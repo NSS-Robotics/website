@@ -1,0 +1,265 @@
+/* Entire Scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+    background: #04303e;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* Draggy Thingy */
+::-webkit-scrollbar-thumb {
+    background: #021b22;
+    width: 2px;
+    border-radius: 10px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* The Full Page Image Header */
+.header {
+    background: url("/imgs/1.webp");
+    font-family: 'Comfortaa';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+/* The Home/Index Page Image Header */
+.home {
+    background-image: url(imgs/2.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+/* The Semi-Transparent Black Overley On The Background Image */
+.black {
+    background: black;
+    opacity: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Big Title Text */
+.title {
+    font-family: 'Comfortaa';
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+    text-decoration: underline;
+    margin-bottom: 2%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+/* Mini Subtitle Text */
+.subtitle {
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+/* Typing Animation For The Big Title */
+.title h1 {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #00ff91;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 2.4s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+/* Subtitle Typing Animation */
+.subtitle p {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #00ff91;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 3.2s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+/* Main Navbar Div */
+.navbar {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Navbar Button */
+.dropbtn {
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+    color: white;
+    text-decoration: underline solid transparent;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.dropbtn:hover {
+    text-decoration: underline solid white;
+    transition-duration: .6s;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    font-family: 'Comfortaa';
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    min-width: 160px;
+    z-index: 1;
+    background-color: white;
+    opacity: 90%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Links Inside The Dropdown Content */
+.dropdown-content a:hover {
+    text-decoration: underline solid black;
+    transition-duration: .6s;
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    text-decoration: underline solid transparent;
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 10px;
+}
+
+/* Scroll Down Message Div */
+.goDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: absolute;
+    bottom: 10px;
+}
+
+/* "Scroll Down" Text */
+#downText {
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    color: white;
+}
+
+/* Kinda Self Explanitory */
+.ourTeamTitle {
+    font-family: 'Comfortaa';
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 5%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+/* The Bouncing Arrow */
+.arrow {
+    position: relative;
+    bottom: -0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-image: url("imgs/down.png");
+    background-size: contain;
+}
+
+/* Bouncing Arrow Animation */
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+/* The Text Under The Big Image */
+.content {
+    font-family: 'Comfortaa';
+    padding-left: 100px;
+    padding-right: 100px;
+    color: black;
+    margin-top: 25px;
+    padding-bottom: 30px;
+    line-height: 2;
+}
+.grid-container {
+    text-align: center;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+.grid-container img {
+    width: 300px;
+    
+}
