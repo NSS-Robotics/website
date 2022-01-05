@@ -41,7 +41,7 @@ body {
 
 /* The Home/Index Page Image Header */
 .home {
-    background-image: url(imgs/2.jpg);
+    background-image: url(/imgs/2.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
