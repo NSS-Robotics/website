@@ -233,7 +233,7 @@ body {
     width: 40px;
     height: 40px;
     display: flex;
-    background-image: url("imgs/down.png");
+    background-image: url("/imgs/down.png");
     background-size: contain;
 }
 
@@ -262,4 +262,21 @@ body {
 .grid-container img {
     width: 300px;
     
+}
+.about-us {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 50px;
+    font-family: 'Comfortaa';
+    color: black;
+    text-align: left;
+}
+.about-us img {
+    height: 400px;
+    width: auto;
+    border-radius: 10px;
 }
