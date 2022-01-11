@@ -297,15 +297,16 @@ body {
     height: auto;
     border-radius: 10px;
     float: left;
-    padding-right: 40px;
+    margin-right: 50px;
     left: 0;
 }
 .teams p {
     text-align: center;
+    width: 1500px;
 }
 .teams h3 {
     text-align: center;
     text-decoration: none;
     font-size: 30px;
-    margin-top: 50px;
+    margin-top: 8%;
 }
