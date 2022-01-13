@@ -336,3 +336,8 @@ figcaption {
     border-radius: 50%;
     zoom: 50%;
 }
+.people p {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0;
+}
