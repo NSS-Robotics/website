@@ -121,13 +121,10 @@ html, body {
 
 /* Main Navbar Div */
 .navbar {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    height: 40px;
 }
 
 /* Navbar Button */
@@ -154,6 +151,7 @@ html, body {
 .dropdown {
     position: relative;
     display: inline-block;
+    align-self: center;
 }
 
 
