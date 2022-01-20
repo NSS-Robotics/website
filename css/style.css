@@ -127,6 +127,11 @@ html, body {
     height: 40px;
 }
 
+.outernav {
+    position: absolute;
+    top: 0;
+}
+
 /* Navbar Button */
 .dropbtn {
     font-family: 'Comfortaa', cursive;
