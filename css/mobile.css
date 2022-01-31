@@ -118,5 +118,18 @@
     .our-team {
         width: 100vh;
     }
-
+    .firstheader {
+        overflow-y: scroll !important;
+    }
+    .firstcontent {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .firstcontent p {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .firstcontent img {
+        display: none;
+    }
 }
