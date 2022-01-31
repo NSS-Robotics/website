@@ -75,7 +75,7 @@
     }
     .btn-right {
         right: 65px !important;
-        top: 250px !important;
+        top: 215px !important;
         color: black;
         background-size: 50px !important;
         background-color: white !important;
@@ -85,7 +85,7 @@
     }
     .btn-right:hover {
         right: 65px !important;
-        top: 250px !important;
+        top: 215px !important;
         color: white;
         background-size: 50px !important;
         background-color: black !important;
@@ -95,7 +95,7 @@
     }
     .btn-left {
         left: 65px !important;
-        top: 250px !important;
+        top: 215px !important;
         color: black;
         background-size: 50px !important;
         background-color: white !important;
@@ -105,7 +105,7 @@
     }
     .btn-left:hover {
         left: 65px !important;
-        top: 250px !important;
+        top: 215px !important;
         color: white;
         background-size: 50px !important;
         background-color: black !important;
