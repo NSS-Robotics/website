@@ -280,14 +280,12 @@ html, body {
 }
 .teams {
     display: flex;
-    flex-wrap: nowrap;
     flex-flow: column;
     row-gap: 30px;
     align-items: center;
     justify-content: center;
     font-family: 'Comfortaa';
     color: black;
-    text-align: left;
     margin-top: 10%;
     width: auto;
 }

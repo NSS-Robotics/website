@@ -1,0 +1,123 @@
+@media screen and (max-width: 480px) {
+
+    html {
+        overflow-x: hidden;
+    }
+    .title {
+        margin-top: 60% !important;
+    }
+    .title h1{
+        font-size: 26px;
+    }
+    .subtitle p{
+        font-size: 11px;
+    }
+    .navbar {
+        zoom: 70%;
+    }
+    .outernav {
+        width: max-content;
+        zoom: 150%;
+    }
+    .header {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 190vh !important;
+        width: 100vh !important;    
+    }
+    .home {
+        background-size: 190vh !important;
+    }
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+        column-gap: 15px;
+        width: 100vh;
+        text-align: center !important;
+    }
+    .about-us p {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .about-us img {
+        width: 90% !important;
+        height: auto !important;
+    }
+    .teams {
+        display: flex;
+        flex-wrap: wrap !important;
+        align-items: center;
+        margin-top: 10%;
+        gap: 50px;
+        text-align: left;
+        width: 100vh !important;
+    }
+    .teams img {
+        display: flex;
+        width: 88% !important;
+        height: auto !important;
+        float: none !important;
+        margin-left: 51px !important; 
+    }
+    .slides {
+        display: flex;
+        width: 98% !important;
+        height: auto;
+        float: none;
+        margin-left: 10px; 
+    }
+    .teams p {
+        padding-right: 50px;
+        padding-left: 50px;
+        text-align: center;
+        width: auto !important;
+    }
+    .btn-right {
+        right: 65px !important;
+        top: 250px !important;
+        color: black;
+        background-size: 50px !important;
+        background-color: white !important;
+        border-radius: 100px;
+        padding: 11px 20px;
+        text-decoration: none;
+    }
+    .btn-right:hover {
+        right: 65px !important;
+        top: 250px !important;
+        color: white;
+        background-size: 50px !important;
+        background-color: black !important;
+        border-radius: 100px;
+        padding: 11px 20px;
+        text-decoration: none;
+    }
+    .btn-left {
+        left: 65px !important;
+        top: 250px !important;
+        color: black;
+        background-size: 50px !important;
+        background-color: white !important;
+        border-radius: 100px;
+        padding: 11px 20px;
+        text-decoration: none;
+    }
+    .btn-left:hover {
+        left: 65px !important;
+        top: 250px !important;
+        color: white;
+        background-size: 50px !important;
+        background-color: black !important;
+        border-radius: 100px;
+        padding: 11px 20px;
+        text-decoration: none;
+    }
+    .people {
+        width: 100vh;
+    }
+    .our-team {
+        width: 100vh;
+    }
+
+}
