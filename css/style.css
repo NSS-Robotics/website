@@ -397,10 +397,16 @@ figcaption {
     border-color: transparent;
     font-size: 25px;
     cursor: pointer;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 15px;
 }
 .btn-left:hover {
     transition-duration: .3s;
+    background-color: black;
     color: white;
+    border-radius: 100px;
+    padding: 5px 15px;
     left: 10px;
 }
 .btn-right:not(hover) {
@@ -413,9 +419,16 @@ figcaption {
     border-color: transparent;
     font-size: 25px;
     cursor: pointer;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 15px;
 }
 .btn-right:hover {
     transition-duration: .3s;
     color: white;
+    background-size: 50px;
+    background-color: black ;
+    border-radius: 100px;
+    padding: 5px 15px;
     right: 10px;
 }
