@@ -26,7 +26,7 @@ html, body {
 /* The Full Page Image Header */
 .header {
     background: url("/imgs/1.webp");
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -63,7 +63,7 @@ html, body {
 
 /* Big Title Text */
 .title {
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     font-size: 30px;
     color: white;
     text-align: center;
@@ -78,7 +78,7 @@ html, body {
 
 /* Mini Subtitle Text */
 .subtitle {
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     font-size: 20px;
     color: white;
     text-align: center;
@@ -162,7 +162,7 @@ html, body {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     display: none;
     position: absolute;
     border-radius: 10px;
@@ -210,14 +210,14 @@ html, body {
 
 /* "Scroll Down" Text */
 #downText {
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     font-size: 20px;
     color: white;
 }
 
 /* Kinda Self Explanitory */
 .ourTeamTitle {
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     font-size: 30px;
     color: white;
     text-align: center;
@@ -246,7 +246,7 @@ html, body {
 
 /* The Text Under The Big Image */
 .content {
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     color: black;
     margin-top: 25px;
     padding-bottom: 30px;
@@ -269,7 +269,7 @@ html, body {
     justify-content: center;
     margin-top: 10%;
     gap: 50px;
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     color: black;
     text-align: left;
 }
@@ -284,7 +284,7 @@ html, body {
     row-gap: 30px;
     align-items: center;
     justify-content: center;
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     color: black;
     margin-top: 10%;
     width: auto;
@@ -339,7 +339,7 @@ figcaption {
     margin-bottom: 0;
 }
 .firstTitle {
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     font-size: 30px;
     color: white;
     text-align: center;
@@ -353,7 +353,7 @@ figcaption {
 }
 .firstheader {
     background: url("/imgs/3.jpg");
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -361,7 +361,7 @@ figcaption {
     height: 100vh;
 }
 .firstcontent {
-    font-family: 'Comfortaa';
+    font-family: 'Inconsolata', monospace;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 30px;
