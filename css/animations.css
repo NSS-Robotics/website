@@ -40,3 +40,51 @@
         border-color: #00ff91;
     }
 }
+
+/* Page Transitions */
+
+/* Fade In */
+.transition {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    bottom: 0;
+    z-index: 101;
+    background-color: black;
+    pointer-events: none;
+    transition: 0.5s ease-out;
+  }
+.transition.is-active {
+    right: 0px;
+}
+/* Spinner */
+.loading {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+.loading--full-height {
+  align-items: center;
+  height: 100%;
+}
+.loading::after {
+    width: auto;
+    height: auto;
+    content: url('/imgs/favicon.ico');
+    zoom: 40%;
+    justify-self: center;
+    transform: rotate(0.20turn);
+    animation: loading 1.7s linear infinite;
+}
+
+@keyframes loading {
+  /* Safari support */
+  from {
+    transform: rotate(0turn);
+  }
+  
+  to {
+    transform: rotate(1turn);
+  }
+}
