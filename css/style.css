@@ -134,7 +134,7 @@ html, body {
 
 /* Navbar Button */
 .dropbtn {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Inconsolata', monospace;
     text-decoration: none;
     color: white;
     text-decoration: underline solid transparent;
