@@ -52,13 +52,13 @@ html, body {
 /* The Semi-Transparent Black Overley On The Background Image */
 .black {
     background: black;
-    opacity: 25%;
+    opacity: 40%;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
 }
 
 /* Big Title Text */
@@ -144,6 +144,7 @@ html, body {
     zoom: 110%;
 }
 .outernav {
+    z-index: 2;
     position: absolute;
     top: 0;
 }
@@ -222,6 +223,7 @@ html, body {
     flex-flow: column;
     position: absolute;
     bottom: 10px;
+    z-index: 2;
 }
 
 /* "Scroll Down" Text */
@@ -242,7 +244,7 @@ html, body {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    z-index: 1;
+    z-index: 2;
 }
 /* The Bouncing Arrow */
 .arrow {
