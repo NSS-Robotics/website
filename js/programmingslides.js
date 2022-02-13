@@ -1,11 +1,11 @@
 var slideIndex = 1;
-showDivs(slideIndex);
+programmingshowDivs(slideIndex);
 
 function programmingplusDivs(n) {
-  showDivs(slideIndex += n);
+  programmingshowDivs(slideIndex += n);
 }
 
-function showDivs(n) {
+function programmingshowDivs(n) {
   var i;
   var x = document.getElementsByClassName("programmingSlides");
   if (n > x.length) {slideIndex = 1}
