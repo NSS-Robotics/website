@@ -25,7 +25,7 @@ html, body {
 
 /* The Full Page Image Header */
 .header {
-    background: url("/imgs/headers/IMG_0151.jpg");
+    background: url("/imgs/headers/IMG_9396.jpg");
     font-family: 'Inconsolata', monospace;
     background-repeat: no-repeat;
     background-position: center;
@@ -407,44 +407,38 @@ figcaption {
     transition-duration: .3s;
     display: block;
     position: absolute;
-    left: 15px;
+    left: -40px;
     top: 210px;
     background: none;
     border-color: transparent;
     font-size: 25px;
     cursor: pointer;
-    background-color: white;
     border-radius: 50px;
     padding: 5px 15px;
 }
 .btn-left:hover {
     transition-duration: .3s;
-    background-color: black;
-    color: white;
     border-radius: 100px;
     padding: 5px 15px;
-    left: 10px;
+    left: -45px;
 }
 .btn-right:not(hover) {
     transition-duration: .3s;
     display: block;
     position: absolute;
-    right: 15px;
+    right: -40px;
     top: 210px;
     background: none;
     border-color: transparent;
     font-size: 25px;
     cursor: pointer;
-    background-color: white;
     border-radius: 50px;
     padding: 5px 15px;
 }
 .btn-right:hover {
     transition-duration: .3s;
-    color: white;
     background-size: 50px;
-    background-color: black ;
     border-radius: 100px;
     padding: 5px 15px;
-    right: 10px;
+    right: -45px;
 }

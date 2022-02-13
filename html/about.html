@@ -60,10 +60,10 @@
                 <div>
                     <img src="/imgs/northern.jpg">
                     <h3>Our School</h3>
-                    <p>Located near the heart of Toronto at 851 Mt Pleasant Rd, is where this all started: Northern Secondary School, or as we like to call it NSS. Northern is a large school with almost 18 hundred students as it was founded at September 1930. There are many streams that NSS offers such as the SHSM Program, gifted, technology and business streams.</p>
+                    <p>Located near the heart of Toronto at 851 Mt Pleasant Rd, is where this all started: Northern Secondary School, or as we like to call it NSS. Northern is a large school with almost eighteen hundred students and was founded at September 1930. There are many programs that NSS offers such as the SHSM Program, gifted, technology and business streams.</p>
                 </div>
                 <div>
-                    <img src="/imgs/hands.jpg">
+                    <img src="/imgs/IMG_0190.jpg">
                     <h3>Our Team</h3>
                     <p>Our team is dedicated to achieving our goals for the First Robotics Competition. Our sub-teams are groups of students which focus on different aspects of the robot. They include our Design, Game Plan, Business, Programming, Manufacturing, and Web Design Team.</p>
                 </div>
@@ -80,7 +80,6 @@
                         <img class="manufacturingSlides" src="/imgs/ManufacturingSlides/1.jpg">
                         <img class="manufacturingSlides" src="/imgs/ManufacturingSlides/2.jpg">
                         <img class="manufacturingSlides" src="/imgs/ManufacturingSlides/3.jpg">
-                        <img class="manufacturingSlides" src="/imgs/ManufacturingSlides/4.jpg">
                         <button class="btn-left" onclick="plusDivs(-1)">&#10094;</button>
                         <button class="btn-right" onclick="plusDivs(+1)">&#10095;</button>
                     </div>
@@ -88,7 +87,12 @@
                     <p>All the assembling and putting together the robot happens here. This team takes the designs created by the design team and fabricates them into a fully functioning robot.</p>
                 </div>
                 <div>
-                    <img src="/imgs/Programming.jpg">
+                    <div class="slides">
+                        <img class="programmingSlides" src="/imgs/ProgrammingSlides/1.jpg">
+                        <img class="programmingSlides" src="/imgs/ProgrammingSlides/2.jpg">
+                        <button class="btn-left" onclick="programmingplusDivs(-1)">&#10094;</button>
+                        <button class="btn-right" onclick="programmingplusDivs(+1)">&#10095;</button>
+                    </div>
                     <h3>Programming Team</h3>
                     <p>The programming team codes the “brain“ of the robot. The movement of the robot comes from programming. Their language of choice for this project was Rust since it provides a great balance between performance and control over systems and functionality.</p>
                 </div>
@@ -151,4 +155,5 @@
 </body>
 </html>
 <script src="/js/manufacturingslides.js"></script>
+<script src="/js/programmingslides.js"></script>
 <script src="/js/transition.js"></script>
