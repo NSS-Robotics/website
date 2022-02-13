@@ -13,13 +13,18 @@
         font-size: 11px;
     }
     .navbar {
-        zoom: 70%;
+        zoom: 80% !important;
     }
     .outernav {
         width: max-content;
         zoom: 150%;
     }
     .header {
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100vh !important;    
+    }
+    .black {
         background-repeat: no-repeat;
         background-position: center;
         width: 100vh !important;    
