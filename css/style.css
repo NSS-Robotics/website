@@ -119,7 +119,6 @@ html, body {
     letter-spacing: .15em;
     /* Adjust as needed */
     animation: typing 3.2s steps(30, end), blink-caret .75s step-end infinite;
-    z-index: ;
 }
 
 .loading-title p {
