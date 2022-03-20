@@ -170,7 +170,7 @@ html, body {
 
 .dropbtn:hover {
     text-decoration: underline solid white;
-    transition-duration: .6s;
+    transition-duration: .3s;
 }
 
 /* The container <div> - needed to position the dropdown content */
