@@ -295,6 +295,15 @@ html, body {
     height: 400px;
     width: auto;
     border-radius: 10px;
+    margin-left: 15px;
+}
+.about-us p {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.about-us h3 {
+    padding-right: 15px;
+    padding-left: 15px;
 }
 .teams {
     display: flex;
