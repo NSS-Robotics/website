@@ -305,6 +305,9 @@ html, body {
     padding-right: 15px;
     padding-left: 15px;
 }
+.ourteam {
+    width: 850px;
+}
 .teams {
     display: flex;
     flex-flow: column;
