@@ -2,29 +2,28 @@
     line-height: 0;
     column-count: 4;
     column-gap: 0px;
+}
+#gallery img {
+  width: 100% !important;
+  height: auto !important;
+}
+@media (max-width: 1200px) {
+  #photos {
+  column-count: 4;
   }
-  
-  #gallery img {
-    width: 100% !important;
-    height: auto !important;
+}
+@media (max-width: 1000px) {
+  #photos {
+  column-count: 3;
   }
-  @media (max-width: 1200px) {
-    #photos {
-    column-count: 4;
-    }
+}
+@media (max-width: 800px) {
+  #photos {
+  column-count: 2;
   }
-  @media (max-width: 1000px) {
-    #photos {
-    column-count: 3;
-    }
+}
+@media (max-width: 400px) {
+  #photos {
+  column-count: 1;
   }
-  @media (max-width: 800px) {
-    #photos {
-    column-count: 2;
-    }
-  }
-  @media (max-width: 400px) {
-    #photos {
-    column-count: 1;
-    }
-  }
+}
