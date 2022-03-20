@@ -56,7 +56,7 @@ html, body {
 /* The Semi-Transparent Black Overley On The Background Image */
 .black {
     background: black;
-    opacity: 35%;
+    opacity: 40%;
     position: absolute;
     top: 0;
     left: 0;
