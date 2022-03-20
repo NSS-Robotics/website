@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
@@ -8,11 +9,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/css/mobile.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/animations.css">
     <link rel="stylesheet" href="/css/gallery.css">
-    <title>NSS Robotics - About Us</title>
+    <link rel="stylesheet" href="/css/animations.css">
+    <title>NSS Robotics - Gallery</title>
 </head>
-<body>
+
+<body style="overflow-x: hidden;">
+    <div class="transition loading loading--full-height transition is-active">
+        <div class="loading-title">
+            <div>
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="outernav">
+            <div class="navbar">
+                <img src="/imgs/favicon.ico" alt="">
+                <div class="dropdown">
+                    <a class="dropbtn" href="../index.html">Home</a>
+                </div>
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="about.html#whoarewe">Who Are We?</a>
+                        <a href="/html/about.html#teams">Our Team</a>
+                        <a href="https://www.firstinspires.org/robotics/frc">First Robotics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="dropbtn" href="/html/gallery.html">Gallery</a>
+                </div>
+                <div class="dropdown">
+                    <a id="except" class="dropbtn" style="cursor: default;">Contact Us</a>
+                    <div class="dropdown-content">
+                        <a href="mailto:nss.roboticsclub@gmail.com">Email Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="black" style="z-index: 1;"></div>
+        <div class="ourTeamTitle">
+            <h1>Gallery</h1>
+        </div>
+        <div class="goDown">
+            <div class="arrow bounce"></div>
+            <p id="downText">Scroll Down</p>
+        </div>
+    </div>
     <section id="gallery">
         <img src="/imgs/gallery/1.jpg" alt="">
         <img src="/imgs/gallery/2.jpg" alt="">
@@ -29,3 +73,4 @@
     </section>
 </body>
 </html>
+<script src="/js/transition.js"></script>
