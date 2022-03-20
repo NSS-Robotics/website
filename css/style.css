@@ -40,25 +40,29 @@ html, body {
 }
 
 /* The Home/Index Page Image Header */
-.home {
+.bg {
     background-image: url(/imgs/2.jpg);
-    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 1;
-    margin-bottom: 0;
+    background-position-y: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
 /* The Semi-Transparent Black Overley On The Background Image */
 .black {
     background: black;
-    opacity: 40%;
+    opacity: 35%;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
 /* Big Title Text */
@@ -73,7 +77,6 @@ html, body {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    z-index: 1;
 }
 
 /* Mini Subtitle Text */
@@ -86,7 +89,6 @@ html, body {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    z-index: 1;
 }
 
 /* Typing Animation For The Big Title */
@@ -117,6 +119,7 @@ html, body {
     letter-spacing: .15em;
     /* Adjust as needed */
     animation: typing 3.2s steps(30, end), blink-caret .75s step-end infinite;
+    z-index: ;
 }
 
 .loading-title p {
@@ -139,9 +142,12 @@ html, body {
 .navbar {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    padding-top: 25px;
     height: 40px;
     zoom: 110%;
+}
+.navbar img {
+    z-index: 1;
 }
 .outernav {
     z-index: 2;
