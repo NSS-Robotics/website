@@ -17,17 +17,17 @@
     }
     .outernav {
         width: max-content;
-        zoom: 150%;
+        zoom: 100%;
     }
     .header {
         background-repeat: no-repeat;
         background-position: center;
-        width: 100vh !important;    
+        width: 100vw !important;    
     }
     .black {
         background-repeat: no-repeat;
         background-position: center;
-        width: 100vh !important;    
+        width: 100vw !important;    
     }
     .home {
         background-size: 190vh !important;
@@ -37,7 +37,7 @@
         align-items: center;
         row-gap: 15px;
         column-gap: 15px;
-        width: 100vh;
+        width: 100vw;
         text-align: center !important;
     }
     .about-us p {
@@ -48,6 +48,10 @@
         width: 90% !important;
         height: auto !important;
     }
+    .ourteam {
+        font-size: 10px !important;
+        width: auto !important;
+    }
     .teams {
         display: flex;
         flex-wrap: wrap !important;
@@ -55,14 +59,13 @@
         margin-top: 10%;
         gap: 50px;
         text-align: left;
-        width: 100vh !important;
+        width: 100vw !important;
     }
     .teams img {
         display: flex;
-        width: 88% !important;
+        width: 95vw !important;
         height: auto !important;
         float: none !important;
-        margin-left: 51px !important; 
     }
     .slides {
         display: flex;
@@ -75,7 +78,7 @@
         padding-right: 50px;
         padding-left: 50px;
         text-align: center;
-        width: auto !important;
+        width: 75vw !important;
     }
     .btn-right {
         right: 65px !important;
@@ -88,8 +91,6 @@
         text-decoration: none;
     }
     .btn-right:hover {
-        right: 65px !important;
-        top: 215px !important;
         color: white;
         background-size: 50px !important;
         background-color: black !important;
@@ -98,8 +99,7 @@
         text-decoration: none;
     }
     .btn-left {
-        left: 65px !important;
-        top: 215px !important;
+        left: 15px !important;
         color: black;
         background-size: 50px !important;
         background-color: white !important;
@@ -118,10 +118,7 @@
         text-decoration: none;
     }
     .people {
-        width: 100vh;
-    }
-    .our-team {
-        width: 100vh;
+        width: 100vw;
     }
     .firstheader {
         overflow-y: scroll !important;
