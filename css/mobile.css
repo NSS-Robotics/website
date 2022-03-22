@@ -13,7 +13,7 @@
         font-size: 11px;
     }
     .navbar {
-        zoom: 70% !important;
+        zoom: 60% !important;
     }
     .outernav {
         width: max-content;
@@ -61,6 +61,13 @@
         text-align: left;
         width: 100vw !important;
     }
+    .teams h3 {
+        text-align: center;
+        width: 100vw !important;
+    }
+    #boop {
+        margin-top: 60px;
+    }
     .teams img {
         display: flex;
         width: 95vw !important;
@@ -82,40 +89,26 @@
     }
     .btn-right {
         right: 65px !important;
-        top: 215px !important;
+        top: 270px !important;
         color: black;
         background-size: 50px !important;
-        background-color: white !important;
         border-radius: 100px;
         padding: 11px 20px;
         text-decoration: none;
     }
     .btn-right:hover {
-        color: white;
-        background-size: 50px !important;
-        background-color: black !important;
-        border-radius: 100px;
-        padding: 11px 20px;
-        text-decoration: none;
+        right: 50px !important;
     }
     .btn-left {
         left: 15px !important;
+        top: 270px !important;
         color: black;
-        background-size: 50px !important;
-        background-color: white !important;
         border-radius: 100px;
         padding: 11px 20px;
         text-decoration: none;
     }
     .btn-left:hover {
-        left: 65px !important;
-        top: 215px !important;
-        color: white;
-        background-size: 50px !important;
-        background-color: black !important;
-        border-radius: 100px;
-        padding: 11px 20px;
-        text-decoration: none;
+        left: 0px !important;
     }
     .people {
         width: 100vw;
