@@ -294,6 +294,7 @@ html, body {
     font-family: 'Inconsolata', monospace;
     color: black;
     text-align: left;
+    width: auto;
 }
 .about-us img {
     height: 400px;
