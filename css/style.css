@@ -305,6 +305,7 @@ html, body {
 .about-us p {
     padding-right: 15px;
     padding-left: 15px;
+    font-size: 17.5px;
 }
 .about-us h3 {
     padding-right: 15px;
@@ -331,7 +332,8 @@ html, body {
 }
 .teams p {
     text-align: center;
-    width: 1300px
+    width: 1300px;
+    font-size: 16px;
 }
 .teams h3 {
     text-align: center;
