@@ -303,11 +303,12 @@ html, body {
 .about-us p {
     padding-right: 15px;
     padding-left: 15px;
-    font-size: 17.5px;
+    font-size: 22px;
 }
 .about-us h3 {
     padding-right: 15px;
     padding-left: 15px;
+    font-size: 32px;
 }
 .teams {
     display: flex;
@@ -331,7 +332,7 @@ html, body {
 .teams p {
     text-align: center;
     width: 1300px;
-    font-size: 16px;
+    font-size: 20px;
 }
 .teams h3 {
     text-align: center;
@@ -369,6 +370,10 @@ figcaption {
     text-align: center;
     font-weight: bold;
     margin-bottom: 0;
+    font-size: 20px;
+}
+.people figcaption {
+    font-size: 20px;
 }
 .firstTitle {
     font-family: 'Inconsolata', monospace;
@@ -461,12 +466,14 @@ figcaption {
 .footer {
     background-color: #1a1a1a;
     color: white;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
     text-align: center;
     font-family: 'Inconsolata', monospace;
-    font-size: 20px;
+}
+.footer img {
+    width: 150px;
 }
 #home {
     position: fixed;
@@ -481,6 +488,6 @@ figcaption {
     width: 100%;
 }
 .center p {
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 0px;
 }
