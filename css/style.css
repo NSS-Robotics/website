@@ -271,7 +271,6 @@ html, body {
     font-family: 'Inconsolata', monospace;
     color: black;
     margin-top: 25px;
-    padding-bottom: 30px;
     line-height: 2;
 }
 .grid-container {
@@ -283,7 +282,6 @@ html, body {
 }
 .grid-container img {
     width: 300px;
-    
 }
 .about-us {
     display: flex;
@@ -459,4 +457,36 @@ figcaption {
     border-radius: 100px;
     padding: 5px 15px;
     right: -45px;
+}
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+}
+#home {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.center p {
+    font-size: 20px;
+    margin-top: 0px;
+}
+#vercel {
+    width: max-content;
+}
+#vercel img{
+    width: auto;
+    height: 15px;
 }
