@@ -484,15 +484,3 @@ figcaption {
     font-size: 20px;
     margin-top: 0px;
 }
-#vercel {
-    width: max-content;
-}
-#vercel img{
-    width: auto;
-    height: 15px;
-    
-}
-#vercel a {
-    color: white;
-    text-decoration: none;
-}

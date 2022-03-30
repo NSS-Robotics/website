@@ -1,7 +1,10 @@
 window.onload = () => {
     const transition_el = document.querySelector('.transition');
     const anchors = document.querySelectorAll('a');
+    const imgs = document.querySelectorAll('img');
     const except = document.getElementById('except')
+
+
 
     setTimeout(() => {
         transition_el.classList.remove('is-active');
@@ -10,7 +13,7 @@ window.onload = () => {
     for(let i = 0; i < anchors.length; i++) {
         const anchor = anchors[i];
 
-        if(anchor == except) {
+        if(anchor == except || anchor.classList.contains('except')) {
             continue;
         }
         else {
