@@ -1,5 +1,5 @@
 
-name: Publish Website to CPanel
+name: Publish In-Development Site
 on:
   push:
     branches:
