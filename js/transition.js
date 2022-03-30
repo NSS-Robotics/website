@@ -3,11 +3,9 @@ window.onload = () => {
     const anchors = document.querySelectorAll('a');
     const except = document.getElementById('except')
 
-
-
     setTimeout(() => {
         transition_el.classList.remove('is-active');
-    }, 2900);
+    }, 500);
 
     for(let i = 0; i < anchors.length; i++) {
         const anchor = anchors[i];
