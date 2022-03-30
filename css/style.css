@@ -471,14 +471,15 @@ figcaption {
     margin-top: 50px;
     text-align: center;
     font-family: 'Inconsolata', monospace;
+    z-index: 1;
 }
 .footer img {
     width: 150px;
 }
 #home {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: -10%;
 }
 .center {
     display: flex;

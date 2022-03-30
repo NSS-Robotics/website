@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="/css/animations.css">
     <title>NSS Robotics</title>
 </head>
-
-<body>
+<body style="overflow-x: hidden;">
     <div class="transition loading loading--full-height transition is-active">
         <div class="loading-title">
             <div>
@@ -21,36 +20,41 @@
             </div>
         </div>
     </div>
-    <div class="bg"></div>
-    <div class="black"></div>
-    <div class="navbar">
-        <img src="/imgs/favicon.ico">
-        <div class="dropdown">
-            <a class="dropbtn" href="index.html">Home</a>
-        </div>
-        <div class="dropdown">
-            <a href="/html/about.html" class="dropbtn">About Us</a>
-            <div class="dropdown-content">
-                <a href="/html/about.html#whoarewe">Who Are We?</a>
-                <a href="/html/about.html#teams">Our Subteams</a>
-                <a href="https://www.firstinspires.org/robotics/frc">First Robotics</a>
+    <div class="header" style="background: url(../imgs/background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <div class="outernav">
+            <div class="navbar">
+                <img src="/imgs/favicon.ico">
+                <div class="dropdown">
+                    <a class="dropbtn" href="index.html">Home</a>
+                </div>
+                <div class="dropdown">
+                    <a href="/html/about.html" class="dropbtn">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="/html/about.html#whoarewe">Who Are We?</a>
+                        <a href="/html/about.html#teams">Our Subteams</a>
+                        <a href="https://www.firstinspires.org/robotics/frc">First Robotics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="dropbtn" href="/html/gallery.html">Gallery</a>
+                </div>
+                <div class="dropdown">
+                    <a class="dropbtn" id="except" style="cursor: default;">Contact Us</a>
+                    <div class="dropdown-content">
+                        <a href="mailto:nss.roboticsclub@gmail.com">Email Us</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="dropdown">
-            <a class="dropbtn" href="/html/gallery.html">Gallery</a>
-        </div>
-        <div class="dropdown">
-            <a class="dropbtn" id="except" style="cursor: default;">Contact Us</a>
-            <div class="dropdown-content">
-                <a href="mailto:nss.roboticsclub@gmail.com">Email Us</a>
+        <div class="black" style="z-index: 1;"></div>
+        <div class="ourTeamTitle">
+            <div class="title">
+                <h1>Crimson Revolution</h1>
+            </div>
+            <div class="subtitle">
+                <p>Pick a page from the menu above to learn more</p>
             </div>
         </div>
-    </div>
-    <div class="title">
-        <h1>Crimson Revolution</h1>
-    </div>
-    <div class="subtitle">
-        <p>Pick a page from the menu above to learn more</p>
     </div>
     <div class="footer" id="home">
         <div class="center">
