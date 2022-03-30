@@ -474,12 +474,12 @@ figcaption {
     z-index: 1;
 }
 .footer img {
-    width: 150px;
+    width: 180px;
 }
 #home {
     position: absolute;
     width: 100%;
-    bottom: -10%;
+    bottom: -11%;
 }
 .center {
     display: flex;
@@ -489,6 +489,6 @@ figcaption {
     width: 100%;
 }
 .center p {
-    font-size: 15px;
+    font-size: 18px;
     margin-top: 0px;
 }
