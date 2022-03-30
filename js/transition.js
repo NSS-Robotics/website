@@ -1,7 +1,6 @@
 window.onload = () => {
     const transition_el = document.querySelector('.transition');
     const anchors = document.querySelectorAll('a');
-    const imgs = document.querySelectorAll('img');
     const except = document.getElementById('except')
 
 
