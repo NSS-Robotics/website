@@ -464,7 +464,6 @@ figcaption {
 #home {
     position: absolute;
     width: 100%;
-    bottom: -11%;
 }
 .center {
     display: flex;
@@ -476,4 +475,18 @@ figcaption {
 .center p {
     font-size: 18px;
     margin-top: 0px;
+}
+.footerline {
+    height: 2px;
+    width: 30%;
+    background-color: white;
+}
+.footerlinks {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.footerlinks a {
+    color: white;
+    text-decoration: underline;
+    font-size: 18px;
 }
