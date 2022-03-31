@@ -134,7 +134,7 @@ html, body {
     z-index: 1;
 }
 .outernav {
-    z-index: 2;
+    z-index: 3;
     position: absolute;
     top: 0;
 }
@@ -230,6 +230,7 @@ html, body {
     text-align: center;
     text-decoration: underline;
     margin-bottom: 20%;
+    margin-top: 20%;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
