@@ -1,17 +1,17 @@
 #gallery {
-    display: grid;
-    grid-template-columns: auto auto auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 #gallery img {
-    width: 90%;
-    height: auto;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    align-self: center;
-    justify-self: center;
-    transition-duration: .2s;
+  width: 90%;
+  height: auto;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  align-self: center;
+  justify-self: center;
+  transition-duration: 0.2s;
 }
 #gallery img:hover {
-    width: 95%;
-    transition-duration: .2s;
+  width: 95%;
+  transition-duration: 0.2s;
 }
