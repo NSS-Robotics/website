@@ -130,9 +130,11 @@ html, body {
     height: 40px;
     zoom: 110%;
 }
+
 .navbar img {
     z-index: 1;
 }
+
 .outernav {
     z-index: 3;
     position: absolute;
@@ -259,6 +261,7 @@ html, body {
     margin-top: 25px;
     line-height: 2;
 }
+
 .grid-container {
     text-align: center;
     display: grid;
@@ -266,9 +269,11 @@ html, body {
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto auto auto;
 }
+
 .grid-container img {
     width: 300px;
 }
+
 .about-us {
     display: flex;
     flex-wrap: nowrap;
@@ -280,22 +285,26 @@ html, body {
     text-align: left;
     width: fit-content;
 }
+
 .about-us img {
     height: 400px;
     width: auto;
     border-radius: 10px;
     margin-left: 15px;
 }
+
 .about-us p {
     padding-right: 15px;
     padding-left: 15px;
     font-size: 20px;
 }
+
 .about-us h3 {
     padding-right: 15px;
     padding-left: 15px;
     font-size: 32px;
 }
+
 .teams {
     display: flex;
     flex-flow: column;
@@ -307,6 +316,7 @@ html, body {
     margin-top: 10%;
     width: auto;
 }
+
 .teams img {
     width: 595px;
     height: auto;
@@ -315,17 +325,20 @@ html, body {
     margin-right: 50px;
     left: 0;
 }
+
 .teams p {
     text-align: center;
     width: 1300px;
     font-size: 20px;
 }
+
 .teams h3 {
     text-align: center;
     text-decoration: none;
     font-size: 30px;
     margin-top: 8%;
 }
+
 .people {
     margin-top: 5%;
     display: flex;
@@ -336,9 +349,11 @@ html, body {
     column-gap: 70px;
     row-gap: 75px;
 }
+
 figcaption {
     text-align: center;
 }
+
 .our-team {
     display: block;
     text-align: center;
@@ -346,21 +361,25 @@ figcaption {
     font-size: 50px;
     margin-top: 8%;
 }
+
 .people img {
     height: 600px;
     width: 600px;
     border-radius: 50%;
     zoom: 50%;
 }
+
 .people p {
     text-align: center;
     font-weight: bold;
     margin-bottom: 0;
     font-size: 20px;
 }
+
 .people figcaption {
     font-size: 20px;
 }
+
 .firstTitle {
     font-family: 'Inconsolata', monospace;
     font-size: 30px;
@@ -374,6 +393,7 @@ figcaption {
     margin-right: auto;
     z-index: 1;
 }
+
 .firstheader {
     background: url("/imgs/3.jpg");
     font-family: 'Inconsolata', monospace;
@@ -383,6 +403,7 @@ figcaption {
     width: 100%;
     height: 100vh;
 }
+
 .firstcontent {
     font-family: 'Inconsolata', monospace;
     padding-left: 100px;
@@ -393,11 +414,13 @@ figcaption {
     justify-content: center;
     align-items: center;
 }
+
 .firstimg {
     float: left;
     zoom: 60%;
     margin-left: 400px;
 }
+
 .firstcontent p {
     color: white;
     text-align: center;
@@ -405,11 +428,13 @@ figcaption {
     padding-right: 200px;
     padding-left: 60px;
 }
+
 .slides {
     position: relative;
     display: block;
     width: 595px;
 }
+
 .btn-left:not(hover) {
     transition-duration: .3s;
     display: block;
@@ -423,12 +448,14 @@ figcaption {
     border-radius: 50px;
     padding: 5px 15px;
 }
+
 .btn-left:hover {
     transition-duration: .3s;
     border-radius: 100px;
     padding: 5px 15px;
     left: -45px;
 }
+
 .btn-right:not(hover) {
     transition-duration: .3s;
     display: block;
@@ -442,6 +469,7 @@ figcaption {
     border-radius: 50px;
     padding: 5px 15px;
 }
+
 .btn-right:hover {
     transition-duration: .3s;
     background-size: 50px;
@@ -449,6 +477,7 @@ figcaption {
     padding: 5px 15px;
     right: -45px;
 }
+
 .footer {
     background-color: #1a1a1a;
     color: white;
@@ -459,14 +488,17 @@ figcaption {
     font-family: 'Inconsolata', monospace;
     z-index: 1;
 }
+
 .footer img {
     width: 180px;
 }
+
 #home {
     position: absolute;
     width: 100%;
     bottom: -11%;
 }
+
 .center {
     display: flex;
     flex-direction: column;
@@ -474,19 +506,23 @@ figcaption {
     align-items: center;
     width: 100%;
 }
+
 .center p {
     font-size: 18px;
     margin-top: 0px;
 }
+
 .footerline {
     height: 2px;
     width: 30%;
     background-color: white;
 }
+
 .footerlinks {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
 .footerlinks a {
     color: white;
     text-decoration: underline;
