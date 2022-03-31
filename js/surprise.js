@@ -4,7 +4,7 @@ const surprise = document.getElementById('surprise');
 // if the element is clicked 3 times then show confetti
 surprise.addEventListener('click', () => {
     i++;
-  if (i === 3) {
+  if (i === 10) {
       i = 0;
     var end = Date.now() + (1.5 * 1000);
 
