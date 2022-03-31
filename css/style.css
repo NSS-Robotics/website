@@ -1,530 +1,528 @@
 /* Entire Scrollbar */
 ::-webkit-scrollbar {
-    width: 15px;
-    background: #04303e;
+  width: 15px;
+  background: #04303e;
 }
 
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
 }
 
 /* Draggy Thingy */
 ::-webkit-scrollbar-thumb {
-    background: #021b22;
-    width: 2px;
-    border-radius: 10px;
+  background: #021b22;
+  width: 2px;
+  border-radius: 10px;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;   
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 /* The Full Page Image Header */
 .header {
-    background: url("/imgs/headers/IMG_9396.jpg");
-    font-family: 'Inconsolata', monospace;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    margin-top: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
+  background: url("/imgs/headers/IMG_9396.jpg");
+  font-family: "Inconsolata", monospace;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
 
 /* The Home/Index Page Image Header */
 .bg {
-    background-image: url(/imgs/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+  background-image: url(/imgs/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 /* The Semi-Transparent Black Overley On The Background Image */
 .black {
-    background: black;
-    opacity: 40%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+  background: black;
+  opacity: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 /* Big Title Text */
 .title {
-    font-family: 'Inconsolata', monospace;
-    font-size: 30px;
-    color: white;
-    text-align: center;
-    margin-top: 20%;
-    text-decoration: underline;
-    margin-bottom: 2%;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+  font-family: "Inconsolata", monospace;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 20%;
+  text-decoration: underline;
+  margin-bottom: 2%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Mini Subtitle Text */
 .subtitle {
-    font-family: 'Inconsolata', monospace;
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    text-decoration: underline;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+  font-family: "Inconsolata", monospace;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Typing Animation For The Big Title */
 .title h1 {
-    overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #00ff91;
-    /* The typwriter cursor */
-    white-space: nowrap;
-    /* Keeps the content on a single line */
-    margin: 0 auto;
-    /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em;
-    /* Adjust as needed */
-    animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #00ff91;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
 .loading-title p {
-    font-family: 'Inconsolata', monospace;
-    color: white;
-    overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #00ff91;
-    /* The typwriter cursor */
-    white-space: nowrap;
-    /* Keeps the content on a single line */
-    margin: 0 auto;
-    /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em;
-    /* Adjust as needed */
-    animation: blink-caret .75s step-end infinite;
+  font-family: "Inconsolata", monospace;
+  color: white;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #00ff91;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  animation: blink-caret 0.75s step-end infinite;
 }
 
 /* Main Navbar Div */
 .navbar {
-    display: flex;
-    justify-content: center;
-    padding-top: 25px;
-    height: 40px;
-    zoom: 110%;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  height: 40px;
+  zoom: 110%;
 }
 
 .navbar img {
-    z-index: 1;
+  z-index: 1;
 }
 
 .outernav {
-    z-index: 3;
-    position: absolute;
-    top: 0;
+  z-index: 3;
+  position: absolute;
+  top: 0;
 }
 
 /* Navbar Button */
 .dropbtn {
-    font-family: 'Inconsolata', monospace;
-    text-decoration: none;
-    color: white;
-    text-decoration: underline solid transparent;
-    padding: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transform: translate(-50%, -50%);
+  font-family: "Inconsolata", monospace;
+  text-decoration: none;
+  color: white;
+  text-decoration: underline solid transparent;
+  padding: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
 }
 
 .dropbtn:hover {
-    text-decoration: underline solid white;
-    transition-duration: .3s;
+  text-decoration: underline solid white;
+  transition-duration: 0.3s;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-    position: relative;
-    display: inline-block;
-    align-self: center;
+  position: relative;
+  display: inline-block;
+  align-self: center;
 }
-
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    font-family: 'Inconsolata', monospace;
-    display: none;
-    position: absolute;
-    border-radius: 10px;
-    min-width: 160px;
-    z-index: 1;
-    background-color: white;
-    opacity: 90%;
-    text-align: center;
-    margin-top: 10px;
+  font-family: "Inconsolata", monospace;
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  min-width: 160px;
+  z-index: 1;
+  background-color: white;
+  opacity: 90%;
+  text-align: center;
+  margin-top: 10px;
 }
 
 /* Links Inside The Dropdown Content */
 .dropdown-content a:hover {
-    text-decoration: underline solid black;
-    transition-duration: .6s;
+  text-decoration: underline solid black;
+  transition-duration: 0.6s;
 }
-
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-radius: 10px;
-    text-decoration: underline solid transparent;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+  text-decoration: underline solid transparent;
 }
-
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
-    border-radius: 10px;
+  display: block;
+  border-radius: 10px;
 }
 
 /* Scroll Down Message Div */
 .goDown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    position: absolute;
-    bottom: 10px;
-    z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  position: absolute;
+  bottom: 10px;
+  z-index: 2;
 }
 
 /* "Scroll Down" Text */
 #downText {
-    font-family: 'Inconsolata', monospace;
-    font-size: 20px;
-    color: white;
+  font-family: "Inconsolata", monospace;
+  font-size: 20px;
+  color: white;
 }
 
 /* Kinda Self Explanitory */
 .ourTeamTitle {
-    font-family: 'Inconsolata', monospace;
-    font-size: 30px;
-    color: white;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 20%;
-    margin-top: 20%;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 2;
+  font-family: "Inconsolata", monospace;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20%;
+  margin-top: 20%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
 }
 /* The Bouncing Arrow */
 .arrow {
-    position: relative;
-    bottom: -0.5rem;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    background-image: url("/imgs/down.png");
-    background-size: contain;
+  position: relative;
+  bottom: -0.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background-image: url("/imgs/down.png");
+  background-size: contain;
 }
 
 /* Bouncing Arrow Animation */
 .bounce {
-    animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
 }
 
 /* The Text Under The Big Image */
 .content {
-    font-family: 'Inconsolata', monospace;
-    color: black;
-    margin-top: 25px;
-    line-height: 2;
+  font-family: "Inconsolata", monospace;
+  color: black;
+  margin-top: 25px;
+  line-height: 2;
 }
 
 .grid-container {
-    text-align: center;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
+  text-align: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
 }
 
 .grid-container img {
-    width: 300px;
+  width: 300px;
 }
 
 .about-us {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-top: 10%;
-    gap: 50px;
-    font-family: 'Inconsolata', monospace;
-    color: black;
-    text-align: left;
-    width: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 10%;
+  gap: 50px;
+  font-family: "Inconsolata", monospace;
+  color: black;
+  text-align: left;
+  width: fit-content;
 }
 
 .about-us img {
-    height: 400px;
-    width: auto;
-    border-radius: 10px;
-    margin-left: 15px;
+  height: 400px;
+  width: auto;
+  border-radius: 10px;
+  margin-left: 15px;
 }
 
 .about-us p {
-    padding-right: 15px;
-    padding-left: 15px;
-    font-size: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 20px;
 }
 
 .about-us h3 {
-    padding-right: 15px;
-    padding-left: 15px;
-    font-size: 32px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 32px;
 }
 
 .teams {
-    display: flex;
-    flex-flow: column;
-    row-gap: 30px;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Inconsolata', monospace;
-    color: black;
-    margin-top: 10%;
-    width: auto;
+  display: flex;
+  flex-flow: column;
+  row-gap: 30px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inconsolata", monospace;
+  color: black;
+  margin-top: 10%;
+  width: auto;
 }
 
 .teams img {
-    width: 595px;
-    height: auto;
-    border-radius: 10px;
-    float: left;
-    margin-right: 50px;
-    left: 0;
+  width: 595px;
+  height: auto;
+  border-radius: 10px;
+  float: left;
+  margin-right: 50px;
+  left: 0;
 }
 
 .teams p {
-    text-align: center;
-    width: 1300px;
-    font-size: 20px;
+  text-align: center;
+  width: 1300px;
+  font-size: 20px;
 }
 
 .teams h3 {
-    text-align: center;
-    text-decoration: none;
-    font-size: 30px;
-    margin-top: 8%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  margin-top: 8%;
 }
 
 .people {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: center;
-    column-gap: 70px;
-    row-gap: 75px;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  column-gap: 70px;
+  row-gap: 75px;
 }
 
 figcaption {
-    text-align: center;
+  text-align: center;
 }
 
 .our-team {
-    display: block;
-    text-align: center;
-    text-decoration: underline;
-    font-size: 50px;
-    margin-top: 8%;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 50px;
+  margin-top: 8%;
 }
 
 .people img {
-    height: 600px;
-    width: 600px;
-    border-radius: 50%;
-    zoom: 50%;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  zoom: 50%;
 }
 
 .people p {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 0;
-    font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 20px;
 }
 
 .people figcaption {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .firstTitle {
-    font-family: 'Inconsolata', monospace;
-    font-size: 30px;
-    color: white;
-    text-align: center;
-    text-decoration: underline;
-    margin-top: 100px;
-    margin-bottom: 5%;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 1;
+  font-family: "Inconsolata", monospace;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 100px;
+  margin-bottom: 5%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
 }
 
 .firstheader {
-    background: url("/imgs/3.jpg");
-    font-family: 'Inconsolata', monospace;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+  background: url("/imgs/3.jpg");
+  font-family: "Inconsolata", monospace;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
 
 .firstcontent {
-    font-family: 'Inconsolata', monospace;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 30px;
-    line-height: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: "Inconsolata", monospace;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 30px;
+  line-height: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .firstimg {
-    float: left;
-    zoom: 60%;
-    margin-left: 400px;
+  float: left;
+  zoom: 60%;
+  margin-left: 400px;
 }
 
 .firstcontent p {
-    color: white;
-    text-align: center;
-    margin-bottom: 0;
-    padding-right: 200px;
-    padding-left: 60px;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+  padding-right: 200px;
+  padding-left: 60px;
 }
 
 .slides {
-    position: relative;
-    display: block;
-    width: 595px;
+  position: relative;
+  display: block;
+  width: 595px;
 }
 
 .btn-left:not(hover) {
-    transition-duration: .3s;
-    display: block;
-    position: absolute;
-    left: -40px;
-    top: 210px;
-    background: none;
-    border-color: transparent;
-    font-size: 25px;
-    cursor: pointer;
-    border-radius: 50px;
-    padding: 5px 15px;
+  transition-duration: 0.3s;
+  display: block;
+  position: absolute;
+  left: -40px;
+  top: 210px;
+  background: none;
+  border-color: transparent;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 5px 15px;
 }
 
 .btn-left:hover {
-    transition-duration: .3s;
-    border-radius: 100px;
-    padding: 5px 15px;
-    left: -45px;
+  transition-duration: 0.3s;
+  border-radius: 100px;
+  padding: 5px 15px;
+  left: -45px;
 }
 
 .btn-right:not(hover) {
-    transition-duration: .3s;
-    display: block;
-    position: absolute;
-    right: -40px;
-    top: 210px;
-    background: none;
-    border-color: transparent;
-    font-size: 25px;
-    cursor: pointer;
-    border-radius: 50px;
-    padding: 5px 15px;
+  transition-duration: 0.3s;
+  display: block;
+  position: absolute;
+  right: -40px;
+  top: 210px;
+  background: none;
+  border-color: transparent;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 5px 15px;
 }
 
 .btn-right:hover {
-    transition-duration: .3s;
-    background-size: 50px;
-    border-radius: 100px;
-    padding: 5px 15px;
-    right: -45px;
+  transition-duration: 0.3s;
+  background-size: 50px;
+  border-radius: 100px;
+  padding: 5px 15px;
+  right: -45px;
 }
 
 .footer {
-    background-color: #1a1a1a;
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 50px;
-    text-align: center;
-    font-family: 'Inconsolata', monospace;
-    z-index: 1;
+  background-color: #1a1a1a;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+  z-index: 1;
 }
 
 .footer img {
-    width: 180px;
+  width: 180px;
 }
 
 #home {
-    position: absolute;
-    width: 100%;
-    bottom: -11%;
+  position: absolute;
+  width: 100%;
+  bottom: -11%;
 }
 
 .center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .center p {
-    font-size: 18px;
-    margin-top: 0px;
+  font-size: 18px;
+  margin-top: 0px;
 }
 
 .footerline {
-    height: 2px;
-    width: 30%;
-    background-color: white;
+  height: 2px;
+  width: 30%;
+  background-color: white;
 }
 
 .footerlinks {
-    margin-top: 10px;
-    margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .footerlinks a {
-    color: white;
-    text-decoration: underline;
-    font-size: 18px;
+  color: white;
+  text-decoration: underline;
+  font-size: 18px;
 }
