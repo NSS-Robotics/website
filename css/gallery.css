@@ -11,6 +11,15 @@
   justify-self: center;
   transition-duration: 0.2s;
 }
+#gallery video {
+  width: 90%;
+  height: auto;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  align-self: center;
+  justify-self: center;
+  transition-duration: 0.2s;
+}
 #gallery img:hover {
   width: 95%;
   transition-duration: 0.2s;
