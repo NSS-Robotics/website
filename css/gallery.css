@@ -11,9 +11,8 @@
   justify-self: center;
   transition-duration: 0.2s;
 }
-#gallery video {
+#gallery iframe {
   width: 90%;
-  height: auto;
   padding-top: 1.5%;
   padding-bottom: 1.5%;
   align-self: center;
