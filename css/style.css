@@ -132,6 +132,10 @@ body {
   font-size: large;
 }
 
+.space {
+  width: 13vw;
+}
+
 .left img {
   width: 10%;
   height: 10%;
