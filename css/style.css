@@ -1,20 +1,11 @@
 /* Entire Scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
-  background: #04303e;
-}
-
-/* Scrollbar Track */
-::-webkit-scrollbar-track {
-  background: rgb(255, 255, 255);
-  border-radius: 10px;
 }
 
 /* Draggy Thingy */
 ::-webkit-scrollbar-thumb {
-  background: #021b22;
-  width: 2px;
-  border-radius: 10px;
+  background: #8c8c8c;
 }
 
 html,
@@ -26,7 +17,7 @@ body {
 
 /* The Full Page Image Header */
 .header {
-  background: url("/imgs/headers/IMG_9396.jpg");
+  background: url("/imgs/headers/IMG_9396.webp");
   font-family: "Inconsolata", monospace;
   background-repeat: no-repeat;
   background-position: center;
