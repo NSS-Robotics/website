@@ -1,5 +1,4 @@
 /* Bouncing Arrow Effect */
-
 @keyframes bounce {
   0%,
   20%,
@@ -17,7 +16,6 @@
 }
 
 /* The typing effect */
-
 @keyframes typing {
   from {
     width: 0;
@@ -28,7 +26,6 @@
 }
 
 /* The typewriter cursor effect */
-
 @keyframes blink-caret {
   from,
   to {

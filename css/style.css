@@ -113,6 +113,7 @@ body {
   /* Adjust as needed */
   animation: blink-caret 0.75s step-end infinite;
 }
+
 /* Main Navbar Div */
 .navbar {
   display: flex;
@@ -121,23 +122,27 @@ body {
   padding-top: 25px;
   height: 40px;
   zoom: 110%;
-  z-index: 2 ;
+  z-index: 2;
   font-family: "Inconsolata", monospace;
 }
+
 .left {
   display: flex;
   color: white;
   font-size: large;
 }
+
 .space {
   width: 13vw;
 }
+
 .left img {
   width: 10%;
   height: 10%;
   align-self: center;
   padding-right: 10px;
 }
+
 /* Navbar Button */
 .dropbtn {
   font-family: "Inconsolata", monospace;
@@ -232,6 +237,7 @@ body {
   margin-right: auto;
   z-index: 2;
 }
+
 /* The Bouncing Arrow */
 .arrow {
   position: relative;
