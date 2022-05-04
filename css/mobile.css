@@ -71,6 +71,9 @@
   .btn-left:hover {
     left: 50px !important;
   }
+  .navbar {
+    zoom: 90% !important;
+  }
 }
 @media screen and (max-width: 480px) {
   html {
@@ -86,7 +89,7 @@
     font-size: 11px;
   }
   .navbar {
-    zoom: 70% !important;
+    zoom: 68% !important;
     flex-wrap: wrap;
     position: absolute;
     top: 2%;
