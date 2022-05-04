@@ -31,20 +31,6 @@ body {
   flex-flow: column;
 }
 
-/* The Home/Index Page Image Header */
-.bg {
-  background-image: url(/imgs/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-}
-
 /* The Semi-Transparent Black Overley On The Background Image */
 .black {
   background: black;
@@ -378,55 +364,6 @@ figcaption {
 
 .people figcaption {
   font-size: 20px;
-}
-
-.firstTitle {
-  font-family: "Inconsolata", monospace;
-  font-size: 30px;
-  color: white;
-  text-align: center;
-  text-decoration: underline;
-  margin-top: 100px;
-  margin-bottom: 5%;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 1;
-}
-
-.firstheader {
-  background: url("/imgs/3.jpg");
-  font-family: "Inconsolata", monospace;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-}
-
-.firstcontent {
-  font-family: "Inconsolata", monospace;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 30px;
-  line-height: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.firstimg {
-  float: left;
-  zoom: 60%;
-  margin-left: 400px;
-}
-
-.firstcontent p {
-  color: white;
-  text-align: center;
-  margin-bottom: 0;
-  padding-right: 200px;
-  padding-left: 60px;
 }
 
 .slides {
