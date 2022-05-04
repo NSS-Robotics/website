@@ -1,35 +1,6 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1385px) {
   html {
     overflow-x: hidden;
-  }
-  .title {
-    margin-top: 60% !important;
-  }
-  .title h1 {
-    font-size: 26px;
-  }
-  .subtitle p {
-    font-size: 11px;
-  }
-  .navbar {
-    zoom: 60% !important;
-  }
-  .outernav {
-    width: max-content;
-    zoom: 100%;
-  }
-  .header {
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100vw !important;
-  }
-  .black {
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100vw !important;
-  }
-  .home {
-    background-size: 190vh !important;
   }
   .about-us {
     flex-direction: column;
@@ -39,17 +10,9 @@
     width: 100vw;
     text-align: center !important;
   }
-  .about-us p {
-    margin-right: 15px;
-    margin-left: 15px;
-  }
   .about-us img {
     width: 90% !important;
     height: auto !important;
-  }
-  .ourteam {
-    font-size: 19px !important;
-    width: auto !important;
   }
   .teams {
     display: flex;
@@ -64,32 +27,30 @@
     text-align: center;
     width: 100vw !important;
   }
-  #boop {
-    margin-top: 60px;
-  }
   .teams img {
     display: flex;
     width: 95vw !important;
     height: auto !important;
     float: none !important;
+    margin-left: 1% !important;
   }
   .slides {
-    display: flex;
     width: 98% !important;
     height: auto;
     float: none;
-    margin-left: 10px;
+    margin-left: 1%;
   }
   .teams p {
-    padding-right: 50px;
-    padding-left: 50px;
     text-align: center;
-    width: 75vw !important;
+    width: 100vw !important;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .btn-right {
-    right: 65px !important;
+    right: 25px !important;
     top: 270px !important;
     color: black;
+    background-color: white !important;
     background-size: 50px !important;
     border-radius: 100px;
     padding: 11px 20px;
@@ -99,31 +60,67 @@
     right: 50px !important;
   }
   .btn-left {
-    left: 15px !important;
+    left: 25px !important;
     top: 270px !important;
     color: black;
+    background-color: white !important;
     border-radius: 100px;
     padding: 11px 20px;
     text-decoration: none;
   }
   .btn-left:hover {
-    left: 0px !important;
+    left: 50px !important;
+  }
+  .navbar {
+    zoom: 90% !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    overflow-x: hidden;
+  }
+  .title {
+    margin-top: 60% !important;
+  }
+  .title h1 {
+    font-size: 26px;
+  }
+  .subtitle p {
+    font-size: 11px;
+  }
+  .navbar {
+    zoom: 68% !important;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 2%;
+  }
+  .space {
+    display: none;
+  }
+  .header {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw !important;
+  }
+  .black {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw !important;
+  }
+  .home {
+    background-size: 190vh !important;
+  }
+  .ourteam {
+    font-size: 19px !important;
+    width: auto !important;
+  }
+  #boop {
+    margin-top: 60px;
   }
   .people {
     width: 100vw;
   }
-  .firstheader {
-    overflow-y: scroll !important;
-  }
-  .firstcontent {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-  .firstcontent p {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  .firstcontent img {
-    display: none;
+  .left {
+    justify-content: center;
   }
 }

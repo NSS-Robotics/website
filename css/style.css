@@ -1,20 +1,11 @@
 /* Entire Scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
-  background: #04303e;
-}
-
-/* Scrollbar Track */
-::-webkit-scrollbar-track {
-  background: rgb(255, 255, 255);
-  border-radius: 10px;
 }
 
 /* Draggy Thingy */
 ::-webkit-scrollbar-thumb {
-  background: #021b22;
-  width: 2px;
-  border-radius: 10px;
+  background: #8c8c8c;
 }
 
 html,
@@ -26,7 +17,7 @@ body {
 
 /* The Full Page Image Header */
 .header {
-  background: url("/imgs/headers/IMG_9396.jpg");
+  background: url("/imgs/headers/IMG_9396.webp");
   font-family: "Inconsolata", monospace;
   background-repeat: no-repeat;
   background-position: center;
@@ -122,26 +113,31 @@ body {
   /* Adjust as needed */
   animation: blink-caret 0.75s step-end infinite;
 }
-
 /* Main Navbar Div */
 .navbar {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-top: 25px;
   height: 40px;
   zoom: 110%;
+  z-index: 2 ;
+  font-family: "Inconsolata", monospace;
 }
-
-.navbar img {
-  z-index: 1;
+.left {
+  display: flex;
+  color: white;
+  font-size: large;
 }
-
-.outernav {
-  z-index: 3;
-  position: absolute;
-  top: 0;
+.space {
+  width: 13vw;
 }
-
+.left img {
+  width: 10%;
+  height: 10%;
+  align-self: center;
+  padding-right: 10px;
+}
 /* Navbar Button */
 .dropbtn {
   font-family: "Inconsolata", monospace;
@@ -150,7 +146,6 @@ body {
   text-decoration: underline solid transparent;
   padding: 30px;
   font-size: 18px;
-  font-weight: bold;
   border: none;
   cursor: pointer;
   transform: translate(-50%, -50%);
@@ -158,6 +153,7 @@ body {
 
 .dropbtn:hover {
   text-decoration: underline solid white;
+  text-decoration-thickness: 2px;
   transition-duration: 0.3s;
 }
 
