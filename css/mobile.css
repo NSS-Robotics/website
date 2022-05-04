@@ -12,11 +12,13 @@
     font-size: 11px;
   }
   .navbar {
-    zoom: 60% !important;
+    zoom: 70% !important;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 2%;
   }
-  .outernav {
-    width: max-content;
-    zoom: 100%;
+  .space {
+    display: none;
   }
   .header {
     background-repeat: no-repeat;
