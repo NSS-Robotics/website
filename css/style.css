@@ -113,7 +113,6 @@ body {
   /* Adjust as needed */
   animation: blink-caret 0.75s step-end infinite;
 }
-
 /* Main Navbar Div */
 .navbar {
   display: flex;
@@ -125,24 +124,20 @@ body {
   z-index: 2 ;
   font-family: "Inconsolata", monospace;
 }
-
 .left {
   display: flex;
   color: white;
   font-size: large;
 }
-
 .space {
   width: 13vw;
 }
-
 .left img {
   width: 10%;
   height: 10%;
   align-self: center;
   padding-right: 10px;
 }
-
 /* Navbar Button */
 .dropbtn {
   font-family: "Inconsolata", monospace;
@@ -158,6 +153,7 @@ body {
 
 .dropbtn:hover {
   text-decoration: underline solid white;
+  text-decoration-thickness: 2px;
   transition-duration: 0.3s;
 }
 
