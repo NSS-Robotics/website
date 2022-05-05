@@ -108,7 +108,7 @@ body {
   padding-top: 25px;
   height: 40px;
   zoom: 110%;
-  z-index: 2;
+  z-index: 3;
   font-family: "Inconsolata", monospace;
 }
 
