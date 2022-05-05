@@ -46,7 +46,7 @@
   width: 100%;
   bottom: 0;
   z-index: 101;
-  background-color: black;
+  background-color: #3C4B57;
   pointer-events: none;
   transition: 0.5s ease-out;
 }
@@ -75,7 +75,7 @@
   }
 }
 body {
-  background-image: radial-gradient(circle farthest-corner at center, #3C4B57 0%, #1C262B 100%);
+  background-image: radial-gradient(circle farthest-corner at center   0%, #1C262B 100%);
 }
 
 .loader {
