@@ -49,7 +49,12 @@
   background-color: #1C262B;
   pointer-events: none;
   transition: 0.5s ease-out;
+<<<<<<< Updated upstream
   background-image: radial-gradient(circle farthest-corner at center, #2f3b45 0%, #1C262B 100%);
+=======
+  background-image: radial-gradient(circle farthest-corner at center, #21292f 0%, #0f1417 100%);
+
+>>>>>>> Stashed changes
 }
 .transition.is-active {
   right: 0px;
@@ -98,21 +103,21 @@
   left: 0%;
   top: 0%;
   animation: rotate-one 1s linear infinite;
-  border-bottom: 3px solid #EFEFFA;
+  border-bottom: 3px solid #de272a ;
 }
 
 .inner.two {
   right: 0%;
   top: 0%;
   animation: rotate-two 1s linear infinite;
-  border-right: 3px solid #EFEFFA;
+  border-right: 3px solid #ff512f;
 }
 
 .inner.three {
   right: 0%;
   bottom: 0%;
   animation: rotate-three 1s linear infinite;
-  border-top: 3px solid #EFEFFA;
+  border-top: 3px solid rgb(220, 201, 31);
 }
 
 @keyframes rotate-one {
