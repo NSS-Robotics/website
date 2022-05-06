@@ -46,9 +46,11 @@
   width: 100%;
   bottom: 0;
   z-index: 101;
-  background-color: #3C4B57;
+  background-color: #1C262B;
   pointer-events: none;
   transition: 0.5s ease-out;
+  background-image: radial-gradient(circle farthest-corner at center, #21292f 0%, #0f1417 100%);
+
 }
 .transition.is-active {
   right: 0px;
@@ -74,10 +76,6 @@
     transform: rotate(1turn);
   }
 }
-body {
-  background-image: radial-gradient(circle farthest-corner at center   0%, #1C262B 100%);
-}
-
 .loader {
   position: absolute;
   top: calc(50% - 100px);
