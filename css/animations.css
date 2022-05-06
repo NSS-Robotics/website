@@ -49,12 +49,8 @@
   background-color: #1C262B;
   pointer-events: none;
   transition: 0.5s ease-out;
-<<<<<<< Updated upstream
-  background-image: radial-gradient(circle farthest-corner at center, #2f3b45 0%, #1C262B 100%);
-=======
   background-image: radial-gradient(circle farthest-corner at center, #21292f 0%, #0f1417 100%);
 
->>>>>>> Stashed changes
 }
 .transition.is-active {
   right: 0px;
