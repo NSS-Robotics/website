@@ -487,3 +487,9 @@ figcaption {
   transition-duration: 300ms;
   background-color: #536676;
 }
+.backtotoparrow {
+  height: 80%;
+  width: auto;
+  margin-top: 3px;
+  margin-left: 1px;
+}
