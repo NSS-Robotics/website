@@ -14,54 +14,36 @@
     width: 90% !important;
     height: auto !important;
   }
-  .teams {
-    display: flex;
-    flex-wrap: wrap !important;
-    align-items: center;
-    margin-top: 10%;
-    gap: 50px;
-    text-align: left;
-    width: 100vw !important;
-  }
-  .teams h3 {
-    text-align: center;
-    width: 100vw !important;
-  }
-  .teams img {
-    display: flex;
-    width: 95vw !important;
-    height: auto !important;
-    float: none !important;
-    margin-left: 1% !important;
-  }
   .slides {
     width: 98% !important;
     height: auto;
     float: none;
-    margin-left: 1%;
+  }
+  .teams img {
+    padding-left: 40px;
   }
   .teams p {
     text-align: center;
-    width: 100vw !important;
+    width: auto !important;
     padding-left: 10px;
     padding-right: 10px;
   }
   .btn-right {
-    right: 25px !important;
-    top: 270px !important;
+    right: 110px !important;
+    top: 250px !important;
+    position: relative !important;
     color: black;
     background-color: white !important;
-    background-size: 50px !important;
     border-radius: 100px;
     padding: 11px 20px;
     text-decoration: none;
   }
   .btn-right:hover {
-    right: 50px !important;
+    right: 115px !important;
   }
   .btn-left {
-    left: 25px !important;
-    top: 270px !important;
+    left: 50px !important;
+    top: 250px !important;
     color: black;
     background-color: white !important;
     border-radius: 100px;
@@ -69,13 +51,16 @@
     text-decoration: none;
   }
   .btn-left:hover {
-    left: 50px !important;
+    left: 45px !important;
   }
   .navbar {
     zoom: 90% !important;
   }
+  #boop {
+    margin-top: 0px !important;
+  }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
   html {
     overflow-x: hidden;
   }
@@ -122,5 +107,25 @@
   }
   .left {
     justify-content: center;
+  }
+  .teams img {
+    display: flex;
+    width: 95vw !important;
+    height: auto !important;
+    float: none !important;
+    margin-left: 1% !important;
+  }
+  .btn-right {
+    right: 105px !important;
+    top: 270px !important;
+    position: absolute !important;
+    color: black;
+    background-color: white !important;
+    border-radius: 100px;
+    padding: 11px 20px;
+    text-decoration: none;
+  }
+  .btn-right:hover {
+    right: 50px !important;
   }
 }
