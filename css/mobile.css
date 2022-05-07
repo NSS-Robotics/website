@@ -30,7 +30,7 @@
   }
   .btn-right {
     right: 110px !important;
-    top: 250px !important;
+    top: 220px !important;
     position: relative !important;
     color: black;
     background-color: white !important;
@@ -43,7 +43,7 @@
   }
   .btn-left {
     left: 50px !important;
-    top: 250px !important;
+    top: 220px !important;
     color: black;
     background-color: white !important;
     border-radius: 100px;
@@ -115,9 +115,14 @@
     float: none !important;
     margin-left: 1% !important;
   }
+  .teams p {
+    width: 100vw !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
   .btn-right {
-    right: 105px !important;
-    top: 270px !important;
+    right: 45px !important;
+    top: 250px !important;
     position: absolute !important;
     color: black;
     background-color: white !important;
@@ -126,6 +131,18 @@
     text-decoration: none;
   }
   .btn-right:hover {
-    right: 50px !important;
+    right: 40px !important;
+  }
+  .btn-left {
+    left: 60px !important;
+    top: 250px !important;
+    color: black;
+    background-color: white !important;
+    border-radius: 100px;
+    padding: 11px 20px;
+    text-decoration: none;
+  }
+  .btn-left:hover {
+    left: 55px !important;
   }
 }
