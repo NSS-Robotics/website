@@ -30,7 +30,3 @@
   justify-self: center;
   transition-duration: 0.2s;
 }
-#gallery img:hover {
-  width: 95%;
-  transition-duration: 0.2s;
-}
