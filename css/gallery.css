@@ -20,7 +20,6 @@
   padding-bottom: 1.5%;
   align-self: center;
   justify-self: center;
-  transition-duration: 0.2s;
 }
 #gallery iframe {
   width: 90%;
@@ -28,9 +27,4 @@
   padding-bottom: 1.5%;
   align-self: center;
   justify-self: center;
-  transition-duration: 0.2s;
-}
-#gallery img:hover {
-  width: 95%;
-  transition-duration: 0.2s;
 }
