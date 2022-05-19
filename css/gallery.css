@@ -3,11 +3,6 @@
     grid-template-columns: auto auto !important;
   }
 }
-@media screen and (max-width: 480px) {
-  #gallery {
-    grid-template-columns: auto !important;
-  }
-}
 
 #gallery {
   display: grid;
