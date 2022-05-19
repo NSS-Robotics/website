@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/css/mobile.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/aos.css">
+
     <title>NSS Robotics - Home</title>
     
     <!-- Facebook Meta Tags -->
@@ -39,7 +41,7 @@
         </div>
     </div>
     <div class="header" style="background: url(../imgs/headers/background.webp); background-repeat: no-repeat; background-position: center; background-size: cover;">
-            <div class="navbar">
+            <div class="navbar" data-aos="fade-down">
                 <div class="left">
                     <img id="surprise" src="/imgs/favicon.ico">
                     <p>Crimson Revolution #8884</p>
@@ -70,7 +72,7 @@
                 </div>
             </div>
         <div class="black" style="z-index: 1;"></div>
-        <div class="ourTeamTitle" style="margin-top: 0;">
+        <div class="ourTeamTitle" style="margin-top: 0;" data-aos="fade-up">
             <div class="title">
                 <h1>Crimson Revolution</h1>
             </div>
@@ -92,6 +94,13 @@
             <a class="except" href="https://vercel.com/?utm_source=nssrobotics&utm_campaign=oss"><img src="/imgs/vercel.svg"></a>
         </div>   
     </div>
+    <script src="/js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            delay: 800,
+        });
+    </script>
 </body>
 <script src="/js/mobilenotif.js"></script>
 <script src="/js/transition.js"></script>
