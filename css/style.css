@@ -484,7 +484,8 @@ figcaption {
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
 }
-#back-to-top-btn:hover, #back-to-top-btn:focus {
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
   transition-duration: 300ms;
   background-color: rgb(89, 89, 89);
   border: 3px solid rgb(89, 89, 89);

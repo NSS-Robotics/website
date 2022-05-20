@@ -46,11 +46,14 @@
   width: 100%;
   bottom: 0;
   z-index: 101;
-  background-color: #1C262B;
+  background-color: #1c262b;
   pointer-events: none;
   transition: 0.5s ease-out;
-  background-image: radial-gradient(circle farthest-corner at center, #21292f 0%, #0f1417 100%);
-
+  background-image: radial-gradient(
+    circle farthest-corner at center,
+    #21292f 0%,
+    #0f1417 100%
+  );
 }
 .transition.is-active {
   right: 0px;
@@ -91,14 +94,14 @@
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border-radius: 50%;  
+  border-radius: 50%;
 }
 
 .inner.one {
   left: 0%;
   top: 0%;
   animation: rotate-one 1s linear infinite;
-  border-bottom: 3px solid #c1282d ;
+  border-bottom: 3px solid #c1282d;
 }
 
 .inner.two {
@@ -158,7 +161,7 @@
 }
 .btnExit {
   animation-duration: 0.25s;
-  animation-fill-mode: both;  
+  animation-fill-mode: both;
   animation-name: btnExit;
 }
 /* fadeOutDown */
