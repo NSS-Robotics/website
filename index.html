@@ -1,100 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/mobile.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/animations.css">
-    <title>NSS Robotics - Home</title>
-    
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://nssrobodevs.gq/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="NSS Robotics - Home">
-    <meta property="og:image" content="https://raw.githubusercontent.com/NSS-Robotics/website/master/imgs/embeds/index.jpg">
-    
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="nssrobodevs.gq">
-    <meta property="twitter:url" content="https://nssrobodevs.gq/">
-    <meta name="twitter:title" content="NSS Robotics - Home">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/NSS-Robotics/website/master/imgs/embeds/index.jpg">
+  <head>
+    <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/mobile.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/aos.css" />
 
-</head>
-<body style="overflow-x: hidden; background-color: #1a1a1a;">
+    <title>NSS Robotics - Home</title>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://nssrobodevs.gq/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NSS Robotics - Home" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/NSS-Robotics/website/master/imgs/embeds/index.jpg"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="nssrobodevs.gq" />
+    <meta property="twitter:url" content="https://nssrobodevs.gq/" />
+    <meta name="twitter:title" content="NSS Robotics - Home" />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/NSS-Robotics/website/master/imgs/embeds/index.jpg"
+    />
+  </head>
+  <body style="overflow-x: hidden; background-color: #1a1a1a">
     <div class="transition loading loading--full-height transition is-active">
-        <div class="loader">
-            <div class="inner one"></div>
-            <div class="inner two"></div>
-            <div class="inner three"></div>
+      <div class="loader">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+      </div>
+      <div class="loading-title">
+        <div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="header"
+      style="
+        background: url(../imgs/headers/background.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      "
+    >
+      <div class="navbar">
+        <div class="left" data-aos="fade-down" data-aos-delay="700">
+          <img id="surprise" src="../imgs/favicon.ico" />
+          <p>Crimson Revolution #8884</p>
+        </div>
+        <span class="space"></span>
+        <div class="right">
+          <div class="dropdown" data-aos="fade-down" data-aos-delay="800">
+            <a class="dropbtn" href="index.html">Home</a>
           </div>
-        <div class="loading-title">
-            <div>
-                <p>Loading...</p>
+          <div class="dropdown" data-aos="fade-down" data-aos-delay="900">
+            <a href="html/about.html" class="dropbtn">About Us</a>
+            <div class="dropdown-content">
+              <a class="except" href="html/about.html#whoarewe">Who Are We?</a>
+              <a class="except" href="html/about.html#teams">Our Subteams</a>
+              <a class="except" href="html/about.html#people">Our Members</a>
+              <a
+                class="except"
+                href="https://www.firstinspires.org/robotics/frc"
+                target="_blank"
+                >First Robotics</a
+              >
             </div>
+          </div>
+          <div class="dropdown" data-aos="fade-down" data-aos-delay="1000">
+            <a class="dropbtn" href="html/gallery.html">Gallery</a>
+          </div>
+          <div class="dropdown" data-aos="fade-down" data-aos-delay="1100">
+            <a class="dropbtn" id="except" style="cursor: default"
+              >Contact Us</a
+            >
+            <div class="dropdown-content">
+              <a class="except" href="mailto:nss.roboticsclub@gmail.com"
+                >Email Us</a
+              >
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="header" style="background: url(../imgs/headers/background.webp); background-repeat: no-repeat; background-position: center; background-size: cover;">
-            <div class="navbar">
-                <div class="left">
-                    <img id="surprise" src="/imgs/favicon.ico">
-                    <p>Crimson Revolution #8884</p>
-                </div>
-                <span class="space"></span>
-                <div class="right">
-                    <div class="dropdown">
-                        <a class="dropbtn" href="index.html">Home</a>
-                    </div>
-                    <div class="dropdown">
-                        <a href="/html/about.html" class="dropbtn">About Us</a>
-                        <div class="dropdown-content">
-                            <a href="/html/about.html#whoarewe">Who Are We?</a>
-                            <a href="/html/about.html#teams">Our Subteams</a>
-                            <a href="/html/about.html#people">Our Members</a>
-                            <a class="except" href="https://www.firstinspires.org/robotics/frc" target="_blank">First Robotics</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <a class="dropbtn" href="/html/gallery.html">Gallery</a>
-                    </div>
-                    <div class="dropdown">
-                        <a class="dropbtn" id="except" style="cursor: default;">Contact Us</a>
-                        <div class="dropdown-content">
-                            <a class="except" href="mailto:nss.roboticsclub@gmail.com">Email Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <div class="black" style="z-index: 1;"></div>
-        <div class="ourTeamTitle" style="margin-top: 0;">
-            <div class="title">
-                <h1>Crimson Revolution</h1>
-            </div>
-            <div class="subtitle">
-                <p>Northern FIRST Robotics Team #8884</p>
-            </div>
+      </div>
+      <div class="black" style="z-index: 1"></div>
+      <div class="ourTeamTitle" style="margin-top: 0" data-aos="fade-up">
+        <div class="title">
+          <h1>Crimson Revolution</h1>
         </div>
+        <div class="subtitle">
+          <p>Northern FIRST Robotics Team #8884</p>
+        </div>
+      </div>
     </div>
-    <div class="footer" id="home" style="bottom: -20%;">
-        <div class="center">
-            <div>
-                <p>&copy; NSS Robotics 2022</p>
-            </div>
-            <div class="footerline"></div>
-            <div class="footerlinks">
-                <a class="except" href="https://github.com/NSS-Robotics/website" target="_blank">Source Code</a>
-                <a class="except" href="mailto:nss.roboticsclub@gmail.com">Contact Us</a>
-            </div>
-            <a class="except" href="https://vercel.com/?utm_source=nssrobotics&utm_campaign=oss"><img src="/imgs/vercel.svg"></a>
-        </div>   
+    <div class="footer" id="home" style="bottom: -20%">
+      <div class="center">
+        <div>
+          <p>&copy; NSS Robotics 2022</p>
+        </div>
+        <div class="footerline"></div>
+        <div class="footerlinks">
+          <a
+            class="except"
+            href="https://github.com/NSS-Robotics/website"
+            target="_blank"
+            >Source Code</a
+          >
+          <a class="except" href="mailto:nss.roboticsclub@gmail.com"
+            >Contact Us</a
+          >
+        </div>
+        <a
+          class="except"
+          href="https://vercel.com/?utm_source=nssrobotics&utm_campaign=oss"
+          ><img src="/imgs/vercel.svg"
+        /></a>
+      </div>
     </div>
-</body>
-<script src="/js/mobilenotif.js"></script>
-<script src="/js/transition.js"></script>
-<script src="/js/surprise.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        delay: 800,
+      });
+    </script>
+  </body>
+  <script src="/js/mobilenotif.js"></script>
+  <script src="/js/transition.js"></script>
+  <script src="/js/surprise.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </html>
