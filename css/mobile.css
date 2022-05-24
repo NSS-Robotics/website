@@ -63,6 +63,11 @@
     padding-right: 30px;
   }
 }
+@media screen and (max-width: 1030px) {
+  .navbar {
+    zoom: 70% !important;
+  }
+}
 @media screen and (max-width: 800px) {
   html {
     overflow-x: hidden;
