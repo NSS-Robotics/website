@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 /* Entire Scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
@@ -18,7 +20,7 @@ body {
 /* The Full Page Image Header */
 .header {
   background: url("/imgs/headers/IMG_9396.webp");
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -45,7 +47,7 @@ body {
 
 /* Big Title Text */
 .title {
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   font-size: 30px;
   color: white;
   text-align: center;
@@ -59,7 +61,7 @@ body {
 
 /* Mini Subtitle Text */
 .subtitle {
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   font-size: 25px;
   color: white;
   text-align: center;
@@ -70,7 +72,7 @@ body {
 }
 
 .loading-title p {
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   color: white;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
@@ -95,7 +97,7 @@ body {
   z-index: 3;
   position: absolute;
   top: 0;
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
 }
 
 .left {
@@ -117,7 +119,7 @@ body {
 
 /* Navbar Button */
 .dropbtn {
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   color: white;
   text-decoration: underline solid transparent;
@@ -143,7 +145,7 @@ body {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   display: none;
   position: absolute;
   border-radius: 10px;
@@ -190,14 +192,14 @@ body {
 
 /* "Scroll Down" Text */
 #downText {
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   color: white;
 }
 
 /* Kinda Self Explanitory */
 .ourTeamTitle {
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   font-size: 30px;
   color: white;
   text-align: center;
@@ -228,7 +230,7 @@ body {
 
 /* The Text Under The Big Image */
 .content {
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   color: black;
   margin-top: 25px;
   line-height: 2;
@@ -252,7 +254,7 @@ body {
   justify-content: center;
   margin-top: 10%;
   gap: 50px;
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   color: black;
   text-align: left;
   width: fit-content;
@@ -299,7 +301,7 @@ body {
   row-gap: 30px;
   align-items: center;
   justify-content: center;
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   color: black;
   margin-top: 7%;
   width: auto;
@@ -424,7 +426,7 @@ figcaption {
   padding-bottom: 10px;
   margin-top: 50px;
   text-align: center;
-  font-family: "Inconsolata", monospace;
+  font-family: "Poppins", sans-serif;
   z-index: 1;
 }
 
