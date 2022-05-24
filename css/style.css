@@ -256,6 +256,7 @@ body {
   color: black;
   text-align: left;
   width: fit-content;
+  padding-right: 30px;
 }
 
 .about-us img {
