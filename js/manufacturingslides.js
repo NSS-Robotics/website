@@ -19,3 +19,8 @@ function showDivs(n) {
   }
   x[slideIndex - 1].style.display = "block";
 }
+
+// auto advance the slide show every 1 second
+var autplay = setInterval(function () {
+  plusDivs(1);
+}, 3000);

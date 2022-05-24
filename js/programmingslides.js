@@ -19,3 +19,6 @@ function programmingshowDivs(n) {
   }
   x[slideIndex - 1].style.display = "block";
 }
+var autplay = setInterval(function () {
+  programmingplusDivs(1);
+}, 3000);
