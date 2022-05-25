@@ -31,7 +31,7 @@
       content="https://raw.githubusercontent.com/NSS-Robotics/website/master/imgs/embeds/index.jpg"
     />
   </head>
-  <body style="overflow-x: hidden; background-color: #1a1a1a">
+  <body style="overflow-x: hidden">
     <div class="transition loading loading--full-height transition is-active">
       <div class="loader">
         <div class="inner one"></div>
@@ -93,7 +93,13 @@
         </div>
       </div>
       <div class="black" style="z-index: 1"></div>
-      <div class="ourTeamTitle" style="margin-top: 0" data-aos="fade-up">
+      <div
+        class="ourTeamTitle"
+        style="margin-top: 0"
+        data-aos-delay="800"
+        data-aos-duration="800"
+        data-aos="fade-up"
+      >
         <div class="title">
           <h1>Crimson Revolution</h1>
         </div>
@@ -101,8 +107,41 @@
           <p>Northern FIRST Robotics Team #8884</p>
         </div>
       </div>
+      <div class="goDown">
+        <div class="arrow bounce"></div>
+        <p id="downText">Scroll Down</p>
+      </div>
     </div>
-    <div class="footer" id="home" style="bottom: -20%">
+    <div class="wooshies">
+      <div class="aboutwoosh" data-aos="fade-right">
+        <div class="wooshgroup">
+          <h2>Who Are We?</h2>
+          <p>Learn a bit more about us and our team.</p>
+          <a href="html/about.html">About Us</a>
+        </div>
+        <img src="imgs/embeds/aboutus.jpg" alt="" />
+      </div>
+      <div class="gallerywoosh" data-aos="fade-left">
+        <img src="imgs/embeds/gallery.jpg" alt="" />
+        <div class="wooshgroup">
+          <h2>Gallery</h2>
+          <p>
+            Experiece our first year competeing in the FIRST Robotics
+            Competition!
+          </p>
+          <a href="html/gallery.html">Gallery</a>
+        </div>
+      </div>
+      <div class="firstwoosh" data-aos="fade-right">
+        <div class="wooshgroup">
+          <h2>FIRST Robotics</h2>
+          <p>Learn more about the FIRST Robotics Competition</p>
+          <a href="https://www.firstinspires.org/robotics/frc">FIRST Website</a>
+        </div>
+        <img src="imgs/embeds/aboutus.jpg" alt="" />
+      </div>
+    </div>
+    <div class="footer">
       <div class="center">
         <div>
           <p>&copy; NSS Robotics 2022</p>
@@ -129,8 +168,8 @@
     <script src="/js/aos.js"></script>
     <script>
       AOS.init({
-        duration: 800,
-        delay: 800,
+        duration: 900,
+        delay: 200,
       });
     </script>
   </body>
