@@ -245,7 +245,7 @@ body {
   justify-content: center;
   margin-top: 10%;
   gap: 50px;
-
+  width: fit-content;
   color: black;
   text-align: left;
   width: fit-content;
