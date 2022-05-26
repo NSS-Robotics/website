@@ -220,6 +220,14 @@ body {
   animation: bounce 2s infinite;
 }
 
+.leftbounce {
+  animation: leftbounce 2s infinite;
+}
+
+.rightbounce {
+  animation: rightbounce 2s infinite;
+}
+
 /* The Text Under The Big Image */
 .content {
   color: black;
@@ -386,6 +394,7 @@ figcaption {
   border-radius: 100px;
   padding: 5px 15px;
   left: -45px;
+  animation: none;
 }
 
 .btn-right:not(hover) {
@@ -408,6 +417,7 @@ figcaption {
   border-radius: 100px;
   padding: 5px 15px;
   right: -45px;
+  animation: none;
 }
 
 .footer {
