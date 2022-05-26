@@ -511,6 +511,7 @@ figcaption {
   width: 600px;
   height: auto;
   padding: 15px;
+  border-radius: 30px;
 }
 .wooshies p {
   padding-left: 15px;
