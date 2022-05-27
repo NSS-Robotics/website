@@ -233,18 +233,6 @@ body {
   line-height: 2;
 }
 
-.grid-container {
-  text-align: center;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto auto auto auto;
-}
-
-.grid-container img {
-  width: 300px;
-}
-
 .about-us {
   display: flex;
   flex-wrap: nowrap;
@@ -431,12 +419,6 @@ figcaption {
 
 .footer img {
   width: 180px;
-}
-
-#home {
-  position: absolute;
-  width: 100%;
-  bottom: -11%;
 }
 
 .center {
