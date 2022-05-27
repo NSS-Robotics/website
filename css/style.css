@@ -13,12 +13,12 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
 
 /* The Full Page Image Header */
 .header {
   background: url("/imgs/headers/IMG_9396.webp");
-  font-family: "Inconsolata", monospace;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -45,7 +45,6 @@ body {
 
 /* Big Title Text */
 .title {
-  font-family: "Inconsolata", monospace;
   font-size: 30px;
   color: white;
   text-align: center;
@@ -59,7 +58,6 @@ body {
 
 /* Mini Subtitle Text */
 .subtitle {
-  font-family: "Inconsolata", monospace;
   font-size: 25px;
   color: white;
   text-align: center;
@@ -70,7 +68,6 @@ body {
 }
 
 .loading-title p {
-  font-family: "Inconsolata", monospace;
   color: white;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
@@ -95,7 +92,6 @@ body {
   z-index: 3;
   position: absolute;
   top: 0;
-  font-family: "Inconsolata", monospace;
 }
 
 .left {
@@ -117,7 +113,6 @@ body {
 
 /* Navbar Button */
 .dropbtn {
-  font-family: "Inconsolata", monospace;
   text-decoration: none;
   color: white;
   text-decoration: underline solid transparent;
@@ -143,7 +138,6 @@ body {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  font-family: "Inconsolata", monospace;
   display: none;
   position: absolute;
   border-radius: 10px;
@@ -190,14 +184,12 @@ body {
 
 /* "Scroll Down" Text */
 #downText {
-  font-family: "Inconsolata", monospace;
   font-size: 20px;
   color: white;
 }
 
 /* Kinda Self Explanitory */
 .ourTeamTitle {
-  font-family: "Inconsolata", monospace;
   font-size: 30px;
   color: white;
   text-align: center;
@@ -226,24 +218,19 @@ body {
   animation: bounce 2s infinite;
 }
 
+.leftbounce {
+  animation: leftbounce 2s infinite;
+}
+
+.rightbounce {
+  animation: rightbounce 2s infinite;
+}
+
 /* The Text Under The Big Image */
 .content {
-  font-family: "Inconsolata", monospace;
   color: black;
   margin-top: 25px;
   line-height: 2;
-}
-
-.grid-container {
-  text-align: center;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto auto auto auto;
-}
-
-.grid-container img {
-  width: 300px;
 }
 
 .about-us {
@@ -252,10 +239,11 @@ body {
   justify-content: center;
   margin-top: 10%;
   gap: 50px;
-  font-family: "Inconsolata", monospace;
+  width: fit-content;
   color: black;
   text-align: left;
   width: fit-content;
+  padding-right: 30px;
 }
 
 .about-us img {
@@ -298,7 +286,7 @@ body {
   row-gap: 30px;
   align-items: center;
   justify-content: center;
-  font-family: "Inconsolata", monospace;
+
   color: black;
   margin-top: 7%;
   width: auto;
@@ -392,6 +380,7 @@ figcaption {
   border-radius: 100px;
   padding: 5px 15px;
   left: -45px;
+  animation: none;
 }
 
 .btn-right:not(hover) {
@@ -414,6 +403,7 @@ figcaption {
   border-radius: 100px;
   padding: 5px 15px;
   right: -45px;
+  animation: none;
 }
 
 .footer {
@@ -423,18 +413,12 @@ figcaption {
   padding-bottom: 10px;
   margin-top: 50px;
   text-align: center;
-  font-family: "Inconsolata", monospace;
+
   z-index: 1;
 }
 
 .footer img {
   width: 180px;
-}
-
-#home {
-  position: absolute;
-  width: 100%;
-  bottom: -11%;
 }
 
 .center {
@@ -495,4 +479,60 @@ figcaption {
   width: auto;
   margin-top: 3px;
   margin-left: 1px;
+}
+.wooshies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.wooshies img {
+  width: 600px;
+  height: auto;
+  padding: 15px;
+  border-radius: 30px;
+}
+.wooshies p {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10%;
+  width: 300px;
+}
+.wooshies a {
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+}
+.wooshgroup {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.aboutwoosh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  width: 75vw;
+}
+.gallerywoosh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  width: 75vw;
+}
+.firstwoosh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  width: 75vw;
 }
