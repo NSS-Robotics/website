@@ -441,15 +441,19 @@ figcaption {
 }
 
 .footerlinks {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
 }
 
-.footerlinks a {
-  color: white;
-  text-decoration: underline;
-  font-size: 18px;
+.footerlinks img {
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 10x;
+  justify-self: center;
 }
+
 #back-to-top-btn {
   display: none;
   position: fixed;
