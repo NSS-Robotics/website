@@ -60,7 +60,24 @@
   }
   #boop {
     margin-top: -50px !important;
-    padding-right: 30px ;
+    padding-right: 30px;
+  }
+  .aboutwoosh {
+    width: 100% !important;
+  }
+  .gallerywoosh {
+    width: 100% !important;
+  }
+  .firstwoosh {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .navbar {
+    zoom: 70% !important;
+  }
+  .wooshies img {
+    width: 400px !important;
   }
 }
 @media screen and (max-width: 800px) {
@@ -94,9 +111,6 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 100vw !important;
-  }
-  .home {
-    background-size: 190vh !important;
   }
   .ourteam {
     font-size: 19px !important;
@@ -153,5 +167,14 @@
   }
   .btn-left:hover {
     left: 55px !important;
+  }
+  .wooshies img {
+    width: 300px !important;
+  }
+  .aboutwoosh {
+    flex-wrap: wrap-reverse !important;
+  }
+  .firstwoosh {
+    flex-wrap: wrap-reverse !important;
   }
 }
