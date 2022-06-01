@@ -21,3 +21,10 @@ function changeBG() {
 }
 
 setInterval(changeBG, 5000);
+
+function initBg() {
+  const header = document.querySelector(".header");
+  header.style.backgroundImage = "url(../imgs/headers/auto/1.webp";
+}
+
+document.onload = initBg();
