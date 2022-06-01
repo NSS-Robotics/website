@@ -540,3 +540,10 @@ figcaption {
   margin-top: 50px;
   width: 75vw;
 }
+.donatewoosh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  width: 75vw;
+}
