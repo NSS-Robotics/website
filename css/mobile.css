@@ -178,3 +178,8 @@
     flex-wrap: wrap-reverse !important;
   }
 }
+@media screen and (max-width: 482px) {
+  .navbar {
+    zoom: 50% !important;
+  }
+}
