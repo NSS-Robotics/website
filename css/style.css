@@ -18,10 +18,9 @@ body {
 
 /* The Full Page Image Header */
 .header {
-  background: url("/imgs/headers/IMG_9396.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
   width: 100%;
   height: 100vh;
   margin-top: auto;
@@ -480,15 +479,19 @@ figcaption {
 }
 
 .footerlinks {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
 }
 
-.footerlinks a {
-  color: white;
-  text-decoration: underline;
-  font-size: 18px;
+.footerlinks img {
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 10x;
+  justify-self: center;
 }
+
 #back-to-top-btn {
   display: none;
   position: fixed;
@@ -572,6 +575,56 @@ figcaption {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 50px;
+  width: 75vw;
+}
+.donatewoosh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  width: 75vw;
+}
+.howto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.howto img {
+  width: 600px;
+  height: auto;
+  padding: 15px;
+  border-radius: 20px;
+}
+.howto a {
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+}
+.howto p {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10%;
+  width: 360px;
+}
+.wooshgroup {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.step {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: ce;
   margin-top: 50px;
   width: 75vw;
 }
