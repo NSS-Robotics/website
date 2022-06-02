@@ -1,10 +1,10 @@
-# NSS Robotics Website
+# Crimson Robotics Website
 
-The NSS Robotics Website Repo!
+The Crimson Robotics Website Repo!
 
 ## Viewing
 
-If you'd like to see the current version in development of the website you can check it out at https://nssrobodevs.gq
+To get at the current production version of the website head over to https://crimsonrobotics.ca
 
 ##
 
