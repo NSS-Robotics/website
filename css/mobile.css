@@ -79,6 +79,9 @@
   .wooshies img {
     width: 400px !important;
   }
+  .howto img {
+    width: 400px !important;
+  }
 }
 @media screen and (max-width: 800px) {
   html {
