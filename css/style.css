@@ -314,6 +314,10 @@ body {
   margin-top: 8%;
 }
 
+figcaption {
+  text-align: center;
+}
+
 .people {
   margin-top: 5%;
   display: flex;
@@ -323,10 +327,6 @@ body {
   justify-content: center;
   column-gap: 70px;
   row-gap: 75px;
-}
-
-figcaption {
-  text-align: center;
 }
 
 .our-team {
@@ -352,6 +352,45 @@ figcaption {
 }
 
 .people figcaption {
+  font-size: 20px;
+}
+.sponsors {
+  margin-top: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+  display: grid;
+  grid-template-columns: 32vw 32vw 32vw;
+  grid-gap: 2%;
+  justify-content: center;
+}
+.greybg {
+  background-color: #f7f7f7;
+  height: auto;
+  padding: 20px;
+}
+.sponsors img {
+  height: auto;
+  width: 600px;
+  zoom: 60%;
+}
+.sponsors p {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+.sponsors a {
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+}
+.sponsors figcaption {
   font-size: 20px;
 }
 
