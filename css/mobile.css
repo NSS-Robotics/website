@@ -180,6 +180,12 @@
   .firstwoosh {
     flex-wrap: wrap-reverse !important;
   }
+  .greybg {
+    width: 55vw !important;
+  }
+  #pnp {
+    height: 20vw;
+  }
 }
 @media screen and (max-width: 482px) {
   .navbar {
