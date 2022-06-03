@@ -180,6 +180,18 @@
   .firstwoosh {
     flex-wrap: wrap-reverse !important;
   }
+  .greybg {
+    width: 55vw !important;
+  }
+  #parentstudents {
+    height: 20vw;
+  }
+  .sponsors img {
+    height: 20vw !important;
+  }
+  #nsscouncil {
+    height: 15vw !important;
+  }
 }
 @media screen and (max-width: 482px) {
   .navbar {

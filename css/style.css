@@ -2,12 +2,10 @@
 ::-webkit-scrollbar {
   width: 15px;
 }
-
 /* Draggy Thingy */
 ::-webkit-scrollbar-thumb {
   background: #8c8c8c;
 }
-
 html,
 body {
   margin: 0;
@@ -15,7 +13,6 @@ body {
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
-
 /* The Full Page Image Header */
 .header {
   background-repeat: no-repeat !important;
@@ -29,7 +26,6 @@ body {
   align-items: center;
   flex-flow: column;
 }
-
 /* The Semi-Transparent Black Overley On The Background Image */
 .black {
   background: black;
@@ -41,7 +37,6 @@ body {
   height: 100vh;
   z-index: -1;
 }
-
 /* Big Title Text */
 .title {
   font-size: 30px;
@@ -54,7 +49,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 /* Mini Subtitle Text */
 .subtitle {
   font-size: 25px;
@@ -65,7 +59,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 .loading-title p {
   color: white;
   overflow: hidden;
@@ -80,7 +73,6 @@ body {
   /* Adjust as needed */
   animation: blink-caret 0.75s step-end infinite;
 }
-
 /* Main Navbar Div */
 .navbar {
   display: flex;
@@ -92,24 +84,20 @@ body {
   position: absolute;
   top: 0;
 }
-
 .left {
   display: flex;
   color: white;
   font-size: large;
 }
-
 .space {
   width: 13vw;
 }
-
 .left img {
   width: 10%;
   height: 10%;
   align-self: center;
   padding-right: 10px;
 }
-
 /* Navbar Button */
 .dropbtn {
   text-decoration: none;
@@ -121,20 +109,17 @@ body {
   cursor: pointer;
   transform: translate(-50%, -50%);
 }
-
 .dropbtn:hover {
   text-decoration: underline solid white;
   text-decoration-thickness: 2px;
   transition-duration: 0.3s;
 }
-
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
   align-self: center;
 }
-
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
@@ -147,13 +132,11 @@ body {
   text-align: center;
   margin-top: 10px;
 }
-
 /* Links Inside The Dropdown Content */
 .dropdown-content a:hover {
   text-decoration: underline solid black;
   transition-duration: 0.6s;
 }
-
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
@@ -163,13 +146,11 @@ body {
   border-radius: 10px;
   text-decoration: underline solid transparent;
 }
-
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
   border-radius: 10px;
 }
-
 /* Scroll Down Message Div */
 .goDown {
   display: flex;
@@ -180,13 +161,11 @@ body {
   bottom: 10px;
   z-index: 2;
 }
-
 /* "Scroll Down" Text */
 #downText {
   font-size: 20px;
   color: white;
 }
-
 /* Kinda Self Explanitory */
 .ourTeamTitle {
   font-size: 30px;
@@ -200,7 +179,6 @@ body {
   margin-right: auto;
   z-index: 2;
 }
-
 /* The Bouncing Arrow */
 .arrow {
   position: relative;
@@ -211,27 +189,22 @@ body {
   background-image: url("/imgs/down.png");
   background-size: contain;
 }
-
 /* Bouncing Arrow Animation */
 .bounce {
   animation: bounce 2s infinite;
 }
-
 .leftbounce {
   animation: leftbounce 2s infinite;
 }
-
 .rightbounce {
   animation: rightbounce 2s infinite;
 }
-
 /* The Text Under The Big Image */
 .content {
   color: black;
   margin-top: 25px;
   line-height: 2;
 }
-
 .about-us {
   display: flex;
   flex-wrap: nowrap;
@@ -244,41 +217,34 @@ body {
   width: fit-content;
   padding-right: 30px;
 }
-
 .about-us img {
   height: 400px;
   width: auto;
   border-radius: 10px;
   margin-left: 15px;
 }
-
 .about-us p {
   padding-right: 15px;
   padding-left: 15px;
   font-size: 20px;
 }
-
 .about-us h3 {
   padding-right: 15px;
   padding-left: 15px;
   font-size: 32px;
 }
-
 .subteams {
   text-align: center;
   margin-top: 10%;
 }
-
 .subteams h3 {
   font-size: 32px;
 }
-
 .subteams p {
   font-size: 20px;
   padding-left: 50px;
   padding-right: 50px;
 }
-
 .teams {
   display: flex;
   flex-flow: column;
@@ -290,7 +256,6 @@ body {
   margin-top: 7%;
   width: auto;
 }
-
 .teams img {
   width: 595px;
   height: auto;
@@ -305,14 +270,15 @@ body {
   width: 1300px;
   font-size: 20px;
 }
-
 .teams h3 {
   text-align: center;
   text-decoration: none;
   font-size: 30px;
   margin-top: 8%;
 }
-
+figcaption {
+  text-align: center;
+}
 .people {
   margin-top: 5%;
   display: flex;
@@ -323,11 +289,6 @@ body {
   column-gap: 70px;
   row-gap: 75px;
 }
-
-figcaption {
-  text-align: center;
-}
-
 .our-team {
   display: block;
   text-align: center;
@@ -335,31 +296,64 @@ figcaption {
   font-size: 50px;
   margin-top: 8%;
 }
-
 .people img {
   height: 600px;
   width: 600px;
   border-radius: 50%;
   zoom: 50%;
 }
-
 .people p {
   text-align: center;
   font-weight: bold;
   margin-bottom: 0;
   font-size: 20px;
 }
-
 .people figcaption {
   font-size: 20px;
 }
-
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  grid-gap: 50px;
+}
+.greybg {
+  background-color: #d8d8d8;
+  padding: 20px;
+  width: 25vw;
+}
+.sponsors img {
+  height: 12vw;
+  width: auto;
+}
+.sponsors p {
+  text-align: center;
+  font-size: 15px;
+}
+.sponsors a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+}
+.sponsors figcaption {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
 .slides {
   position: relative;
   display: block;
   width: 595px;
 }
-
 .btn-left:not(hover) {
   transition-duration: 0.3s;
   display: block;
@@ -373,7 +367,6 @@ figcaption {
   border-radius: 50px;
   padding: 5px 15px;
 }
-
 .btn-left:hover {
   transition-duration: 0.3s;
   border-radius: 100px;
@@ -381,7 +374,6 @@ figcaption {
   left: -45px;
   animation: none;
 }
-
 .btn-right:not(hover) {
   transition-duration: 0.3s;
   display: block;
@@ -395,7 +387,6 @@ figcaption {
   border-radius: 50px;
   padding: 5px 15px;
 }
-
 .btn-right:hover {
   transition-duration: 0.3s;
   background-size: 50px;
@@ -404,7 +395,6 @@ figcaption {
   right: -45px;
   animation: none;
 }
-
 .footer {
   background-color: #1a1a1a;
   color: white;
@@ -415,11 +405,9 @@ figcaption {
 
   z-index: 1;
 }
-
 .footer img {
   width: 180px;
 }
-
 .center {
   display: flex;
   flex-direction: column;
@@ -427,32 +415,27 @@ figcaption {
   align-items: center;
   width: 100%;
 }
-
 .center p {
   font-size: 18px;
   margin-top: 0px;
 }
-
 .footerline {
   height: 2px;
   width: 30%;
   background-color: white;
 }
-
 .footerlinks {
   margin-top: 12px;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
 }
-
 .footerlinks img {
   width: 30px;
   margin-left: 10px;
   margin-right: 10x;
   justify-self: center;
 }
-
 #back-to-top-btn {
   display: none;
   position: fixed;
