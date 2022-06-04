@@ -72,6 +72,11 @@
     width: 100% !important;
   }
 }
+@media screen and (max-width: 1215px) {
+  .navbar {
+    zoom: 75% !important;
+  }
+}
 @media screen and (max-width: 1030px) {
   .navbar {
     zoom: 63% !important;
