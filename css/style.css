@@ -320,8 +320,9 @@ figcaption {
   text-align: center;
   grid-gap: 50px;
 }
-.greybg {
-  background-color: #d8d8d8;
+.sponsorbox {
+  background-color: #f5f5f5;
+  border-radius: 10px;
   padding: 20px;
   width: 25vw;
 }
