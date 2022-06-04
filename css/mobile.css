@@ -79,6 +79,9 @@
   .wooshies img {
     width: 400px !important;
   }
+  .howto img {
+    width: 400px !important;
+  }
 }
 @media screen and (max-width: 800px) {
   html {
@@ -176,5 +179,22 @@
   }
   .firstwoosh {
     flex-wrap: wrap-reverse !important;
+  }
+  .greybg {
+    width: 55vw !important;
+  }
+  #parentstudents {
+    height: 20vw;
+  }
+  .sponsors img {
+    height: 20vw !important;
+  }
+  #nsscouncil {
+    height: 15vw !important;
+  }
+}
+@media screen and (max-width: 482px) {
+  .navbar {
+    zoom: 50% !important;
   }
 }
