@@ -28,14 +28,3 @@ function initBg() {
 }
 
 document.onload = initBg();
-
-function preloadimages(arr) {
-  var newimages = [];
-  var arr = typeof arr != "object" ? [arr] : arr; //force arr parameter to always be an array
-  for (var i = 0; i < arr.length; i++) {
-    newimages[i] = new Image();
-    newimages[i].src = arr[i];
-  }
-}
-
-preloadimages(images);
