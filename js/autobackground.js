@@ -12,6 +12,16 @@ const images = [
   "../imgs/headers/auto/11.webp",
 ];
 
+const firefox =
+  navigator.userAgent.toString().toLowerCase().indexOf("firefox") != -1;
+
+if (!firefox) {
+  initBg();
+  setInterval(changeBG, 5000);
+} else {
+  initBg();
+}
+
 function changeBG() {
   const header = document.querySelector(".header");
   const bg = images[Math.floor(Math.random() * images.length)];
@@ -20,11 +30,8 @@ function changeBG() {
   header.style.transition = "2.3s";
 }
 
-setInterval(changeBG, 5000);
-
 function initBg() {
+  const bg = images[Math.floor(Math.random() * images.length)];
   const header = document.querySelector(".header");
-  header.style.backgroundImage = "url(../imgs/headers/auto/1.webp";
+  header.style.backgroundImage = "url(" + bg + ")";
 }
-
-document.onload = initBg();
