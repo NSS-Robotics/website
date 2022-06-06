@@ -124,13 +124,11 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  border-radius: 10px;
   min-width: 160px;
   z-index: 1;
-  background-color: white;
-  opacity: 90%;
+  background-color: #efefef;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 /* Links Inside The Dropdown Content */
 .dropdown-content a:hover {
@@ -149,7 +147,7 @@ body {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 /* Scroll Down Message Div */
 .goDown {
