@@ -1,3 +1,8 @@
+@media screen and (max-width: 1425px) {
+  .navbar {
+    zoom: 90% !important;
+  }
+}
 @media screen and (max-width: 1385px) {
   html {
     overflow-x: hidden;
@@ -55,9 +60,6 @@
   .btn-left:hover {
     left: 45px !important;
   }
-  .navbar {
-    zoom: 90% !important;
-  }
   #boop {
     margin-top: -50px !important;
     padding-right: 30px;
@@ -72,7 +74,7 @@
     width: 100% !important;
   }
 }
-@media screen and (max-width: 1215px) {
+@media screen and (max-width: 1265px) {
   .navbar {
     zoom: 75% !important;
   }
@@ -88,6 +90,14 @@
     width: 400px !important;
   }
 }
+@media screen and (max-width: 845px) {
+  .navbar {
+    zoom: 68% !important;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 2%;
+  }
+}
 @media screen and (max-width: 813px) {
   html {
     overflow-x: hidden;
@@ -100,12 +110,6 @@
   }
   .subtitle p {
     font-size: 11px;
-  }
-  .navbar {
-    zoom: 68% !important;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 2%;
   }
   .space {
     display: none;
