@@ -571,16 +571,44 @@ figcaption {
   margin-top: 50px;
   width: 75vw;
 }
-.tiers {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.tiergraph {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  grid-template-rows: auto auto auto auto;
+  line-height: 2;
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-left: 25px;
   background-color: #f5f5f5;
+  border: 3.5px solid #333;
+  border-bottom: none;
+  border-radius: 5px;
+}
+.tier {
+  border-left: 3.5px solid #333;
+  border-bottom: 3.5px solid #333;
   text-align: center;
   padding: 10px;
-  margin-bottom: 25px;
-  margin-left: 50px;
-  margin-right: 50px;
+}
+.tiertitle {
+  font-size: 15px;
+  text-decoration: underline;
+  text-align: center;
+}
+#bronze {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+#gold {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+#platinum {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+#diamond {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  width: inherit;
 }
