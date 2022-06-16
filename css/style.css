@@ -595,6 +595,7 @@ figcaption {
   font-size: 15px;
   text-decoration: underline;
   text-align: center;
+  font-weight: bold;
 }
 #item {
   grid-column-start: 1;
