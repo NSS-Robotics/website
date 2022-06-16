@@ -17,7 +17,7 @@ const firefox =
 
 if (!firefox) {
   initBg();
-  setInterval(changeBG, 5000);
+  setInterval(changeBG, 3700);
 } else {
   initBg();
 }
