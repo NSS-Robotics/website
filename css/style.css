@@ -589,6 +589,7 @@ figcaption {
   border-bottom: 3.5px solid #333;
   text-align: center;
   padding: 10px;
+  font-size: 17px;
 }
 .tiertitle {
   font-size: 15px;
@@ -599,6 +600,7 @@ figcaption {
   grid-column-start: 1;
   grid-column-end: 2;
   border-left: none !important;
+  font-size: medium;
 }
 #bronze {
   grid-column-start: 2;
