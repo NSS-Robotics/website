@@ -202,6 +202,14 @@
     width: 50vw !important;
   }
 }
+@media screen and (max-width: 720px) {
+  .tiers {
+    grid-template-columns: 65vw !important;
+  }
+  .box h3 {
+    height: auto !important;
+  }
+}
 @media screen and (max-width: 482px) {
   .navbar {
     zoom: 50% !important;
