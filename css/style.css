@@ -594,6 +594,7 @@ figcaption {
   font-size: 14.5px;
   padding: 10px;
   margin-top: 10px;
+  height: 145px;
 }
 .box a {
   display: flex;
