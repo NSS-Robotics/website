@@ -78,6 +78,9 @@
   .navbar {
     zoom: 75% !important;
   }
+  .tiers {
+    grid-template-columns: 44vw 44vw !important;
+  }
 }
 @media screen and (max-width: 1030px) {
   .navbar {
@@ -205,5 +208,8 @@
 @media screen and (max-width: 482px) {
   .navbar {
     zoom: 50% !important;
+  }
+  .tiers {
+    grid-template-columns: 88vw !important;
   }
 }

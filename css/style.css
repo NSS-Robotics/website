@@ -26,7 +26,7 @@ body {
   align-items: center;
   flex-flow: column;
 }
-/* The Semi-Transparent Black Overley On The Background Image */
+/* The Semi-Transparent Black Overlay On The Background Image */
 .black {
   background: black;
   opacity: 28%;
@@ -64,7 +64,7 @@ body {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid #00ff91;
-  /* The typwriter cursor */
+  /* The typewriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
   margin: 0 auto;
@@ -164,7 +164,7 @@ body {
   font-size: 20px;
   color: white;
 }
-/* Kinda Self Explanitory */
+/* Kinda Self Explanatory */
 .ourTeamTitle {
   font-size: 30px;
   color: white;
@@ -571,117 +571,73 @@ figcaption {
   margin-top: 50px;
   width: 75vw;
 }
-.tiergraph {
+.tiers {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-template-rows: auto auto auto auto;
-  line-height: 2;
+  grid-template-columns: 22vw 22vw 22vw 22vw;
+  justify-content: center;
   margin-top: 25px;
-  margin-right: 25px;
-  margin-left: 25px;
-  background-color: #f5f5f5;
-  border: 3.5px solid #333;
-  border-bottom: none;
-  border-radius: 5px;
-}
-.tier {
-  border-left: 3.5px solid #333;
-  border-bottom: 3.5px solid #333;
   text-align: center;
-  padding: 10px;
-  font-size: 17px;
+  grid-gap: 30px;
 }
 .tiertitle {
-  font-size: 15px;
-  text-decoration: underline;
-  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+.box {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.box h3 {
+  font-weight: normal;
+  font-size: 14.5px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.line {
+  height: 2px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #b7b7b7;
+  align-self: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.miniline {
+  height: 2px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: #b7b7b7;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.things {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 13px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.things p {
+  text-align: left;
+}
+.things img {
+  height: 12px;
+  width: auto;
+}
+.amount {
+  margin-bottom: 1px;
+  margin-top: 10px;
+  font-size: 25px;
   font-weight: bold;
 }
-#item {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  border-left: none !important;
-  font-size: medium;
-}
-#bronze {
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-#gold {
-  grid-column-start: 4;
-  grid-column-end: 4;
-}
-#platinum {
-  grid-column-start: 4;
-  grid-column-end: 5;
-}
-#diamond {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  width: inherit;
-}
-.col1 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  text-align: center;
-}
-.col2 {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  text-align: center;
-}
-.col3 {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  text-align: center;
-}
-.col4 {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  text-align: center;
-}
-.row1 {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  text-align: center;
-}
-.row2 {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  text-align: center;
-}
-.row3 {
-  grid-row-start: 4;
-  grid-row-end: 5;
-  text-align: center;
-}
-.row4 {
-  grid-row-start: 5;
-  grid-row-end: 6;
-  text-align: center;
-}
-.row5 {
-  grid-row-start: 6;
-  grid-row-end: 7;
-  text-align: center;
-}
-.row6 {
-  grid-row-start: 7;
-  grid-row-end: 8;
-  text-align: center;
-}
-.row7 {
-  grid-row-start: 8;
-  grid-row-end: 9;
-  text-align: center;
-}
-.row8 {
-  grid-row-start: 9;
-  grid-row-end: 10;
-  text-align: center;
-}
-.row9 {
-  grid-row-start: 10;
-  grid-row-end: 11;
-  text-align: center;
+.taxrecipt {
+  margin-top: 1px;
+  margin-bottom: 14.5px;
 }
