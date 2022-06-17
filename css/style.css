@@ -594,7 +594,27 @@ figcaption {
   font-size: 14.5px;
   padding: 10px;
   margin-top: 10px;
-  margin-bottom: 10px;
+}
+.box a {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: 15px;
+  transition-duration: 300ms;
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  padding: 12px;
+  border-radius: 10px;
+  width: 25%;
+  border: 3px solid #333;
+}
+.box a:hover {
+  transition-duration: 300ms;
+  background-color: transparent;
+  color: #333;
+  border: 3px solid #333;
 }
 .line {
   height: 2px;
