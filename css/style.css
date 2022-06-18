@@ -489,11 +489,19 @@ figcaption {
   color: white;
   background-color: #333;
   margin-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border-radius: 10px;
+  transition-duration: 200ms;
+  border: 3px solid #333;
+}
+.wooshies a:hover {
+  transition-duration: 200ms;
+  background-color: transparent;
+  color: #333;
+  border: 3px solid #333;
 }
 .wooshgroup {
   text-align: center;
