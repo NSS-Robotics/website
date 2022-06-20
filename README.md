@@ -1,6 +1,6 @@
-# NSS Robotics Website
+# CaronTech Website
 
-The NSS Robotics Website Repo!
+The CaronTech Website Repo!
 
 ## Viewing
 
