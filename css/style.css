@@ -405,7 +405,14 @@ figcaption {
   z-index: 1;
 }
 .footer img {
-  width: 180px;
+  width: 80px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+.vercel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .center {
   display: flex;
@@ -422,18 +429,41 @@ figcaption {
   height: 2px;
   width: 30%;
   background-color: white;
+  margin-bottom: 20px;
 }
 .footerlinks {
   margin-top: 12px;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
-.footerlinks img {
-  width: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
-  justify-self: center;
+.icons {
+  color: #ffffff;
+  font-size: 27px;
+  padding: 5px;
+  transition-duration: 0.3s;
+}
+.icons:hover {
+  color: #b7b7b7;
+  transition-duration: 0.3s;
+}
+.pages {
+  margin-bottom: 15px;
+}
+.pages a {
+  margin-left: 8px;
+  margin-right: 8px;
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  text-decoration: underline solid transparent;
+}
+.pages a:hover {
+  text-decoration: underline solid white;
+  text-decoration-thickness: 2px;
+  transition-duration: 0.3s;
 }
 #topbtn {
   display: flex !important;
