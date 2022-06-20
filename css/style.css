@@ -663,3 +663,7 @@ figcaption {
   margin-top: 1px;
   margin-bottom: 14.5px;
 }
+.logoinfo {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
