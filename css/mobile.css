@@ -230,3 +230,8 @@
     grid-column-end: 2 !important;
   }
 }
+@media screen and (max-width: 400px) {
+  #tiersTitle {
+    font-size: 10vw !important;
+  }
+}
