@@ -1,4 +1,4 @@
-const backToTopButton = document.querySelector("#back-to-top-btn");
+const backToTopButton = document.querySelector("#topbtn");
 
 window.addEventListener("scroll", scrollFunction);
 

@@ -432,38 +432,49 @@ figcaption {
 .footerlinks img {
   width: 30px;
   margin-left: 10px;
-  margin-right: 10x;
+  margin-right: 10px;
   justify-self: center;
 }
-#back-to-top-btn {
-  display: none;
+#topbtn {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  font-size: 26px;
-  width: 50px;
-  height: 50px;
-  background-color: #333;
+  right: 10px;
+  font-size: 15px;
+  width: 40px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: transparent;
   color: #333;
   cursor: pointer;
   outline: none;
   border: 3px solid #333;
-  border-radius: 50%;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-property: background-color, color;
+  transition-duration: 0.5s;
 }
-#back-to-top-btn:hover,
-#back-to-top-btn:focus {
-  transition-duration: 300ms;
-  background-color: rgb(89, 89, 89);
-  border: 3px solid rgb(89, 89, 89);
+#topbtn p {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5px;
 }
-.backtotoparrow {
-  height: 80%;
-  width: auto;
-  margin-top: 3px;
-  margin-left: 1px;
+#topbtn svg {
+  width: 20px;
+  height: auto;
+  margin-bottom: 10px;
+  fill: #333;
+}
+#topbtn:hover {
+  background-color: #333;
+  color: white;
+}
+#topbtn:hover svg {
+  fill: white;
+  transition-duration: 0.5s;
 }
 .wooshies {
   display: flex;
