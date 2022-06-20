@@ -78,6 +78,13 @@
   .navbar {
     zoom: 75% !important;
   }
+  .tiers {
+    grid-template-columns: 44vw 44vw !important;
+  }
+  .logoinfo {
+    grid-column-start: 1;
+    grid-column-end: 3 !important;
+  }
 }
 @media screen and (max-width: 1030px) {
   .navbar {
@@ -189,9 +196,6 @@
   .firstwoosh {
     flex-wrap: wrap-reverse !important;
   }
-  .greybg {
-    width: 55vw !important;
-  }
   #nsscouncil {
     height: 7vw !important;
   }
@@ -202,8 +206,27 @@
     width: 50vw !important;
   }
 }
+@media screen and (max-width: 720px) {
+  .tiers {
+    grid-template-columns: 65vw !important;
+  }
+  .box h3 {
+    height: auto !important;
+  }
+  .logoinfo {
+    grid-column-start: 1;
+    grid-column-end: 2 !important;
+  }
+}
 @media screen and (max-width: 482px) {
   .navbar {
     zoom: 50% !important;
+  }
+  .tiers {
+    grid-template-columns: 88vw !important;
+  }
+  .logoinfo {
+    grid-column-start: 1;
+    grid-column-end: 2 !important;
   }
 }
