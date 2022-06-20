@@ -546,7 +546,7 @@ figcaption {
 .howto img {
   width: 600px;
   height: auto;
-  padding: 15px;
+  padding: 12px;
   border-radius: 20px;
 }
 .howto a {
@@ -559,6 +559,12 @@ figcaption {
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 10px;
+  border: 3px solid #333;
+}
+.howto a:hover {
+  transition-duration: 200ms;
+  background-color: transparent;
+  color: #333;
 }
 .howto p {
   padding-left: 15px;
