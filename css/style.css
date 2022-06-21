@@ -514,6 +514,7 @@ figcaption {
   height: auto;
   margin-bottom: 10px;
   fill: var(--onyx);
+  transition-duration: 0.5s;
 }
 #topbtn:hover {
   border: 3px solid var(--wheezerblue);
