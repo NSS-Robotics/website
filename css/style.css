@@ -1,3 +1,10 @@
+:root {
+  --onyx: #424241;
+  --shinygrey: #8e9196;
+  --aeroblue: #b6fcee;
+  --wheezerblue: #a4cde7;
+  --max-blue-purple: #949de9;
+}
 /* Entire Scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
