@@ -27,6 +27,16 @@ body {
   flex-flow: column;
 }
 /* The Semi-Transparent Black Overlay On The Background Image */
+.moreblack {
+  background: black;
+  opacity: 70%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+}
 .black {
   background: black;
   opacity: 28%;
@@ -336,7 +346,7 @@ figcaption {
   display: inline-block;
   text-decoration: none;
   color: white;
-  background-color: #333;
+  background-color: var(--onyx);
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 15px;
@@ -478,10 +488,10 @@ figcaption {
   height: 100px;
   border-radius: 50px;
   background-color: transparent;
-  color: #333;
+  color: var(--onyx);
   cursor: pointer;
   outline: none;
-  border: 3px solid #333;
+  border: 3px solid var(--onyx);
   transition-duration: 0.5s;
 }
 #topbtn p {
@@ -496,14 +506,14 @@ figcaption {
   width: 20px;
   height: auto;
   margin-bottom: 10px;
-  fill: #333;
+  fill: var(--onyx);
 }
 #topbtn:hover {
-  background-color: #333;
-  color: white;
+  border: 3px solid var(--wheezerblue);
+  color: var(--wheezerblue);
 }
 #topbtn:hover svg {
-  fill: white;
+  fill: var(--wheezerblue);
   transition-duration: 0.5s;
 }
 .wooshies {
@@ -528,7 +538,7 @@ figcaption {
 .wooshies a {
   text-decoration: none;
   color: white;
-  background-color: #333;
+  background-color: var(--onyx);
   margin-top: 30px;
   padding-left: 17px;
   padding-right: 17px;
@@ -536,13 +546,13 @@ figcaption {
   padding-bottom: 12px;
   border-radius: 10px;
   transition-duration: 200ms;
-  border: 3px solid #333;
+  border: 3px solid var(--onyx);
 }
 .wooshies a:hover {
   transition-duration: 200ms;
   background-color: transparent;
-  color: #333;
-  border: 3px solid #333;
+  color: var(--onyx);
+  border: 3px solid var(--onyx);
 }
 .wooshgroup {
   text-align: center;
@@ -593,19 +603,19 @@ figcaption {
 .howto a {
   text-decoration: none;
   color: white;
-  background-color: #333;
+  background-color: var(--onyx);
   margin-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 10px;
-  border: 3px solid #333;
+  border: 3px solid var(--onyx);
 }
 .howto a:hover {
   transition-duration: 200ms;
   background-color: transparent;
-  color: #333;
+  color: var(--onyx);
 }
 .howto p {
   padding-left: 15px;
@@ -653,17 +663,17 @@ figcaption {
   transition-duration: 300ms;
   text-decoration: none;
   color: white;
-  background-color: #333;
+  background-color: var(--onyx);
   padding: 12px;
   border-radius: 10px;
   width: 32%;
-  border: 3px solid #333;
+  border: 3px solid var(--onyx);
 }
 .box a:hover {
   transition-duration: 300ms;
   background-color: transparent;
-  color: #333;
-  border: 3px solid #333;
+  color: var(--onyx);
+  border: 3px solid var(--onyx);
 }
 .line {
   height: 2px;
@@ -713,4 +723,36 @@ figcaption {
 .logoinfo {
   grid-column-start: 1;
   grid-column-end: 5;
+}
+.infobox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  background-color: var(--onyx);
+  color: white;
+  text-align: center;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.infobox button {
+  background-color: white;
+  color: var(--onyx);
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 85px;
+  height: 40px;
+  cursor: pointer;
+  border: 3px solid white;
+}
+.infobox button:hover {
+  transition-duration: 200ms;
+  background-color: var(--onyx);
+  color: white;
 }
