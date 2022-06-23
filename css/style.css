@@ -1,9 +1,10 @@
 :root {
   --onyx: #424241;
   --shinygrey: #8e9196;
-  --aeroblue: #b6fcee;
+  --aeroblue: #7cbae1;
   --wheezerblue: #a4cde7;
   --max-blue-purple: #949de9;
+  --vividblue: #5ccbff;
 }
 /* Entire Scrollbar */
 ::-webkit-scrollbar {
@@ -46,7 +47,7 @@ body {
 }
 .black {
   background: black;
-  opacity: 28%;
+  opacity: 60%;
   position: absolute;
   top: 0;
   left: 0;
@@ -127,7 +128,7 @@ body {
   transform: translate(-50%, -50%);
 }
 .dropbtn:hover {
-  text-decoration: underline solid white;
+  text-decoration: underline solid var(--vividblue);
   text-decoration-thickness: 2px;
   transition-duration: 0.3s;
 }
@@ -149,7 +150,7 @@ body {
 }
 /* Links Inside The Dropdown Content */
 .dropdown-content a:hover {
-  text-decoration: underline solid black;
+  text-decoration: underline solid var(--aeroblue);
   transition-duration: 0.6s;
 }
 /* Links inside the dropdown */
@@ -463,7 +464,7 @@ figcaption {
   transition-duration: 0.3s;
 }
 .icons:hover {
-  color: #b7b7b7;
+  color: #40c3ff;
   transition-duration: 0.3s;
 }
 .pages {
@@ -517,11 +518,11 @@ figcaption {
   transition-duration: 0.5s;
 }
 #topbtn:hover {
-  border: 3px solid var(--wheezerblue);
-  color: var(--wheezerblue);
+  border: 3px solid var(--aeroblue);
+  color: var(--aeroblue);
 }
 #topbtn:hover svg {
-  fill: var(--wheezerblue);
+  fill: var(--aeroblue);
   transition-duration: 0.5s;
 }
 .wooshies {
@@ -559,13 +560,16 @@ figcaption {
 .wooshies a:hover {
   transition-duration: 200ms;
   background-color: transparent;
-  color: var(--onyx);
-  border: 3px solid var(--onyx);
+  color: #40c3ff;
+  border: 3px solid #40c3ff;
 }
 .wooshgroup {
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
+}
+.wooshgroup h2 {
+  color: var(--vividblue);
 }
 .aboutwoosh {
   display: flex;
@@ -761,6 +765,7 @@ figcaption {
 }
 .infobox button:hover {
   transition-duration: 200ms;
-  background-color: var(--onyx);
+  background-color: transparent;
   color: white;
+  border: 3px solid var(--vividblue);
 }
