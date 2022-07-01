@@ -690,8 +690,8 @@ figcaption {
 .box a:hover {
   transition-duration: 300ms;
   background-color: transparent;
-  color: var(--onyx);
-  border: 3px solid var(--onyx);
+  color: var(--vividblue);
+  border: 3px solid var(--vividblue);
 }
 .line {
   height: 2px;
