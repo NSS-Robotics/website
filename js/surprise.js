@@ -4,13 +4,13 @@ const surprise = document.getElementById("surprise");
 // if the element is clicked 3 times then show confetti
 surprise.addEventListener("click", () => {
   i++;
-  if (i === 10) {
+  if (i === 3) {
     i = 0;
     var end = Date.now() + 1.5 * 1000;
 
     // Confetti thanks to https://www.kirilv.com/canvas-confetti/
 
-    var colors = ["#D33E43", "#E2B6CD"];
+    var colors = ["#5ccbff", "#424241"];
 
     (function frame() {
       confetti({
