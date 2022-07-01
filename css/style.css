@@ -394,6 +394,7 @@ figcaption {
   padding: 5px 15px;
   left: 0px;
   animation: none;
+  color: var(--vividblue);
 }
 .btn-right:not(hover) {
   transition-duration: 0.3s;
@@ -415,6 +416,7 @@ figcaption {
   padding: 5px 15px;
   right: -45px;
   animation: none;
+  color: var(--vividblue);
 }
 .footer {
   background-color: #1a1a1a;
