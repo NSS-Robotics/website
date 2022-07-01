@@ -24,45 +24,23 @@
     height: auto;
     float: none;
   }
-  .teams img {
-    padding-left: 40px;
-  }
-  .teams p {
-    text-align: center;
-    width: auto !important;
-    padding-left: 10px;
-    padding-right: 30px;
-    font-size: 18px !important;
-    margin-top: -30px;
-  }
   .btn-right {
-    right: 110px !important;
+    right: 60px !important;
     top: 220px !important;
-    position: relative !important;
     color: black;
     background-color: white !important;
     border-radius: 100px;
     padding: 11px 20px;
     text-decoration: none;
-  }
-  .btn-right:hover {
-    right: 115px !important;
   }
   .btn-left {
-    left: 50px !important;
+    left: 70px !important;
     top: 220px !important;
     color: black;
     background-color: white !important;
     border-radius: 100px;
     padding: 11px 20px;
     text-decoration: none;
-  }
-  .btn-left:hover {
-    left: 45px !important;
-  }
-  #boop {
-    margin-top: -50px !important;
-    padding-right: 30px;
   }
   .aboutwoosh {
     width: 100% !important;
@@ -95,6 +73,19 @@
   }
   .howto img {
     width: 400px !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .teamgroup {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .teamgroup img {
+    width: 90% !important;
+  }
+  .teams img {
+    margin-left: 6% !important;
+    margin-right: 0 !important;
   }
 }
 @media screen and (max-width: 845px) {
@@ -139,26 +130,11 @@
     margin-right: 20px;
     margin-left: 20px;
   }
-  #boop {
-    margin-top: 60px;
-  }
   .people {
     width: 100vw;
   }
   .left {
     justify-content: center;
-  }
-  .teams img {
-    display: flex;
-    width: 95vw !important;
-    height: auto !important;
-    float: none !important;
-    margin-left: 1% !important;
-  }
-  .teams p {
-    width: auto !important;
-    margin-left: 50px !important;
-    margin-right: 50px !important;
   }
   .btn-right {
     right: 45px !important;
