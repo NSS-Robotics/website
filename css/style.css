@@ -1,7 +1,7 @@
 :root {
   --onyx: #424241;
   --shinygrey: #8e9196;
-  --aeroblue: #7cbae1;
+  --vividblue: #7cbae1;
   --wheezerblue: #a4cde7;
   --max-blue-purple: #949de9;
   --vividblue: #5ccbff;
@@ -150,7 +150,7 @@ body {
 }
 /* Links Inside The Dropdown Content */
 .dropdown-content a:hover {
-  text-decoration: underline solid var(--aeroblue);
+  text-decoration: underline solid var(--vividblue);
   transition-duration: 0.6s;
 }
 /* Links inside the dropdown */
@@ -361,8 +361,8 @@ figcaption {
   background-color: var(--onyx);
   padding-left: 17px;
   padding-right: 17px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border-radius: 10px;
   transition-duration: 200ms;
   border: 3px solid #333;
@@ -370,8 +370,8 @@ figcaption {
 .sponsors a:hover {
   transition-duration: 200ms;
   background-color: transparent;
-  color: #333;
-  border: 3px solid #333;
+  color: var(--vividblue);
+  border: 3px solid var(--vividblue);
 }
 .sponsors figcaption {
   font-size: 20px;
@@ -433,7 +433,6 @@ figcaption {
   padding-bottom: 10px;
   margin-top: 50px;
   text-align: center;
-
   z-index: 1;
 }
 .footer img {
@@ -493,7 +492,7 @@ figcaption {
   text-decoration: underline solid transparent;
 }
 .pages a:hover {
-  text-decoration: underline solid white;
+  text-decoration: underline solid var(--vividblue);
   text-decoration-thickness: 2px;
   transition-duration: 0.3s;
 }
@@ -532,11 +531,11 @@ figcaption {
   transition-duration: 0.5s;
 }
 #topbtn:hover {
-  border: 3px solid var(--aeroblue);
-  color: var(--aeroblue);
+  border: 3px solid var(--vividblue);
+  color: var(--vividblue);
 }
 #topbtn:hover svg {
-  fill: var(--aeroblue);
+  fill: var(--vividblue);
   transition-duration: 0.5s;
 }
 .wooshies {
@@ -574,8 +573,8 @@ figcaption {
 .wooshies a:hover {
   transition-duration: 200ms;
   background-color: transparent;
-  color: #40c3ff;
-  border: 3px solid #40c3ff;
+  color: var(--vividblue);
+  border: 3px solid var(--vividblue);
 }
 .wooshgroup {
   text-align: center;
