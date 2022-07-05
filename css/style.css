@@ -341,11 +341,19 @@ figcaption {
   text-decoration: none;
   color: white;
   background-color: #333;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border-radius: 10px;
+  transition-duration: 200ms;
+  border: 3px solid #333;
+}
+.sponsors a:hover {
+  transition-duration: 200ms;
+  background-color: transparent;
+  color: #333;
+  border: 3px solid #333;
 }
 .sponsors figcaption {
   font-size: 20px;
