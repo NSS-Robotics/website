@@ -1,3 +1,7 @@
+:root {
+  --vividblue: #5ccbff;
+}
+
 /* Bouncing Arrow Effect */
 @keyframes bounce {
   0%,
@@ -64,7 +68,7 @@
     border-color: transparent;
   }
   50% {
-    border-color: #00ff91;
+    border-color: var(--vividblue);
   }
 }
 
