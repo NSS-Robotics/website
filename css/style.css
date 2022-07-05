@@ -1,9 +1,6 @@
 :root {
   --onyx: #424241;
   --shinygrey: #8e9196;
-  --vividblue: #7cbae1;
-  --wheezerblue: #a4cde7;
-  --max-blue-purple: #949de9;
   --vividblue: #5ccbff;
 }
 /* Entire Scrollbar */
@@ -81,7 +78,7 @@ body {
   color: white;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid #00ff91;
+  border-right: 0.15em solid var(--vividblue);
   /* The typewriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
