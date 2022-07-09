@@ -277,6 +277,9 @@ body {
 figcaption {
   text-align: center;
 }
+.showpeople {
+  display: flex !important;
+}
 .people {
   margin-top: 5%;
   display: none;
