@@ -137,21 +137,21 @@
   left: 0%;
   top: 0%;
   animation: rotate-one 1s linear infinite;
-  border-bottom: 3px solid #c1282d;
+  border-bottom: 3px solid #2f6690;
 }
 
 .inner.two {
   right: 0%;
   top: 0%;
   animation: rotate-two 1s linear infinite;
-  border-right: 3px solid #ea6b24;
+  border-right: 3px solid #6ebae9;
 }
 
 .inner.three {
   right: 0%;
   bottom: 0%;
   animation: rotate-three 1s linear infinite;
-  border-top: 3px solid #eebe22;
+  border-top: 3px solid #d9dcd6;
 }
 
 @keyframes rotate-one {
