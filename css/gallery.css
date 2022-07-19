@@ -7,19 +7,19 @@
 #gallery {
   display: grid;
   grid-template-columns: auto auto auto;
+  row-gap: 50px;
+  margin-top: 2%;
 }
 #gallery img {
   width: 90%;
   height: auto;
-  padding-top: 1.5%;
-  padding-bottom: 1.5%;
   align-self: center;
   justify-self: center;
+  border-radius: 4px;
 }
 #gallery iframe {
   width: 90%;
-  padding-top: 1.5%;
-  padding-bottom: 1.5%;
   align-self: center;
   justify-self: center;
+  border-radius: 4px;
 }
