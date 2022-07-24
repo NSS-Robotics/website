@@ -1,3 +1,8 @@
+:root {
+  --onyx: #424241;
+  --shinygrey: #8e9196;
+  --vividblue: #5ccbff;
+}
 /* Entire Scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
@@ -27,9 +32,19 @@ body {
   flex-flow: column;
 }
 /* The Semi-Transparent Black Overlay On The Background Image */
+.moreblack {
+  background: black;
+  opacity: 70%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+}
 .black {
   background: black;
-  opacity: 28%;
+  opacity: 60%;
   position: absolute;
   top: 0;
   left: 0;
@@ -63,7 +78,7 @@ body {
   color: white;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid #00ff91;
+  border-right: 0.15em solid var(--vividblue);
   /* The typewriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
@@ -110,7 +125,7 @@ body {
   transform: translate(-50%, -50%);
 }
 .dropbtn:hover {
-  text-decoration: underline solid white;
+  text-decoration: underline solid var(--vividblue);
   text-decoration-thickness: 2px;
   transition-duration: 0.3s;
 }
@@ -132,7 +147,7 @@ body {
 }
 /* Links Inside The Dropdown Content */
 .dropdown-content a:hover {
-  text-decoration: underline solid black;
+  text-decoration: underline solid var(--vividblue);
   transition-duration: 0.6s;
 }
 /* Links inside the dropdown */
@@ -340,11 +355,11 @@ figcaption {
   display: inline-block;
   text-decoration: none;
   color: white;
-  background-color: #333;
+  background-color: var(--onyx);
   padding-left: 17px;
   padding-right: 17px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border-radius: 10px;
   transition-duration: 200ms;
   border: 3px solid #333;
@@ -352,8 +367,8 @@ figcaption {
 .sponsors a:hover {
   transition-duration: 200ms;
   background-color: transparent;
-  color: #333;
-  border: 3px solid #333;
+  color: var(--vividblue);
+  border: 3px solid var(--vividblue);
 }
 .sponsors figcaption {
   font-size: 20px;
@@ -384,6 +399,7 @@ figcaption {
   padding: 5px 15px;
   left: 0px;
   animation: none;
+  color: var(--vividblue);
 }
 .btn-right:not(hover) {
   transition-duration: 0.3s;
@@ -405,6 +421,7 @@ figcaption {
   padding: 5px 15px;
   right: -45px;
   animation: none;
+  color: var(--vividblue);
 }
 .footer {
   background-color: #1a1a1a;
@@ -413,11 +430,17 @@ figcaption {
   padding-bottom: 10px;
   margin-top: 50px;
   text-align: center;
-
   z-index: 1;
 }
 .footer img {
-  width: 180px;
+  width: 80px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+.vercel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .center {
   display: flex;
@@ -434,48 +457,83 @@ figcaption {
   height: 2px;
   width: 30%;
   background-color: white;
+  margin-bottom: 20px;
 }
 .footerlinks {
   margin-top: 12px;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
-.footerlinks img {
-  width: 30px;
-  margin-left: 10px;
-  margin-right: 10x;
-  justify-self: center;
+.icons {
+  color: #ffffff;
+  font-size: 27px;
+  padding: 5px;
+  transition-duration: 0.3s;
 }
-#back-to-top-btn {
-  display: none;
+.icons:hover {
+  color: #40c3ff;
+  transition-duration: 0.3s;
+}
+.pages {
+  margin-bottom: 15px;
+}
+.pages a {
+  margin-left: 8px;
+  margin-right: 8px;
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  text-decoration: underline solid transparent;
+}
+.pages a:hover {
+  text-decoration: underline solid var(--vividblue);
+  text-decoration-thickness: 2px;
+  transition-duration: 0.3s;
+}
+#topbtn {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  font-size: 26px;
-  width: 50px;
-  height: 50px;
-  background-color: #333;
-  color: #333;
+  right: 10px;
+  font-size: 15px;
+  width: 40px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: var(--onyx);
   cursor: pointer;
   outline: none;
-  border: 3px solid #333;
-  border-radius: 50%;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-property: background-color, color;
+  border: 3px solid var(--onyx);
+  transition-duration: 0.5s;
 }
-#back-to-top-btn:hover,
-#back-to-top-btn:focus {
-  transition-duration: 300ms;
-  background-color: rgb(89, 89, 89);
-  border: 3px solid rgb(89, 89, 89);
+#topbtn p {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5px;
 }
-.backtotoparrow {
-  height: 80%;
-  width: auto;
-  margin-top: 3px;
-  margin-left: 1px;
+#topbtn svg {
+  width: 20px;
+  height: auto;
+  margin-bottom: 10px;
+  fill: var(--onyx);
+  transition-duration: 0.5s;
+}
+#topbtn:hover {
+  border: 3px solid var(--vividblue);
+  color: var(--vividblue);
+}
+#topbtn:hover svg {
+  fill: var(--vividblue);
+  transition-duration: 0.5s;
 }
 .wooshies {
   display: flex;
@@ -499,7 +557,7 @@ figcaption {
 .wooshies a {
   text-decoration: none;
   color: white;
-  background-color: #333;
+  background-color: var(--onyx);
   margin-top: 30px;
   padding-left: 17px;
   padding-right: 17px;
@@ -507,18 +565,21 @@ figcaption {
   padding-bottom: 12px;
   border-radius: 10px;
   transition-duration: 200ms;
-  border: 3px solid #333;
+  border: 3px solid var(--onyx);
 }
 .wooshies a:hover {
   transition-duration: 200ms;
   background-color: transparent;
-  color: #333;
-  border: 3px solid #333;
+  color: var(--vividblue);
+  border: 3px solid var(--vividblue);
 }
 .wooshgroup {
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
+}
+.wooshgroup h2 {
+  color: var(--vividblue);
 }
 .aboutwoosh {
   display: flex;
@@ -564,19 +625,19 @@ figcaption {
 .howto a {
   text-decoration: none;
   color: white;
-  background-color: #333;
+  background-color: var(--onyx);
   margin-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 10px;
-  border: 3px solid #333;
+  border: 3px solid var(--onyx);
 }
 .howto a:hover {
   transition-duration: 200ms;
   background-color: transparent;
-  color: #333;
+  color: var(--onyx);
 }
 .howto p {
   padding-left: 15px;
@@ -624,17 +685,17 @@ figcaption {
   transition-duration: 300ms;
   text-decoration: none;
   color: white;
-  background-color: #333;
+  background-color: var(--onyx);
   padding: 12px;
   border-radius: 10px;
   width: 32%;
-  border: 3px solid #333;
+  border: 3px solid var(--onyx);
 }
 .box a:hover {
   transition-duration: 300ms;
   background-color: transparent;
-  color: #333;
-  border: 3px solid #333;
+  color: var(--vividblue);
+  border: 3px solid var(--vividblue);
 }
 .line {
   height: 2px;
@@ -684,4 +745,37 @@ figcaption {
 .logoinfo {
   grid-column-start: 1;
   grid-column-end: 5;
+}
+.infobox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  background-color: var(--onyx);
+  color: white;
+  text-align: center;
+  width: 450px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.infobox button {
+  background-color: white;
+  color: var(--onyx);
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 85px;
+  height: 40px;
+  cursor: pointer;
+  border: 3px solid white;
+}
+.infobox button:hover {
+  transition-duration: 200ms;
+  background-color: transparent;
+  color: white;
+  border: 3px solid var(--vividblue);
 }

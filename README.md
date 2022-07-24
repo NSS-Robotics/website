@@ -1,10 +1,10 @@
-# NSS Robotics Website
+# CaronTech Website
 
-The NSS Robotics Website Repo!
+The CaronTech Website Repo!
 
 ## Viewing
 
-If you'd like to see the current version in development of the website you can check it out at https://nssrobodevs.gq
+If you'd like to see the current version in development of the website you can check it out at https://carbontechrobotics.ca
 
 ##
 
