@@ -285,10 +285,24 @@
           </div>
         </div>
       </div>
-      <h2 id="people" class="our-team" data-aos="zoom-in" data-aos-once="true">
-        Our Members
-      </h2>
-      <div class="people">
+      <div class="membertitle">
+        <h2
+          id="people"
+          class="our-team"
+          data-aos="zoom-in"
+          data-aos-once="true"
+          style="margin-bottom: 0"
+        >
+          Our Team
+        </h2>
+        <div>
+          <select id="yearselector">
+            <option value="year2">2022/23</option>
+            <option value="year1">2021/22</option>
+          </select>
+        </div>
+      </div>
+      <div class="people data" id="year1">
         <div>
           <img
             src="/imgs/people/mrwong.webp"
@@ -420,6 +434,118 @@
           <figcaption>Manufacturing</figcaption>
         </div>
       </div>
+      <div class="people data showpeople" id="year2">
+        <div>
+          <img
+            src="/imgs/people/mrwong.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Mr. Wong"
+          />
+          <p>Mr. Wong</p>
+          <figcaption>Staff Advisor</figcaption>
+        </div>
+        <div>
+          <img
+            src="/imgs/people/aarnav.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Aarnav"
+          />
+          <p>Aarnav</p>
+          <figcaption>Head Of Robotics</figcaption>
+        </div>
+        <div>
+          <img
+            src="/imgs/people/eammon.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Eamonn"
+          />
+          <p>Eamonn</p>
+          <figcaption>Co-Head Of Manufacturing</figcaption>
+        </div>
+        <div>
+          <img
+            src="/imgs/people/jacob.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Jacob"
+          />
+          <p>Jacob</p>
+          <figcaption>Co-Head Of Manufacturing</figcaption>
+        </div>
+        <div>
+          <img
+            src="/imgs/people/dominique.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Dominique"
+          />
+          <p>Dominique</p>
+          <figcaption>Head Of Business</figcaption>
+        </div>
+        <div>
+          <img
+            src="/imgs/people/koby.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Koby"
+          />
+          <p>Koby</p>
+          <figcaption>Head Of Planning</figcaption>
+        </div>
+        <div>
+          <img
+            src="/imgs/people/chloe.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Chloe"
+          />
+          <p>Chloe</p>
+          <figcaption>Head Of Programming</figcaption>
+        </div>
+        <div>
+          <img
+            src="/imgs/people/anna.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Anna"
+          />
+          <p>Anna</p>
+          <figcaption>Head Of Media</figcaption>
+        </div>
+        <div>
+          <img
+            src="/imgs/people/retaj.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Retaj"
+          />
+          <p>Retaj</p>
+          <figcaption>Head Of Electronics</figcaption>
+        </div>
+        <div>
+          <img
+            src="/imgs/people/calum.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Calum"
+          />
+          <p>Calum</p>
+          <figcaption>Design</figcaption>
+        </div>
+        <div>
+          <img
+            src="/imgs/people/evan.webp"
+            data-aos="zoom-in-up"
+            data-aos-once="true"
+            alt="Evan"
+          />
+          <p>Evan</p>
+          <figcaption>Manufacturing</figcaption>
+        </div>
+      </div>
       <button id="back-to-top-btn">
         <img class="backtotoparrow" src="/imgs/up.svg" />
       </button>
@@ -461,6 +587,7 @@
         delay: 100,
       });
     </script>
+    <script src="/js/yearselect.js"></script>
     <script src="/js/manufacturingslides.js"></script>
     <script src="/js/programmingslides.js"></script>
     <script src="/js/transition.js"></script>

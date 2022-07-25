@@ -281,9 +281,12 @@ body {
 figcaption {
   text-align: center;
 }
+.showpeople {
+  display: flex !important;
+}
 .people {
   margin-top: 5%;
-  display: flex;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   flex-grow: 1;
@@ -296,7 +299,6 @@ figcaption {
   text-align: center;
   text-decoration: underline;
   font-size: 50px;
-  margin-top: 8%;
 }
 .people img {
   height: 600px;
@@ -684,4 +686,26 @@ figcaption {
 .logoinfo {
   grid-column-start: 1;
   grid-column-end: 5;
+}
+.membertitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+}
+#yearselector {
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #333;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+#yearselector option {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
 }
