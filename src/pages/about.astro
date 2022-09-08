@@ -1,0 +1,165 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import TeamLayout from '../layouts/TeamLayout.astro';
+import ImageHeader from '../components/ImageHeader.astro';
+import Person from '../components/About/Person.astro';
+import Subteam from '../components/About/Subteam.astro';
+import SubteamSlider from '../components/About/SubteamSlider.astro';
+---
+
+<MainLayout title="CarbonTech - About Us">
+  <ImageHeader title="About Us" background="/images/headers/about.webp" />
+  <div class="content">
+    <div class="about-us">
+      <a id="whoarewe"></a>
+      <div data-aos="fade-right">
+        <img
+          src="/images/aboutus/northern.webp"
+          alt="The main entrance of Northern Secondary School"
+        />
+        <h3>Northern Secondary School</h3>
+        <p>
+          Northern Secondary School, or as we like to call it, NSS, is located
+          near the heart of Toronto at 851 Mt Pleasant Rd. Northern is the third
+          largest secondary school in the Toronto District School Board with
+          almost eighteen hundred students; it was founded in September 1930.
+          NSS offers many programs such as the Specialist High Skills Major
+          Program as well as gifted, technology and business streams.
+        </p>
+      </div>
+      <div data-aos="fade-left">
+        <img
+          src="/images/aboutus/ourTeam.webp"
+          alt="Eamonn, Isaac, Jacob and Koby standing around our half finished 2022 robot Sharpie"
+        />
+        <h3>What We've Been Doing</h3>
+        <p class="ourteam">
+          Thanks to the generous support of our sponsors, parents, students,
+          School Foundation, Parent Council, School Council, our school, and the
+          tech department, we have been able to participate in the FIRST
+          Robotics Competition (FRC). FRC is an international robotics
+          competition where high school teams design, build and program a robot
+          to compete in a themed game. Throughout the build-season we have been
+          able to develop our skills across various fields including: computer
+          aided design (CAD) software, computerized numerical control (CNC)
+          machines, 3D printers, programming, electronics control system design,
+          business development and problem-solving.
+        </p>
+      </div>
+    </div>
+    <a id="teams"></a>
+    <div class="subteams" data-aos="zoom-in ">
+      <h3>Our Subteams</h3>
+      <p>
+        Our sub-teams are groups of students that focus on different aspects of
+        the robot and team operations. They include our Business, Programming,
+        Manufacturing, Design, and the Web Design and Media Teams.
+      </p>
+    </div>
+    <div class="teams">
+      <Subteam
+        name="Design"
+        alt="Olivia and Calum using a laptop with a 3D model on it"
+        description="This team leads the design of the robot. We use OnShape as our CAD software of choice to design and model various parts and components for our robots."
+        fadeDirection="left"
+      />
+      <SubteamSlider
+        name="Manufacturing"
+        images={[
+          '/images/aboutus/manufacturingSlides/1.webp',
+          '/images/aboutus/manufacturingSlides/2.webp',
+          '/images/aboutus/manufacturingSlides/3.webp',
+          '/images/aboutus/manufacturingSlides/4.webp',
+        ]}
+        description="This team is responsible for the manufacturing of the robot. We use a variety of tools such as 3D printers, CNC machines, and laser cutters to create the parts and components for our robots."
+        fadeDirection="right"
+      />
+      <SubteamSlider
+        name="Programming"
+        images={[
+          '/images/aboutus/programmingSlides/1.webp',
+          '/images/aboutus/programmingSlides/2.webp',
+          '/images/aboutus/programmingSlides/3.webp',
+        ]}
+        description="The programming team codes the 'brain' of the robot. The language of choice for FRC robots is Java since it provides a great balance between performance and control over systems and functionality."
+        fadeDirection="left"
+      />
+      <Subteam
+        name="Web Design"
+        alt="Isaac, Jacob and another member working around a laptop"
+        description="The web design team is responsible for the creating and maintaining this website. The media team is responsible for our social media presence as well as the team's photography and videography in partnership with the media team."
+        fadeDirection="right"
+      />
+    </div>
+    <TeamLayout>
+      <Person name="Mr. Wong" role="Staff Advisor" />
+      <Person name="Olivia" role="Head Of Robotics" />
+      <Person name="Aarnav" role="Manufacturing" />
+      <Person name="Eamonn" role="Manufacturing" />
+      <Person name="Jacob" role="Manufacturing & Web Design" />
+      <Person name="Dominique" role="Business" />
+      <Person name="Koby" role="Planning" />
+      <Person name="Harrison" role="Programming" />
+      <Person name="Chloe" role="Programming & Drive Team" />
+      <Person name="Anna" role="Media" />
+      <Person name="Retaj" role="Floater" />
+      <Person name="Calum" role="Design" />
+      <Person name="Evan" role="Manufacturing" />
+    </TeamLayout>
+  </div>
+  <style>
+    .content {
+      line-height: 2;
+    }
+    .about-us {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      margin-top: 10%;
+      gap: 50px;
+      width: fit-content;
+      color: black;
+      text-align: left;
+      width: fit-content;
+      padding-right: 30px;
+    }
+    .about-us img {
+      height: 400px;
+      width: auto;
+      border-radius: 10px;
+      margin-left: 15px;
+    }
+    .about-us p {
+      padding-right: 15px;
+      padding-left: 15px;
+      font-size: 20px;
+    }
+    .about-us h3 {
+      padding-right: 15px;
+      padding-left: 15px;
+      font-size: 32px;
+    }
+    .subteams {
+      text-align: center;
+      margin-top: 10%;
+    }
+    .subteams h3 {
+      font-size: 32px;
+    }
+    .subteams p {
+      font-size: 20px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .teams {
+      display: grid;
+      grid-template-columns: auto;
+      row-gap: 30px;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      margin-top: 7%;
+      width: auto;
+    }
+  </style>
+</MainLayout>

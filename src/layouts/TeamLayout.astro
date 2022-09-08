@@ -1,0 +1,27 @@
+<h2 id="people" class="our-team" data-aos="zoom-in" data-aos-once="true">
+  Our Members
+</h2>
+<div class="people" data-aos="zoom-in" data-aos-once="true">
+  <slot />
+</div>
+<style>
+  .people {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    column-gap: 70px;
+    row-gap: 75px;
+  }
+  #people {
+    text-decoration: underline;
+  }
+  .our-team {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 8%;
+  }
+</style>

@@ -1,0 +1,82 @@
+---
+import Footer from '../components/Footer.astro';
+import { SEO } from 'astro-seo';
+import '@fontsource/poppins';
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <SEO
+      title={title}
+      description="The official website for the CarbonTech FIRST robotics team from Toronto, Canada"
+      extend={{
+        // extending the default link tags
+        link: [{ rel: 'icon', href: '/favicon.ico' }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: 'viewport',
+            content: 'width=device-width, initial-scale=1.0',
+          },
+        ],
+      }}
+    />
+    <script
+      src="https://kit.fontawesome.com/8c6e6d8835.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="/css/mobile.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <slot />
+    <Footer />
+    <style>
+      :root {
+        --onyx: #424241;
+        --shinygrey: #8e9196;
+        --vividblue: #5ccbff;
+      }
+      /* Entire Scrollbar */
+      ::-webkit-scrollbar {
+        width: 15px;
+      }
+      /* Draggy Thingy */
+      ::-webkit-scrollbar-thumb {
+        background: #8c8c8c;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+      }
+      .header {
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: cover !important;
+        width: 100%;
+        height: 100vh;
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+      }
+    </style>
+    <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script is:inline>
+      AOS.init({
+        duration: 600,
+        delay: 100,
+        once: true,
+        offset: 50,
+      });
+    </script>
+  </body>
+</html>

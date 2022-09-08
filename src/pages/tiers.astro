@@ -1,0 +1,77 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ImageHeader from '../components/ImageHeader.astro';
+import SponsorshipTier from '../components/Sponsorship/SponsorshipTier.astro';
+---
+
+<MainLayout title="CarbonTech - Sponsorship Tiers">
+  <ImageHeader
+    title="Soponsorship Tiers"
+    background="/images/headers/tiers.webp"
+  />
+  <div class="tiers">
+    <SponsorshipTier
+      tier="Bronze"
+      amount="$500 - $999"
+      colour="#00d2ff"
+      things={[
+        'Name and logo showcased on our website',
+        'Name and logo showcased on our robot*',
+        'Receive our team merchandise',
+        'Receive a shoutout on all our social media platforms',
+        'Have your name mentioned at the FIRST competitions when our team is introduced',
+      ]}
+      buttonText="Donate"
+      buttonLink="/donate/"
+    />
+    <SponsorshipTier
+      tier="Silver"
+      amount="$1,000 - $4,999"
+      colour="#00b6f7"
+      things={[
+        'Everything in the Bronze tier',
+        'Come and meet our team',
+        'Have your name and logo displayed in our pit at the FIRST competitions',
+      ]}
+    />
+    <SponsorshipTier
+      tier="Gold"
+      amount="$5,000 - $9,999"
+      colour="#0099e9"
+      things={[
+        'Everything in the Silver tier',
+        'Upon request we will come and do a presentation at your company',
+        'Receive an invitation to come watch us compete at competitions',
+      ]}
+    />
+    <SponsorshipTier
+      tier="Platinum"
+      amount="$10,000+"
+      colour="#3a7bd5"
+      things={[
+        'Everything in the Gold tier',
+        'Receive a plaque recognizing the generous contributions you have made to support our team',
+      ]}
+    />
+    <div data-aos="zoom-in" data-aos-offset="70" class="logoinfo">
+      <p>
+        *The higher the tier you choose to donate with the larger and more
+        prominently your logo will be on our robot
+      </p>
+    </div>
+  </div>
+  <style>
+    .tiers {
+      display: grid;
+      grid-template-columns: 22vw 22vw 22vw 22vw;
+      justify-content: center;
+      margin-top: 25px;
+      text-align: center;
+      grid-gap: 30px;
+    }
+    .logoinfo {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  </style>
+</MainLayout>

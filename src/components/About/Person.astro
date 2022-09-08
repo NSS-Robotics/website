@@ -1,0 +1,32 @@
+---
+const { name, role } = Astro.props;
+---
+
+<div>
+  <img
+    data-aos="zoom-in-up"
+    src={'/images/people/' + name + '.webp'}
+    data-aos-once="true"
+    alt={'Picture of' + name}
+  />
+  <p>{name}</p>
+  <figcaption>{role}</figcaption>
+</div>
+<style>
+  img {
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    zoom: 50%;
+  }
+  p {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+  figcaption {
+    font-size: 20px;
+    text-align: center;
+  }
+</style>

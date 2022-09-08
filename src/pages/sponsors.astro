@@ -1,0 +1,42 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import SponsorsLayout from '../layouts/SponsorsLayout.astro';
+import ImageHeader from '../components/ImageHeader.astro';
+import Sponsor from '../components/Sponsorship/Sponsor.astro';
+---
+
+<MainLayout title="CarbonTech - Our Sponsors">
+  <ImageHeader
+    title="Our Amazing Sponsors"
+    background="/images/headers/sponsors.webp"
+  />
+  <SponsorsLayout>
+    <Sponsor
+      name="TDSB"
+      description="The TDSB has received funding from the Ministry of Education to develop Community-Connected Experiential Learning (CCEL) projects within our Elementary and Secondary schools (Grades 5-12) in the 2021-22 academic year."
+      buttonLink="https://www.tdsb.on.ca/"
+    />
+    <Sponsor
+      name="Onyen"
+      description="It is a pleasure to assist young women especially to achieve academic success in STEM activities"
+      buttonLink="https://www.onyen.com/#/home"
+    />
+    <Sponsor
+      name="Stones Throw Design"
+      buttonLink="https://stonesthrowdesigninc.com/"
+    />
+    <Sponsor name="Parents & Students" />
+    <Sponsor
+      name="Northern School Council"
+      buttonLink="https://www.nsscouncil.com/"
+    />
+    <Sponsor
+      name="Northern Secondary School"
+      buttonLink="https://schoolweb.tdsb.on.ca/northernss/"
+    />
+    <Sponsor
+      name="Northern Student Affairs Council"
+      buttonLink="https://www.northernsac.ca/"
+    />
+  </SponsorsLayout>
+</MainLayout>
