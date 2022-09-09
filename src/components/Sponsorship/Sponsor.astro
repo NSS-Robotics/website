@@ -3,7 +3,7 @@ const { name, description, buttonText = 'Website', buttonLink } = Astro.props;
 ---
 
 <div data-aos="zoom-in-up" class="sponsorbox">
-  <img src={'/src/images//sponsors/' + name + '.webp'} alt={name + "'s logo"} />
+  <img src={'/images/sponsors/' + name + '.webp'} alt={name + "'s logo"} />
   <figcaption>{name}</figcaption>
   <p>{description}</p>
   <a class="except" href={buttonLink} target="_blank">{buttonText}</a>
