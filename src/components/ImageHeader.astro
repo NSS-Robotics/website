@@ -1,41 +1,30 @@
 ---
 import Navbar from './Navbar.astro';
 import ScrollDown from './ScrollDown.astro';
-import { BackgroundImage } from 'astro-imagetools/components';
 
 const { title, subtitle, background } = Astro.props;
 ---
 
-<BackgroundImage
-  src={background}
-  backgroundSize="cover"
-  backgroundPosition="center"
-  formatOptions={{ width: '100%', height: '100vh' }}
-  placeholder="dominantColor"
-  attributes={{
-    link: {
-      fetchpriority: 'high',
-    },
-  }}
->
-  <div class="header">
-    <Navbar />
-    <div class="black"></div>
-    <div
-      class="titles"
-      data-aos-delay="800"
-      data-aos-duration="800"
-      data-aos="fade-up"
-    >
-      <h1>{title}</h1>
-      <p class="subtitle">{subtitle}</p>
-    </div>
-    <ScrollDown />
+<div class="header" style={` background-image: url(${background}); `}>
+  <Navbar />
+  <div class="black"></div>
+  <div
+    class="titles"
+    data-aos-delay="800"
+    data-aos-duration="800"
+    data-aos="fade-up"
+  >
+    <h1>{title}</h1>
+    <p class="subtitle">{subtitle}</p>
   </div>
-</BackgroundImage>
+  <ScrollDown />
+</div>
 
 <style>
   .header {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
     width: 100%;
     height: 100vh;
     margin-top: auto;
@@ -45,7 +34,7 @@ const { title, subtitle, background } = Astro.props;
     flex-flow: column;
   }
   .titles {
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     text-align: center;
     text-decoration: underline;

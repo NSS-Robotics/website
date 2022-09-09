@@ -13,7 +13,6 @@
     "@fontsource/poppins": "^4.5.9",
     "astro": "^1.1.5",
     "astro-imagetools": "^0.6.10",
-    "astro-seo": "^0.6.0",
     "swiper": "^8.3.2"
   },
   "devDependencies": {

@@ -8,13 +8,13 @@ import SubteamSlider from '../components/About/SubteamSlider.astro';
 ---
 
 <MainLayout title="CarbonTech - About Us">
-  <ImageHeader title="About Us" background="/src/images/headers/about.webp" />
+  <ImageHeader title="About Us" background="../images/headers/about.webp" />
   <div class="content">
     <div class="about-us">
       <a id="whoarewe"></a>
       <div data-aos="fade-right">
         <img
-          src="/src/images/aboutus/northern.webp"
+          src="../images/aboutus/northern.webp"
           alt="The main entrance of Northern Secondary School"
         />
         <h3>Northern Secondary School</h3>
@@ -29,7 +29,7 @@ import SubteamSlider from '../components/About/SubteamSlider.astro';
       </div>
       <div data-aos="fade-left">
         <img
-          src="/src/images/aboutus/ourTeam.webp"
+          src="../images/aboutus/ourTeam.webp"
           alt="Eamonn, Isaac, Jacob and Koby standing around our half finished 2022 robot Sharpie"
         />
         <h3>What We've Been Doing</h3>
@@ -59,7 +59,6 @@ import SubteamSlider from '../components/About/SubteamSlider.astro';
     <div class="teams">
       <Subteam
         name="Design"
-        image="/src/images/aboutus/Design.webp"
         alt="Olivia and Calum using a laptop with a 3D model on it"
         description="This team leads the design of the robot. We use OnShape as our CAD software of choice to design and model various parts and components for our robots."
         fadeDirection="left"
@@ -67,10 +66,10 @@ import SubteamSlider from '../components/About/SubteamSlider.astro';
       <SubteamSlider
         name="Manufacturing"
         images={[
-          '/src/images/aboutus/manufacturingSlides/1.webp',
-          '/src/images/aboutus/manufacturingSlides/2.webp',
-          '/src/images/aboutus/manufacturingSlides/3.webp',
-          '/src/images/aboutus/manufacturingSlides/4.webp',
+          '../images/aboutus/manufacturingSlides/1.webp',
+          '../images/aboutus/manufacturingSlides/2.webp',
+          '../images/aboutus/manufacturingSlides/3.webp',
+          '../images/aboutus/manufacturingSlides/4.webp',
         ]}
         description="This team is responsible for the manufacturing of the robot. We use a variety of tools such as 3D printers, CNC machines, and laser cutters to create the parts and components for our robots."
         fadeDirection="right"
@@ -78,16 +77,15 @@ import SubteamSlider from '../components/About/SubteamSlider.astro';
       <SubteamSlider
         name="Programming"
         images={[
-          '/src/images/aboutus/programmingSlides/1.webp',
-          '/src/images/aboutus/programmingSlides/2.webp',
-          '/src/images/aboutus/programmingSlides/3.webp',
+          '../images/aboutus/programmingSlides/1.webp',
+          '../images/aboutus/programmingSlides/2.webp',
+          '../images/aboutus/programmingSlides/3.webp',
         ]}
         description="The programming team codes the 'brain' of the robot. The language of choice for FRC robots is Java since it provides a great balance between performance and control over systems and functionality."
         fadeDirection="left"
       />
       <Subteam
         name="Web Design"
-        image="/src/images/aboutus/WebDesign.webp"
         alt="Isaac, Jacob and another member working around a laptop"
         description="The web design team is responsible for the creating and maintaining this website. The media team is responsible for our social media presence as well as the team's photography and videography in partnership with the media team."
         fadeDirection="right"

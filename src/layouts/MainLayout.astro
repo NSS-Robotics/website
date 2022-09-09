@@ -1,6 +1,5 @@
 ---
 import Footer from '../components/Footer.astro';
-import { ImageSupportDetection } from 'astro-imagetools/components';
 //@ts-ignore
 import { SEO } from 'astro-seo';
 import '@fontsource/poppins';
@@ -11,7 +10,6 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <ImageSupportDetection />
     <SEO
       title={title}
       description="The official website for the CarbonTech FIRST robotics team from Toronto, Canada"
