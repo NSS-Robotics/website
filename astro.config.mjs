@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
-import robotsTxt from 'astro-robots-txt';
 import react from '@astrojs/react';
+import { astroImageTools } from 'astro-imagetools';
+import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,5 +9,5 @@ export default defineConfig({
     integrations: true,
   },
   site: 'https://nssrobodevs.gq',
-  integrations: [react(), robotsTxt()],
+  integrations: [astroImageTools, react(), robotsTxt()],
 });
