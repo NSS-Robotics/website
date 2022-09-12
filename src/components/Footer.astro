@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -9,22 +10,18 @@ const currentYear = new Date().getFullYear();
         class="except"
         href="https://github.com/NSS-Robotics/website"
         target="_blank"
-        ><i class="fa-brands icons fa-github"></i>
+      >
+        <Icon name="bi:github" />
       </a>
       <a
         class="except"
         href="https://www.instagram.com/nss.roboticsclub/"
         target="_blank"
-        ><i class="fa-brands icons fa-instagram"></i>
+      >
+        <Icon name="bi:instagram" />
       </a>
-      <a
-        class="except"
-        href="https://www.instagram.com/nss.roboticsclub/"
-        target="_blank"
-        ><i class="fa-brands icons fa-youtube"></i>
-      </a>
-      <a class="except" href="mailto:nss.roboticsclub@gmail.com"
-        ><i class="fa-regular icons fa-envelope"></i>
+      <a class="except" href="mailto:nss.roboticsclub@gmail.com">
+        <Icon name="bi:envelope" />
       </a>
     </div>
     <div class="vercel">
@@ -37,11 +34,11 @@ const currentYear = new Date().getFullYear();
     </div>
     <div class="footerline"></div>
     <div class="pages">
-      <a href="/about/">About Us</a>
-      <a href="/gallery/">Gallery</a>
-      <a href="/sponsors/">Our Sponsors</a>
-      <a href="/tiers/">Sponsorship Tiers</a>
-      <a href="/donate/">Sponsor Us</a>
+      <a href="/about">About Us</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/sponsors">Our Sponsors</a>
+      <a href="/tiers">Sponsorship Tiers</a>
+      <a href="/donate">Sponsor Us</a>
     </div>
     <div>
       <p>&copy; NSS Robotics {currentYear}</p>
@@ -57,6 +54,15 @@ const currentYear = new Date().getFullYear();
     margin-top: 50px;
     text-align: center;
     z-index: 1;
+  }
+  [astro-icon] {
+    color: white;
+    width: 30px;
+    margin-left: 10px;
+  }
+  [astro-icon]:hover {
+    color: #40c3ff;
+    transition-duration: 0.3s;
   }
   .footer img {
     width: 80px;
@@ -97,10 +103,6 @@ const currentYear = new Date().getFullYear();
     color: #ffffff;
     font-size: 27px;
     padding: 5px;
-    transition-duration: 0.3s;
-  }
-  .icons:hover {
-    color: #40c3ff;
     transition-duration: 0.3s;
   }
   .pages {
