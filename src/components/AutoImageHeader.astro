@@ -5,6 +5,18 @@ import ScrollDown from './ScrollDown.astro';
 const { title, subtitle } = Astro.props;
 ---
 
+<link rel="preload" href="/images/headers/auto/1.webp" as="image" />
+<link rel="preload" href="/images/headers/auto/2.webp" as="image" />
+<link rel="preload" href="/images/headers/auto/3.webp" as="image" />
+<link rel="preload" href="/images/headers/auto/4.webp" as="image" />
+<link rel="preload" href="/images/headers/auto/5.webp" as="image" />
+<link rel="preload" href="/images/headers/auto/6.webp" as="image" />
+<link rel="preload" href="/images/headers/auto/7.webp" as="image" />
+<link rel="preload" href="/images/headers/auto/8.webp" as="image" />
+<link rel="preload" href="/images/headers/auto/9.webp" as="image" />
+<link rel="preload" href="/images/headers/auto/10.webp" as="image" />
+<link rel="preload" href="/images/headers/auto/11.webp" as="image" />
+
 <div class="header">
   <Navbar />
   <div class="black"></div>
@@ -34,6 +46,7 @@ const { title, subtitle } = Astro.props;
     '/images/headers/auto/10.webp',
     '/images/headers/auto/11.webp',
   ];
+
   const firefox =
     navigator.userAgent.toString().toLowerCase().indexOf('firefox') != -1;
 
