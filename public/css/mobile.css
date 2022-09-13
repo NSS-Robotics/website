@@ -81,11 +81,18 @@
     flex-wrap: wrap;
   }
   .teamgroup img {
-    width: 90% !important;
+    width: 90vw !important;
+    height: auto !important;
+  }
+  .teamgroup p {
+    width: 80vw !important;
   }
   .teams img {
-    margin-left: 6% !important;
-    margin-right: 0 !important;
+    margin: 0 !important;
+  }
+  .about-us {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
   }
 }
 @media screen and (max-width: 845px) {
@@ -100,14 +107,8 @@
   html {
     overflow-x: hidden;
   }
-  .title {
-    margin-top: 60% !important;
-  }
-  .title h1 {
-    font-size: 26px;
-  }
-  .subtitle p {
-    font-size: 11px;
+  .titles {
+    margin-bottom: 40vh;
   }
   .space {
     display: none;
@@ -122,16 +123,12 @@
     background-position: center;
     width: 100vw !important;
   }
-  .ourteam {
-    font-size: 19px !important;
+  .our-team {
     width: auto !important;
   }
   .about-us p {
     margin-right: 20px;
     margin-left: 20px;
-  }
-  .people {
-    width: 100vw;
   }
   .left {
     justify-content: center;
@@ -166,10 +163,7 @@
   .wooshies img {
     width: 300px !important;
   }
-  .aboutwoosh {
-    flex-wrap: wrap-reverse !important;
-  }
-  .firstwoosh {
+  .woosh {
     flex-wrap: wrap-reverse !important;
   }
   #nsscouncil {
