@@ -1,0 +1,101 @@
+---
+import Navbar from './Navbar.astro';
+import ScrollDown from './ScrollDown.astro';
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="header">
+  <Navbar />
+  <div class="black"></div>
+  <div
+    class="titles"
+    data-aos-delay="800"
+    data-aos-duration="800"
+    data-aos="fade-up"
+  >
+    <h1>{title}</h1>
+    <p class="subtitle">{subtitle}</p>
+  </div>
+  <ScrollDown />
+</div>
+
+<script>
+  const images = [
+    '/images/headers/auto/1.webp',
+    '/images/headers/auto/2.webp',
+    '/images/headers/auto/3.webp',
+    '/images/headers/auto/4.webp',
+    '/images/headers/auto/5.webp',
+    '/images/headers/auto/6.webp',
+    '/images/headers/auto/7.webp',
+    '/images/headers/auto/8.webp',
+    '/images/headers/auto/9.webp',
+    '/images/headers/auto/10.webp',
+    '/images/headers/auto/11.webp',
+  ];
+  const firefox =
+    navigator.userAgent.toString().toLowerCase().indexOf('firefox') != -1;
+
+  if (!firefox) {
+    initBg();
+    setInterval(changeBG, 3700);
+  } else {
+    initBg();
+  }
+
+  function changeBG() {
+    const header = document.querySelector('.header')! as HTMLElement;
+    const bg = images[Math.floor(Math.random() * images.length)];
+
+    header.style.backgroundImage = 'url(' + bg + ')';
+    header.style.transition = '2.3s';
+  }
+
+  function initBg() {
+    const bg = images[Math.floor(Math.random() * images.length)];
+    const header = document.querySelector('.header')! as HTMLElement;
+    header.style.backgroundImage = 'url(' + bg + ')';
+  }
+</script>
+
+<style>
+  .header {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 100vh;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+  .titles {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20%;
+    margin-top: 20%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+  }
+  /* Mini Subtitle Text */
+  .subtitle {
+    font-size: 25px;
+  }
+  .black {
+    background: black;
+    opacity: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+</style>
