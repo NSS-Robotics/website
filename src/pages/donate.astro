@@ -1,91 +1,13 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
+import DonatingSlider from '../components/Sponsorship/Donating/index.jsx';
 ---
 
 <MainLayout title="CarbonTech - Donate">
   <ImageHeader title="Donating" background="/images/headers/donate.webp" />
   <div class="content">
-    <div class="howto">
-      <div class="step" data-aos="fade-right">
-        <img src="/images/donating/1.webp" alt="The NSSF donations homepage" />
-        <div class="wooshgroup">
-          <h2>Step 1</h2>
-          <p style="text-align: center">
-            We process all of our donations through the Northern Secondary
-            School Foundation (NSSF) website.
-            <strong style="background-color: yellow; border-radius: 5px">
-              Donations of $20 or more are eligible to receive a charitable tax
-              receipt.
-            </strong>
-            Click the button below to open the NSSF donation webpage in a new tab.
-          </p>
-          <a class="except" href="https://nssf.ca/support-us/" target="_blank"
-            >NSSF Website</a
-          >
-        </div>
-      </div>
-      <div class="step" data-aos="fade-right">
-        <img src="/images/donating/2.webp" alt="The NSSF donation form" />
-        <div class="wooshgroup">
-          <h2>Step 2</h2>
-          <p>
-            Scroll down the page until you come to the section which looks like
-            this. On the right side of the screen is the form which is used to
-            make either the one time or monthly donation.
-          </p>
-        </div>
-      </div>
-      <div class="step" data-aos="fade-right">
-        <img
-          src="/images/donating/3.webp"
-          style="zoom: 50%"
-          alt="Zoomed image of the NSSF donation form"
-        />
-        <div class="wooshgroup">
-          <h2>Step 3</h2>
-          <p style="text-align: left">
-            [1] Choose whether you would like your donation to be monthly or one
-            time.<br />[2] Enter the amount you would donate; either by picking
-            from a preset amount or by entering a custom amount.<br />[3] This
-            is who the donation will go to. Please make sure this is set to "NSS
-            Robotics Team".<br />[4] Send a message to us along with your
-            donation (Optional).<br />[5] Dedicate your donation to someone
-            (Optional).
-          </p>
-        </div>
-      </div>
-      <div class="step" data-aos="fade-right">
-        <img
-          src="/images/donating/4.webp"
-          style="zoom: 50%"
-          alt="The second part of the NSSF donation form"
-        />
-        <div class="wooshgroup">
-          <h2>Step 4</h2>
-          <p>
-            Enter all the information needed by the form including: Email, First
-            and Last Names and Address.
-          </p>
-        </div>
-      </div>
-      <div class="step" data-aos="fade-right">
-        <img
-          src="/images/donating/5.webp"
-          style="height: fit-content; align-self: center"
-          alt="The 3 payment options of the NSSF donation form"
-        />
-        <div class="wooshgroup">
-          <h2>Step 5</h2>
-          <p>
-            There are three different options when it comes to how you can pay.
-            You can choose from either a [1] credit card, [2] PayPal, or a [3]
-            CanadaHelps Gift Card. You can pick the option you want to use by
-            selecting one of the dots at the top of the form.
-          </p>
-        </div>
-      </div>
-    </div>
+    <DonatingSlider client:visible />
   </div>
 </MainLayout>
 <style>
@@ -93,54 +15,5 @@ import ImageHeader from '../components/ImageHeader.astro';
     color: black;
     margin-top: 25px;
     line-height: 2;
-  }
-  .howto {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  .howto img {
-    width: 600px;
-    height: auto;
-    padding: 12px;
-    border-radius: 20px;
-  }
-  .howto a {
-    text-decoration: none;
-    color: white;
-    background-color: var(--onyx);
-    margin-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 10px;
-    border: 3px solid var(--onyx);
-  }
-  .howto a:hover {
-    transition-duration: 200ms;
-    background-color: transparent;
-    color: var(--onyx);
-  }
-  .howto p {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 10%;
-    width: 360px;
-  }
-  .wooshgroup {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .step {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: ce;
-    margin-top: 50px;
-    width: 75vw;
   }
 </style>

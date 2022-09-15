@@ -71,7 +71,7 @@
   .wooshies img {
     width: 400px !important;
   }
-  .howto img {
+  .step img {
     width: 400px !important;
   }
 }
@@ -174,6 +174,9 @@
   }
   .sponsorbox {
     width: 50vw !important;
+  }
+  .step img {
+    width: 400px !important;
   }
 }
 @media screen and (max-width: 720px) {
