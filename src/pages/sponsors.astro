@@ -10,6 +10,9 @@ import Sponsor from '../components/Sponsorship/Sponsor.astro';
     title="Our Amazing Sponsors"
     background="/images/headers/sponsors.webp"
   />
+  <h2 data-aos="zoom-in-up" style="text-decoration-color: #00b6f7;">
+    Silver Sponsors
+  </h2>
   <SponsorsLayout>
     <Sponsor
       name="TDSB"
@@ -17,15 +20,20 @@ import Sponsor from '../components/Sponsorship/Sponsor.astro';
       buttonLink="https://www.tdsb.on.ca/"
     />
     <Sponsor
-      name="Onyen"
-      description="It is a pleasure to assist young women especially to achieve academic success in STEM activities"
-      buttonLink="https://www.onyen.com/#/home"
-    />
-    <Sponsor
       name="Deloitte Digital"
       buttonLink="https://www.deloittedigital.com/us/en.html"
       border="0px"
     />
+    <Sponsor
+      name="Onyen"
+      description="It is a pleasure to assist young women especially to achieve academic success in STEM activities"
+      buttonLink="https://www.onyen.com/#/home"
+    />
+  </SponsorsLayout>
+  <h2 data-aos="zoom-in-up" style="text-decoration-color: #00d2ff;">
+    Bronze Sponsors
+  </h2>
+  <SponsorsLayout>
     <Sponsor
       name="Stones Throw Design"
       buttonLink="https://stonesthrowdesigninc.com/"
@@ -45,3 +53,11 @@ import Sponsor from '../components/Sponsorship/Sponsor.astro';
     />
   </SponsorsLayout>
 </MainLayout>
+<style>
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 40px;
+    margin-bottom: 3.5%;
+  }
+</style>
