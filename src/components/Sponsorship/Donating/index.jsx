@@ -24,12 +24,12 @@ export default function DonatingSlider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div class="step">
+          <div className="step">
             <img
               src="/images/donating/1.webp"
               alt="The NSSF donations homepage"
             />
-            <div class="wooshgroup">
+            <div className="wooshgroup">
               <h2>Step 1</h2>
               <p>
                 We process all of our donations through the Northern Secondary
@@ -42,7 +42,7 @@ export default function DonatingSlider() {
                 new tab.
               </p>
               <a
-                class="except"
+                className="except"
                 href="https://nssf.ca/support-us/"
                 target="_blank"
               >
@@ -52,9 +52,9 @@ export default function DonatingSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="step">
+          <div className="step">
             <img src="/images/donating/2.webp" alt="The NSSF donation form" />
-            <div class="wooshgroup">
+            <div className="wooshgroup">
               <h2>Step 2</h2>
               <p>
                 Scroll down the page until you come to the section which looks
