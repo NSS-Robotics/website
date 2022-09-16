@@ -108,7 +108,7 @@
     overflow-x: hidden;
   }
   .titles {
-    margin-bottom: 40vh;
+    margin-bottom: 40vh !important;
   }
   .space {
     display: none;
