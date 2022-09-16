@@ -1,0 +1,59 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import AutoImageHeader from '../components/AutoImageHeader.astro';
+import Wooshie from '../components/Wooshie.astro';
+---
+
+<MainLayout title="Knight Owls - Home">
+  <AutoImageHeader
+    title="Knight Owls"
+    subtitle="Northern FIRST Robotics Team #8884"
+  />
+  <div class="wooshies">
+    <Wooshie
+      fadeDirection="right"
+      title="Who Are We?"
+      subtitle="Learn a bit more about us and our team."
+      image="/images/wooshies/about.webp"
+      alt="Anna, Koby, Jacob, Grace and Retaj working on the 2022 CETA line following robot"
+      buttonLink="/about"
+      buttonText="About Us"
+    />
+    <Wooshie
+      fadeDirection="left"
+      title="Gallery"
+      subtitle="Experience our first year competing in the FIRST Robotics Competition!"
+      image="/images/wooshies/gallery.webp"
+      alt="The 2022 robotics team with our 2022 robot Sharpie in the gym"
+      buttonLink="/gallery"
+      buttonText="Gallery"
+    />
+    <Wooshie
+      fadeDirection="right"
+      title="FIRST Robotics"
+      subtitle="Learn more about the FIRST Robotics Competition"
+      image="/images/wooshies/first.webp"
+      alt="A laptop sitting at the driver's station at the FIRST provincial championships"
+      buttonLink="https://www.firstinspires.org/robotics/frc"
+      buttonText="FIRST Website"
+    />
+    <Wooshie
+      fadeDirection="left"
+      title="Support Us"
+      subtitle="If you would like to support us and our team, you are more than to donate by clicking the button below!"
+      image="images/wooshies/donate.webp"
+      alt="Olivia working with a laptop in front of an Ultimaker 3D printer"
+      buttonLink="/donate"
+      buttonText="Donate"
+    />
+  </div>
+</MainLayout>
+<style>
+  .wooshies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+</style>

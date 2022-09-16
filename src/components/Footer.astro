@@ -1,0 +1,121 @@
+---
+import { Icon } from 'astro-icon';
+const currentYear = new Date().getFullYear();
+---
+
+<div class="footer">
+  <div class="center">
+    <div class="footerlinks">
+      <a class="except" href="https://github.com/NSS-Robotics/" target="_blank">
+        <Icon name="bi:github" />
+      </a>
+      <a
+        class="except"
+        href="https://www.instagram.com/nss.roboticsclub/"
+        target="_blank"
+      >
+        <Icon name="bi:instagram" />
+      </a>
+      <a class="except" href="mailto:hello@knightowls.ca">
+        <Icon name="bi:envelope" />
+      </a>
+    </div>
+    <div class="vercel">
+      <p>Powered By</p>
+      <a
+        class="except"
+        href="https://vercel.com/?utm_source=nssrobotics&utm_campaign=oss"
+        ><img src="/images/vercel.svg" alt="Vercel logo" />
+      </a>
+    </div>
+    <div class="footerline"></div>
+    <div class="pages">
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/sponsors">Our Sponsors</a>
+      <a href="/tiers">Sponsorship Tiers</a>
+      <a href="/donate">Sponsor Us</a>
+    </div>
+    <div>
+      <p>&copy; NSS Robotics {currentYear}</p>
+    </div>
+  </div>
+</div>
+<style>
+  .footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    text-align: center;
+    z-index: 1;
+  }
+  [astro-icon] {
+    color: white;
+    width: 30px;
+    margin-left: 10px;
+  }
+  [astro-icon]:hover {
+    color: #40c3ff;
+    transition-duration: 0.3s;
+  }
+  .footer img {
+    width: 80px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+  }
+  .vercel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .center p {
+    font-size: 18px;
+    margin-top: 0px;
+  }
+  .footerline {
+    height: 2px;
+    width: 30%;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  .footerlinks {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .icons {
+    color: #ffffff;
+    font-size: 27px;
+    padding: 5px;
+    transition-duration: 0.3s;
+  }
+  .pages {
+    margin-bottom: 15px;
+  }
+  .pages a {
+    margin-left: 8px;
+    margin-right: 8px;
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    text-decoration: underline solid transparent;
+  }
+  .pages a:hover {
+    text-decoration: underline solid var(--vividblue);
+    text-decoration-thickness: 2px;
+    transition-duration: 0.3s;
+  }
+</style>

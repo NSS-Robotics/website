@@ -1,0 +1,19 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ImageHeader from '../components/ImageHeader.astro';
+import DonatingSlider from '../components/Sponsorship/Donating/index.jsx';
+---
+
+<MainLayout title="Knight Owls - Donate">
+  <ImageHeader title="Donating" background="/images/headers/donate.webp" />
+  <div class="content">
+    <DonatingSlider client:visible />
+  </div>
+</MainLayout>
+<style>
+  .content {
+    color: black;
+    margin-top: 25px;
+    line-height: 2;
+  }
+</style>

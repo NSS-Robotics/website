@@ -1,0 +1,215 @@
+@media screen and (max-width: 1425px) {
+  .navbar {
+    zoom: 90% !important;
+  }
+}
+@media screen and (max-width: 1385px) {
+  html {
+    overflow-x: hidden;
+  }
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    column-gap: 15px;
+    width: 100vw;
+    text-align: center !important;
+  }
+  .about-us img {
+    width: 90% !important;
+    height: auto !important;
+  }
+  .slides {
+    width: 98% !important;
+    height: auto;
+    float: none;
+  }
+  .btn-right {
+    right: 60px !important;
+    top: 220px !important;
+    color: black;
+    background-color: white !important;
+    border-radius: 100px;
+    padding: 11px 20px;
+    text-decoration: none;
+  }
+  .btn-left {
+    left: 70px !important;
+    top: 220px !important;
+    color: black;
+    background-color: white !important;
+    border-radius: 100px;
+    padding: 11px 20px;
+    text-decoration: none;
+  }
+  .aboutwoosh {
+    width: 100% !important;
+  }
+  .gallerywoosh {
+    width: 100% !important;
+  }
+  .firstwoosh {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 1265px) {
+  .navbar {
+    zoom: 75% !important;
+  }
+  .tiers {
+    grid-template-columns: 44vw 44vw !important;
+  }
+  .logoinfo {
+    grid-column-start: 1;
+    grid-column-end: 3 !important;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .navbar {
+    zoom: 63% !important;
+  }
+  .wooshies img {
+    width: 400px !important;
+  }
+  .step img {
+    width: 400px !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .teamgroup {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .teamgroup img {
+    width: 90vw !important;
+    height: auto !important;
+  }
+  .teamgroup p {
+    width: 80vw !important;
+  }
+  .teams img {
+    margin: 0 !important;
+  }
+  .about-us {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+}
+@media screen and (max-width: 845px) {
+  .navbar {
+    zoom: 68% !important;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 2%;
+  }
+}
+@media screen and (max-width: 813px) {
+  html {
+    overflow-x: hidden;
+  }
+  .titles {
+    margin-bottom: 40vh !important;
+  }
+  .space {
+    display: none;
+  }
+  .header {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw !important;
+  }
+  .black {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw !important;
+  }
+  .our-team {
+    width: auto !important;
+  }
+  .about-us p {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .left {
+    justify-content: center;
+  }
+  .btn-right {
+    right: 45px !important;
+    top: 270px !important;
+    position: absolute !important;
+    color: black;
+    background-color: white !important;
+    border-radius: 100px;
+    padding: 11px 20px;
+    text-decoration: none;
+    zoom: 90%;
+  }
+  .btn-right:hover {
+    right: 40px !important;
+  }
+  .btn-left {
+    left: 55px !important;
+    top: 270px !important;
+    color: black;
+    background-color: white !important;
+    border-radius: 100px;
+    padding: 11px 20px;
+    text-decoration: none;
+    zoom: 90%;
+  }
+  .btn-left:hover {
+    left: 55px !important;
+  }
+  .wooshies img {
+    width: 300px !important;
+  }
+  .woosh {
+    flex-wrap: wrap-reverse !important;
+  }
+  #nsscouncil {
+    height: 7vw !important;
+  }
+  .sponsors {
+    flex-direction: column;
+  }
+  .sponsorbox {
+    width: 50vw !important;
+  }
+  .step img {
+    width: 400px !important;
+  }
+}
+@media screen and (max-width: 720px) {
+  .tiers {
+    grid-template-columns: 65vw !important;
+  }
+  .box h3 {
+    height: auto !important;
+  }
+  .logoinfo {
+    grid-column-start: 1;
+    grid-column-end: 2 !important;
+  }
+}
+@media screen and (max-width: 482px) {
+  .navbar {
+    zoom: 50% !important;
+  }
+  .tiers {
+    grid-template-columns: 88vw !important;
+  }
+  .logoinfo {
+    grid-column-start: 1;
+    grid-column-end: 2 !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  #tiersTitle {
+    font-size: 10vw !important;
+  }
+}
+@media screen and (max-width: 380px) {
+  .navbar {
+    zoom: 40% !important;
+  }
+}
