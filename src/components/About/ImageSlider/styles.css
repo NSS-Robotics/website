@@ -6,6 +6,11 @@
     background-color: #5ccbff !important;
   }
 }
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #5ccbff;
+  opacity: 1;
+}
+
 @media screen and (max-width: 535px) {
   .swiper-pagination-vertical.swiper-pagination-bullets,
   .swiper-vertical > .swiper-pagination-bullets {
@@ -54,10 +59,7 @@
     right: 100px !important;
   }
 }
-span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #5ccbff !important;
-  opacity: 1 !important;
-}
+
 /* target all bullets */
 .swiper-pagination-bullet {
   background-color: white;
