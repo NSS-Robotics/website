@@ -5,6 +5,7 @@ const {
   buttonText = 'Website',
   buttonLink,
   border = '10px',
+  buttonVisible = '',
 } = Astro.props;
 ---
 
@@ -16,10 +17,15 @@ const {
   />
   <figcaption>{name}</figcaption>
   <p>{description}</p>
-  <a class="except" href={buttonLink} target="_blank">{buttonText}</a>
+  <a id={buttonVisible} class="except" href={buttonLink} target="_blank"
+    >{buttonText}
+  </a>
 </div>
 
 <style>
+  #false {
+    display: none !important;
+  }
   .sponsorbox {
     background-color: #f5f5f5;
     border-radius: 10px;
