@@ -19,5 +19,9 @@ export default defineConfig({
       external: ['svgo'],
     },
   },
-  integrations: [react(), robotsTxt(), sitemap()],
+  integrations: [
+    react(),
+    robotsTxt({ sitemap: 'https://knightowls.ca/sitemap-0.xml' }),
+    sitemap(),
+  ],
 });
