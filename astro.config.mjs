@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://nssrobodevs.gq',
+  site: 'https://knightowls.ca',
   // Important!
   // Only official '@astrojs/*' integrations are currently supported by Astro.
   // Add 'experimental.integrations: true' to make 'astro-robots-txt' working
