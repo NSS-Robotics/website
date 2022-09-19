@@ -1,19 +1,28 @@
-<h3 id="people" class="our-team" data-aos="zoom-in" data-aos-once="true">
-  Our Members
-</h3>
-<div class="people" data-aos="zoom-in" data-aos-once="true">
+---
+const { year, classes } = Astro.props;
+---
+
+<div
+  class:list={[classes, 'people data']}
+  id={year}
+  data-aos="zoom-in"
+  data-aos-once="true"
+>
   <slot />
 </div>
 <style>
   .people {
     margin-top: 5%;
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
     justify-content: center;
     column-gap: 70px;
     row-gap: 75px;
+  }
+  .showDefault {
+    display: flex !important;
   }
   .our-team {
     display: block;
