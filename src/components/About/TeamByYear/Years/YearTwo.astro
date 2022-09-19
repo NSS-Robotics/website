@@ -1,19 +1,29 @@
 ---
 import TeamLayout from '../../../../layouts/TeamLayout.astro';
 import Person from '../../Person.astro';
+import ExcecTitle from '../Titles/ExcecTitle.astro';
+import ManufacturingTitle from '../Titles/ManufacturingTitle.astro';
+import DesignTitle from '../Titles/DesignTitle.astro';
+import BusinessTitle from '../Titles/BusinessTitle.astro';
+import MediaTitle from '../Titles/MediaTitle.astro';
 ---
 
 <TeamLayout classes="showDefault" year="year2">
+  <ExcecTitle />
   <Person name="Mr. Wong" role="Staff Advisor" />
   <Person name="Mr. Edwards" role="Staff Advisor" />
   <Person name="Aarnav" role="Head Of Robotics" />
   <Person name="Chloe" role="Co-Head Of Robotics & Programming Lead" />
+  <ManufacturingTitle />
   <Person name="Eamonn" role="Manufacturing Lead" />
   <Person name="Jacob" role="Manufacturing & Web Design Lead" />
+  <Person name="Evan" role="Manufacturing" />
+  <DesignTitle />
+  <Person name="Calum" role="Design Lead" />
+  <BusinessTitle />
   <Person name="Dominique" role="Business Lead" />
   <Person name="Koby" role="Lead Strategist" />
+  <MediaTitle />
   <Person name="Anna" role="Media Lead" />
   <Person name="Retaj" role="Electronics Lead" />
-  <Person name="Calum" role="Design Lead" />
-  <Person name="Evan" role="Manufacturing" />
 </TeamLayout>

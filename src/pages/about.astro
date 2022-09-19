@@ -97,9 +97,11 @@ import YearTwo from '../components/About/TeamByYear/Years/YearTwo.astro';
     <YearTwo />
   </div>
   <script>
+    // Get the element with the id of "yearselector"
     const selector = document.getElementById(
       'yearselector'
     ) as HTMLSelectElement;
+    // When the selector changes, change the year to the selected year
     selector.addEventListener('change', function () {
       let newactive = document.querySelector('#' + this.value) as HTMLElement;
       let oldactive = document.querySelector('.people') as HTMLElement;
