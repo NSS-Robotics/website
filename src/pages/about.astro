@@ -96,27 +96,28 @@ import YearTwo from '../components/About/TeamByYear/Years/YearTwo.astro';
     <YearOne />
     <YearTwo />
   </div>
-  <script is:inline>
-    document
-      .getElementById('yearselector')
-      .addEventListener('change', function () {
-        let newactive = document.querySelector('#' + this.value);
-        oldactive = document.querySelector('.people');
+  <script>
+    const selector = document.getElementById(
+      'yearselector'
+    ) as HTMLSelectElement;
+    selector.addEventListener('change', function () {
+      let newactive = document.querySelector('#' + this.value) as HTMLElement;
+      let oldactive = document.querySelector('.people') as HTMLElement;
 
-        removeClass();
-        newactive.classList.add('showDefault');
+      removeClass();
+      newactive.classList.add('showDefault');
 
-        oldactive.animate([{ opacity: '1' }, { opacity: '.5' }], {
-          duration: 1000,
-        });
-        newactive.animate([{ opacity: '.2' }, { opacity: '1' }], {
-          duration: 1000,
-        });
+      oldactive.animate([{ opacity: '1' }, { opacity: '.5' }], {
+        duration: 1000,
       });
+      newactive.animate([{ opacity: '.2' }, { opacity: '1' }], {
+        duration: 1000,
+      });
+    });
 
     function removeClass() {
       var allElements = document.querySelectorAll('.showDefault');
-      for (i = 0; i < allElements.length; i++) {
+      for (let i = 0; i < allElements.length; i++) {
         allElements[i].classList.remove('showDefault');
       }
     }
