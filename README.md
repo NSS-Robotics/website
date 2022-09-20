@@ -14,3 +14,6 @@ All commands are run from the root of the project, from a terminal:
 
 ## 🧙‍♀️ Getting Started
 To get started clone this repo and run `npm install` to install the dependencies. Then run `npm run dev` to start the dev server.
+
+##
+[![Powered by Vercel](https://user-images.githubusercontent.com/70914399/160733536-9b9355c5-8569-4973-8f6b-d6d24676816a.svg)](https://vercel.com/?utm_source=nssrobotics&utm_campaign=oss "Powered by Vercel")
