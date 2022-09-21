@@ -73,7 +73,7 @@ export default function DonatingSlider() {
             />
             <div className="wooshgroup">
               <h2>Step 3</h2>
-              <p style={{ 'text-align': 'left' }}>
+              <p style={{ textAlign: 'left' }}>
                 [1] Choose whether you would like your donation to be monthly or
                 one time.
                 <br />
@@ -112,7 +112,7 @@ export default function DonatingSlider() {
               src="/images/donating/5.webp"
               style={{
                 height: 'fit-content',
-                'align-self': 'center',
+                alignSelf: 'center',
               }}
               alt="The 3 payment options of the NSSF donation form"
             />
