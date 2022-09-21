@@ -36,10 +36,10 @@ export default function DonatingSlider() {
                 School Foundation (NSSF) website.&nbsp;
                 <strong>
                   Donations of $20 or more are eligible to receive a charitable
-                  tax receipt.&nbsp;
+                  tax receipt.
                 </strong>
-                Click the button below to open the NSSF donation webpage in a
-                new tab.
+                &nbsp;Click the button below to open the NSSF donation webpage
+                in a new tab.
               </p>
               <a
                 className="except"
