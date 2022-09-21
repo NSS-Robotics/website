@@ -23,7 +23,7 @@ export default function ImageSlider({ images }) {
           clickable: true,
         }}
         modules={[Mousewheel, Pagination]}
-        className="mySwiper"
+        className="subteamSwiper"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>

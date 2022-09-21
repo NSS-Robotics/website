@@ -21,7 +21,7 @@ export default function DonatingSlider() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="donatingSwiper"
       >
         <SwiperSlide>
           <div className="step">

@@ -65,7 +65,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: white;
   opacity: 0.75;
 }
-.swiper {
+.subteamSwiper {
   width: 550px;
   height: 420px;
   border-radius: 10px;
