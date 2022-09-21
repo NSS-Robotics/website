@@ -1,9 +1,6 @@
 @media screen and (max-width: 560px) {
-  .swiper-pagination-bullet {
-    background-color: #333 !important;
-  }
-  span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background-color: #5ccbff !important;
+  :root {
+    --swiper-pagination-bullet-inactive-color: #333 !important;
   }
 }
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -60,9 +57,12 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 }
 
+:root {
+  --swiper-pagination-bullet-inactive-color: #fff;
+}
+
 /* target all bullets */
 .swiper-pagination-bullet {
-  background-color: white;
   opacity: 0.75 !important;
 }
 .subteamSwiper {
