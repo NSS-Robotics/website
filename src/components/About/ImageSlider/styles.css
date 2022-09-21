@@ -62,7 +62,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 /* target all bullets */
 .swiper-pagination-bullet {
-  background-color: white !important;
+  background-color: white;
   opacity: 0.75 !important;
 }
 .subteamSwiper {
