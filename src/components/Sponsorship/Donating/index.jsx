@@ -2,12 +2,12 @@ import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import './styles.css';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-import './styles.css';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper';
@@ -21,7 +21,7 @@ export default function DonatingSlider() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="donatingSwiper"
       >
         <SwiperSlide>
           <div className="step">
@@ -36,10 +36,10 @@ export default function DonatingSlider() {
                 School Foundation (NSSF) website.&nbsp;
                 <strong>
                   Donations of $20 or more are eligible to receive a charitable
-                  tax receipt.&nbsp;
+                  tax receipt.
                 </strong>
-                Click the button below to open the NSSF donation webpage in a
-                new tab.
+                &nbsp;Click the button below to open the NSSF donation webpage
+                in a new tab.
               </p>
               <a
                 className="except"
@@ -73,7 +73,7 @@ export default function DonatingSlider() {
             />
             <div className="wooshgroup">
               <h2>Step 3</h2>
-              <p style={{ 'text-align': 'left' }}>
+              <p style={{ textAlign: 'left' }}>
                 [1] Choose whether you would like your donation to be monthly or
                 one time.
                 <br />
@@ -112,7 +112,7 @@ export default function DonatingSlider() {
               src="/images/donating/5.webp"
               style={{
                 height: 'fit-content',
-                'align-self': 'center',
+                alignSelf: 'center',
               }}
               alt="The 3 payment options of the NSSF donation form"
             />

@@ -1,14 +1,11 @@
 @media screen and (max-width: 560px) {
-  .swiper-pagination-bullet {
-    background-color: #333 !important;
-  }
-  span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background-color: #5ccbff !important;
+  :root {
+    --swiper-pagination-bullet-inactive-color: #333 !important;
   }
 }
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #5ccbff;
-  opacity: 1;
+  background-color: #5ccbff !important;
+  opacity: 1 !important;
 }
 
 @media screen and (max-width: 535px) {
@@ -60,18 +57,21 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 }
 
+:root {
+  --swiper-pagination-bullet-inactive-color: #fff;
+}
+
 /* target all bullets */
 .swiper-pagination-bullet {
-  background-color: white;
-  opacity: 0.75;
+  opacity: 0.75 !important;
 }
-.swiper {
+.subteamSwiper {
   width: 550px;
   height: 420px;
   border-radius: 10px;
   float: left;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 50px !important;
+  margin-right: 50px !important;
   left: 0;
 }
 

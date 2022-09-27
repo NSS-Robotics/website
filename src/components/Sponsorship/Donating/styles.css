@@ -33,14 +33,16 @@
   padding-bottom: 15px;
   border-radius: 10px;
   border: 3px solid var(--onyx);
+  transition-duration: 200ms;
 }
 .step a:hover {
   transition-duration: 200ms;
   background-color: transparent;
-  color: var(--onyx);
+  color: var(--vividblue);
+  border: 3px solid var(--vividblue);
 }
 
-.swiper {
+.donatingSwiper {
   width: 95%;
   height: 95%;
 }
