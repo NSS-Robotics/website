@@ -1,21 +1,27 @@
+---
+const { year, classes } = Astro.props;
+---
+
 <div class="content">
-  <div class="sponsors">
+  <div class:list={[classes, 'sponsors data']} id={year}>
     <slot />
   </div>
 </div>
 <style>
   .content {
     margin-top: 25px;
-    line-height: 2;
+    line-height: 1.5;
   }
   .sponsors {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
     text-align: center;
     grid-gap: 50px;
-    margin-bottom: 4%;
+  }
+  .showDefault {
+    display: flex !important;
   }
 </style>

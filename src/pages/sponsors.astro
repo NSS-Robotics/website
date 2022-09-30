@@ -10,7 +10,13 @@ import Sponsor from '../components/Sponsorship/Sponsor.astro';
     title="Our Amazing Sponsors"
     background="/images/headers/sponsors.webp"
   />
-  <SponsorsLayout>
+  <div class="centerSelect">
+    <select id="yearselector" data-aos="zoom-in" data-aos-once="true">
+      <option value="year2">2022/23</option>
+      <option value="year1">2021/22</option>
+    </select>
+  </div>
+  <SponsorsLayout classes="showDefault" year="year2">
     <Sponsor
       name="TDSB"
       description="The TDSB has received funding from the Ministry of Education to develop Community-Connected Experiential Learning (CCEL) projects within our Elementary and Secondary schools (Grades 5-12) in the 2021-22 academic year."
@@ -20,9 +26,7 @@ import Sponsor from '../components/Sponsorship/Sponsor.astro';
       name="Northern Secondary School"
       buttonLink="https://schoolweb.tdsb.on.ca/northernss/"
     />
-  </SponsorsLayout>
-  <h2 data-aos="zoom-in-up">Silver Sponsors</h2>
-  <SponsorsLayout>
+    <h2 data-aos="zoom-in-up">Silver Sponsors</h2>
     <Sponsor
       name="Deloitte Digital"
       buttonLink="https://www.deloittedigital.com/us/en.html"
@@ -41,9 +45,7 @@ import Sponsor from '../components/Sponsorship/Sponsor.astro';
       name="Northern School Council"
       buttonLink="https://www.nsscouncil.com/"
     />
-  </SponsorsLayout>
-  <h2 data-aos="zoom-in-up">Bronze Sponsors</h2>
-  <SponsorsLayout>
+    <h2 data-aos="zoom-in-up">Bronze Sponsors</h2>
     <Sponsor name="Parents & Students" buttonVisible="false" />
     <Sponsor
       name="Northern Student Affairs Council"
@@ -58,5 +60,50 @@ import Sponsor from '../components/Sponsorship/Sponsor.astro';
     text-decoration-color: var(--vividblue);
     font-size: 40px;
     margin-bottom: 3.5%;
+    flex-basis: 100%;
+  }
+  #yearselector {
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--vividblue);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+  }
+  #yearselector option {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+  }
+  .centerSelect {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 35px;
   }
 </style>
+<script>
+  // Get the element with the id of "yearselector"
+  const selector = document.getElementById('yearselector') as HTMLSelectElement;
+  // When the selector changes, change the year to the selected year
+  selector.addEventListener('change', function () {
+    let newactive = document.querySelector('#' + this.value) as HTMLElement;
+    let oldactive = document.querySelector('.sponsors') as HTMLElement;
+    removeClass();
+    newactive.classList.add('showDefault');
+    oldactive.animate([{ opacity: '1' }, { opacity: '.5' }], {
+      duration: 1000,
+    });
+    newactive.animate([{ opacity: '.2' }, { opacity: '1' }], {
+      duration: 1000,
+    });
+  });
+  function removeClass() {
+    var allElements = document.querySelectorAll('.showDefault');
+    for (let i = 0; i < allElements.length; i++) {
+      allElements[i].classList.remove('showDefault');
+    }
+  }
+</script>
