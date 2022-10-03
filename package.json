@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
-    "@fontsource/poppins": "^4.5.9",
+    "@fontsource/poppins": "^4.5.10",
     "astro": "^1.4.0",
     "astro-icon": "^0.7.3",
     "astro-seo": "^0.6.0",
