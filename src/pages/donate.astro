@@ -7,7 +7,15 @@ import DonatingSlider from '../components/Sponsorship/Donating/index.jsx';
 <MainLayout title="Knight Owls - Donate">
   <ImageHeader title="Donating" background="/images/headers/donate.webp" />
   <div class="content">
-    <DonatingSlider client:visible />
+    <div class="things">
+      <DonatingSlider client:visible />
+      <iframe
+        src="https://www.canadahelps.org/en/dne/m/10652/donation"
+        title="iframe"
+        width="100%"
+        allow="payment"
+        style="height: 800px; border: 0px; overflow: hidden;"></iframe>
+    </div>
   </div>
 </MainLayout>
 <style>
@@ -15,5 +23,14 @@ import DonatingSlider from '../components/Sponsorship/Donating/index.jsx';
     color: black;
     margin-top: 25px;
     line-height: 2;
+  }
+  .things {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 15px;
   }
 </style>
