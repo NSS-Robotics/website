@@ -15,11 +15,6 @@ export default defineConfig({
   experimental: {
     integrations: true,
   },
-  vite: {
-    ssr: {
-      external: ['svgo'],
-    },
-  },
   integrations: [
     react(),
     robotsTxt({
