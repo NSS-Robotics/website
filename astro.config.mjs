@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
 import robotsTxt from 'astro-robots-txt';
 import react from '@astrojs/react';
-
 import sitemap from '@astrojs/sitemap';
+
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,7 +22,11 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    robotsTxt({ sitemap: 'https://knightowls.ca/sitemap-0.xml' }),
+    robotsTxt({
+      sitemap: 'https://knightowls.ca/sitemap-0.xml',
+    }),
     sitemap(),
   ],
+  output: 'edge',
+  adapter: vercel(),
 });
