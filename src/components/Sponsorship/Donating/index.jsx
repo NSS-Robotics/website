@@ -25,41 +25,16 @@ export default function DonatingSlider() {
       >
         <SwiperSlide>
           <div className="step">
-            <img
-              src="/images/donating/1.webp"
-              alt="The NSSF donations homepage"
-            />
-            <div className="wooshgroup">
-              <h2>Step 1</h2>
+            <div className="stepContent">
+              <h2>Info</h2>
               <p>
                 We process all of our donations through the Northern Secondary
-                School Foundation (NSSF) website.&nbsp;
+                School Foundation (NSSF) using the form over there 👉
+                <br />
                 <strong>
                   Donations of $20 or more are eligible to receive a charitable
                   tax receipt.
                 </strong>
-                &nbsp;Click the button below to open the NSSF donation webpage
-                in a new tab.
-              </p>
-              <a
-                className="except"
-                href="https://nssf.ca/support-us/"
-                target="_blank"
-              >
-                NSSF Website
-              </a>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="step">
-            <img src="/images/donating/2.webp" alt="The NSSF donation form" />
-            <div className="wooshgroup">
-              <h2>Step 2</h2>
-              <p>
-                Scroll down the page until you come to the section which looks
-                like this. On the right side of the screen is the form which is
-                used to make either the one time or monthly donation.
               </p>
             </div>
           </div>
@@ -67,12 +42,12 @@ export default function DonatingSlider() {
         <SwiperSlide>
           <div className="step">
             <img
-              src="/images/donating/3.webp"
+              src="/images/donating/1.webp"
               style={{ zoom: '50%' }}
               alt="Zoomed image of the NSSF donation form"
             />
             <div className="wooshgroup">
-              <h2>Step 3</h2>
+              <h2>Step 1</h2>
               <p style={{ textAlign: 'left' }}>
                 [1] Choose whether you would like your donation to be monthly or
                 one time.
@@ -80,8 +55,10 @@ export default function DonatingSlider() {
                 [2] Enter the amount you would donate; either by picking from a
                 preset amount or by entering a custom amount.
                 <br />
-                [3] This is who the donation will go to. Please make sure this
-                is set to "NSS Robotics Team".
+                [3] This is who the donation will go to.&nbsp;
+                <strong>
+                  Please make sure this is set to "NSS Robotics Team".
+                </strong>
                 <br />
                 [4] Send a message to us along with your donation (Optional).
                 <br />
@@ -93,15 +70,15 @@ export default function DonatingSlider() {
         <SwiperSlide>
           <div className="step">
             <img
-              src="/images/donating/4.webp"
+              src="/images/donating/2.webp"
               style={{ zoom: '50%' }}
               alt="The second part of the NSSF donation form"
             />
             <div className="wooshgroup">
-              <h2>Step 4</h2>
+              <h2>Step 2</h2>
               <p>
                 Enter all the information needed by the form including: Email,
-                First and Last Names and Address.
+                First and Last Names as well as your preferred Billing Address.
               </p>
             </div>
           </div>
@@ -109,7 +86,7 @@ export default function DonatingSlider() {
         <SwiperSlide>
           <div className="step">
             <img
-              src="/images/donating/5.webp"
+              src="/images/donating/3.webp"
               style={{
                 height: 'fit-content',
                 alignSelf: 'center',
@@ -117,7 +94,7 @@ export default function DonatingSlider() {
               alt="The 3 payment options of the NSSF donation form"
             />
             <div className="wooshgroup">
-              <h2>Step 5</h2>
+              <h2>Step 3</h2>
               <p>
                 There are three different options when it comes to how you can
                 pay. You can choose from either a [1] credit card, [2] PayPal,

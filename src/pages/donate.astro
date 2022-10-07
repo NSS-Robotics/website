@@ -12,7 +12,7 @@ import DonatingSlider from '../components/Sponsorship/Donating/index.jsx';
       <iframe
         src="https://www.canadahelps.org/en/dne/m/10652/donation"
         title="iframe"
-        width="100%"
+        width="95%"
         allow="payment"
         style="height: 800px; border: 0px; overflow: hidden;"></iframe>
     </div>
@@ -25,12 +25,16 @@ import DonatingSlider from '../components/Sponsorship/Donating/index.jsx';
     line-height: 2;
   }
   .things {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     align-content: center;
     padding: 15px;
+  }
+  @media screen and (max-width: 1478px) {
+    .things {
+      grid-template-columns: 100vw;
+    }
   }
 </style>
