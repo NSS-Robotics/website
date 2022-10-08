@@ -89,7 +89,6 @@ const { title, subtitle } = Astro.props;
     font-size: 30px;
     color: white;
     text-align: center;
-    text-decoration: underline;
     margin-bottom: 20%;
     margin-top: 20%;
     width: fit-content;
@@ -97,9 +96,13 @@ const { title, subtitle } = Astro.props;
     margin-right: auto;
     z-index: 2;
   }
-  /* Mini Subtitle Text */
+  h1 {
+    text-decoration: underline;
+    text-decoration-color: var(--vividblue);
+  }
   .subtitle {
     font-size: 25px;
+    text-decoration: none;
   }
   .black {
     background: black;
