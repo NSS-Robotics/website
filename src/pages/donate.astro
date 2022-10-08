@@ -1,40 +1,73 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
-import DonatingSlider from '../components/Sponsorship/Donating/index.jsx';
 ---
 
 <MainLayout title="Knight Owls - Donate">
   <ImageHeader title="Donating" background="/images/headers/donate.webp" />
   <div class="content">
     <div class="things">
-      <DonatingSlider client:visible />
-      <iframe
-        src="https://www.canadahelps.org/en/dne/m/10652/donation"
-        title="iframe"
-        width="95%"
-        allow="payment"
-        style="height: 800px; border: 0px; overflow: hidden;"></iframe>
+      <div class="info" data-aos="fade-right">
+        <h2>Donating</h2>
+        <p>
+          We process all of our your generous donations through the Northern
+          Secondary School Foundation (NSSF). The NSSF is a registered charity
+          with the CRA which means that all donations over $20 are eligible for
+          a tax receipt. When using the donation form, please make sure you've
+          selected <strong>NSS Robotics Team</strong> under the <strong
+            >Fund</strong
+          > category so that your donation is sent to us instead of a different team
+          or initiative.
+        </p>
+      </div>
+      <div data-aos="fade-left">
+        <iframe
+          src="https://www.canadahelps.org/en/dne/m/10652/donation"
+          title="iframe"
+          width="100%"
+          allow="payment"
+          style="height: 800px; border: none; overflow: hidden;"></iframe>
+      </div>
     </div>
   </div>
-</MainLayout>
-<style>
-  .content {
-    color: black;
-    margin-top: 25px;
-    line-height: 2;
-  }
-  .things {
-    display: grid;
-    grid-template-columns: 50vw 50vw;
-    justify-content: center;
-    align-items: start;
-    align-content: center;
-    padding: 15px;
-  }
-  @media screen and (max-width: 1478px) {
-    .things {
-      grid-template-columns: 100vw;
+  <style>
+    @media screen and (max-width: 950px) {
+      .things {
+        grid-template-columns: 100% !important;
+      }
     }
-  }
-</style>
+    .content {
+      color: black;
+      margin-top: 25px;
+      line-height: 2;
+    }
+    .things {
+      display: grid;
+      grid-template-columns: 50% 45%;
+      justify-content: center;
+      align-content: center;
+      padding: 15px;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-self: center;
+      align-items: center;
+      width: 90%;
+    }
+    strong {
+      color: var(--vividblue);
+    }
+    h2 {
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-color: var(--vividblue);
+      font-size: 35px;
+    }
+    p {
+      width: 85%;
+      text-align: center;
+    }
+  </style>
+</MainLayout>
