@@ -11,13 +11,11 @@
   },
   {
     "name": "Eamonn",
-    "role": "manufacturing",
-    "title": "Manufacturing Lead"
+    "role": "manufacturing"
   },
   {
     "name": "Aarnav",
-    "role": "manufacturing",
-    "title": "Electronics Lead"
+    "role": "manufacturing"
   },
   {
     "name": "Jacob",
@@ -41,13 +39,11 @@
   },
   {
     "name": "Dominique",
-    "role": "business",
-    "title": "Business Lead"
+    "role": "business"
   },
   {
     "name": "Harrison",
-    "role": "programming",
-    "title": "Programming Lead"
+    "role": "programming"
   },
   {
     "name": "Chloe",
@@ -59,7 +55,6 @@
   },
   {
     "name": "Anna",
-    "role": "media",
-    "title": "Media Lead"
+    "role": "media"
   }
 ]
