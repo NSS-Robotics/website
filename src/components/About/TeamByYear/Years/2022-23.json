@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Mr. Wong",
+    "role": "exec",
+    "title": "Staff Advisor"
+  },
+  {
+    "name": "Mr. Edwards",
+    "role": "exec",
+    "title": "Staff Advisor",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Aarnav",
+    "role": "exec",
+    "title": "Head Of Robotics"
+  },
+  {
+    "name": "Eamonn",
+    "role": "manufacturing",
+    "title": "Manufacturing Co-Lead"
+  },
+  {
+    "name": "Jacob",
+    "role": "manufacturing",
+    "title": "Manufacturing Co-Lead"
+  },
+  {
+    "name": "Retaj",
+    "role": "manufacturing",
+    "title": "Electronics Lead"
+  },
+  {
+    "name": "Calum",
+    "role": "design",
+    "title": "Design Co-Lead"
+  },
+  {
+    "name": "Isaac",
+    "role": "design",
+    "title": "Design Co-Lead"
+  },
+  {
+    "name": "Dominique",
+    "role": "business",
+    "title": "Business Lead"
+  },
+  {
+    "name": "Koby",
+    "role": "Planning"
+  },
+  {
+    "name": "Harrison",
+    "role": "Programming"
+  },
+  {
+    "name": "Chloe",
+    "role": "Programming & Driver"
+  },
+  {
+    "name": "Anna",
+    "role": "media"
+  },
+  {
+    "name": "Evan",
+    "role": "manufacturing"
+  }
+]

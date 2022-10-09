@@ -1,16 +1,16 @@
 ---
-const { name, role } = Astro.props;
+const { name, title, image = `/images/people/${name}.webp` } = Astro.props;
 ---
 
 <div>
   <img
     data-aos="zoom-in-up"
-    src={'/images/people/' + name + '.webp'}
+    src={image}
     data-aos-once="true"
     alt={'Picture of' + name}
   />
   <p>{name}</p>
-  <figcaption>{role}</figcaption>
+  <figcaption>{title}</figcaption>
 </div>
 <style>
   img {
