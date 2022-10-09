@@ -45,16 +45,17 @@
     "title": "Business Lead"
   },
   {
-    "name": "Koby",
-    "role": "Planning"
-  },
-  {
     "name": "Harrison",
-    "role": "Programming"
+    "role": "programming",
+    "title": "Programming Lead"
   },
   {
     "name": "Chloe",
-    "role": "Programming & Driver"
+    "role": "programming"
+  },
+  {
+    "name": "Koby",
+    "role": "programming"
   },
   {
     "name": "Anna",
