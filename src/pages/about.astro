@@ -1,10 +1,10 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import TeamLayout from '../layouts/TeamLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
-import Person from '../components/About/Person.astro';
 import Subteam from '../components/About/Subteam.astro';
 import SubteamSlider from '../components/About/SubteamSlider.astro';
+import YearSelector from '../components/About/TeamByYear/YearSelector.astro';
+import Team from '../components/About/TeamByYear/Team.astro';
 ---
 
 <MainLayout title="Knight Owls - About Us">
@@ -91,22 +91,37 @@ import SubteamSlider from '../components/About/SubteamSlider.astro';
         fadeDirection="right"
       />
     </div>
-    <TeamLayout>
-      <Person name="Mr. Wong" role="Staff Advisor" />
-      <Person name="Olivia" role="Head Of Robotics" />
-      <Person name="Aarnav" role="Manufacturing" />
-      <Person name="Eamonn" role="Manufacturing" />
-      <Person name="Jacob" role="Manufacturing & Web Design" />
-      <Person name="Dominique" role="Business" />
-      <Person name="Koby" role="Planning" />
-      <Person name="Harrison" role="Programming" />
-      <Person name="Chloe" role="Programming & Drive Team" />
-      <Person name="Anna" role="Media" />
-      <Person name="Retaj" role="Floater" />
-      <Person name="Calum" role="Design" />
-      <Person name="Evan" role="Manufacturing" />
-    </TeamLayout>
+    <YearSelector />
+    <Team classes="showDefault" year="year1" filename="2021-22" />
   </div>
+  <script>
+    // Get the element with the id of "yearselector"
+    const selector = document.getElementById(
+      'yearselector'
+    ) as HTMLSelectElement;
+    // When the selector changes, change the year to the selected year
+    selector.addEventListener('change', function () {
+      let newactive = document.querySelector('#' + this.value) as HTMLElement;
+      let oldactive = document.querySelector('.people') as HTMLElement;
+
+      removeClass();
+      newactive.classList.add('showDefault');
+
+      oldactive.animate([{ opacity: '1' }, { opacity: '.5' }], {
+        duration: 1000,
+      });
+      newactive.animate([{ opacity: '.2' }, { opacity: '1' }], {
+        duration: 1000,
+      });
+    });
+
+    function removeClass() {
+      var allElements = document.querySelectorAll('.showDefault');
+      for (let i = 0; i < allElements.length; i++) {
+        allElements[i].classList.remove('showDefault');
+      }
+    }
+  </script>
   <style>
     .content {
       line-height: 2;
