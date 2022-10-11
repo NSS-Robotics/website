@@ -12,13 +12,13 @@
   "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
     "@fontsource/poppins": "^4.5.10",
-    "astro": "^1.4.5",
+    "astro": "^1.4.7",
     "astro-icon": "^0.7.3",
     "astro-seo": "^0.6.0",
     "swiper": "^8.4.3"
   },
   "devDependencies": {
-    "@astrojs/react": "^1.1.4",
+    "@astrojs/react": "^1.2.0",
     "astro-robots-txt": "^0.3.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
