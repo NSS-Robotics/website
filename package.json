@@ -18,7 +18,7 @@
     "swiper": "^8.4.3"
   },
   "devDependencies": {
-    "@astrojs/react": "^1.1.4",
+    "@astrojs/react": "^1.2.0",
     "astro-robots-txt": "^0.3.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
