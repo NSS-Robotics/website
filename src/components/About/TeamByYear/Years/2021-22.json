@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Mr. Wong",
+    "role": "exec",
+    "title": "Staff Advisor"
+  },
+  {
+    "name": "Olivia",
+    "role": "exec",
+    "title": "Head Of Robotics"
+  },
+  {
+    "name": "Eamonn",
+    "role": "manufacturing"
+  },
+  {
+    "name": "Aarnav",
+    "role": "manufacturing"
+  },
+  {
+    "name": "Jacob",
+    "role": "manufacturing"
+  },
+  {
+    "name": "Retaj",
+    "role": "manufacturing"
+  },
+  {
+    "name": "Calum",
+    "role": "design"
+  },
+  {
+    "name": "Evan",
+    "role": "manufacturing"
+  },
+  {
+    "name": "Isaac",
+    "role": "manufacturing"
+  },
+  {
+    "name": "Dominique",
+    "role": "business"
+  },
+  {
+    "name": "Harrison",
+    "role": "programming"
+  },
+  {
+    "name": "Chloe",
+    "role": "programming"
+  },
+  {
+    "name": "Koby",
+    "role": "programming"
+  },
+  {
+    "name": "Anna",
+    "role": "media"
+  }
+]
