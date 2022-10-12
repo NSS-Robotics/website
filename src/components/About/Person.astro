@@ -1,23 +1,22 @@
 ---
-const { name, role } = Astro.props;
+const { name, title, image = `/images/people/${name}.webp` } = Astro.props;
 ---
 
 <div>
   <img
     data-aos="zoom-in-up"
-    src={'/images/people/' + name + '.webp'}
+    src={image}
     data-aos-once="true"
     alt={'Picture of' + name}
   />
   <p>{name}</p>
-  <figcaption>{role}</figcaption>
+  <figcaption>{title}</figcaption>
 </div>
 <style>
   img {
-    height: 600px;
-    width: 600px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
-    zoom: 50%;
   }
   p {
     text-align: center;
@@ -28,5 +27,6 @@ const { name, role } = Astro.props;
   figcaption {
     font-size: 20px;
     text-align: center;
+    width: 300px;
   }
 </style>
