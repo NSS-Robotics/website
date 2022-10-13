@@ -1,0 +1,111 @@
+---
+import Sponsor from './SponsorBox.astro';
+
+const { year, classes, filename } = Astro.props;
+const SponsorsToMap = (await import(`./Years/${filename}.json`)).default;
+---
+
+<div class="content">
+  <div class:list={[classes, 'sponsors data']} id={year}>
+    {
+      SponsorsToMap.map(
+        (sponsor: {
+          name: string;
+          description: string;
+          buttonLink: string;
+          border: string;
+          buttonVisible: string;
+          tier: string;
+        }) => {
+          if (sponsor.tier == 'elite') {
+            return (
+              <Sponsor
+                name={sponsor.name}
+                description={sponsor.description}
+                buttonLink={sponsor.buttonLink}
+                border={sponsor.border}
+                buttonVisible={sponsor.buttonVisible}
+              />
+            );
+          }
+        }
+      )
+    }
+    <h2 data-aos="zoom-in-up">Silver Sponsors</h2>
+    {
+      SponsorsToMap.map(
+        (sponsor: {
+          name: string;
+          description: string;
+          buttonLink: string;
+          border: string;
+          buttonVisible: string;
+          tier: string;
+        }) => {
+          if (sponsor.tier == 'silver') {
+            return (
+              <Sponsor
+                name={sponsor.name}
+                description={sponsor.description}
+                buttonLink={sponsor.buttonLink}
+                border={sponsor.border}
+                buttonVisible={sponsor.buttonVisible}
+              />
+            );
+          }
+        }
+      )
+    }
+    <h2 data-aos="zoom-in-up">Bronze Sponsors</h2>
+    {
+      SponsorsToMap.map(
+        (sponsor: {
+          name: string;
+          description: string;
+          buttonLink: string;
+          border: string;
+          buttonVisible: string;
+          tier: string;
+        }) => {
+          if (sponsor.tier == 'bronze') {
+            return (
+              <Sponsor
+                name={sponsor.name}
+                description={sponsor.description}
+                buttonLink={sponsor.buttonLink}
+                border={sponsor.border}
+                buttonVisible={sponsor.buttonVisible}
+              />
+            );
+          }
+        }
+      )
+    }
+  </div>
+</div>
+<style>
+  .content {
+    margin-top: 25px;
+    line-height: 2;
+  }
+  .sponsors {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    grid-gap: 50px;
+  }
+  .showDefault {
+    display: flex !important;
+  }
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--vividblue);
+    font-size: 40px;
+    margin-bottom: 3.5%;
+    flex-basis: 100%;
+  }
+</style>
