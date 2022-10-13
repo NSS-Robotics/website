@@ -1,8 +1,8 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import SponsorsLayout from '../layouts/SponsorsLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
-import Sponsor from '../components/Sponsorship/Sponsor.astro';
+import YearSelector from '../components/About/YearSelector.astro';
+import Sponsors from '../components/Sponsorship/Sponsors.astro';
 ---
 
 <MainLayout title="Knight Owls - Our Sponsors">
@@ -10,53 +10,33 @@ import Sponsor from '../components/Sponsorship/Sponsor.astro';
     title="Our Amazing Sponsors"
     background="/images/headers/sponsors.webp"
   />
-  <SponsorsLayout>
-    <Sponsor
-      name="TDSB"
-      description="The TDSB has received funding from the Ministry of Education to develop Community-Connected Experiential Learning (CCEL) projects within our Elementary and Secondary schools (Grades 5-12) in the 2021-22 academic year."
-      buttonLink="https://www.tdsb.on.ca/"
-    />
-    <Sponsor
-      name="Northern Secondary School"
-      buttonLink="https://schoolweb.tdsb.on.ca/northernss/"
-    />
-  </SponsorsLayout>
-  <h2 data-aos="zoom-in-up">Silver Sponsors</h2>
-  <SponsorsLayout>
-    <Sponsor
-      name="Deloitte Digital"
-      buttonLink="https://www.deloittedigital.com/us/en.html"
-      border="0px"
-    />
-    <Sponsor
-      name="Onyen"
-      description="It is a pleasure to assist young women especially to achieve academic success in STEM activities"
-      buttonLink="https://www.onyen.com/#/home"
-    />
-    <Sponsor
-      name="Stones Throw Design"
-      buttonLink="https://stonesthrowdesigninc.com/"
-    />
-    <Sponsor
-      name="Northern School Council"
-      buttonLink="https://www.nsscouncil.com/"
-    />
-  </SponsorsLayout>
-  <h2 data-aos="zoom-in-up">Bronze Sponsors</h2>
-  <SponsorsLayout>
-    <Sponsor name="Parents & Students" buttonVisible="false" />
-    <Sponsor
-      name="Northern Student Affairs Council"
-      buttonLink="https://www.northernsac.ca/"
-    />
-  </SponsorsLayout>
+  <YearSelector />
+  <Sponsors classes="showDefault" year="year2" filename="2022-23" />
+  <Sponsors year="year1" filename="2021-22" />
+
+  <script>
+    // Get the element with the id of "yearselector"
+    const selector = document.getElementById(
+      'yearselector'
+    ) as HTMLSelectElement;
+    // When the selector changes, change the year to the selected year
+    selector.addEventListener('change', function () {
+      let newactive = document.querySelector('#' + this.value) as HTMLElement;
+      let oldactive = document.querySelector('.sponsors') as HTMLElement;
+      removeClass();
+      newactive.classList.add('showDefault');
+      oldactive.animate([{ opacity: '1' }, { opacity: '.5' }], {
+        duration: 1000,
+      });
+      newactive.animate([{ opacity: '.2' }, { opacity: '1' }], {
+        duration: 1000,
+      });
+    });
+    function removeClass() {
+      var allElements = document.querySelectorAll('.showDefault');
+      for (let i = 0; i < allElements.length; i++) {
+        allElements[i].classList.remove('showDefault');
+      }
+    }
+  </script>
 </MainLayout>
-<style>
-  h2 {
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: var(--vividblue);
-    font-size: 40px;
-    margin-bottom: 3.5%;
-  }
-</style>
