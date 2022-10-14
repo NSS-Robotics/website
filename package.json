@@ -15,7 +15,7 @@
     "astro": "^1.5.0",
     "astro-icon": "^0.7.3",
     "astro-seo": "^0.6.0",
-    "swiper": "^8.4.3"
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@astrojs/react": "^1.2.0",
