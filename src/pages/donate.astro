@@ -1,19 +1,90 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
-import DonatingSlider from '../components/Sponsorship/Donating/index.jsx';
 ---
 
 <MainLayout title="Knight Owls - Donate">
   <ImageHeader title="Donating" background="/images/headers/donate.webp" />
   <div class="content">
-    <DonatingSlider client:visible />
+    <div class="things">
+      <div class="info" data-aos="fade-right">
+        <h2>Donating</h2>
+        <p>
+          We process all donations with the help of the Northern Secondary
+          School Foundation (NSSF). The NSSF is a registered charity with the
+          CRA meaning that all donations over $20 are eligible for a tax
+          receipt.<br /><br />
+          When using the donation form, please make sure you've selected <strong
+            >NSS Robotics Team</strong
+          > under the <strong>Fund</strong> category and include <strong
+            >your name</strong
+          > and <strong>"NSS Robotics Team"</strong> in the <strong
+            >private message field</strong
+          >
+          so that your donation is sent to the Robotics Team as opposed to one of
+          the other initiatives that the NSSF supports.<br /><br />Please take a
+          quick look at the <a href="/tiers#listing">sponsorship tiers</a>
+          for more info on the perks you'll receive with your donation. If you have
+          any questions, don't hesitate to
+          <a href="mailto:hello@knightowls.ca">get in touch!</a>
+        </p>
+      </div>
+      <div data-aos="fade-left">
+        <iframe
+          src="https://www.canadahelps.org/en/dne/m/10652/donation"
+          title="iframe"
+          width="100%"
+          allow="payment"
+          style="height: 800px; border: none; overflow: hidden;"></iframe>
+      </div>
+    </div>
   </div>
+  <style>
+    @media screen and (max-width: 950px) {
+      .things {
+        grid-template-columns: 100% !important;
+      }
+    }
+    .content {
+      color: black;
+      margin-top: 25px;
+      line-height: 2;
+    }
+    .things {
+      display: grid;
+      grid-template-columns: 50% 45%;
+      justify-content: center;
+      align-content: center;
+      padding: 15px;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-self: center;
+      align-items: center;
+      width: 90%;
+    }
+    strong {
+      color: var(--vividblue);
+    }
+    h2 {
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-color: var(--vividblue);
+      font-size: 35px;
+    }
+    p {
+      width: 85%;
+      text-align: center;
+    }
+    a {
+      color: var(--vividblue);
+      transition-duration: 0.3s;
+    }
+    a:hover {
+      color: var(--onyx);
+      transition-duration: 0.3s;
+    }
+  </style>
 </MainLayout>
-<style>
-  .content {
-    color: black;
-    margin-top: 25px;
-    line-height: 2;
-  }
-</style>
