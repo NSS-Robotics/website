@@ -21,7 +21,7 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
   <ExecTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: any; title: any; image: any }) => {
+      (member: { role: string; name: string; title: string; image: string }) => {
         if (member.role == 'exec') {
           return (
             <Person
@@ -37,7 +37,7 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
   <ManufacturingTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: any; title: any; image: any }) => {
+      (member: { role: string; name: string; title: string; image: string }) => {
         if (member.role == 'manufacturing') {
           return <Person name={member.name} title={member.title} />;
         }
@@ -47,7 +47,7 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
   <DesignTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: any; title: any; image: any }) => {
+      (member: { role: string; name: string; title: string; image: string }) => {
         if (member.role == 'design') {
           return <Person name={member.name} title={member.title} />;
         }
@@ -57,7 +57,7 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
   <ProgrammingTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: any; title: any; image: any }) => {
+      (member: { role: string; name: string; title: string; image: string }) => {
         if (member.role == 'programming') {
           return <Person name={member.name} title={member.title} />;
         }
@@ -67,7 +67,7 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
   <BusinessTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: any; title: any; image: any }) => {
+      (member: { role: string; name: string; title: string; image: string }) => {
         if (member.role == 'business') {
           return <Person name={member.name} title={member.title} />;
         }
@@ -77,7 +77,7 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
   <MediaTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: any; title: any; image: any }) => {
+      (member: { role: string; name: string; title: string; image: string }) => {
         if (member.role == 'media') {
           return <Person name={member.name} title={member.title} />;
         }
