@@ -5,8 +5,7 @@ import ExecTitle from '../../../components/About/TeamByYear/Titles/ExecTitle.ast
 import ManufacturingTitle from '../../../components/About/TeamByYear/Titles/ManufacturingTitle.astro';
 import DesignTitle from '../../../components/About/TeamByYear/Titles/DesignTitle.astro';
 import ProgrammingTitle from './Titles/ProgrammingTitle.astro';
-import BusinessTitle from '../../../components/About/TeamByYear/Titles/BusinessTitle.astro';
-import MediaTitle from '../../../components/About/TeamByYear/Titles/MediaTitle.astro';
+import SocialTitle from '../../../components/About/TeamByYear/Titles/SocialTitle.astro';
 
 const { year, classes, filename } = Astro.props;
 const TeamToMap = (await import(`./Years/${filename}.json`)).default;
@@ -21,7 +20,12 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
   <ExecTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: string; title: string; image: string }) => {
+      (member: {
+        role: string;
+        name: string;
+        title: string;
+        image: string;
+      }) => {
         if (member.role == 'exec') {
           return (
             <Person
@@ -37,7 +41,12 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
   <ManufacturingTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: string; title: string; image: string }) => {
+      (member: {
+        role: string;
+        name: string;
+        title: string;
+        image: string;
+      }) => {
         if (member.role == 'manufacturing') {
           return <Person name={member.name} title={member.title} />;
         }
@@ -47,7 +56,12 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
   <DesignTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: string; title: string; image: string }) => {
+      (member: {
+        role: string;
+        name: string;
+        title: string;
+        image: string;
+      }) => {
         if (member.role == 'design') {
           return <Person name={member.name} title={member.title} />;
         }
@@ -57,28 +71,28 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
   <ProgrammingTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: string; title: string; image: string }) => {
+      (member: {
+        role: string;
+        name: string;
+        title: string;
+        image: string;
+      }) => {
         if (member.role == 'programming') {
           return <Person name={member.name} title={member.title} />;
         }
       }
     )
   }
-  <BusinessTitle />
+  <SocialTitle />
   {
     TeamToMap.map(
-      (member: { role: string; name: string; title: string; image: string }) => {
-        if (member.role == 'business') {
-          return <Person name={member.name} title={member.title} />;
-        }
-      }
-    )
-  }
-  <MediaTitle />
-  {
-    TeamToMap.map(
-      (member: { role: string; name: string; title: string; image: string }) => {
-        if (member.role == 'media') {
+      (member: {
+        role: string;
+        name: string;
+        title: string;
+        image: string;
+      }) => {
+        if (member.role == 'social') {
           return <Person name={member.name} title={member.title} />;
         }
       }
