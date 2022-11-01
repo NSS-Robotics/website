@@ -1,0 +1,54 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+import ImageHeader from '../../../components/ImageHeader.astro';
+
+const images = await Astro.glob(
+  '../../../media/albums/2022/yorkuniversity/*.webp'
+);
+---
+
+<MainLayout title="Knight Owls - York University Regionals">
+  <ImageHeader
+    title="Regional Event - York University"
+    background="/images/headers/gallery.webp"
+  />
+
+  <section id="gallery">
+    {
+      images.map((image) => (
+        <img
+          data-aos="fade-up"
+          src={image.default}
+          alt="An image in the gallery"
+        />
+      ))
+    }
+  </section>
+</MainLayout>
+<style>
+  @media screen and (max-width: 600px) {
+    #gallery {
+      grid-template-columns: auto auto !important;
+    }
+  }
+
+  #gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  #gallery img {
+    width: 90%;
+    height: auto;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    align-self: center;
+    justify-self: center;
+  }
+  #gallery iframe {
+    width: 90%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    align-self: center;
+    justify-self: center;
+  }
+</style>
