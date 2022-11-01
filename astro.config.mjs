@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
 import robotsTxt from 'astro-robots-txt';
 import react from '@astrojs/react';
-
 import sitemap from '@astrojs/sitemap';
+
+import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,16 +13,14 @@ export default defineConfig({
   // Add 'experimental.integrations: true' to make 'astro-robots-txt' working
   // with 'astro build' command.
   experimental: {
-    integrations: true,
+    integrations: true
   },
   vite: {
     ssr: {
-      external: ['svgo'],
-    },
+      external: ['svgo']
+    }
   },
-  integrations: [
-    react(),
-    robotsTxt({ sitemap: 'https://knightowls.ca/sitemap-0.xml' }),
-    sitemap(),
-  ],
+  integrations: [react(), robotsTxt({
+    sitemap: 'https://knightowls.ca/sitemap-0.xml'
+  }), sitemap(), image()]
 });
