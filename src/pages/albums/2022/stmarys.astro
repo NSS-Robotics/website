@@ -1,10 +1,12 @@
 ---
 //@ts-ignore
-import { Picture } from 'astro-imagetools/components';
+import { Img } from 'astro-imagetools/components';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../components/ImageHeader.astro';
 const images = await Astro.glob('../../../media/albums/2022/stmarys/*.jpg');
-console.log(images);
+images.forEach((image) => {
+  image.default.src = image.default.src.replace('@astroimage', 'src');
+});
 ---
 
 <MainLayout title="Knight Owls - St. Mary's Regionals Gallery">
@@ -15,9 +17,9 @@ console.log(images);
   <section id="gallery">
     {
       images.map((image) => (
-        <div data-aos="fade-up">
-          <Picture
-            src="/src/media/albums/2022/stmarys/1.jpg"
+        <div class="galleryImage" data-aos="fade-up">
+          <Img
+            src={image.default.src}
             alt="An image in the gallery"
             format={['webp']}
             placeholder="blurred"
@@ -38,7 +40,7 @@ console.log(images);
     display: grid;
     grid-template-columns: auto auto auto;
   }
-  #gallery img {
+  .galleryImage {
     width: 90%;
     height: auto;
     padding-top: 1.5%;
