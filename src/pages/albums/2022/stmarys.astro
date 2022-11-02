@@ -1,10 +1,10 @@
 ---
-import { Image } from '@astrojs/image/components';
-
+//@ts-ignore
+import { Picture } from 'astro-imagetools/components';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../components/ImageHeader.astro';
-
 const images = await Astro.glob('../../../media/albums/2022/stmarys/*.jpg');
+console.log(images);
 ---
 
 <MainLayout title="Knight Owls - St. Mary's Regionals Gallery">
@@ -12,16 +12,17 @@ const images = await Astro.glob('../../../media/albums/2022/stmarys/*.jpg');
     title="Regional Event - St. Mary's"
     background="/images/headers/gallery.webp"
   />
-
   <section id="gallery">
     {
       images.map((image) => (
-        <Image
-          data-aos="fade-up"
-          src={image.default}
-          alt="An image in the gallery"
-          format="webp"
-        />
+        <div data-aos="fade-up">
+          <Picture
+            src="/src/media/albums/2022/stmarys/1.jpg"
+            alt="An image in the gallery"
+            format={['webp']}
+            placeholder="blurred"
+          />
+        </div>
       ))
     }
   </section>

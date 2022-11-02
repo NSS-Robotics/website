@@ -2,6 +2,8 @@ import { defineConfig } from 'astro/config';
 import robotsTxt from 'astro-robots-txt';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import { astroImageTools } from 'astro-imagetools';
+
 
 import image from "@astrojs/image";
 
@@ -13,14 +15,20 @@ export default defineConfig({
   // Add 'experimental.integrations: true' to make 'astro-robots-txt' working
   // with 'astro build' command.
   experimental: {
-    integrations: true
+    integrations: true,
   },
   vite: {
     ssr: {
-      external: ['svgo']
-    }
+      external: ['svgo'],
+    },
   },
-  integrations: [react(), robotsTxt({
-    sitemap: 'https://knightowls.ca/sitemap-0.xml'
-  }), sitemap(), image()]
+  integrations: [
+    react(),
+    robotsTxt({
+      sitemap: 'https://knightowls.ca/sitemap-0.xml',
+    }),
+    sitemap(),
+    image(),
+    astroImageTools,
+  ],
 });
