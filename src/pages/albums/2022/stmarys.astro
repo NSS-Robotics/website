@@ -1,4 +1,5 @@
 ---
+import GalleryLayout from '../../../layouts/GalleryLayout.astro';
 import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../components/ImageHeader.astro';
@@ -9,22 +10,24 @@ import ImageHeader from '../../../components/ImageHeader.astro';
     title="Regional Event - St. Mary's"
     background="/images/headers/gallery.webp"
   />
-  <GalleryImages
-    images={[
-      '/images/albums/2022/stmarys/1.jpg',
-      '/images/albums/2022/stmarys/2.jpg',
-      '/images/albums/2022/stmarys/3.jpg',
-      '/images/albums/2022/stmarys/4.jpg',
-      '/images/albums/2022/stmarys/5.jpg',
-      '/images/albums/2022/stmarys/6.jpg',
-      '/images/albums/2022/stmarys/7.jpg',
-      '/images/albums/2022/stmarys/8.jpg',
-      '/images/albums/2022/stmarys/9.jpg',
-      '/images/albums/2022/stmarys/10.jpg',
-      '/images/albums/2022/stmarys/11.jpg',
-      '/images/albums/2022/stmarys/12.jpg',
-      '/images/albums/2022/stmarys/13.jpg',
-      '/images/albums/2022/stmarys/14.jpg',
-    ]}
-  />
+  <GalleryLayout>
+    <GalleryImages
+      images={[
+        '/images/albums/2022/stmarys/1.jpg',
+        '/images/albums/2022/stmarys/2.jpg',
+        '/images/albums/2022/stmarys/3.jpg',
+        '/images/albums/2022/stmarys/4.jpg',
+        '/images/albums/2022/stmarys/5.jpg',
+        '/images/albums/2022/stmarys/6.jpg',
+        '/images/albums/2022/stmarys/7.jpg',
+        '/images/albums/2022/stmarys/8.jpg',
+        '/images/albums/2022/stmarys/9.jpg',
+        '/images/albums/2022/stmarys/10.jpg',
+        '/images/albums/2022/stmarys/11.jpg',
+        '/images/albums/2022/stmarys/12.jpg',
+        '/images/albums/2022/stmarys/13.jpg',
+        '/images/albums/2022/stmarys/14.jpg',
+      ]}
+    />
+  </GalleryLayout>
 </MainLayout>
