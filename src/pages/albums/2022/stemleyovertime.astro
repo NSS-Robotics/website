@@ -1,24 +1,32 @@
 ---
+//@ts-ignore
+import { Img } from 'astro-imagetools/components';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../components/ImageHeader.astro';
-
-const images = await Astro.glob('../../../media/albums/2022/overtime/*.webp');
+const images = await Astro.glob(
+  '../../../media/albums/2022/stemleyovertime/*.jpg'
+);
+images.forEach((image) => {
+  image.default.src = image.default.src.replace('@astroimage', 'src');
+});
 ---
 
-<MainLayout title="Knight Owls - STEMley Overtime Gallery">
+<MainLayout title="Knight Owls - STEMley Overtime">
   <ImageHeader
-    title="STEMley Overtime - Rapid React"
+    title="Regional Event - STEMley Overtime"
     background="/images/headers/gallery.webp"
   />
-
   <section id="gallery">
     {
       images.map((image) => (
-        <img
-          data-aos="fade-up"
-          src={image.default}
-          alt="An image in the gallery"
-        />
+        <div class="galleryImage" data-aos="fade-up">
+          <Img
+            src={image.default.src}
+            alt="An image in the gallery"
+            format={['webp']}
+            placeholder="blurred"
+          />
+        </div>
       ))
     }
   </section>
@@ -34,7 +42,7 @@ const images = await Astro.glob('../../../media/albums/2022/overtime/*.webp');
     display: grid;
     grid-template-columns: auto auto auto;
   }
-  #gallery img {
+  .galleryImage {
     width: 90%;
     height: auto;
     padding-top: 1.5%;
