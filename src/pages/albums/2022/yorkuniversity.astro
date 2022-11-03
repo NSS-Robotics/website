@@ -1,29 +1,32 @@
 ---
-import { Image } from '@astrojs/image/components';
-
+//@ts-ignore
+import { Img } from 'astro-imagetools/components';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../components/ImageHeader.astro';
-
 const images = await Astro.glob(
   '../../../media/albums/2022/yorkuniversity/*.jpg'
 );
+images.forEach((image) => {
+  image.default.src = image.default.src.replace('@astroimage', 'src');
+});
 ---
 
-<MainLayout title="Knight Owls - York University Regionals">
+<MainLayout title="Knight Owls - York University Regionals Gallery">
   <ImageHeader
     title="Regional Event - York University"
     background="/images/headers/gallery.webp"
   />
-
   <section id="gallery">
     {
       images.map((image) => (
-        <Image
-          data-aos="fade-up"
-          src={image.default}
-          alt="An image in the gallery"
-          format="webp"
-        />
+        <div class="galleryImage" data-aos="fade-up">
+          <Img
+            src={image.default.src}
+            alt="An image in the gallery"
+            format={['webp']}
+            placeholder="blurred"
+          />
+        </div>
       ))
     }
   </section>
@@ -39,7 +42,7 @@ const images = await Astro.glob(
     display: grid;
     grid-template-columns: auto auto auto;
   }
-  #gallery img {
+  .galleryImage {
     width: 90%;
     height: auto;
     padding-top: 1.5%;
