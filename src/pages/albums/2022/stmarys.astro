@@ -1,12 +1,7 @@
 ---
-//@ts-ignore
-import { Img } from 'astro-imagetools/components';
+import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../components/ImageHeader.astro';
-const images = await Astro.glob('../../../media/albums/2022/stmarys/*.jpg');
-images.forEach((image) => {
-  image.default.src = image.default.src.replace('@astroimage', 'src');
-});
 ---
 
 <MainLayout title="Knight Owls - St. Mary's Regionals Gallery">
@@ -14,46 +9,22 @@ images.forEach((image) => {
     title="Regional Event - St. Mary's"
     background="/images/headers/gallery.webp"
   />
-  <section id="gallery">
-    {
-      images.map((image) => (
-        <div class="galleryImage" data-aos="fade-up">
-          <Img
-            src={image.default.src}
-            alt="An image in the gallery"
-            format={['webp']}
-            placeholder="blurred"
-            loading="eager"
-          />
-        </div>
-      ))
-    }
-  </section>
+  <GalleryImages
+    images={[
+      '/images/albums/2022/stmarys/1.jpg',
+      '/images/albums/2022/stmarys/2.jpg',
+      '/images/albums/2022/stmarys/3.jpg',
+      '/images/albums/2022/stmarys/4.jpg',
+      '/images/albums/2022/stmarys/5.jpg',
+      '/images/albums/2022/stmarys/6.jpg',
+      '/images/albums/2022/stmarys/7.jpg',
+      '/images/albums/2022/stmarys/8.jpg',
+      '/images/albums/2022/stmarys/9.jpg',
+      '/images/albums/2022/stmarys/10.jpg',
+      '/images/albums/2022/stmarys/11.jpg',
+      '/images/albums/2022/stmarys/12.jpg',
+      '/images/albums/2022/stmarys/13.jpg',
+      '/images/albums/2022/stmarys/14.jpg',
+    ]}
+  />
 </MainLayout>
-<style>
-  @media screen and (max-width: 600px) {
-    #gallery {
-      grid-template-columns: auto auto !important;
-    }
-  }
-
-  #gallery {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-  .galleryImage {
-    width: 90%;
-    height: auto;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    align-self: center;
-    justify-self: center;
-  }
-  #gallery iframe {
-    width: 90%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    align-self: center;
-    justify-self: center;
-  }
-</style>

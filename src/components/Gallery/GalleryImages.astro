@@ -1,0 +1,48 @@
+---
+//@ts-ignore
+import { Img } from 'astro-imagetools/components';
+const { images = [] } = Astro.props;
+---
+
+<section id="gallery">
+  {
+    images.map((image: string) => (
+      <div class="galleryImage" data-aos="fade-up">
+        <Img
+          src={image}
+          alt="An image in the gallery"
+          format={['webp']}
+          placeholder="blurred"
+          loading="eager"
+        />
+      </div>
+    ))
+  }
+</section>
+<style>
+  @media screen and (max-width: 600px) {
+    #gallery {
+      grid-template-columns: auto auto !important;
+    }
+  }
+
+  #gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .galleryImage {
+    width: 90%;
+    height: auto;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    align-self: center;
+    justify-self: center;
+  }
+  #gallery iframe {
+    width: 90%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    align-self: center;
+    justify-self: center;
+  }
+</style>

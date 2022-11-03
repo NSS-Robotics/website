@@ -1,12 +1,7 @@
 ---
-//@ts-ignore
-import { Img } from 'astro-imagetools/components';
+import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../components/ImageHeader.astro';
-const images = await Astro.glob('../../../media/albums/2022/provincials/*.jpg');
-images.forEach((image) => {
-  image.default.src = image.default.src.replace('@astroimage', 'src');
-});
 ---
 
 <MainLayout title="Knight Owls - Provincial Championship Gallery">
@@ -14,46 +9,30 @@ images.forEach((image) => {
     title="Regional Event - Provincial Championships"
     background="/images/headers/gallery.webp"
   />
-  <section id="gallery">
-    {
-      images.map((image) => (
-        <div class="galleryImage" data-aos="fade-up">
-          <Img
-            src={image.default.src}
-            alt="An image in the gallery"
-            format={['webp']}
-            placeholder="blurred"
-            loading="eager"
-          />
-        </div>
-      ))
-    }
-  </section>
+  <GalleryImages
+    images={[
+      '/images/albums/2022/provincials/1.jpg',
+      '/images/albums/2022/provincials/2.jpg',
+      '/images/albums/2022/provincials/3.jpg',
+      '/images/albums/2022/provincials/4.jpg',
+      '/images/albums/2022/provincials/5.jpg',
+      '/images/albums/2022/provincials/6.jpg',
+      '/images/albums/2022/provincials/7.jpg',
+      '/images/albums/2022/provincials/8.jpg',
+      '/images/albums/2022/provincials/9.jpg',
+      '/images/albums/2022/provincials/10.jpg',
+      '/images/albums/2022/provincials/11.jpg',
+      '/images/albums/2022/provincials/12.jpg',
+      '/images/albums/2022/provincials/13.jpg',
+      '/images/albums/2022/provincials/14.jpg',
+      '/images/albums/2022/provincials/15.jpg',
+      '/images/albums/2022/provincials/16.jpg',
+      '/images/albums/2022/provincials/17.jpg',
+      '/images/albums/2022/provincials/18.jpg',
+      '/images/albums/2022/provincials/19.jpg',
+      '/images/albums/2022/provincials/20.jpg',
+      '/images/albums/2022/provincials/21.jpg',
+      '/images/albums/2022/provincials/22.jpg',
+    ]}
+  />
 </MainLayout>
-<style>
-  @media screen and (max-width: 600px) {
-    #gallery {
-      grid-template-columns: auto auto !important;
-    }
-  }
-
-  #gallery {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-  .galleryImage {
-    width: 90%;
-    height: auto;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    align-self: center;
-    justify-self: center;
-  }
-  #gallery iframe {
-    width: 90%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    align-self: center;
-    justify-self: center;
-  }
-</style>

@@ -1,14 +1,7 @@
 ---
-//@ts-ignore
-import { Img } from 'astro-imagetools/components';
+import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../components/ImageHeader.astro';
-const images = await Astro.glob(
-  '../../../media/albums/2022/yorkuniversity/*.jpg'
-);
-images.forEach((image) => {
-  image.default.src = image.default.src.replace('@astroimage', 'src');
-});
 ---
 
 <MainLayout title="Knight Owls - York University Regionals Gallery">
@@ -16,46 +9,56 @@ images.forEach((image) => {
     title="Regional Event - York University"
     background="/images/headers/gallery.webp"
   />
-  <section id="gallery">
-    {
-      images.map((image) => (
-        <div class="galleryImage" data-aos="fade-up">
-          <Img
-            src={image.default.src}
-            alt="An image in the gallery"
-            format={['webp']}
-            placeholder="blurred"
-            loading="eager"
-          />
-        </div>
-      ))
-    }
-  </section>
+  <GalleryImages
+    images={[
+      '/images/albums/2022/yorkuniversity/1.jpg',
+      '/images/albums/2022/yorkuniversity/2.jpg',
+      '/images/albums/2022/yorkuniversity/3.jpg',
+      '/images/albums/2022/yorkuniversity/4.jpg',
+      '/images/albums/2022/yorkuniversity/5.jpg',
+      '/images/albums/2022/yorkuniversity/6.jpg',
+      '/images/albums/2022/yorkuniversity/7.jpg',
+      '/images/albums/2022/yorkuniversity/8.jpg',
+      '/images/albums/2022/yorkuniversity/9.jpg',
+      '/images/albums/2022/yorkuniversity/10.jpg',
+      '/images/albums/2022/yorkuniversity/11.jpg',
+      '/images/albums/2022/yorkuniversity/12.jpg',
+      '/images/albums/2022/yorkuniversity/13.jpg',
+      '/images/albums/2022/yorkuniversity/14.jpg',
+      '/images/albums/2022/yorkuniversity/15.jpg',
+      '/images/albums/2022/yorkuniversity/16.jpg',
+      '/images/albums/2022/yorkuniversity/17.jpg',
+      '/images/albums/2022/yorkuniversity/18.jpg',
+      '/images/albums/2022/yorkuniversity/19.jpg',
+      '/images/albums/2022/yorkuniversity/20.jpg',
+      '/images/albums/2022/yorkuniversity/21.jpg',
+      '/images/albums/2022/yorkuniversity/22.jpg',
+      '/images/albums/2022/yorkuniversity/23.jpg',
+      '/images/albums/2022/yorkuniversity/24.jpg',
+      '/images/albums/2022/yorkuniversity/25.jpg',
+      '/images/albums/2022/yorkuniversity/26.jpg',
+      '/images/albums/2022/yorkuniversity/27.jpg',
+      '/images/albums/2022/yorkuniversity/28.jpg',
+      '/images/albums/2022/yorkuniversity/29.jpg',
+      '/images/albums/2022/yorkuniversity/30.jpg',
+      '/images/albums/2022/yorkuniversity/31.jpg',
+      '/images/albums/2022/yorkuniversity/32.jpg',
+      '/images/albums/2022/yorkuniversity/33.jpg',
+      '/images/albums/2022/yorkuniversity/34.jpg',
+      '/images/albums/2022/yorkuniversity/35.jpg',
+      '/images/albums/2022/yorkuniversity/36.jpg',
+      '/images/albums/2022/yorkuniversity/37.jpg',
+      '/images/albums/2022/yorkuniversity/38.jpg',
+      '/images/albums/2022/yorkuniversity/39.jpg',
+      '/images/albums/2022/yorkuniversity/40.jpg',
+      '/images/albums/2022/yorkuniversity/41.jpg',
+      '/images/albums/2022/yorkuniversity/42.jpg',
+      '/images/albums/2022/yorkuniversity/43.jpg',
+      '/images/albums/2022/yorkuniversity/44.jpg',
+      '/images/albums/2022/yorkuniversity/45.jpg',
+      '/images/albums/2022/yorkuniversity/46.jpg',
+      '/images/albums/2022/yorkuniversity/47.jpg',
+      '/images/albums/2022/yorkuniversity/48.jpg',
+    ]}
+  />
 </MainLayout>
-<style>
-  @media screen and (max-width: 600px) {
-    #gallery {
-      grid-template-columns: auto auto !important;
-    }
-  }
-
-  #gallery {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-  .galleryImage {
-    width: 90%;
-    height: auto;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    align-self: center;
-    justify-self: center;
-  }
-  #gallery iframe {
-    width: 90%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    align-self: center;
-    justify-self: center;
-  }
-</style>
