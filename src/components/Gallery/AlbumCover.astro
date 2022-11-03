@@ -2,16 +2,18 @@
 const { event, date, image, link } = Astro.props;
 ---
 
-<div class="album">
-  <a href={link}>
-    <div class="titles">
-      <p>
-        {event}
-      </p>
-      <p id="date">{date}</p>
-    </div>
-    <div class="cover" style={` background-image: url(${image}); `}></div>
-  </a>
+<div data-aos="fade-up">
+  <div class="album">
+    <a href={link}>
+      <div class="titles">
+        <p>
+          {event}
+        </p>
+        <p id="date">{date}</p>
+      </div>
+      <div class="cover" style={` background-image: url(${image}); `}></div>
+    </a>
+  </div>
 </div>
 
 <style>
@@ -21,7 +23,7 @@ const { event, date, image, link } = Astro.props;
     }
   }
   .album {
-    filter: grayscale(100%);
+    filter: grayscale(90%);
     transition-duration: 300ms;
   }
   .album:hover {
