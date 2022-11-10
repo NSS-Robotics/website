@@ -1,5 +1,7 @@
 ---
 import GalleryLayout from '../../../layouts/GalleryLayout.astro';
+import GalleryAlbumLayout from '../../../layouts/GalleryAlbumLayout.astro';
+import AlbumCover from '../../../components/Gallery/AlbumCover.astro';
 import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
 import GalleryImagesFlopped from '../../../components/Gallery/GalleryImagesFlopped.astro';
 import MainLayout from '../../../layouts/MainLayout.astro';
@@ -8,9 +10,29 @@ import ImageHeader from '../../../components/ImageHeader.astro';
 
 <MainLayout title="Knight Owls - Provincial Championship Gallery">
   <ImageHeader
-    title="Regional Event - Provincial Championships"
+    title="Provincial Championships"
     background="/images/headers/gallery.webp"
   />
+  <GalleryAlbumLayout>
+    <AlbumCover
+      event="Day 1"
+      date="April 14th 2022"
+      image="/images/albums/2022/provincials/dayone/4.jpg"
+      link="/albums/2022/provincials/dayone"
+    />
+    <AlbumCover
+      event="Day 2"
+      date="April 15th 2022"
+      image="/images/albums/2022/provincials/daytwo/4.jpg"
+      link="/albums/2022/provincials/daytwo"
+    />
+    <AlbumCover
+      event="Day 3"
+      date="April 16th 2022"
+      image="/images/albums/2022/provincials/daythree/9.jpg"
+      link="/albums/2022/provincials/daythree"
+    />
+  </GalleryAlbumLayout>
   <GalleryLayout>
     <GalleryImages
       images={[

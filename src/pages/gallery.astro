@@ -1,13 +1,13 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import GalleryAlbumLayout from '../layouts/GalleryAlbumLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import AlbumCover from '../components/Gallery/AlbumCover.astro';
 ---
 
 <MainLayout title="Knight Owls - Gallery">
   <ImageHeader title="Gallery" background="/images/headers/gallery.webp" />
-  <div class="content"></div>
-  <div class="albums">
+  <GalleryAlbumLayout>
     <AlbumCover
       event="Off Season Event - STEMley Overtime"
       date="October 30th 2022"
@@ -32,27 +32,5 @@ import AlbumCover from '../components/Gallery/AlbumCover.astro';
       image="/images/albums/2022/yorkuniversity/16.jpg"
       link="/albums/2022/yorkuniversity"
     />
-  </div>
+  </GalleryAlbumLayout>
 </MainLayout>
-<style>
-  @media screen and (max-width: 1280px) {
-    .albums {
-      grid-template-columns: auto auto !important;
-    }
-  }
-  @media screen and (max-width: 852px) {
-    .albums {
-      grid-template-columns: auto !important;
-    }
-  }
-  .content {
-    margin-top: 3%;
-  }
-  .albums {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: auto auto auto;
-    grid-gap: 50px;
-  }
-</style>
