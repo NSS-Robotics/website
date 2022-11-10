@@ -1,9 +1,6 @@
 ---
-import GalleryLayout from '../../../../layouts/GalleryLayout.astro';
 import GalleryAlbumLayout from '../../../../layouts/GalleryAlbumLayout.astro';
 import AlbumCover from '../../../../components/Gallery/AlbumCover.astro';
-import GalleryImages from '../../../../components/Gallery/GalleryImages.astro';
-import GalleryImagesFlopped from '../../../../components/Gallery/GalleryImagesFlopped.astro';
 import MainLayout from '../../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../../components/ImageHeader.astro';
 ---
@@ -33,36 +30,4 @@ import ImageHeader from '../../../../components/ImageHeader.astro';
       link="/albums/2022/provincials/daythree"
     />
   </GalleryAlbumLayout>
-  <GalleryLayout>
-    <GalleryImages
-      images={[
-        '/images/albums/2022/provincials/4.jpg',
-        '/images/albums/2022/provincials/5.jpg',
-        '/images/albums/2022/provincials/6.jpg',
-        '/images/albums/2022/provincials/7.jpg',
-        '/images/albums/2022/provincials/8.jpg',
-        '/images/albums/2022/provincials/9.jpg',
-        '/images/albums/2022/provincials/10.jpg',
-        '/images/albums/2022/provincials/11.jpg',
-        '/images/albums/2022/provincials/20.jpg',
-        '/images/albums/2022/provincials/21.jpg',
-      ]}
-    />
-    <GalleryImagesFlopped
-      images={[
-        '/images/albums/2022/provincials/1.jpg',
-        '/images/albums/2022/provincials/2.jpg',
-        '/images/albums/2022/provincials/3.jpg',
-        '/images/albums/2022/provincials/12.jpg',
-        '/images/albums/2022/provincials/13.jpg',
-        '/images/albums/2022/provincials/14.jpg',
-        '/images/albums/2022/provincials/15.jpg',
-        '/images/albums/2022/provincials/16.jpg',
-        '/images/albums/2022/provincials/17.jpg',
-        '/images/albums/2022/provincials/18.jpg',
-        '/images/albums/2022/provincials/19.jpg',
-        '/images/albums/2022/provincials/22.jpg',
-      ]}
-    />
-  </GalleryLayout>
 </MainLayout>
