@@ -6,6 +6,7 @@ import ManufacturingTitle from '../../../components/About/TeamByYear/Titles/Manu
 import DesignTitle from '../../../components/About/TeamByYear/Titles/DesignTitle.astro';
 import ProgrammingTitle from './Titles/ProgrammingTitle.astro';
 import SocialTitle from '../../../components/About/TeamByYear/Titles/SocialTitle.astro';
+import StaffTitle from './Titles/StaffTitle.astro';
 
 const { year, classes, filename } = Astro.props;
 const TeamToMap = (await import(`./Years/${filename}.json`)).default;
@@ -94,6 +95,27 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
       }) => {
         if (member.role == 'social') {
           return <Person name={member.name} title={member.title} />;
+        }
+      }
+    )
+  }
+  <StaffTitle />
+  {
+    TeamToMap.map(
+      (member: {
+        role: string;
+        name: string;
+        title: string;
+        image: string;
+      }) => {
+        if (member.role == 'staff') {
+          return (
+            <Person
+              name={member.name}
+              title={member.title}
+              image={member.image}
+            />
+          );
         }
       }
     )

@@ -1,16 +1,5 @@
 [
   {
-    "name": "Mr. Wong",
-    "role": "exec",
-    "title": "Staff Advisor"
-  },
-  {
-    "name": "Mr. Edwards",
-    "role": "exec",
-    "title": "Staff Advisor",
-    "image": "/images/people/placeholder.webp"
-  },
-  {
     "name": "Aarnav",
     "role": "exec",
     "title": "Co-Head Of Robotics"
@@ -63,5 +52,23 @@
   {
     "name": "Evan",
     "role": "manufacturing"
+  },
+  {
+    "name": "Mr. Edwards",
+    "role": "staff",
+    "title": "Staff Advisor",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Mr. Martell",
+    "role": "staff",
+    "title": "Staff Advisor",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Mr. Wong",
+    "role": "staff",
+    "title": "Staff Advisor",
+    "image": "/images/people/placeholder.webp"
   }
 ]
