@@ -33,18 +33,18 @@
     "tier": "silver"
   },
   {
-    "name": "Parents & Students",
-    "buttonVisible": "false",
-    "tier": "bronze"
-  },
-  {
     "name": "Northern Secondary School Foundation",
     "buttonLink": "https://www.nssf.ca/",
-    "tier": "bronze"
+    "tier": "silver"
   },
   {
     "name": "Northern Student Affairs Council",
     "buttonLink": "https://www.northernsac.ca/",
+    "tier": "silver"
+  },
+  {
+    "name": "Parents & Students",
+    "buttonVisible": "false",
     "tier": "bronze"
   }
 ]
