@@ -11,4 +11,23 @@ import ImageHeader from '../../../../components/ImageHeader.astro';
     title="Provincials - Day Three"
     background="/images/headers/galleries/provincialsdaythree.webp"
   />
+  <GalleryLayout>
+    <GalleryImages
+      images={[
+        '/images/albums/2022/provincials/daythree/1.jpg',
+        '/images/albums/2022/provincials/daythree/3.jpg',
+        '/images/albums/2022/provincials/daythree/4.jpg',
+        '/images/albums/2022/provincials/daythree/5.jpg',
+        '/images/albums/2022/provincials/daythree/8.jpg',
+      ]}
+    />
+    <GalleryImagesFlopped
+      images={[
+        '/images/albums/2022/provincials/daythree/2.jpg',
+        '/images/albums/2022/provincials/daythree/6.jpg',
+        '/images/albums/2022/provincials/daythree/7.jpg',
+        '/images/albums/2022/provincials/daythree/9.jpg',
+      ]}
+    />
+  </GalleryLayout>
 </MainLayout>
