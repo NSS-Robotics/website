@@ -10,7 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.11.0",
     "@astrojs/sitemap": "^1.0.0",
     "@fontsource/poppins": "^4.5.10",
     "astro": "^1.6.10",
@@ -22,10 +21,10 @@
   "devDependencies": {
     "@astrojs/react": "^1.2.2",
     "astro-robots-txt": "^0.3.10",
+    "find-up": "^6.3.0",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.7.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "find-up": "^6.3.0"
+    "react-dom": "^18.2.0"
   }
 }
