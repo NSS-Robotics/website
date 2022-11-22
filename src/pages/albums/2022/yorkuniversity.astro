@@ -1,0 +1,72 @@
+---
+import GalleryLayout from '../../../layouts/GalleryLayout.astro';
+import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
+import MainLayout from '../../../layouts/MainLayout.astro';
+import ImageHeader from '../../../components/ImageHeader.astro';
+import GalleryImagesFlopped from '../../../components/Gallery/GalleryImagesFlopped.astro';
+---
+
+<MainLayout title="Knight Owls - York University Regionals Gallery">
+  <ImageHeader
+    title="Regional Event - York University"
+    background="/images/headers/galleries/yorkuniversity.webp"
+  />
+  <GalleryLayout>
+    <GalleryImages
+      images={[
+        '/images/albums/2022/yorkuniversity/1.jpg',
+        '/images/albums/2022/yorkuniversity/2.jpg',
+        '/images/albums/2022/yorkuniversity/3.jpg',
+        '/images/albums/2022/yorkuniversity/5.jpg',
+        '/images/albums/2022/yorkuniversity/6.jpg',
+        '/images/albums/2022/yorkuniversity/7.jpg',
+        '/images/albums/2022/yorkuniversity/8.jpg',
+        '/images/albums/2022/yorkuniversity/10.jpg',
+        '/images/albums/2022/yorkuniversity/11.jpg',
+        '/images/albums/2022/yorkuniversity/14.jpg',
+        '/images/albums/2022/yorkuniversity/17.jpg',
+        '/images/albums/2022/yorkuniversity/21.jpg',
+        '/images/albums/2022/yorkuniversity/22.jpg',
+        '/images/albums/2022/yorkuniversity/25.jpg',
+        '/images/albums/2022/yorkuniversity/42.jpg',
+        '/images/albums/2022/yorkuniversity/43.jpg',
+        '/images/albums/2022/yorkuniversity/47.jpg',
+        '/images/albums/2022/yorkuniversity/48.jpg',
+      ]}
+    />
+    <GalleryImagesFlopped
+      images={[
+        '/images/albums/2022/yorkuniversity/4.jpg',
+        '/images/albums/2022/yorkuniversity/9.jpg',
+        '/images/albums/2022/yorkuniversity/12.jpg',
+        '/images/albums/2022/yorkuniversity/13.jpg',
+        '/images/albums/2022/yorkuniversity/15.jpg',
+        '/images/albums/2022/yorkuniversity/16.jpg',
+        '/images/albums/2022/yorkuniversity/18.jpg',
+        '/images/albums/2022/yorkuniversity/19.jpg',
+        '/images/albums/2022/yorkuniversity/20.jpg',
+        '/images/albums/2022/yorkuniversity/23.jpg',
+        '/images/albums/2022/yorkuniversity/24.jpg',
+        '/images/albums/2022/yorkuniversity/26.jpg',
+        '/images/albums/2022/yorkuniversity/27.jpg',
+        '/images/albums/2022/yorkuniversity/28.jpg',
+        '/images/albums/2022/yorkuniversity/29.jpg',
+        '/images/albums/2022/yorkuniversity/30.jpg',
+        '/images/albums/2022/yorkuniversity/31.jpg',
+        '/images/albums/2022/yorkuniversity/32.jpg',
+        '/images/albums/2022/yorkuniversity/33.jpg',
+        '/images/albums/2022/yorkuniversity/34.jpg',
+        '/images/albums/2022/yorkuniversity/35.jpg',
+        '/images/albums/2022/yorkuniversity/36.jpg',
+        '/images/albums/2022/yorkuniversity/37.jpg',
+        '/images/albums/2022/yorkuniversity/38.jpg',
+        '/images/albums/2022/yorkuniversity/39.jpg',
+        '/images/albums/2022/yorkuniversity/40.jpg',
+        '/images/albums/2022/yorkuniversity/41.jpg',
+        '/images/albums/2022/yorkuniversity/44.jpg',
+        '/images/albums/2022/yorkuniversity/45.jpg',
+        '/images/albums/2022/yorkuniversity/46.jpg',
+      ]}
+    />
+  </GalleryLayout>
+</MainLayout>

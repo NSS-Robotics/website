@@ -6,10 +6,10 @@ import SponsorshipTier from '../components/Sponsorship/SponsorshipTier.astro';
 
 <MainLayout title="Knight Owls - Sponsorship Tiers">
   <ImageHeader
-    title="Soponsorship Tiers"
+    title="Sponsorship Tiers"
     background="/images/headers/tiers.webp"
   />
-  <div class="tiers">
+  <div class="tiers" id="listing">
     <SponsorshipTier
       tier="Bronze"
       amount="$500 - $999"
@@ -17,7 +17,7 @@ import SponsorshipTier from '../components/Sponsorship/SponsorshipTier.astro';
       things={[
         'Name and logo showcased on our website',
         'Name and logo showcased on our robot*',
-        'Receive our team merchandise',
+        'Receive our team shirt or hoodie signed by the team',
         'Receive a shoutout on all our social media platforms',
         'Have your name mentioned at the FIRST competitions when our team is introduced',
       ]}

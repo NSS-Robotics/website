@@ -1,0 +1,60 @@
+---
+import GalleryLayout from '../../../../layouts/GalleryLayout.astro';
+import GalleryImages from '../../../../components/Gallery/GalleryImages.astro';
+import GalleryImagesFlopped from '../../../../components/Gallery/GalleryImagesFlopped.astro';
+import MainLayout from '../../../../layouts/MainLayout.astro';
+import ImageHeader from '../../../../components/ImageHeader.astro';
+---
+
+<MainLayout title="Knight Owls - Provincial Championships Day One">
+  <ImageHeader
+    title="Provincials - Day One"
+    background="/images/headers/galleries/provincialsdayone.webp"
+  />
+  <GalleryLayout>
+    <GalleryImages
+      images={[
+        '/images/albums/2022/provincials/dayone/2.jpg',
+        '/images/albums/2022/provincials/dayone/9.jpg',
+        '/images/albums/2022/provincials/dayone/50.jpg',
+        '/images/albums/2022/provincials/dayone/44.jpg',
+        '/images/albums/2022/provincials/dayone/16.jpg',
+        '/images/albums/2022/provincials/dayone/37.jpg',
+        '/images/albums/2022/provincials/dayone/38.jpg',
+      ]}
+    />
+    <GalleryImagesFlopped
+      images={[
+        '/images/albums/2022/provincials/dayone/3.jpg',
+        '/images/albums/2022/provincials/dayone/4.jpg',
+        '/images/albums/2022/provincials/dayone/5.jpg',
+        '/images/albums/2022/provincials/dayone/6.jpg',
+        '/images/albums/2022/provincials/dayone/7.jpg',
+        '/images/albums/2022/provincials/dayone/11.jpg',
+        '/images/albums/2022/provincials/dayone/13.jpg',
+        '/images/albums/2022/provincials/dayone/14.jpg',
+        '/images/albums/2022/provincials/dayone/18.jpg',
+        '/images/albums/2022/provincials/dayone/19.jpg',
+        '/images/albums/2022/provincials/dayone/20.jpg',
+        '/images/albums/2022/provincials/dayone/21.jpg',
+        '/images/albums/2022/provincials/dayone/22.jpg',
+        '/images/albums/2022/provincials/dayone/23.jpg',
+        '/images/albums/2022/provincials/dayone/25.jpg',
+        '/images/albums/2022/provincials/dayone/26.jpg',
+        '/images/albums/2022/provincials/dayone/27.jpg',
+        '/images/albums/2022/provincials/dayone/28.jpg',
+        '/images/albums/2022/provincials/dayone/29.jpg',
+        '/images/albums/2022/provincials/dayone/32.jpg',
+        '/images/albums/2022/provincials/dayone/33.jpg',
+        '/images/albums/2022/provincials/dayone/35.jpg',
+        '/images/albums/2022/provincials/dayone/36.jpg',
+        '/images/albums/2022/provincials/dayone/39.jpg',
+        '/images/albums/2022/provincials/dayone/40.jpg',
+        '/images/albums/2022/provincials/dayone/41.jpg',
+        '/images/albums/2022/provincials/dayone/42.jpg',
+        '/images/albums/2022/provincials/dayone/45.jpg',
+        '/images/albums/2022/provincials/dayone/48.jpg',
+      ]}
+    />
+  </GalleryLayout>
+</MainLayout>

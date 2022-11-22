@@ -1,0 +1,64 @@
+---
+const { event, date, image, link } = Astro.props;
+---
+
+<div data-aos="fade-up">
+  <div class="album">
+    <a href={link}>
+      <div class="titles">
+        <p>
+          {event}
+        </p>
+        <p id="date">{date}</p>
+      </div>
+      <div class="cover" style={` background-image: url(${image}); `}></div>
+    </a>
+  </div>
+</div>
+
+<style>
+  @media screen and (max-width: 852px) {
+    .titles {
+      margin: 0 !important;
+    }
+  }
+  .album {
+    filter: grayscale(90%);
+    transition-duration: 300ms;
+  }
+  .album:hover {
+    filter: none;
+    transition-duration: 300ms;
+    transform: scale(1.03);
+  }
+  .cover {
+    background-size: cover;
+    background-position: center;
+    width: 375px;
+    height: 375px;
+    border-radius: 10px;
+  }
+  .titles {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+  }
+  p {
+    text-align: center;
+    align-self: center;
+    margin: 0;
+  }
+  #date {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+</style>

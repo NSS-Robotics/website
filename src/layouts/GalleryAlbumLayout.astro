@@ -1,0 +1,28 @@
+<div class="content">
+  <div class="albums">
+    <slot />
+  </div>
+</div>
+<style>
+  @media screen and (max-width: 1280px) {
+    .albums {
+      grid-template-columns: auto auto !important;
+    }
+  }
+  @media screen and (max-width: 852px) {
+    .albums {
+      grid-template-columns: auto !important;
+    }
+  }
+  .content {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  .albums {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+  }
+</style>

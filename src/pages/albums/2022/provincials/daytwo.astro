@@ -1,0 +1,27 @@
+---
+import GalleryLayout from '../../../../layouts/GalleryLayout.astro';
+import GalleryImages from '../../../../components/Gallery/GalleryImages.astro';
+import GalleryImagesFlopped from '../../../../components/Gallery/GalleryImagesFlopped.astro';
+import MainLayout from '../../../../layouts/MainLayout.astro';
+import ImageHeader from '../../../../components/ImageHeader.astro';
+---
+
+<MainLayout title="Knight Owls - Provincial Championships Day Two">
+  <ImageHeader
+    title="Provincials - Day Two"
+    background="/images/headers/galleries/provincialsdaytwo.webp"
+  />
+  <GalleryLayout>
+    <GalleryImagesFlopped
+      images={[
+        '/images/albums/2022/provincials/daytwo/11.jpg',
+        '/images/albums/2022/provincials/daytwo/5.jpg',
+        '/images/albums/2022/provincials/daytwo/7.jpg',
+        '/images/albums/2022/provincials/daytwo/9.jpg',
+        '/images/albums/2022/provincials/daytwo/10.jpg',
+        '/images/albums/2022/provincials/daytwo/12.jpg',
+        '/images/albums/2022/provincials/daytwo/13.jpg',
+      ]}
+    />
+  </GalleryLayout>
+</MainLayout>
