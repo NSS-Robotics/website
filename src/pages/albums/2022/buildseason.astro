@@ -1,0 +1,51 @@
+---
+import GalleryLayout from '../../../layouts/GalleryLayout.astro';
+import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
+import MainLayout from '../../../layouts/MainLayout.astro';
+import ImageHeader from '../../../components/ImageHeader.astro';
+import GalleryImagesFlopped from '../../../components/Gallery/GalleryImagesFlopped.astro';
+---
+
+<MainLayout title="Knight Owls - Build Season Gallery">
+  <ImageHeader
+    title="Build Season 2022 Gallery"
+    background="/images/headers/galleries/buildseason.webp"
+  />
+  <GalleryLayout>
+    <GalleryImages
+      images={[
+        '/images/albums/2022/buildseason/1.jpg',
+        '/images/albums/2022/buildseason/2.jpg',
+        '/images/albums/2022/buildseason/3.jpg',
+        '/images/albums/2022/buildseason/4.jpg',
+        '/images/albums/2022/buildseason/5.jpg',
+        '/images/albums/2022/buildseason/9.jpg',
+        '/images/albums/2022/buildseason/10.jpg',
+        '/images/albums/2022/buildseason/14.jpg',
+        '/images/albums/2022/buildseason/15.jpg',
+        '/images/albums/2022/buildseason/16.jpg',
+        '/images/albums/2022/buildseason/17.jpg',
+        '/images/albums/2022/buildseason/18.jpg',
+        '/images/albums/2022/buildseason/19.jpg',
+        '/images/albums/2022/buildseason/20.jpg',
+        '/images/albums/2022/buildseason/21.jpg',
+        '/images/albums/2022/buildseason/26.jpg',
+        '/images/albums/2022/buildseason/27.jpg',
+        '/images/albums/2022/buildseason/28.jpg',
+        '/images/albums/2022/buildseason/29.jpg',
+        '/images/albums/2022/buildseason/30.jpg',
+        '/images/albums/2022/buildseason/31.jpg',
+        '/images/albums/2022/buildseason/32.jpg',
+      ]}
+    />
+    <GalleryImagesFlopped
+      images={[
+        '/images/albums/2022/buildseason/6.jpg',
+        '/images/albums/2022/buildseason/7.jpg',
+        '/images/albums/2022/buildseason/8.jpg',
+        '/images/albums/2022/buildseason/12.jpg',
+        '/images/albums/2022/buildseason/13.jpg',
+      ]}
+    />
+  </GalleryLayout>
+</MainLayout>
