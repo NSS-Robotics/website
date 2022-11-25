@@ -15,7 +15,7 @@
     "@fontsource/poppins": "^4.5.10",
     "astro": "^1.6.10",
     "astro-icon": "^0.8.0",
-    "astro-imagetools": "^0.6.12",
+    "astro-imagetools": "^0.6.13",
     "astro-seo": "^0.6.0",
     "swiper": "^8.4.5"
   },
