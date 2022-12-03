@@ -1,0 +1,27 @@
+---
+//@ts-ignore
+const { videoids = [] } = Astro.props;
+---
+
+{
+  videoids.map((id: string) => (
+    <iframe
+      height="315"
+      src={`https://www.youtube-nocookie.com/embed/${id}`}
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      data-aos="fade-up"
+    />
+  ))
+}
+<style>
+  iframe {
+    width: 90%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    align-self: center;
+    justify-self: center;
+    border: none;
+  }
+</style>
