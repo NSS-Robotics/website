@@ -77,6 +77,7 @@
     border: none;
     cursor: pointer;
     transform: translate(-50%, -50%);
+    transition-duration: 0.3s;
   }
   .dropbtn:hover {
     text-decoration: underline solid var(--vividblue);
@@ -91,13 +92,16 @@
   }
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
-    display: none;
     position: absolute;
+    opacity: 0;
+    pointer-events: none;
     min-width: 160px;
     z-index: 1;
     background-color: #efefef;
     text-align: center;
     margin-top: 8px;
+    border-radius: 8px;
+    transition: 0.3s;
   }
   /* Links Inside The Dropdown Content */
   .dropdown-content a:hover {
@@ -116,6 +120,8 @@
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     display: block;
-    border-radius: 8px;
+    opacity: 1;
+    pointer-events: auto;
+    transition-duration: 0.3s;
   }
 </style>
