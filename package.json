@@ -14,7 +14,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "@fontsource/poppins": "^4.5.10",
     "@vercel/analytics": "^0.1.5",
-    "astro": "^1.6.14",
+    "astro": "^1.6.15",
     "astro-icon": "^0.8.0",
     "astro-imagetools": "^0.6.16",
     "astro-seo": "^0.6.0",
