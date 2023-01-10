@@ -11,6 +11,12 @@
     "tier": "elite"
   },
   {
+    "name": "PrintPOP",
+    "buttonLink": "https://theprintpop.com/",
+    "border": "0px",
+    "tier": "silver"
+  },
+  {
     "name": "Deloitte Digital",
     "buttonLink": "https://www.deloittedigital.com/us/en.html",
     "border": "0px",
