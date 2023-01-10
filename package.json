@@ -16,7 +16,7 @@
     "@vercel/analytics": "^0.1.6",
     "astro": "^1.9.1",
     "astro-icon": "^0.8.0",
-    "astro-imagetools": "^0.6.17",
+    "astro-imagetools": "^0.7.0",
     "astro-seo": "^0.6.1",
     "swiper": "^8.4.5"
   },
@@ -24,8 +24,8 @@
     "@astrojs/react": "^1.2.2",
     "astro-robots-txt": "^0.3.10",
     "find-up": "^6.3.0",
-    "prettier": "^2.8.1",
-    "prettier-plugin-astro": "^0.7.0",
+    "prettier": "^2.8.2",
+    "prettier-plugin-astro": "^0.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
