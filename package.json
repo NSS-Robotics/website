@@ -24,7 +24,7 @@
     "@astrojs/react": "^1.2.2",
     "astro-robots-txt": "^0.3.10",
     "find-up": "^6.3.0",
-    "prettier": "^2.8.1",
+    "prettier": "^2.8.2",
     "prettier-plugin-astro": "^0.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
