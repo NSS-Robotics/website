@@ -21,7 +21,7 @@
     "swiper": "^8.4.6"
   },
   "devDependencies": {
-    "@astrojs/react": "^1.2.2",
+    "@astrojs/react": "^2.0.0",
     "astro-robots-txt": "^0.3.11",
     "find-up": "^6.3.0",
     "prettier": "^2.8.3",
