@@ -4,6 +4,7 @@ import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
 import GalleryImagesFlopped from '../../../components/Gallery/GalleryImagesFlopped.astro';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../components/ImageHeader.astro';
+import GalleryVideos from '../../../components/Gallery/GalleryVideos.astro';
 ---
 
 <MainLayout title="Knight Owls - STEMley Overtime">
@@ -12,6 +13,7 @@ import ImageHeader from '../../../components/ImageHeader.astro';
     background="/images/headers/galleries/stemleyovertime.webp"
   />
   <GalleryLayout>
+    <GalleryVideos videoids={['9QZH366IYd0', 'mGyIN-wCb-c', 'pVtmf-m2i4I']} />
     <GalleryImages
       images={[
         '/images/albums/2022/stemleyovertime/3.jpg',

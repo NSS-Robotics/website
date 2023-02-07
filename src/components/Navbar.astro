@@ -1,10 +1,6 @@
 <div class="navbar">
   <div class="left" data-aos="fade-down" data-aos-delay="500">
-    <img
-      id="surprise"
-      src="/favicons/favicon-navbar.ico"
-      alt="Knight Owls logo"
-    />
+    <img id="logo" src="/favicons/navbar.png" alt="Knight Owls logo" />
     <p>Knight Owls #8884</p>
   </div>
   <span class="space"></span>
@@ -14,12 +10,19 @@
     </div>
     <div class="dropdown" data-aos="fade-down" data-aos-delay="700">
       <a href="/about/" class="dropbtn">About Us</a>
-      <div style="margin-left: -10px" class="dropdown-content">
-        <a href="/about#whoarewe">Who Are We?</a>
-        <a href="/about#teams">Our Subteams</a>
-        <a href="/about#people">Our Members</a>
-        <a href="https://www.firstinspires.org/robotics/frc" target="_blank"
-          >🔗 FIRST Robotics</a
+      <div style="margin-left: -10px" class="dropdown-content"
+        <a class="except" href="/about#whoarewe">Who Are We?</a>
+        <a class="except" href="/about#teams">Our Subteams</a>
+        <a class="except" href="/about#people">Our Members</a>
+        <a
+          class="except"
+          href="https://www.youtube.com/watch?v=4oBanPq-mG0"
+          target="_blank">🔗 Team Video</a
+        >
+        <a
+          class="except"
+          href="https://www.firstinspires.org/robotics/frc"
+          target="_blank">🔗 FIRST Robotics</a
         >
       </div>
     </div>
@@ -56,6 +59,9 @@
     color: white;
     font-size: large;
   }
+  #logo {
+    width: 50px;
+  }
   .space {
     width: 13vw;
   }
@@ -75,6 +81,7 @@
     border: none;
     cursor: pointer;
     transform: translate(-50%, -50%);
+    transition-duration: 0.3s;
   }
   .dropbtn:hover {
     text-decoration: underline solid var(--vividblue);
@@ -89,13 +96,16 @@
   }
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
-    display: none;
     position: absolute;
+    opacity: 0;
+    pointer-events: none;
     min-width: 160px;
     z-index: 1;
     background-color: #efefef;
     text-align: center;
     margin-top: 8px;
+    border-radius: 8px;
+    transition: 0.3s;
   }
   /* Links Inside The Dropdown Content */
   .dropdown-content a:hover {
@@ -114,6 +124,8 @@
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     display: block;
-    border-radius: 8px;
+    opacity: 1;
+    pointer-events: auto;
+    transition-duration: 0.3s;
   }
 </style>
