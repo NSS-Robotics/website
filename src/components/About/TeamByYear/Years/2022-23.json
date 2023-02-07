@@ -49,19 +49,11 @@
     "role": "manufacturing"
   },
   {
-    "name": "Ewan",
-    "role": "manufacturing"
-  },
-  {
     "name": "Imeth",
     "role": "manufacturing"
   },
   {
     "name": "Zidane",
-    "role": "manufacturing"
-  },
-  {
-    "name": "Ezra",
     "role": "manufacturing"
   },
   {
@@ -73,6 +65,14 @@
     "name": "Isaac",
     "role": "design",
     "title": "Design Co-Lead"
+  },
+  {
+    "name": "Ewan",
+    "role": "design"
+  },
+  {
+    "name": "Evan",
+    "role": "design"
   },
   {
     "name": "Chloe",
