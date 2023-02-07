@@ -66,10 +66,10 @@ import Team from '../components/About/TeamByYear/Team.astro';
       <SubteamSlider
         name="Manufacturing"
         images={[
-          '/images/aboutus/manufacturingSlides/1.webp',
-          '/images/aboutus/manufacturingSlides/2.webp',
-          '/images/aboutus/manufacturingSlides/3.webp',
-          '/images/aboutus/manufacturingSlides/4.webp',
+          '/images/aboutus/subteams/manufacturingSlides/1.webp',
+          '/images/aboutus/subteams/manufacturingSlides/2.webp',
+          '/images/aboutus/subteams/manufacturingSlides/3.webp',
+          '/images/aboutus/subteams/manufacturingSlides/4.webp',
         ]}
         description="This team is responsible for the manufacturing of the robot. We use a variety of tools such as 3D printers, CNC machines, and laser cutters to create the parts and components for our robots."
         fadeDirection="right"
@@ -77,18 +77,24 @@ import Team from '../components/About/TeamByYear/Team.astro';
       <SubteamSlider
         name="Programming"
         images={[
-          '/images/aboutus/programmingSlides/1.webp',
-          '/images/aboutus/programmingSlides/2.webp',
-          '/images/aboutus/programmingSlides/3.webp',
+          '/images/aboutus/subteams/programmingSlides/1.webp',
+          '/images/aboutus/subteams/programmingSlides/2.webp',
+          '/images/aboutus/subteams/programmingSlides/3.webp',
         ]}
         description="The programming team codes the 'brain' of the robot. The language of choice for FRC robots is Java since it provides a great balance between performance and control over systems and functionality."
         fadeDirection="left"
       />
       <Subteam
+        name="Outreach"
+        alt=""
+        description="The outreach team is a combination of the media and business subteams. They're in charge of connecting and working with the community, leading the team's social media presence, and managing the team's finances including all of the fundraising."
+        fadeDirection="right"
+      />
+      <Subteam
         name="Web Design"
         alt="Isaac, Jacob and another member working around a laptop"
         description="The web design team is responsible for the creating and maintaining this website. The media team is responsible for our social media presence as well as the team's photography and videography in partnership with the media team."
-        fadeDirection="right"
+        fadeDirection="left"
       />
     </div>
     <h3 id="people" class="our-team" data-aos="zoom-in" data-aos-once="true">
