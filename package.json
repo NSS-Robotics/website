@@ -13,7 +13,7 @@
     "@astrojs/image": "^0.14.1",
     "@astrojs/sitemap": "^1.0.1",
     "@fontsource/poppins": "^4.5.10",
-    "@vercel/analytics": "^0.1.8",
+    "@vercel/analytics": "^0.1.9",
     "astro": "^2.0.8",
     "astro-icon": "^0.8.0",
     "astro-imagetools": "^0.8.1",
