@@ -3,11 +3,27 @@ import MainLayout from '../layouts/MainLayout.astro';
 import GalleryAlbumLayout from '../layouts/GalleryAlbumLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import AlbumCover from '../components/Gallery/AlbumCover.astro';
+
+// Get the number of days from the current date to march 16th 2023 and save it to a variable
+const daysToMarch16th = Math.floor(
+  //@ts-ignore
+  (new Date(2023, 2, 16) - new Date()) / (1000 * 60 * 60 * 24)
+);
 ---
 
 <MainLayout title="Knight Owls - Gallery">
   <ImageHeader title="Gallery" background="/images/headers/gallery.webp" />
-  <GalleryAlbumLayout>
+  <h3>2023 Gallery</h3>
+  <GalleryAlbumLayout columns="1">
+    <AlbumCover
+      event="Build Season"
+      date={`January 7th - March 16th 2023 (${daysToMarch16th} Days From Now)`}
+      image="/images/albums/2023/buildseason/12.jpg"
+      link="/albums/2023/buildseason"
+    />
+  </GalleryAlbumLayout>
+  <h3>2022 Gallery</h3>
+  <GalleryAlbumLayout columns="3">
     <AlbumCover
       event="Off Season Event - STEMley Overtime"
       date="October 30th 2022"
@@ -40,3 +56,11 @@ import AlbumCover from '../components/Gallery/AlbumCover.astro';
     />
   </GalleryAlbumLayout>
 </MainLayout>
+<style>
+  h3 {
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--vividblue);
+  }
+</style>
