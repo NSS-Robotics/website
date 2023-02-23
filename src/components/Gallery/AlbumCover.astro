@@ -25,6 +25,7 @@ const { event, date, image, link } = Astro.props;
   .album {
     filter: grayscale(90%);
     transition-duration: 300ms;
+    display: flex !important;
   }
   .album:hover {
     filter: none;
@@ -40,6 +41,9 @@ const { event, date, image, link } = Astro.props;
   }
   .titles {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
     font-size: 20px;
     font-weight: 600;
@@ -53,6 +57,7 @@ const { event, date, image, link } = Astro.props;
   #date {
     font-size: 1rem;
     font-weight: 300;
+    width: 250px;
   }
   a {
     text-decoration: none;
