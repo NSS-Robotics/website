@@ -1,5 +1,12 @@
+---
+const { columns = 3 } = Astro.props;
+---
+
 <div class="content">
-  <div class="albums">
+  <div
+    class="albums"
+    style={`grid-template-columns: repeat(${columns}, auto);`}
+  >
     <slot />
   </div>
 </div>
@@ -22,7 +29,6 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: auto auto auto;
     grid-gap: 50px;
   }
 </style>
