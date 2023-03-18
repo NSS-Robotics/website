@@ -3,12 +3,6 @@ import MainLayout from '../layouts/MainLayout.astro';
 import GalleryAlbumLayout from '../layouts/GalleryAlbumLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import AlbumCover from '../components/Gallery/AlbumCover.astro';
-
-// Get the number of days from the current date to march 16th 2023 and save it to a variable
-const daysToMarch16th = Math.floor(
-  //@ts-ignore
-  (new Date(2023, 2, 16) - new Date()) / (1000 * 60 * 60 * 24)
-);
 ---
 
 <MainLayout title="Knight Owls - Gallery">
@@ -17,7 +11,7 @@ const daysToMarch16th = Math.floor(
   <GalleryAlbumLayout columns="1">
     <AlbumCover
       event="Build Season"
-      date={`January 7th - March 16th 2023 (${daysToMarch16th} Days From Now)`}
+      date={'January 7th - March 16th 2023'}
       image="/images/albums/2023/buildseason/12.jpg"
       link="/albums/2023/buildseason"
     />
