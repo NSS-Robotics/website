@@ -1,6 +1,7 @@
 ---
 import GalleryLayout from '../../../layouts/GalleryLayout.astro';
 import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
+import GalleryVideos from '../../../components/Gallery/GalleryVideos.astro';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ImageHeader from '../../../components/ImageHeader.astro';
 import GalleryImagesFlopped from '../../../components/Gallery/GalleryImagesFlopped.astro';
@@ -12,6 +13,7 @@ import GalleryImagesFlopped from '../../../components/Gallery/GalleryImagesFlopp
     background="/images/headers/galleries/2023/western.webp"
   />
   <GalleryLayout>
+    <GalleryVideos videoids={['N5T_Y6lmfiA', 'k-s3uMfTOMs', 'goeMJKN1fQQ']} />
     <GalleryImages
       images={[
         '/images/albums/2023/western/1.jpg',
