@@ -1,0 +1,44 @@
+<div class="live">
+  <p>We're currently competeing at an event!</p>
+  <a href="http://live.knightowls.ca" target="_blank">Watch us live!</a>
+</div>
+<style>
+  .live {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #fff;
+    width: 100%;
+    z-index: 2;
+    border: 3px solid var(--blue);
+    padding: 5px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--onyx);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 10px;
+    transition-duration: 200ms;
+    border: 3px solid var(--onyx);
+  }
+  a:hover {
+    transition-duration: 200ms;
+    background-color: transparent;
+    color: var(--blue);
+    border: 3px solid var(--blue);
+  }
+</style>
+<style is:global>
+  .navbar {
+    margin-top: 90px;
+  }
+</style>
