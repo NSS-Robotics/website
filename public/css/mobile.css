@@ -194,6 +194,7 @@
 @media screen and (max-width: 482px) {
   .navbar {
     zoom: 50% !important;
+    margin-top: 180px !important;
   }
   .tiers {
     grid-template-columns: 88vw !important;
@@ -201,6 +202,15 @@
   .logoinfo {
     grid-column-start: 1;
     grid-column-end: 2 !important;
+  }
+  .live {
+    text-align: center;
+  }
+  .live p {
+    font-size: 12px !important;
+  }
+  .live a {
+    font-size: 10px !important;
   }
 }
 @media screen and (max-width: 400px) {
