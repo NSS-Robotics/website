@@ -1,5 +1,12 @@
 ---
-const { tier, amount, colour, things=[], buttonText='Contact Us', buttonLink='mailto:sponsorships@knightowls.ca' } = Astro.props;
+const {
+  tier,
+  amount,
+  colour,
+  things = [],
+  buttonText = 'Contact Us',
+  buttonLink = 'mailto:sponsorships@knightowls.ca',
+} = Astro.props;
 ---
 
 <div data-aos="zoom-in" class="box">
@@ -11,13 +18,15 @@ const { tier, amount, colour, things=[], buttonText='Contact Us', buttonLink='ma
   <div class="things">
     {
       things.map((thing: string) => (
-        <img
-          data-aos="zoom-in"
-          data-aos-delay="250"
-          src="/images/check.svg"
-          alt="checkmark"
-        />
-      <p>{thing}</p>
+        <>
+          <img
+            data-aos="zoom-in"
+            data-aos-delay="250"
+            src="/images/check.svg"
+            alt="checkmark"
+          />
+          <p>{thing}</p>
+        </>
       ))
     }
   </div>
@@ -53,8 +62,8 @@ const { tier, amount, colour, things=[], buttonText='Contact Us', buttonLink='ma
   .box a:hover {
     transition-duration: 300ms;
     background-color: transparent;
-    color: var(--vividblue);
-    border: 3px solid var(--vividblue);
+    color: var(--blue);
+    border: 3px solid var(--blue);
   }
   .line {
     height: 2px;
