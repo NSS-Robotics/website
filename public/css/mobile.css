@@ -194,7 +194,6 @@
 @media screen and (max-width: 482px) {
   .navbar {
     zoom: 50% !important;
-    margin-top: 180px !important;
   }
   .tiers {
     grid-template-columns: 88vw !important;
