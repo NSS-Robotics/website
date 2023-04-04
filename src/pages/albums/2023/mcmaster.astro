@@ -1,0 +1,43 @@
+---
+import GalleryLayout from '../../../layouts/GalleryLayout.astro';
+import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
+import MainLayout from '../../../layouts/MainLayout.astro';
+import ImageHeader from '../../../components/ImageHeader.astro';
+---
+
+<MainLayout title="Knight Owls - District Event - McMaster">
+  <ImageHeader
+    title="District Event - McMaster"
+    background="/images/headers/galleries/2023/mcmaster.webp"
+  />
+  <GalleryLayout>
+    <GalleryImages
+      images={[
+        '/images/albums/2023/mcmaster/1.jpg',
+        '/images/albums/2023/mcmaster/2.jpg',
+        '/images/albums/2023/mcmaster/3.jpg',
+        '/images/albums/2023/mcmaster/4.jpg',
+        '/images/albums/2023/mcmaster/5.jpg',
+        '/images/albums/2023/mcmaster/6.jpg',
+        '/images/albums/2023/mcmaster/7.jpg',
+        '/images/albums/2023/mcmaster/8.jpg',
+        '/images/albums/2023/mcmaster/10.jpg',
+        '/images/albums/2023/mcmaster/12.jpg',
+        '/images/albums/2023/mcmaster/13.jpg',
+        '/images/albums/2023/mcmaster/16.jpg',
+        '/images/albums/2023/mcmaster/17.jpg',
+        '/images/albums/2023/mcmaster/19.jpg',
+        '/images/albums/2023/mcmaster/20.jpg',
+        '/images/albums/2023/mcmaster/22.jpg',
+        '/images/albums/2023/mcmaster/23.jpg',
+        '/images/albums/2023/mcmaster/24.jpg',
+        '/images/albums/2023/mcmaster/25.jpg',
+        '/images/albums/2023/mcmaster/26.jpg',
+        '/images/albums/2023/mcmaster/27.jpg',
+        '/images/albums/2023/mcmaster/15.jpg',
+        '/images/albums/2023/mcmaster/11.jpg',
+        '/images/albums/2023/mcmaster/9.jpg',
+      ]}
+    />
+  </GalleryLayout>
+</MainLayout>

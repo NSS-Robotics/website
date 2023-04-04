@@ -8,9 +8,15 @@ import AlbumCover from '../components/Gallery/AlbumCover.astro';
 <MainLayout title="Knight Owls - Gallery">
   <ImageHeader title="Gallery" background="/images/headers/gallery.webp" />
   <h3>2023 Gallery</h3>
-  <GalleryAlbumLayout columns="2">
+  <GalleryAlbumLayout columns="3">
     <AlbumCover
-      event="Regional Event - Western University"
+      event="District Event - McMaster"
+      date={'March 31st - April 2nd 2023'}
+      image="/images/albums/2023/mcmaster/1.jpg"
+      link="/albums/2023/mcmaster"
+    />
+    <AlbumCover
+      event="District Event - Western University"
       date={'March 17th - March 19th 2023'}
       image="/images/albums/2023/western/1.jpg"
       link="/albums/2023/western"
@@ -37,13 +43,13 @@ import AlbumCover from '../components/Gallery/AlbumCover.astro';
       link="/albums/2022/provincials/provincials"
     />
     <AlbumCover
-      event="Regional Event - St. Mary's"
+      event="District Event - St. Mary's"
       date="April 9th - 10th 2022"
       image="/images/albums/2022/stmarys/12.jpg"
       link="/albums/2022/stmarys"
     />
     <AlbumCover
-      event="Regional Event - York University"
+      event="District Event - York University"
       date="March 27th 2022"
       image="/images/albums/2022/yorkuniversity/16.jpg"
       link="/albums/2022/yorkuniversity"
