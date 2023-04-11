@@ -1,0 +1,33 @@
+---
+import GalleryAlbumLayout from '../../../../layouts/GalleryAlbumLayout.astro';
+import AlbumCover from '../../../../components/Gallery/AlbumCover.astro';
+import MainLayout from '../../../../layouts/MainLayout.astro';
+import ImageHeader from '../../../../components/ImageHeader.astro';
+---
+
+<MainLayout title="Knight Owls - Provincial Championship Gallery">
+  <ImageHeader
+    title="Provincial Championships"
+    background="/images/headers/galleries/2023/provincials.webp"
+  />
+  <GalleryAlbumLayout>
+    <AlbumCover
+      event="Day 1"
+      date="April 6th 2023"
+      image="/images/albums/2023/provincials/dayone/4.jpg"
+      link="/albums/2023/provincials/dayone"
+    />
+    <AlbumCover
+      event="Day 2"
+      date="April 7th 2023"
+      image="/images/albums/2023/provincials/daytwo/4.jpg"
+      link="/albums/2023/provincials/daytwo"
+    />
+    <AlbumCover
+      event="Day 3"
+      date="April 8th 2023"
+      image="/images/albums/2023/provincials/daythree/9.jpg"
+      link="/albums/2023/provincials/daythree"
+    />
+  </GalleryAlbumLayout>
+</MainLayout>
