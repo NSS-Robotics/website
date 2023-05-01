@@ -3,6 +3,7 @@ import Footer from '../components/Footer.astro';
 import { SEO } from 'astro-seo';
 import '@fontsource/poppins';
 import Favicons from '../components/Favicons.astro';
+import Live from '../components/Live.astro';
 const { title } = Astro.props;
 ---
 
@@ -51,12 +52,13 @@ const { title } = Astro.props;
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <!-- <Live /> -->
     <slot />
     <Footer />
     <style>
       :root {
         --onyx: #282828;
-        --vividblue: #5ccbff;
+        --blue: #707cac;
       }
       /* Entire Scrollbar */
       ::-webkit-scrollbar {
