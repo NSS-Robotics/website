@@ -33,6 +33,7 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
               name={member.name}
               title={member.title}
               image={member.image}
+              image={member.image}
             />
           );
         }
@@ -49,7 +50,13 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
         image: string;
       }) => {
         if (member.role == 'manufacturing') {
-          return <Person name={member.name} title={member.title} />;
+          return (
+            <Person
+              name={member.name}
+              title={member.title}
+              image={member.image}
+            />
+          );
         }
       }
     )
@@ -64,7 +71,13 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
         image: string;
       }) => {
         if (member.role == 'design') {
-          return <Person name={member.name} title={member.title} />;
+          return (
+            <Person
+              name={member.name}
+              title={member.title}
+              image={member.image}
+            />
+          );
         }
       }
     )
@@ -79,7 +92,13 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
         image: string;
       }) => {
         if (member.role == 'programming') {
-          return <Person name={member.name} title={member.title} />;
+          return (
+            <Person
+              name={member.name}
+              title={member.title}
+              image={member.image}
+            />
+          );
         }
       }
     )
@@ -94,7 +113,13 @@ const TeamToMap = (await import(`./Years/${filename}.json`)).default;
         image: string;
       }) => {
         if (member.role == 'social') {
-          return <Person name={member.name} title={member.title} />;
+          return (
+            <Person
+              name={member.name}
+              title={member.title}
+              image={member.image}
+            />
+          );
         }
       }
     )

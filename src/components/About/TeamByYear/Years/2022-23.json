@@ -25,27 +25,33 @@
   },
   {
     "name": "Henry",
-    "role": "manufacturing"
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Lyla",
-    "role": "manufacturing"
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Shiloh",
-    "role": "manufacturing"
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Lawrence",
-    "role": "manufacturing"
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Imeth",
-    "role": "manufacturing"
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Zidane",
-    "role": "manufacturing"
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Calum",
@@ -59,11 +65,13 @@
   },
   {
     "name": "Ewan",
-    "role": "design"
+    "role": "design",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Evan",
-    "role": "design"
+    "role": "design",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Chloe",
@@ -72,15 +80,18 @@
   },
   {
     "name": "James",
-    "role": "programming"
+    "role": "programming",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Luan",
-    "role": "programming"
+    "role": "programming",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Tommy",
-    "role": "programming"
+    "role": "programming",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Dominique",
@@ -93,13 +104,9 @@
     "title": "Media & Business Co-Lead"
   },
   {
-    "name": "Zoey",
-    "role": "social",
-    "title": "Media & Business Co-Lead"
-  },
-  {
     "name": "Nathan",
-    "role": "social"
+    "role": "social",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Mr. Edwards",
