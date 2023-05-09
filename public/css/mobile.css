@@ -8,8 +8,6 @@
     overflow-x: hidden;
   }
   .about-us {
-    flex-direction: column;
-    align-items: center;
     row-gap: 15px;
     column-gap: 15px;
     width: 100vw;
@@ -189,6 +187,10 @@
   .logoinfo {
     grid-column-start: 1;
     grid-column-end: 2 !important;
+  }
+  .about-us {
+    grid-template-columns: 100% !important;
+    margin-right: 0px !important;
   }
 }
 @media screen and (max-width: 482px) {
