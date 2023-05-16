@@ -20,9 +20,38 @@
     "title": "Manufacturing Co-Lead"
   },
   {
-    "name": "Retaj",
+    "name": "Evan",
+    "role": "manufacturing"
+  },
+  {
+    "name": "Henry",
     "role": "manufacturing",
-    "title": "Electronics Lead"
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Lyla",
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Shiloh",
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Lawrence",
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Imeth",
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Zidane",
+    "role": "manufacturing",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Calum",
@@ -32,12 +61,38 @@
   {
     "name": "Isaac",
     "role": "design",
-    "title": "Design Co-Lead"
+    "title": "Design Co-Lead",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Ewan",
+    "role": "design",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Evan",
+    "role": "design",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Chloe",
     "role": "programming",
     "title": "Programming Lead"
+  },
+  {
+    "name": "James",
+    "role": "programming",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Luan",
+    "role": "programming",
+    "image": "/images/people/placeholder.webp"
+  },
+  {
+    "name": "Tommy",
+    "role": "programming",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Dominique",
@@ -50,8 +105,9 @@
     "title": "Media & Business Co-Lead"
   },
   {
-    "name": "Evan",
-    "role": "manufacturing"
+    "name": "Nathan",
+    "role": "social",
+    "image": "/images/people/placeholder.webp"
   },
   {
     "name": "Mr. Edwards",
