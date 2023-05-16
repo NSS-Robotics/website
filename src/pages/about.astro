@@ -10,8 +10,8 @@ import Team from '../components/About/TeamByYear/Team.astro';
 <MainLayout title="Knight Owls - About Us">
   <ImageHeader title="About Us" background="/images/headers/about.webp" />
   <div class="content">
+    <a id="whoarewe"></a>
     <div class="about-us">
-      <a id="whoarewe"></a>
       <div data-aos="fade-right">
         <img
           src="/images/aboutus/northern.webp"
@@ -137,19 +137,19 @@ import Team from '../components/About/TeamByYear/Team.astro';
       line-height: 2;
     }
     .about-us {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      align-items: start;
       margin-top: 10%;
       gap: 50px;
       width: fit-content;
       color: black;
       text-align: left;
       width: fit-content;
-      padding-right: 30px;
+      margin-right: 50px;
     }
-    .about-us img {
-      height: 400px;
+    img {
+      height: 100px;
       width: auto;
       border-radius: 10px;
       margin-left: 15px;
