@@ -11,6 +11,16 @@ import ImageHeader from '../../../components/ImageHeader.astro';
     background="/images/headers/galleries/2023/ahs.webp"
   />
   <GalleryLayout>
+    <GalleryImages
+      images={[
+        '/images/albums/2023/ahs/1.jpg',
+        '/images/albums/2023/ahs/2.jpg',
+        '/images/albums/2023/ahs/3.jpg',
+        '/images/albums/2023/ahs/4.jpg',
+        '/images/albums/2023/ahs/5.jpg',
+        '/images/albums/2023/ahs/6.jpg',
+      ]}
+    />
     <div class="instaEmbed">
       <blockquote
         class="instagram-media"
@@ -143,15 +153,6 @@ import ImageHeader from '../../../components/ImageHeader.astro';
       </blockquote>
       <script async src="//www.instagram.com/embed.js"></script>
     </div>
-    <GalleryImages
-      images={[
-        '/images/albums/2023/ahs/1.jpg',
-        '/images/albums/2023/ahs/2.jpg',
-        '/images/albums/2023/ahs/3.jpg',
-        '/images/albums/2023/ahs/4.jpg',
-        '/images/albums/2023/ahs/5.jpg',
-      ]}
-    />
   </GalleryLayout>
 </MainLayout>
 <style>
