@@ -28,6 +28,27 @@ import ImageHeader from '../../../components/ImageHeader.astro';
   </GalleryLayout>
 </MainLayout>
 <style>
+  @media screen and (max-width: 780px) {
+    a {
+      zoom: 85%;
+    }
+  }
+  @media screen and (max-width: 485px) {
+    a {
+      zoom: 70%;
+    }
+  }
+  @media screen and (max-width: 357px) {
+    a {
+      zoom: 55%;
+    }
+  }
+  @media screen and (max-width: 285px) {
+    a {
+      zoom: 45%;
+    }
+  }
+
   a {
     text-decoration: none;
     color: white;
