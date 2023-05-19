@@ -1,0 +1,52 @@
+---
+import GalleryLayout from '../../../layouts/GalleryLayout.astro';
+import GalleryImages from '../../../components/Gallery/GalleryImages.astro';
+import MainLayout from '../../../layouts/MainLayout.astro';
+import ImageHeader from '../../../components/ImageHeader.astro';
+---
+
+<MainLayout title="Knight Owls - Build Season Gallery">
+  <ImageHeader
+    title="Build Season 2023 Gallery"
+    background="/images/headers/galleries/2023/buildseason.webp"
+  />
+  <GalleryLayout>
+    <div style="width: fit-content; justify-self: center;">
+      <a href="https://www.instagram.com/p/CsJ5NFoPJ-T/" target="_blank"
+        >Pictures By The Middle School</a
+      >
+    </div>
+    <GalleryImages
+      images={[
+        '/images/albums/2023/ahs/1.jpg',
+        '/images/albums/2023/ahs/2.jpg',
+        '/images/albums/2023/ahs/3.jpg',
+        '/images/albums/2023/ahs/4.jpg',
+        '/images/albums/2023/ahs/5.jpg',
+      ]}
+    />
+  </GalleryLayout>
+</MainLayout>
+<style>
+  a {
+    text-decoration: none;
+    color: white;
+    width: 50%;
+    height: 20px;
+    text-align: center;
+    background-color: var(--onyx);
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 10px;
+    transition-duration: 200ms;
+    border: 3px solid var(--onyx);
+  }
+  a:hover {
+    transition-duration: 200ms;
+    background-color: transparent;
+    color: var(--blue);
+    border: 3px solid var(--blue);
+  }
+</style>
