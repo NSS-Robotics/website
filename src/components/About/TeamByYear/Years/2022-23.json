@@ -12,7 +12,8 @@
   {
     "name": "Eamonn",
     "role": "manufacturing",
-    "title": "Manufacturing Co-Lead"
+    "title": "Manufacturing Co-Lead",
+    "image": "/images/people/2023/eamonn.webp"
   },
   {
     "name": "Jacob",
@@ -25,54 +26,48 @@
   },
   {
     "name": "Henry",
-    "role": "manufacturing",
-    "image": "/images/people/placeholder.webp"
+    "role": "manufacturing"
   },
   {
     "name": "Lyla",
     "role": "manufacturing",
-    "image": "/images/people/placeholder.webp"
+    "image": "/images/people/2023/lyla.webp"
   },
   {
     "name": "Shiloh",
-    "role": "manufacturing",
-    "image": "/images/people/placeholder.webp"
+    "role": "manufacturing"
   },
   {
     "name": "Lawrence",
-    "role": "manufacturing",
-    "image": "/images/people/placeholder.webp"
+    "role": "manufacturing"
   },
   {
     "name": "Imeth",
-    "role": "manufacturing",
-    "image": "/images/people/placeholder.webp"
+    "role": "manufacturing"
   },
   {
     "name": "Zidane",
     "role": "manufacturing",
-    "image": "/images/people/placeholder.webp"
+    "image": "/images/people/2023/zidane.webp"
   },
   {
     "name": "Calum",
     "role": "design",
-    "title": "Design Co-Lead"
+    "title": "Design Co-Lead",
+    "image": "/images/people/2023/calum.webp"
   },
   {
     "name": "Isaac",
     "role": "design",
-    "title": "Design Co-Lead",
-    "image": "/images/people/placeholder.webp"
+    "title": "Design Co-Lead"
   },
   {
     "name": "Ewan",
-    "role": "design",
-    "image": "/images/people/placeholder.webp"
+    "role": "design"
   },
   {
     "name": "Evan",
-    "role": "design",
-    "image": "/images/people/placeholder.webp"
+    "role": "design"
   },
   {
     "name": "Chloe",
@@ -81,18 +76,15 @@
   },
   {
     "name": "James",
-    "role": "programming",
-    "image": "/images/people/placeholder.webp"
+    "role": "programming"
   },
   {
     "name": "Luan",
-    "role": "programming",
-    "image": "/images/people/placeholder.webp"
+    "role": "programming"
   },
   {
     "name": "Tommy",
-    "role": "programming",
-    "image": "/images/people/placeholder.webp"
+    "role": "programming"
   },
   {
     "name": "Dominique",
@@ -107,24 +99,21 @@
   {
     "name": "Nathan",
     "role": "social",
-    "image": "/images/people/placeholder.webp"
+    "image": "/images/people/2023/nathan.webp"
   },
   {
     "name": "Mr. Edwards",
     "role": "staff",
-    "title": "Staff Advisor",
-    "image": "/images/people/placeholder.webp"
+    "title": "Staff Advisor"
   },
   {
     "name": "Mr. Martell",
     "role": "staff",
-    "title": "Staff Advisor",
-    "image": "/images/people/placeholder.webp"
+    "title": "Staff Advisor"
   },
   {
     "name": "Mr. Wong",
     "role": "staff",
-    "title": "Staff Advisor",
-    "image": "/images/people/placeholder.webp"
+    "title": "Staff Advisor"
   }
 ]
