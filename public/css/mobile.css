@@ -1,8 +1,3 @@
-@media screen and (max-width: 1425px) {
-  .navbar {
-    zoom: 90% !important;
-  }
-}
 @media screen and (max-width: 1385px) {
   html {
     overflow-x: hidden;
@@ -52,7 +47,7 @@
 }
 @media screen and (max-width: 1265px) {
   .navbar {
-    zoom: 75% !important;
+    transform: scale(0.9) !important;
   }
   .tiers {
     grid-template-columns: 44vw 44vw !important;
@@ -64,7 +59,7 @@
 }
 @media screen and (max-width: 1030px) {
   .navbar {
-    zoom: 63% !important;
+    transform: scale(0.7) !important;
   }
   .wooshies img {
     width: 400px !important;
@@ -95,7 +90,7 @@
 }
 @media screen and (max-width: 845px) {
   .navbar {
-    zoom: 68% !important;
+    transform: scale(0.68) !important;
     flex-wrap: wrap;
     position: absolute;
     top: 2%;
@@ -195,7 +190,8 @@
 }
 @media screen and (max-width: 482px) {
   .navbar {
-    zoom: 50% !important;
+    /* zoom: 50% !important; */
+    transform: scale(0.8) !important;
   }
   .tiers {
     grid-template-columns: 88vw !important;
@@ -221,6 +217,6 @@
 }
 @media screen and (max-width: 380px) {
   .navbar {
-    zoom: 40% !important;
+    transform: scale(0.4) !important;
   }
 }
