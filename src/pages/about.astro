@@ -1,14 +1,51 @@
 ---
+import { contentfulClient } from '../lib/contentful';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import type { Document } from '@contentful/rich-text-types';
+
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import Subteam from '../components/About/Subteam.astro';
 import SubteamSlider from '../components/About/SubteamSlider.astro';
 import YearSelector from '../components/About/YearSelector.astro';
 import Team from '../components/About/TeamByYear/Team.astro';
+
+interface Subteams {
+  fields: {
+    subteamName: string;
+    subteamDescription: string;
+    subteamImage: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+  };
+  contentTypeId: string;
+}
+
+const response = await contentfulClient.getEntries<Subteams>({
+  content_type: 'subteam',
+});
+console.log(response.items);
 ---
 
 <MainLayout title="Knight Owls - About Us">
   <ImageHeader title="About Us" background="/images/headers/about.webp" />
+  {
+    response.items.map((item) => {
+      return (
+        <Subteam
+          name={item.fields.subteamName}
+          @ts-ignore
+          image={item.fields.subteamImage.fields.file.url}
+          description={item.fields.subteamDescription}
+          fadeDirection="left"
+        />
+      );
+    })
+  }
   <div class="content">
     <a id="whoarewe"></a>
     <div class="about-us">
