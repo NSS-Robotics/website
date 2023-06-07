@@ -17,14 +17,18 @@ interface Subteams {
         };
       };
     };
-    // subteamImageAltText: string;
+    subteamImageAltText: string;
+    order: number;
   };
   contentTypeId: string;
 }
 
 const response = await contentfulClient.getEntries<Subteams>({
   content_type: 'subteam',
+  //@ts-ignore
+  order: '-fields.order',
 });
+
 console.log(response.items);
 ---
 
@@ -84,6 +88,7 @@ console.log(response.items);
             <Subteam
               name={item.fields.subteamTitle}
               image={item.fields.subteamImage.fields.file.url}
+              alt={item.fields.subteamImageAltText}
               description={item.fields.subteamDescription}
               fadeDirection="left"
             />
