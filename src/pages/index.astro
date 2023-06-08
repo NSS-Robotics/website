@@ -12,7 +12,7 @@ interface Wooshie {
     image: {
       fields: {
         file: {
-          url: string;
+          url: any;
         };
       };
     };
@@ -48,42 +48,6 @@ const aboutUsResponse = await contentfulClient.getEntries<Wooshie>({
         />
       ))
     }
-    <!-- <Wooshie
-      fadeDirection="right"
-      title="Who Are We?"
-      subtitle="Learn a bit more about us and our team."
-      image="/images/wooshies/about.webp"
-      alt="Anna, Koby, Jacob, Grace and Retaj working on the 2022 CETA line following robot"
-      buttonLink="/about"
-      buttonText="About Us"
-    />
-    <Wooshie
-      fadeDirection="left"
-      title="Gallery"
-      subtitle="Come see our journey competing in the FIRST robotics competition!"
-      image="/images/wooshies/gallery.webp"
-      alt="The 2022 robotics team with our 2022 robot Sharpie in the gym"
-      buttonLink="/gallery"
-      buttonText="Gallery"
-    />
-    <Wooshie
-      fadeDirection="right"
-      title="FIRST Robotics"
-      subtitle="Learn more about the FIRST Robotics Competition"
-      image="/images/wooshies/first.webp"
-      alt="A laptop sitting at the driver's station at the FIRST provincial championships"
-      buttonLink="https://www.firstinspires.org/robotics/frc"
-      buttonText="FIRST Website"
-    />
-    <Wooshie
-      fadeDirection="left"
-      title="Support Us"
-      subtitle="If you would like to support us and our team, you are more than welcome to donate by clicking the button below!"
-      image="images/wooshies/donate.webp"
-      alt="Olivia working with a laptop in front of an Ultimaker 3D printer"
-      buttonLink="/donate"
-      buttonText="Donate"
-    /> -->
   </div>
 </MainLayout>
 <style>
