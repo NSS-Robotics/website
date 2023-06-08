@@ -1,77 +1,67 @@
 ---
+import { contentfulClient } from '../lib/contentful';
+
 import MainLayout from '../layouts/MainLayout.astro';
 import GalleryAlbumLayout from '../layouts/GalleryAlbumLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import AlbumCover from '../components/Gallery/AlbumCover.astro';
+
+interface GalleryCover {
+  fields: {
+    title: string;
+    date: string;
+    year: number;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    link: string;
+    order: number;
+  };
+  contentTypeId: string;
+}
+
+const galleryCoverResponse = await contentfulClient.getEntries<GalleryCover>({
+  content_type: 'galleryCover',
+  //@ts-ignore
+  order: '-fields.order',
+});
 ---
 
 <MainLayout title="Knight Owls - Gallery">
   <ImageHeader title="Gallery" background="/images/headers/gallery.webp" />
   <h3>2023 Gallery</h3>
   <GalleryAlbumLayout columns="3">
-    <AlbumCover
-      event="Knight Owls @ AHS"
-      date={'May 12th 2023'}
-      image="/images/albums/2023/AHSCover.jpg"
-      link="/albums/2023/ahs"
-    />
-    <AlbumCover
-      event="Ontario Provincial Championship"
-      date={'April 6th - April 8th 2023'}
-      image="/images/albums/2023/provincials/daythree/8.jpg"
-      link="https://flic.kr/s/aHBqjAAEUi"
-    />
-    <AlbumCover
-      event="District Event - McMaster"
-      date={'March 31st - April 2nd 2023'}
-      image="/images/albums/2023/mcmaster/1.jpg"
-      link="https://flic.kr/s/aHBqjAAjXz"
-    />
-    <AlbumCover
-      event="District Event - Western University"
-      date={'March 17th - March 19th 2023'}
-      image="/images/albums/2023/western/1.jpg"
-      link="https://flic.kr/s/aHBqjAAjXu"
-    />
-    <AlbumCover
-      event="Build Season"
-      date={'January 7th - March 16th 2023'}
-      image="/images/albums/2023/buildseason/12.jpg"
-      link="https://flic.kr/s/aHBqjAAg96"
-    />
+    {
+      galleryCoverResponse.items
+        .filter((item) => item.fields.year === 2023)
+        .map((item) => (
+          <AlbumCover
+            event={item.fields.title}
+            date={item.fields.date}
+            image={item.fields.image.fields.file.url}
+            link={item.fields.link}
+          />
+        ))
+    }
   </GalleryAlbumLayout>
   <h3>2022 Gallery</h3>
   <GalleryAlbumLayout columns="3">
-    <AlbumCover
-      event="Off Season Event - STEMley Overtime"
-      date="October 30th 2022"
-      image="/images/albums/2022/stemleyovertime/1.jpg"
-      link="https://flic.kr/s/aHBqjAAbUF"
-    />
-    <AlbumCover
-      event="Ontario Provincial Championship"
-      date="April 13th-16th 2022"
-      image="/images/albums/2022/provincials/dayone/6.jpg"
-      link="https://flic.kr/s/aHBqjAAc9o"
-    />
-    <AlbumCover
-      event="District Event - St. Mary's"
-      date="April 9th - 10th 2022"
-      image="/images/albums/2022/stmarys/12.jpg"
-      link="https://flic.kr/s/aHBqjAAgvx"
-    />
-    <AlbumCover
-      event="District Event - York University"
-      date="March 27th 2022"
-      image="/images/albums/2022/yorkuniversity/16.jpg"
-      link="https://flic.kr/s/aHBqjAAbXG"
-    />
-    <AlbumCover
-      event="Build Season"
-      date="January 7th - March 26th 2022"
-      image="/images/albums/2022/buildseason/32.jpg"
-      link="https://flic.kr/s/aHBqjABbXk"
-    />
+    {
+      galleryCoverResponse.items
+        .filter((item) => item.fields.year === 2022)
+        .map((item) => (
+          <AlbumCover
+            event={item.fields.title}
+            date={item.fields.date}
+            image={item.fields.image.fields.file.url}
+            link={item.fields.link}
+          />
+        ))
+    }
   </GalleryAlbumLayout>
 </MainLayout>
 <style>
