@@ -22,14 +22,36 @@ interface Subteams {
   };
   contentTypeId: string;
 }
+interface AboutUs {
+  fields: {
+    title: string;
+    paragraph: string;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    order: number;
+    fadeDirection: string;
+  };
+  contentTypeId: string;
+}
 
-const response = await contentfulClient.getEntries<Subteams>({
+const aboutUsResponse = await contentfulClient.getEntries<AboutUs>({
+  content_type: 'whoAreWe',
+  //@ts-ignore
+  order: '-fields.order',
+});
+
+const subteamResponse = await contentfulClient.getEntries<Subteams>({
   content_type: 'subteam',
   //@ts-ignore
   order: '-fields.order',
 });
 
-console.log(response.items);
+console.log(aboutUsResponse.items);
 ---
 
 <MainLayout title="Knight Owls - About Us">
@@ -37,40 +59,22 @@ console.log(response.items);
   <div class="content">
     <a id="whoarewe"></a>
     <div class="about-us">
-      <div data-aos="fade-right">
-        <img
-          src="/images/aboutus/northern.webp"
-          alt="The main entrance of Northern Secondary School"
-        />
-        <h3>Northern Secondary School</h3>
-        <p>
-          Northern Secondary School, or as we like to call it, NSS, is located
-          near the heart of Toronto, Northern is the third largest secondary
-          school in the Toronto District School Board with almost eighteen
-          hundred students; it was founded in September 1930. NSS offers many
-          programs such as the Specialist High Skills Major Program as well as
-          gifted, technology and business streams.
-        </p>
-      </div>
-      <div data-aos="fade-left">
-        <img
-          src="/images/aboutus/ourTeam.webp"
-          alt="Eamonn, Isaac, Jacob and Koby standing around our half finished 2022 robot Sharpie"
-        />
-        <h3>What We've Been Doing</h3>
-        <p class="ourteam">
-          Thanks to the generous support of our sponsors, parents, students,
-          School Foundation, Parent Council, School Council, our school, and the
-          tech department, we have been able to participate in the FIRST
-          Robotics Competition (FRC). FRC is an international robotics
-          competition where high school teams design, build and program a robot
-          to compete in a themed game. Throughout the build-season we have been
-          able to develop our skills across various fields including: computer
-          aided design (CAD) software, computerized numerical control (CNC)
-          machines, 3D printers, programming, electronics control system design,
-          business development and problem-solving.
-        </p>
-      </div>
+      <!-- Map the about us response to the page -->
+      {
+        aboutUsResponse.items.map((item) => {
+          return (
+            //name the divs data-aos='fade-${item.fields.fadeDirection}'
+            <div data-aos={`fade-${item.fields.fadeDirection}`}>
+              <img
+                src={item.fields.image.fields.file.url}
+                alt={item.fields.title}
+              />
+              <h3>{item.fields.title}</h3>
+              <p>{item.fields.paragraph}</p>
+            </div>
+          );
+        })
+      }
     </div>
     <a id="teams"></a>
     <div class="subteams" data-aos="zoom-in ">
@@ -82,8 +86,9 @@ console.log(response.items);
       </p>
     </div>
     <div class="teams">
+      <!-- Map the subteams to the page -->
       {
-        response.items.map((item) => {
+        subteamResponse.items.map((item) => {
           return (
             <Subteam
               name={item.fields.subteamTitle}
