@@ -1,13 +1,54 @@
 ---
+import { contentfulClient } from '../lib/contentful';
+
 import MainLayout from '../layouts/MainLayout.astro';
 import AutoImageHeader from '../components/AutoImageHeader.astro';
 import Wooshie from '../components/Wooshie.astro';
+
+interface Wooshie {
+  fields: {
+    title: string;
+    description: string;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    imageAltText: string;
+    buttonText: string;
+    buttonLink: string;
+    fadeDirection: string;
+    order: number;
+  };
+  contentTypeId: string;
+}
+
+const aboutUsResponse = await contentfulClient.getEntries<Wooshie>({
+  content_type: 'wooshies',
+  //@ts-ignore
+  order: '-fields.order',
+});
 ---
 
 <MainLayout title="Knight Owls - Home">
   <AutoImageHeader title="Knight Owls" subtitle="FIRST Robotics Team 8884" />
   <div class="wooshies">
-    <Wooshie
+    {
+      aboutUsResponse.items.map((wooshie) => (
+        <Wooshie
+          fadeDirection={wooshie.fields.fadeDirection}
+          title={wooshie.fields.title}
+          subtitle={wooshie.fields.description}
+          image={wooshie.fields.image.fields.file.url}
+          alt={wooshie.fields.imageAltText}
+          buttonLink={wooshie.fields.buttonLink}
+          buttonText={wooshie.fields.buttonText}
+        />
+      ))
+    }
+    <!-- <Wooshie
       fadeDirection="right"
       title="Who Are We?"
       subtitle="Learn a bit more about us and our team."
@@ -42,7 +83,7 @@ import Wooshie from '../components/Wooshie.astro';
       alt="Olivia working with a laptop in front of an Ultimaker 3D printer"
       buttonLink="/donate"
       buttonText="Donate"
-    />
+    /> -->
   </div>
 </MainLayout>
 <style>

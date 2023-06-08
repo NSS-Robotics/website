@@ -50,8 +50,6 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
   //@ts-ignore
   order: '-fields.order',
 });
-
-console.log(aboutUsResponse.items);
 ---
 
 <MainLayout title="Knight Owls - About Us">
@@ -86,7 +84,6 @@ console.log(aboutUsResponse.items);
       </p>
     </div>
     <div class="teams">
-      <!-- Map the subteams to the page -->
       {
         subteamResponse.items.map((item) => {
           return (
