@@ -1,48 +1,53 @@
 ---
+import { contentfulClient } from '../lib/contentful';
+
 import MainLayout from '../layouts/MainLayout.astro';
 import AutoImageHeader from '../components/AutoImageHeader.astro';
 import Wooshie from '../components/Wooshie.astro';
+
+interface Wooshie {
+  fields: {
+    title: string;
+    description: string;
+    image: {
+      fields: {
+        file: {
+          url: any;
+        };
+      };
+    };
+    imageAltText: string;
+    buttonText: string;
+    buttonLink: string;
+    fadeDirection: string;
+    order: number;
+  };
+  contentTypeId: string;
+}
+
+const aboutUsResponse = await contentfulClient.getEntries<Wooshie>({
+  content_type: 'wooshies',
+  //@ts-ignore
+  order: '-fields.order',
+});
 ---
 
 <MainLayout title="Knight Owls - Home">
   <AutoImageHeader title="Knight Owls" subtitle="FIRST Robotics Team 8884" />
   <div class="wooshies">
-    <Wooshie
-      fadeDirection="right"
-      title="Who Are We?"
-      subtitle="Learn a bit more about us and our team."
-      image="/images/wooshies/about.webp"
-      alt="Anna, Koby, Jacob, Grace and Retaj working on the 2022 CETA line following robot"
-      buttonLink="/about"
-      buttonText="About Us"
-    />
-    <Wooshie
-      fadeDirection="left"
-      title="Gallery"
-      subtitle="Come see our journey competing in the FIRST robotics competition!"
-      image="/images/wooshies/gallery.webp"
-      alt="The 2022 robotics team with our 2022 robot Sharpie in the gym"
-      buttonLink="/gallery"
-      buttonText="Gallery"
-    />
-    <Wooshie
-      fadeDirection="right"
-      title="FIRST Robotics"
-      subtitle="Learn more about the FIRST Robotics Competition"
-      image="/images/wooshies/first.webp"
-      alt="A laptop sitting at the driver's station at the FIRST provincial championships"
-      buttonLink="https://www.firstinspires.org/robotics/frc"
-      buttonText="FIRST Website"
-    />
-    <Wooshie
-      fadeDirection="left"
-      title="Support Us"
-      subtitle="If you would like to support us and our team, you are more than welcome to donate by clicking the button below!"
-      image="images/wooshies/donate.webp"
-      alt="Olivia working with a laptop in front of an Ultimaker 3D printer"
-      buttonLink="/donate"
-      buttonText="Donate"
-    />
+    {
+      aboutUsResponse.items.map((wooshie) => (
+        <Wooshie
+          fadeDirection={wooshie.fields.fadeDirection}
+          title={wooshie.fields.title}
+          subtitle={wooshie.fields.description}
+          image={wooshie.fields.image.fields.file.url}
+          alt={wooshie.fields.imageAltText}
+          buttonLink={wooshie.fields.buttonLink}
+          buttonText={wooshie.fields.buttonText}
+        />
+      ))
+    }
   </div>
 </MainLayout>
 <style>

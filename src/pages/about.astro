@@ -1,10 +1,55 @@
 ---
+import { contentfulClient } from '../lib/contentful';
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import Subteam from '../components/About/Subteam.astro';
-import SubteamSlider from '../components/About/SubteamSlider.astro';
 import YearSelector from '../components/About/YearSelector.astro';
 import Team from '../components/About/TeamByYear/Team.astro';
+
+interface Subteams {
+  fields: {
+    subteamTitle: string;
+    subteamDescription: string;
+    subteamImage: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    subteamImageAltText: string;
+    order: number;
+  };
+  contentTypeId: string;
+}
+interface AboutUs {
+  fields: {
+    title: string;
+    paragraph: string;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    order: number;
+    fadeDirection: string;
+  };
+  contentTypeId: string;
+}
+
+const aboutUsResponse = await contentfulClient.getEntries<AboutUs>({
+  content_type: 'whoAreWe',
+  //@ts-ignore
+  order: '-fields.order',
+});
+
+const subteamResponse = await contentfulClient.getEntries<Subteams>({
+  content_type: 'subteam',
+  //@ts-ignore
+  order: '-fields.order',
+});
 ---
 
 <MainLayout title="Knight Owls - About Us">
@@ -12,40 +57,22 @@ import Team from '../components/About/TeamByYear/Team.astro';
   <div class="content">
     <a id="whoarewe"></a>
     <div class="about-us">
-      <div data-aos="fade-right">
-        <img
-          src="/images/aboutus/northern.webp"
-          alt="The main entrance of Northern Secondary School"
-        />
-        <h3>Northern Secondary School</h3>
-        <p>
-          Northern Secondary School, or as we like to call it, NSS, is located
-          near the heart of Toronto, Northern is the third largest secondary
-          school in the Toronto District School Board with almost eighteen
-          hundred students; it was founded in September 1930. NSS offers many
-          programs such as the Specialist High Skills Major Program as well as
-          gifted, technology and business streams.
-        </p>
-      </div>
-      <div data-aos="fade-left">
-        <img
-          src="/images/aboutus/ourTeam.webp"
-          alt="Eamonn, Isaac, Jacob and Koby standing around our half finished 2022 robot Sharpie"
-        />
-        <h3>What We've Been Doing</h3>
-        <p class="ourteam">
-          Thanks to the generous support of our sponsors, parents, students,
-          School Foundation, Parent Council, School Council, our school, and the
-          tech department, we have been able to participate in the FIRST
-          Robotics Competition (FRC). FRC is an international robotics
-          competition where high school teams design, build and program a robot
-          to compete in a themed game. Throughout the build-season we have been
-          able to develop our skills across various fields including: computer
-          aided design (CAD) software, computerized numerical control (CNC)
-          machines, 3D printers, programming, electronics control system design,
-          business development and problem-solving.
-        </p>
-      </div>
+      <!-- Map the about us response to the page -->
+      {
+        aboutUsResponse.items.map((item) => {
+          return (
+            //name the divs data-aos='fade-${item.fields.fadeDirection}'
+            <div data-aos={`fade-${item.fields.fadeDirection}`}>
+              <img
+                src={item.fields.image.fields.file.url}
+                alt={item.fields.title}
+              />
+              <h3>{item.fields.title}</h3>
+              <p>{item.fields.paragraph}</p>
+            </div>
+          );
+        })
+      }
     </div>
     <a id="teams"></a>
     <div class="subteams" data-aos="zoom-in ">
@@ -57,45 +84,19 @@ import Team from '../components/About/TeamByYear/Team.astro';
       </p>
     </div>
     <div class="teams">
-      <Subteam
-        name="Design"
-        alt="Olivia and Calum using a laptop with a 3D model on it"
-        description="This team leads the design of the robot. We use OnShape as our CAD software of choice to design and model various parts and components for our robots."
-        fadeDirection="left"
-      />
-      <SubteamSlider
-        name="Manufacturing"
-        images={[
-          '/images/aboutus/subteams/manufacturingSlides/1.webp',
-          '/images/aboutus/subteams/manufacturingSlides/2.webp',
-          '/images/aboutus/subteams/manufacturingSlides/3.webp',
-          '/images/aboutus/subteams/manufacturingSlides/4.webp',
-        ]}
-        description="This team is responsible for the manufacturing of the robot. We use a variety of tools such as 3D printers, CNC machines, and laser cutters to create the parts and components for our robots."
-        fadeDirection="right"
-      />
-      <SubteamSlider
-        name="Programming"
-        images={[
-          '/images/aboutus/subteams/programmingSlides/1.webp',
-          '/images/aboutus/subteams/programmingSlides/2.webp',
-          '/images/aboutus/subteams/programmingSlides/3.webp',
-        ]}
-        description="The programming team codes the 'brain' of the robot. The language of choice for FRC robots is Java since it provides a great balance between performance and control over systems and functionality."
-        fadeDirection="left"
-      />
-      <Subteam
-        name="Outreach"
-        alt=""
-        description="The outreach team is a combination of the media and business subteams. They're in charge of connecting and working with the community, leading the team's social media presence, and managing the team's finances including all of the fundraising."
-        fadeDirection="right"
-      />
-      <Subteam
-        name="Web Design"
-        alt="Isaac, Jacob and another member working around a laptop"
-        description="The web design team is responsible for the creating and maintaining this website. The media team is responsible for our social media presence as well as the team's photography and videography in partnership with the media team."
-        fadeDirection="left"
-      />
+      {
+        subteamResponse.items.map((item) => {
+          return (
+            <Subteam
+              name={item.fields.subteamTitle}
+              image={item.fields.subteamImage.fields.file.url}
+              alt={item.fields.subteamImageAltText}
+              description={item.fields.subteamDescription}
+              fadeDirection="left"
+            />
+          );
+        })
+      }
     </div>
     <h3 id="people" class="our-team" data-aos="zoom-in" data-aos-once="true">
       Our Members
