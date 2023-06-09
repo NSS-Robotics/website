@@ -1,85 +1,78 @@
 ---
+import { contentfulClient } from '../../lib/contentful';
 import Sponsor from './SponsorBox.astro';
 
-const { year, classes, filename } = Astro.props;
-const SponsorsToMap = (await import(`./Years/${filename}.json`)).default;
+const { year, classes } = Astro.props;
+
+interface Sponsor {
+  fields: {
+    logo: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    name: string;
+    blurb: string;
+    buttonText: string;
+    buttonLink: string;
+    tier: string;
+    year: number;
+    order: number;
+  };
+  contentTypeId: string;
+}
+
+const sponsorsResponse = await contentfulClient.getEntries<Sponsor>({
+  content_type: 'sponsor',
+  //@ts-ignore
+  order: '-fields.order',
+});
 ---
 
 <div class="content">
   <div class:list={[classes, 'sponsors data']} id={year}>
     {
-      SponsorsToMap.map(
-        (sponsor: {
-          name: string;
-          description: string;
-          buttonLink: string;
-          border: string;
-          buttonVisible: string;
-          tier: string;
-        }) => {
-          if (sponsor.tier == 'elite') {
-            return (
-              <Sponsor
-                name={sponsor.name}
-                description={sponsor.description}
-                buttonLink={sponsor.buttonLink}
-                border={sponsor.border}
-                buttonVisible={sponsor.buttonVisible}
-              />
-            );
-          }
-        }
-      )
+      sponsorsResponse.items
+        .filter((sponsor) => sponsor.fields.tier === 'elite')
+        .map((sponsor) => (
+          <Sponsor
+            name={sponsor.fields.name}
+            description={sponsor.fields.blurb}
+            buttonLink={sponsor.fields.buttonLink}
+            border={sponsor.fields.logo.fields.file.url}
+            buttonVisible={sponsor.fields.buttonText}
+          />
+        ))
     }
     <h2 data-aos="zoom-in-up">Silver Sponsors</h2>
     {
-      SponsorsToMap.map(
-        (sponsor: {
-          name: string;
-          description: string;
-          buttonLink: string;
-          border: string;
-          buttonVisible: string;
-          tier: string;
-        }) => {
-          if (sponsor.tier == 'silver') {
-            return (
-              <Sponsor
-                name={sponsor.name}
-                description={sponsor.description}
-                buttonLink={sponsor.buttonLink}
-                border={sponsor.border}
-                buttonVisible={sponsor.buttonVisible}
-              />
-            );
-          }
-        }
-      )
+      sponsorsResponse.items
+        .filter((sponsor) => sponsor.fields.tier === 'silver')
+        .map((sponsor) => (
+          <Sponsor
+            name={sponsor.fields.name}
+            description={sponsor.fields.blurb}
+            buttonLink={sponsor.fields.buttonLink}
+            border={sponsor.fields.logo.fields.file.url}
+            buttonVisible={sponsor.fields.buttonText}
+          />
+        ))
     }
     <h2 data-aos="zoom-in-up">Bronze Sponsors</h2>
     {
-      SponsorsToMap.map(
-        (sponsor: {
-          name: string;
-          description: string;
-          buttonLink: string;
-          border: string;
-          buttonVisible: string;
-          tier: string;
-        }) => {
-          if (sponsor.tier == 'bronze') {
-            return (
-              <Sponsor
-                name={sponsor.name}
-                description={sponsor.description}
-                buttonLink={sponsor.buttonLink}
-                border={sponsor.border}
-                buttonVisible={sponsor.buttonVisible}
-              />
-            );
-          }
-        }
-      )
+      sponsorsResponse.items
+        .filter((sponsor) => sponsor.fields.tier === 'bronze')
+        .map((sponsor) => (
+          <Sponsor
+            name={sponsor.fields.name}
+            description={sponsor.fields.blurb}
+            buttonLink={sponsor.fields.buttonLink}
+            border={sponsor.fields.logo.fields.file.url}
+            buttonVisible={sponsor.fields.buttonText}
+          />
+        ))
     }
   </div>
 </div>

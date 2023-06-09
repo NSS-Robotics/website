@@ -1,8 +1,32 @@
 ---
+import { contentfulClient } from '../lib/contentful';
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import YearSelector from '../components/About/YearSelector.astro';
-import Sponsors from '../components/Sponsorship/Sponsors.astro';
+import SponsorBlock from '../components/Sponsorship/Sponsors.astro';
+
+interface Sponsor {
+  fields: {
+    title: string;
+    paragraph: string;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    order: number;
+    fadeDirection: string;
+  };
+  contentTypeId: string;
+}
+
+const sponsorsResponse = await contentfulClient.getEntries<Sponsor>({
+  content_type: 'sponsor',
+  //@ts-ignore
+  order: '-fields.order',
+});
 ---
 
 <MainLayout title="Knight Owls - Our Sponsors">
@@ -11,8 +35,8 @@ import Sponsors from '../components/Sponsorship/Sponsors.astro';
     background="/images/headers/sponsors.webp"
   />
   <YearSelector />
-  <Sponsors classes="showDefault" year="year2" filename="2022-23" />
-  <Sponsors year="year1" filename="2021-22" />
+  <SponsorBlock classes="showDefault" year="year2" filename="2022-23" />
+  <SponsorBlock year="year1" filename="2021-22" />
 
   <script>
     // Get the element with the id of "yearselector"
