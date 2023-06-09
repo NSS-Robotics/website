@@ -2,8 +2,8 @@
 import { contentfulClient } from '../lib/contentful';
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
-import YearSelector from '../components/About/YearSelector.astro';
-import SponsorBlock from '../components/Sponsorship/SponsorBlocks.astro';
+import SponsorBox from '../components/Sponsorship/SponsorBox.astro';
+import type { EntryCollection } from 'contentful';
 
 interface Sponsor {
   fields: {
@@ -18,6 +18,7 @@ interface Sponsor {
     blurb: string;
     buttonText: string;
     buttonLink: string;
+    buttonVisible: boolean;
     tier: string;
     year: number;
     order: number;
@@ -46,6 +47,7 @@ years.forEach((year) => {
     years.splice(years.indexOf(year), 1);
   }
 });
+console.log(years);
 ---
 
 <MainLayout title="Knight Owls - Our Sponsors">
@@ -53,40 +55,54 @@ years.forEach((year) => {
     title="Our Amazing Sponsors"
     background="/images/headers/sponsors.webp"
   />
-  <YearSelector />
-  {
-    years.map((year) => {
-      if (year == years[0]) {
-        return <SponsorBlock year={year} class="showDefault" />;
-      } else {
-        return <SponsorBlock year={year} />;
-      }
-    })
-  }
+  <div class="content">
+    <h2 data-aos="zoom-in-up">Bronze Sponsors</h2>
 
-  <script>
-    // Get the element with the id of "yearselector"
-    const selector = document.getElementById(
-      'yearselector'
-    ) as HTMLSelectElement;
-    // When the selector changes, change the year to the selected year
-    selector.addEventListener('change', function () {
-      let newactive = document.querySelector('#' + this.value) as HTMLElement;
-      let oldactive = document.querySelector('.sponsors') as HTMLElement;
-      removeClass();
-      newactive.classList.add('showDefault');
-      oldactive.animate([{ opacity: '1' }, { opacity: '.5' }], {
-        duration: 1000,
-      });
-      newactive.animate([{ opacity: '.2' }, { opacity: '1' }], {
-        duration: 1000,
-      });
-    });
-    function removeClass() {
-      var allElements = document.querySelectorAll('.showDefault');
-      for (let i = 0; i < allElements.length; i++) {
-        allElements[i].classList.remove('showDefault');
+    <div class="sponsors">
+      <h2 data-aos="zoom-in-up">Silver Sponsors</h2>
+      {
+        sponsorsResponse.items
+          .filter(
+            (item) => item.fields.year === 2023 && item.fields.tier === 'silver'
+          )
+          .map((item) => (
+            <div data-aos="zoom-in-up" class="sponsorbox">
+              <SponsorBox
+                name={item.fields.name}
+                description={item.fields.blurb}
+                image={item.fields.logo.fields.file.url}
+                buttonText={item.fields.buttonText}
+                buttonLink={item.fields.buttonLink}
+                buttonVisible={item.fields.buttonVisible}
+              />
+            </div>
+          ))
       }
-    }
-  </script>
+    </div>
+  </div>
 </MainLayout>
+<style>
+  .content {
+    margin-top: 25px;
+    line-height: 2;
+  }
+  .sponsors {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    grid-gap: 50px;
+  }
+  .showDefault {
+    display: flex !important;
+  }
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+    font-size: 40px;
+    margin-bottom: 3.5%;
+    flex-basis: 100%;
+  }
+</style>
