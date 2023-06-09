@@ -61,7 +61,6 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       {
         aboutUsResponse.items.map((item) => {
           return (
-            //name the divs data-aos='fade-${item.fields.fadeDirection}'
             <div data-aos={`fade-${item.fields.fadeDirection}`}>
               <img
                 src={item.fields.image.fields.file.url}

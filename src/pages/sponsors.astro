@@ -3,21 +3,24 @@ import { contentfulClient } from '../lib/contentful';
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import YearSelector from '../components/About/YearSelector.astro';
-import SponsorBlock from '../components/Sponsorship/Sponsors.astro';
+import SponsorBlock from '../components/Sponsorship/SponsorBlocks.astro';
 
 interface Sponsor {
   fields: {
-    title: string;
-    paragraph: string;
-    image: {
+    logo: {
       fields: {
         file: {
           url: string;
         };
       };
     };
+    name: string;
+    blurb: string;
+    buttonText: string;
+    buttonLink: string;
+    tier: string;
+    year: number;
     order: number;
-    fadeDirection: string;
   };
   contentTypeId: string;
 }
@@ -27,6 +30,22 @@ const sponsorsResponse = await contentfulClient.getEntries<Sponsor>({
   //@ts-ignore
   order: '-fields.order',
 });
+
+const years: number[] = [];
+// for each of the years in the response, add it to the years array if it isn't already there
+sponsorsResponse.items.forEach((item) => {
+  if (!years.includes(item.fields.year)) {
+    years.push(item.fields.year);
+  }
+});
+years.sort((a, b) => b - a);
+
+//for anything thats not an integer, remove it from the array
+years.forEach((year) => {
+  if (!Number.isInteger(year)) {
+    years.splice(years.indexOf(year), 1);
+  }
+});
 ---
 
 <MainLayout title="Knight Owls - Our Sponsors">
@@ -35,8 +54,15 @@ const sponsorsResponse = await contentfulClient.getEntries<Sponsor>({
     background="/images/headers/sponsors.webp"
   />
   <YearSelector />
-  <SponsorBlock classes="showDefault" year="year2" filename="2022-23" />
-  <SponsorBlock year="year1" filename="2021-22" />
+  {
+    years.map((year) => {
+      if (year == years[0]) {
+        return <SponsorBlock year={year} class="showDefault" />;
+      } else {
+        return <SponsorBlock year={year} />;
+      }
+    })
+  }
 
   <script>
     // Get the element with the id of "yearselector"

@@ -1,0 +1,131 @@
+---
+import { contentfulClient } from '../../lib/contentful';
+
+const { year, classes } = Astro.props;
+
+interface Sponsor {
+  fields: {
+    logo: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    name: string;
+    blurb: string;
+    buttonText: string;
+    buttonLink: string;
+    buttonVisible: boolean;
+    tier: string;
+    year: number;
+    order: number;
+  };
+  contentTypeId: string;
+}
+
+const sponsorsResponse = await contentfulClient.getEntries<Sponsor>({
+  content_type: 'sponsor',
+  //@ts-ignore
+  order: '-fields.order',
+});
+---
+
+<div class="content">
+  <div class:list={[classes, 'sponsors data']} id={year}>
+    {
+      sponsorsResponse.items
+        .filter((sponsor) => sponsor.fields.tier === 'elite')
+        .map((sponsor) => (
+          <div data-aos="zoom-in-up" class="sponsorbox">
+            <img
+              src={sponsor.fields.logo.fields.file.url}
+              alt={sponsor.fields.name + "'s logo"}
+              style={'border-radius: 10px;'}
+            />
+            <figcaption>{sponsor.fields.name}</figcaption>
+            <p>{sponsor.fields.blurb}</p>
+            <a
+              id={sponsor.fields.buttonVisible}
+              href={sponsor.fields.buttonLink}
+              target="_blank"
+            >
+              {sponsor.fields.buttonText}
+            </a>
+          </div>
+        ))
+    }
+    <h2 data-aos="zoom-in-up">Silver Sponsors</h2>
+    {
+      sponsorsResponse.items
+        .filter((sponsor) => sponsor.fields.tier === 'silver')
+        .map((sponsor) => (
+          <div data-aos="zoom-in-up" class="sponsorbox">
+            <img
+              src={sponsor.fields.logo.fields.file.url}
+              alt={sponsor.fields.name + "'s logo"}
+              style={'border-radius: 10px;'}
+            />
+            <figcaption>{sponsor.fields.name}</figcaption>
+            <p>{sponsor.fields.blurb}</p>
+            <a
+              id={sponsor.fields.buttonVisible}
+              href={sponsor.fields.buttonLink}
+              target="_blank"
+            >
+              {sponsor.fields.buttonText}
+            </a>
+          </div>
+        ))
+    }
+    <h2 data-aos="zoom-in-up">Bronze Sponsors</h2>
+    {
+      sponsorsResponse.items
+        .filter((sponsor) => sponsor.fields.tier === 'bronze')
+        .map((sponsor) => (
+          <div data-aos="zoom-in-up" class="sponsorbox">
+            <img
+              src={sponsor.fields.logo.fields.file.url}
+              alt={sponsor.fields.name + "'s logo"}
+              style={'border-radius: 10px;'}
+            />
+            <figcaption>{sponsor.fields.name}</figcaption>
+            <p>{sponsor.fields.blurb}</p>
+            <a
+              id={sponsor.fields.buttonVisible}
+              href={sponsor.fields.buttonLink}
+              target="_blank"
+            >
+              {sponsor.fields.buttonText}
+            </a>
+          </div>
+        ))
+    }
+  </div>
+</div>
+<style>
+  .content {
+    margin-top: 25px;
+    line-height: 2;
+  }
+  .sponsors {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    grid-gap: 50px;
+  }
+  .showDefault {
+    display: flex !important;
+  }
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+    font-size: 40px;
+    margin-bottom: 3.5%;
+    flex-basis: 100%;
+  }
+</style>
