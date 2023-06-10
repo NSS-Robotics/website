@@ -71,37 +71,36 @@ tiers.forEach((tier, index) => {
 
   {
     years.map((year) => (
-      <div class={`content ${year === years[0] ? 'showDefault' : ''}`}>
-        <div id={`${year}`}>
+      <div class="content">
+        <div class={`${year === years[0] ? 'showDefault' : ''} sponsors`}>
           {tiers.map((tier) => (
-            <div class="tier" id={tier.toLowerCase()}>
-              <div class="sponsors">
-                <h2>
-                  {year} {tier} Sponsors
-                </h2>
-                {sponsorsResponse.items
-                  .filter(
-                    (item) =>
-                      item.fields.tier === tier.toLowerCase() &&
-                      item.fields.year === year
-                  )
-                  .map((item) => {
-                    {
-                      return (
-                        <div data-aos="zoom-in-up" class="sponsorbox">
-                          <SponsorBox
-                            name={item.fields.name}
-                            description={item.fields.blurb}
-                            buttonText={item.fields.buttonText}
-                            buttonLink={item.fields.buttonLink}
-                            buttonVisible={item.fields.buttonVisible}
-                          />
-                        </div>
-                      );
-                    }
-                  })}
-              </div>
-            </div>
+            <>
+              <h2>
+                {year} {tier} Sponsor
+              </h2>
+              {sponsorsResponse.items
+                .filter(
+                  (item) =>
+                    item.fields.tier === tier.toLowerCase() &&
+                    item.fields.year === year
+                )
+                .map((item) => {
+                  {
+                    return (
+                      <div data-aos="zoom-in-up" class="sponsorbox">
+                        <SponsorBox
+                          name={item.fields.name}
+                          logo={item.fields.logo?.fields?.file?.url}
+                          description={item.fields.blurb}
+                          buttonText={item.fields.buttonText}
+                          buttonLink={item.fields.buttonLink}
+                          buttonVisible={item.fields.buttonVisible}
+                        />
+                      </div>
+                    );
+                  }
+                })}
+            </>
           ))}
         </div>
       </div>
@@ -110,12 +109,11 @@ tiers.forEach((tier, index) => {
 
   <style>
     .content {
-      display: none;
       margin-top: 25px;
       line-height: 2;
     }
     .sponsors {
-      display: flex;
+      display: none;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
