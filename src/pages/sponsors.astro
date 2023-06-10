@@ -3,7 +3,6 @@ import { contentfulClient } from '../lib/contentful';
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import SponsorBox from '../components/Sponsorship/SponsorBox.astro';
-import type { EntryCollection } from 'contentful';
 
 interface Sponsor {
   fields: {
@@ -32,22 +31,18 @@ const sponsorsResponse = await contentfulClient.getEntries<Sponsor>({
   order: '-fields.order',
 });
 
-const years: number[] = [];
-// for each of the years in the response, add it to the years array if it isn't already there
+//Make an array of all the tiers
+const tiers: string[] = [];
 sponsorsResponse.items.forEach((item) => {
-  if (!years.includes(item.fields.year)) {
-    years.push(item.fields.year);
+  if (!tiers.includes(item.fields.tier)) {
+    tiers.push(item.fields.tier);
   }
 });
-years.sort((a, b) => b - a);
 
-//for anything thats not an integer, remove it from the array
-years.forEach((year) => {
-  if (!Number.isInteger(year)) {
-    years.splice(years.indexOf(year), 1);
-  }
+//Capitalize first letter of each tier
+tiers.forEach((tier, index) => {
+  tiers[index] = tier.charAt(0).toUpperCase() + tier.slice(1);
 });
-console.log(years);
 ---
 
 <MainLayout title="Knight Owls - Our Sponsors">
@@ -56,53 +51,68 @@ console.log(years);
     background="/images/headers/sponsors.webp"
   />
   <div class="content">
-    <h2 data-aos="zoom-in-up">Bronze Sponsors</h2>
+    // ...
 
-    <div class="sponsors">
-      <h2 data-aos="zoom-in-up">Silver Sponsors</h2>
-      {
-        sponsorsResponse.items
-          .filter(
-            (item) => item.fields.year === 2023 && item.fields.tier === 'silver'
-          )
-          .map((item) => (
-            <div data-aos="zoom-in-up" class="sponsorbox">
-              <SponsorBox
-                name={item.fields.name}
-                description={item.fields.blurb}
-                image={item.fields.logo.fields.file.url}
-                buttonText={item.fields.buttonText}
-                buttonLink={item.fields.buttonLink}
-                buttonVisible={item.fields.buttonVisible}
-              />
-            </div>
-          ))
-      }
-    </div>
+    {
+      tiers.map((tier) => (
+        <div class="tier" id={tier.toLowerCase()}>
+          <h2>{tier} Sponsors</h2>
+          <div class="sponsors">
+            {sponsorsResponse.items
+              .filter(
+                (item) =>
+                  item.fields.tier === tier.toLowerCase() &&
+                  item.fields.year === 2023
+              )
+              .map((item) => {
+                // Check if the required properties exist
+                {
+                  return (
+                    <div data-aos="zoom-in-up" class="sponsorbox">
+                      <SponsorBox
+                        name={item.fields.name}
+                        description={item.fields.blurb}
+                        image={item.fields.logo.fields.file.url}
+                        buttonText={item.fields.buttonText}
+                        buttonLink={item.fields.buttonLink}
+                        buttonVisible={item.fields.buttonVisible}
+                      />
+                    </div>
+                  );
+                }
+              })}
+          </div>
+        </div>
+      ))
+    }
+
+    // ...
   </div>
+
+  <style>
+    .content {
+      margin-top: 25px;
+      line-height: 2;
+    }
+    .sponsors {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      grid-gap: 50px;
+    }
+    .showDefault {
+      display: flex !important;
+    }
+    h2 {
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-color: var(--blue);
+      font-size: 40px;
+      margin-bottom: 3.5%;
+      flex-basis: 100%;
+    }
+  </style>
 </MainLayout>
-<style>
-  .content {
-    margin-top: 25px;
-    line-height: 2;
-  }
-  .sponsors {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    grid-gap: 50px;
-  }
-  .showDefault {
-    display: flex !important;
-  }
-  h2 {
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: var(--blue);
-    font-size: 40px;
-    margin-bottom: 3.5%;
-    flex-basis: 100%;
-  }
-</style>
