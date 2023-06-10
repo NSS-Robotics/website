@@ -58,7 +58,8 @@ years.forEach((year) => {
   const selector = document.getElementById('yearselector') as HTMLSelectElement;
   // When the selector changes, change the year to the selected year
   selector.addEventListener('change', function () {
-    let newactive = document.querySelector('#' + this.value) as HTMLElement;
+    let newactive = document.getElementById(this.value) as HTMLElement;
+    console.log(newactive);
     let oldactive = document.querySelector('.sponsors') as HTMLElement;
     removeClass();
     newactive.classList.add('showDefault');
@@ -76,6 +77,7 @@ years.forEach((year) => {
     }
   }
 </script>
+
 <style>
   #yearselector {
     width: 250px;

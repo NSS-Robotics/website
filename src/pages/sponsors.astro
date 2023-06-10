@@ -3,6 +3,7 @@ import { contentfulClient } from '../lib/contentful';
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import SponsorBox from '../components/Sponsorship/SponsorBox.astro';
+import YearSelector from '../components/About/YearSelector.astro';
 
 interface Sponsor {
   fields: {
@@ -31,6 +32,22 @@ const sponsorsResponse = await contentfulClient.getEntries<Sponsor>({
   order: '-fields.order',
 });
 
+const years: number[] = [];
+// for each of the years in the response, add it to the years array if it isn't already there
+sponsorsResponse.items.forEach((item) => {
+  if (!years.includes(item.fields.year)) {
+    years.push(item.fields.year);
+  }
+});
+years.sort((a, b) => b - a);
+
+//for anything thats not an integer, remove it from the array
+years.forEach((year) => {
+  if (!Number.isInteger(year)) {
+    years.splice(years.indexOf(year), 1);
+  }
+});
+
 //Make an array of all the tiers
 const tiers: string[] = [];
 sponsorsResponse.items.forEach((item) => {
@@ -50,47 +67,50 @@ tiers.forEach((tier, index) => {
     title="Our Amazing Sponsors"
     background="/images/headers/sponsors.webp"
   />
-  <div class="content">
-    // ...
+  <YearSelector />
 
-    {
-      tiers.map((tier) => (
-        <div class="tier" id={tier.toLowerCase()}>
-          <h2>{tier} Sponsors</h2>
-          <div class="sponsors">
-            {sponsorsResponse.items
-              .filter(
-                (item) =>
-                  item.fields.tier === tier.toLowerCase() &&
-                  item.fields.year === 2023
-              )
-              .map((item) => {
-                // Check if the required properties exist
-                {
-                  return (
-                    <div data-aos="zoom-in-up" class="sponsorbox">
-                      <SponsorBox
-                        name={item.fields.name}
-                        description={item.fields.blurb}
-                        image={item.fields.logo.fields.file.url}
-                        buttonText={item.fields.buttonText}
-                        buttonLink={item.fields.buttonLink}
-                        buttonVisible={item.fields.buttonVisible}
-                      />
-                    </div>
-                  );
-                }
-              })}
-          </div>
+  {
+    years.map((year) => (
+      <div class={`content ${year === years[0] ? 'showDefault' : ''}`}>
+        <div id={`${year}`}>
+          {tiers.map((tier) => (
+            <div class="tier" id={tier.toLowerCase()}>
+              <div class="sponsors">
+                <h2>
+                  {year} {tier} Sponsors
+                </h2>
+                {sponsorsResponse.items
+                  .filter(
+                    (item) =>
+                      item.fields.tier === tier.toLowerCase() &&
+                      item.fields.year === year
+                  )
+                  .map((item) => {
+                    {
+                      return (
+                        <div data-aos="zoom-in-up" class="sponsorbox">
+                          <SponsorBox
+                            name={item.fields.name}
+                            description={item.fields.blurb}
+                            buttonText={item.fields.buttonText}
+                            buttonLink={item.fields.buttonLink}
+                            buttonVisible={item.fields.buttonVisible}
+                          />
+                        </div>
+                      );
+                    }
+                  })}
+              </div>
+            </div>
+          ))}
         </div>
-      ))
-    }
-
-    // ...
-  </div>
+      </div>
+    ))
+  }
 
   <style>
     .content {
+      display: none;
       margin-top: 25px;
       line-height: 2;
     }
