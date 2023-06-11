@@ -67,10 +67,14 @@ tiers.forEach((tier, index) => {
     title="Our Amazing Sponsors"
     background="/images/headers/sponsors.webp"
   />
+  <YearSelector />
   {
     years.map((year) => (
       <div class="content">
-        <div class={`${year === years[0] ? 'showDefault' : ''} sponsors data`}>
+        <div
+          id={year}
+          class={`${year === years[0] ? 'showDefault' : ''} sponsors data`}
+        >
           {tiers.map((tier) => (
             <>
               <h2>
