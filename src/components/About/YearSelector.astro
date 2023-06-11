@@ -54,28 +54,22 @@ years.forEach((year) => {
   </select>
 </div>
 <script>
-  // Get the element with the id of "yearselector"
-  const selector = document.getElementById('yearselector') as HTMLSelectElement;
-  // When the selector changes, change the year to the selected year
-  selector.addEventListener('change', function () {
-    let newactive = document.querySelector('#' + this.value) as HTMLElement;
-    console.log(newactive);
-    let oldactive = document.querySelector('.sponsors') as HTMLElement;
-    removeClass();
-    newactive.classList.add('showDefault');
-    oldactive.animate([{ opacity: '1' }, { opacity: '.5' }], {
-      duration: 1000,
+  //when the year selector is changed, get the element with the same id as the selected year and give it the class "showDefault" and remove the class from all other elements
+  //@ts-ignore
+  document
+    .getElementById('yearselector')
+    .addEventListener('change', function () {
+      //@ts-ignore
+      var year = document.getElementById('yearselector').value;
+      var elements = document.getElementsByClassName('data');
+      for (var i = 0; i < elements.length; i++) {
+        if (elements[i].id == year) {
+          elements[i].classList.add('showDefault');
+        } else {
+          elements[i].classList.remove('showDefault');
+        }
+      }
     });
-    newactive.animate([{ opacity: '.2' }, { opacity: '1' }], {
-      duration: 1000,
-    });
-  });
-  function removeClass() {
-    var allElements = document.querySelectorAll('.showDefault');
-    for (let i = 0; i < allElements.length; i++) {
-      allElements[i].classList.remove('showDefault');
-    }
-  }
 </script>
 
 <style>
