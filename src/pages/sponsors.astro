@@ -72,7 +72,7 @@ tiers.forEach((tier, index) => {
     years.map((year) => (
       <div class="content">
         <div
-          id={year}
+          id={year.toString()}
           class={`${year === years[0] ? 'showDefault' : ''} sponsors data`}
         >
           {tiers.map((tier) => (
@@ -88,18 +88,31 @@ tiers.forEach((tier, index) => {
                 )
                 .map((item) => {
                   {
-                    return (
-                      <div data-aos="zoom-in-up" class="sponsorbox">
-                        <SponsorBox
-                          name={item.fields.name}
-                          logo={item.fields.logo?.fields?.file?.url}
-                          description={item.fields.blurb}
-                          buttonText={item.fields.buttonText}
-                          buttonLink={item.fields.buttonLink}
-                          buttonVisible={item.fields.buttonVisible}
-                        />
-                      </div>
-                    );
+                    if (item.fields.buttonVisible === false) {
+                      return (
+                        <div data-aos="zoom-in-up" class="sponsorbox">
+                          <SponsorBox
+                            name={item.fields.name}
+                            logo={item.fields.logo?.fields?.file?.url}
+                            description={item.fields.blurb}
+                            buttonText={item.fields.buttonText}
+                            buttonLink={item.fields.buttonLink}
+                            buttonVisible="false"
+                          />
+                        </div>
+                      );
+                    } else
+                      return (
+                        <div data-aos="zoom-in-up" class="sponsorbox">
+                          <SponsorBox
+                            name={item.fields.name}
+                            logo={item.fields.logo?.fields?.file?.url}
+                            description={item.fields.blurb}
+                            buttonText={item.fields.buttonText}
+                            buttonLink={item.fields.buttonLink}
+                          />
+                        </div>
+                      );
                   }
                 })}
             </>
