@@ -83,7 +83,10 @@ subteams.sort((a, b) => {
 
 {
   rosterYears.map((year) => (
-    <div class={`${year === rosterYears[0] ? 'showDefault' : ''} people data`}>
+    <div
+      class={`${year === rosterYears[0] ? 'showDefault' : ''} people data`}
+      id={year.toString()}
+    >
       {subteams.map((subteam) => {
         return (
           <>

@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import Subteam from '../components/About/Subteam.astro';
 import YearSelector from '../components/About/YearSelector.astro';
-import Team from '../components/About/TeamByYear/Roster.astro';
+import Roster from '../components/About/TeamByYear/Roster.astro';
 
 interface Subteams {
   fields: {
@@ -100,6 +100,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
     <h3 id="people" class="our-team" data-aos="zoom-in" data-aos-once="true">
       Our Members
     </h3>
+    <YearSelector />
     <Roster />
   </div>
   <style>
