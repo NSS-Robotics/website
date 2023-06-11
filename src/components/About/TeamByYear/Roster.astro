@@ -96,7 +96,9 @@ subteams.sort((a, b) => {
             <div class="subteam">
               {rosterResponse.items
                 .filter(
-                  (member) => member.fields.subteam == subteam.toLowerCase()
+                  (member) =>
+                    member.fields.subteam == subteam.toLowerCase() &&
+                    member.fields.year == year
                 )
                 .map((member) => {
                   return (
