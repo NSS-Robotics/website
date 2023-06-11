@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import Subteam from '../components/About/Subteam.astro';
 import YearSelector from '../components/About/YearSelector.astro';
-import Team from '../components/About/TeamByYear/Team.astro';
+import Team from '../components/About/TeamByYear/Roster.astro';
 
 interface Subteams {
   fields: {
@@ -100,38 +100,8 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
     <h3 id="people" class="our-team" data-aos="zoom-in" data-aos-once="true">
       Our Members
     </h3>
-    <YearSelector />
-    <Team classes="showDefault" year="year2" filename="2022-23" />
-    <Team year="year1" filename="2021-22" />
+    <Roster />
   </div>
-  <script>
-    // Get the element with the id of "yearselector"
-    const selector = document.getElementById(
-      'yearselector'
-    ) as HTMLSelectElement;
-    // When the selector changes, change the year to the selected year
-    selector.addEventListener('change', function () {
-      let newactive = document.querySelector('#' + this.value) as HTMLElement;
-      let oldactive = document.querySelector('.people') as HTMLElement;
-
-      removeClass();
-      newactive.classList.add('showDefault');
-
-      oldactive.animate([{ opacity: '1' }, { opacity: '.5' }], {
-        duration: 1000,
-      });
-      newactive.animate([{ opacity: '.2' }, { opacity: '1' }], {
-        duration: 1000,
-      });
-    });
-
-    function removeClass() {
-      var allElements = document.querySelectorAll('.showDefault');
-      for (let i = 0; i < allElements.length; i++) {
-        allElements[i].classList.remove('showDefault');
-      }
-    }
-  </script>
   <style>
     .content {
       line-height: 2;

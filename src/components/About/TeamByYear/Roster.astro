@@ -1,0 +1,149 @@
+---
+import { contentfulClient } from '../../../lib/contentful';
+import Person from '../Person.astro';
+
+interface Roster {
+  fields: {
+    picture: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    name: string;
+    title: string;
+    subteam: string;
+    year: number;
+  };
+  contentTypeId: string;
+}
+
+const rosterResponse = await contentfulClient.getEntries<Roster>({
+  content_type: 'teamRoster',
+  //@ts-ignore
+});
+
+const rosterYears: number[] = [];
+// for each of the years in the response, add it to the years array if it isn't already there
+rosterResponse.items.forEach((item) => {
+  if (!rosterYears.includes(item.fields.year)) {
+    rosterYears.push(item.fields.year);
+  }
+});
+rosterYears.sort((a, b) => b - a);
+
+//for anything thats not an integer, remove it from the array
+rosterYears.forEach((year) => {
+  if (!Number.isInteger(year)) {
+    rosterYears.splice(rosterYears.indexOf(year), 1);
+  }
+});
+
+//Make an array of all the subteams
+const subteams: string[] = [];
+rosterResponse.items.forEach((item) => {
+  if (!subteams.includes(item.fields.subteam)) {
+    subteams.push(item.fields.subteam);
+  }
+});
+
+//capitalize the first letter of each subteam
+subteams.forEach((subteam, index) => {
+  subteams[index] = subteam.charAt(0).toUpperCase() + subteam.slice(1);
+});
+
+//sort the subteams so they go "exec", "manufacturing", "design", "outreach", "mentor"
+subteams.sort((a, b) => {
+  if (a == 'Exec') {
+    return -1;
+  } else if (b == 'Exec') {
+    return 1;
+  } else if (a == 'Manufacturing') {
+    return -1;
+  } else if (b == 'Manufacturing') {
+    return 1;
+  } else if (a == 'Design') {
+    return -1;
+  } else if (b == 'Design') {
+    return 1;
+  } else if (a == 'Outreach') {
+    return -1;
+  } else if (b == 'Outreach') {
+    return 1;
+  } else if (a == 'Mentor') {
+    return -1;
+  } else if (b == 'Mentor') {
+    return 1;
+  } else {
+    return 0;
+  }
+});
+---
+
+{
+  rosterYears.map((year) => (
+    <div class={`${year === rosterYears[0] ? 'showDefault' : ''} people data`}>
+      {subteams.map((subteam) => {
+        return (
+          <>
+            <h4 data-aos="zoom-in" data-aos-once="true">
+              {year} {subteam} Team
+            </h4>
+            <div class="subteam">
+              {rosterResponse.items
+                .filter(
+                  (member) => member.fields.subteam == subteam.toLowerCase()
+                )
+                .map((member) => {
+                  return (
+                    <Person
+                      name={member.fields.name}
+                      title={member.fields.title}
+                      image={member.fields.picture.fields.file.url}
+                    />
+                  );
+                })}
+            </div>
+          </>
+        );
+      })}
+    </div>
+  ))
+}
+
+<style>
+  .people {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    column-gap: 70px;
+    row-gap: 75px;
+  }
+  .showDefault {
+    display: flex !important;
+  }
+  .our-team {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 8%;
+  }
+  h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+  }
+  h4 {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+  }
+</style>
