@@ -1,7 +1,27 @@
 ---
+import { contentfulClient } from '../lib/contentful';
+
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import SponsorshipTier from '../components/Sponsorship/SponsorshipTier.astro';
+
+interface Tiers {
+  fields: {
+    tier: string;
+    amount: string;
+    perks: string[];
+    buttonText: string;
+    buttonLink: string;
+    order: number;
+  };
+  contentTypeId: string;
+}
+
+const tiersResponse = await contentfulClient.getEntries<Tiers>({
+  content_type: 'sponsorshipTiers',
+  //@ts-ignore
+  order: '-fields.order',
+});
 ---
 
 <MainLayout title="Knight Owls - Sponsorship Tiers">
