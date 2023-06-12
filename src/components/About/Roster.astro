@@ -67,6 +67,10 @@ subteams.sort((a, b) => {
     return -1;
   } else if (b == 'Design') {
     return 1;
+  } else if (a == 'Programming') {
+    return -1;
+  } else if (b == 'Programming') {
+    return 1;
   } else if (a == 'Outreach') {
     return -1;
   } else if (b == 'Outreach') {
@@ -79,6 +83,8 @@ subteams.sort((a, b) => {
     return 0;
   }
 });
+
+console.log(subteams);
 ---
 
 {
