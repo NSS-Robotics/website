@@ -9,6 +9,7 @@ interface Tiers {
   fields: {
     tier: string;
     amount: string;
+    colour: string;
     perks: string[];
     buttonText: string;
     buttonLink: string;
@@ -30,49 +31,18 @@ const tiersResponse = await contentfulClient.getEntries<Tiers>({
     background="/images/headers/tiers.webp"
   />
   <div class="tiers" id="listing">
-    <SponsorshipTier
-      tier="Bronze"
-      amount="$500 - $999"
-      colour="#00d2ff"
-      things={[
-        'Name and logo showcased on our website and team apparel',
-        'Name and logo showcased on our robot*',
-        'Receive a shoutout on all our social media platforms',
-        'Have your name mentioned at the FIRST competitions when our team is introduced',
-      ]}
-      buttonText="Donate"
-      buttonLink="/donate/"
-    />
-    <SponsorshipTier
-      tier="Silver"
-      amount="$1,000 - $4,999"
-      colour="#00b6f7"
-      things={[
-        'Everything in the Bronze tier',
-        'Come and meet our team',
-        'Receive our team shirt or hoodie signed by the team',
-        'Have your name and logo displayed in our pit at the FIRST competitions',
-      ]}
-    />
-    <SponsorshipTier
-      tier="Gold"
-      amount="$5,000 - $9,999"
-      colour="#0099e9"
-      things={[
-        'Everything in the Silver tier',
-        'Upon request we will come and do a presentation at your company',
-        'Receive an invitation to come watch us compete at competitions',
-      ]}
-    />
-    <SponsorshipTier
-      tier="Platinum"
-      amount="$10,000+"
-      colour="#3a7bd5"
-      things={[
-        'Everything in the Gold tier',
-        'Receive a plaque recognizing the generous contributions you have made to support our team',
-      ]}
-    />
+    {
+      tiersResponse.items.map((item) => (
+        <SponsorshipTier
+          tier={item.fields.tier}
+          amount={item.fields.amount}
+          colour={item.fields.colour}
+          things={item.fields.perks}
+          buttonText={item.fields.buttonText}
+          buttonLink={item.fields.buttonLink}
+        />
+      ))
+    }
     <div data-aos="zoom-in" data-aos-offset="70" class="logoinfo">
       <p>
         *The higher the tier you choose to donate with the larger and more
