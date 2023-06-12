@@ -61,7 +61,10 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       {
         aboutUsResponse.items.map((item) => {
           return (
-            <div data-aos={`fade-${item.fields.fadeDirection}`}>
+            <div
+              class="aboutusItem"
+              data-aos={`fade-${item.fields.fadeDirection}`}
+            >
               <img
                 src={item.fields.image.fields.file.url}
                 alt={item.fields.title}
@@ -119,18 +122,26 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       width: fit-content;
       margin-right: 50px;
     }
-    img {
-      height: 100px;
+    .aboutusItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .aboutusItem img {
+      height: 25vw;
       width: auto;
       border-radius: 10px;
       margin-left: 15px;
     }
-    .about-us p {
+    .aboutusItem p {
       padding-right: 15px;
       padding-left: 15px;
       font-size: 20px;
+      text-align: center;
     }
-    .about-us h3 {
+    .aboutusItem h3 {
       padding-right: 15px;
       padding-left: 15px;
       font-size: 32px;
