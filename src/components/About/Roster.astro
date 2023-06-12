@@ -83,8 +83,6 @@ subteams.sort((a, b) => {
     return 0;
   }
 });
-
-console.log(subteams);
 ---
 
 {
@@ -103,7 +101,24 @@ console.log(subteams);
               .filter(
                 (member) =>
                   member.fields.subteam == subteam.toLowerCase() &&
-                  member.fields.year == year
+                  member.fields.year == year &&
+                  member.fields.title
+              )
+              .map((member) => {
+                return (
+                  <Person
+                    name={member.fields.name}
+                    title={member.fields.title}
+                    image={member.fields.picture.fields.file.url}
+                  />
+                );
+              })}
+            {rosterResponse.items
+              .filter(
+                (member) =>
+                  member.fields.subteam == subteam.toLowerCase() &&
+                  member.fields.year == year &&
+                  member.fields.title == undefined
               )
               .map((member) => {
                 return (
