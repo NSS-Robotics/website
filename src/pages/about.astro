@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import Subteam from '../components/About/Subteam.astro';
 import YearSelector from '../components/About/YearSelector.astro';
-import Team from '../components/About/TeamByYear/Team.astro';
+import Roster from '../components/About/Roster.astro';
 
 interface Subteams {
   fields: {
@@ -61,8 +61,10 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       {
         aboutUsResponse.items.map((item) => {
           return (
-            //name the divs data-aos='fade-${item.fields.fadeDirection}'
-            <div data-aos={`fade-${item.fields.fadeDirection}`}>
+            <div
+              class="aboutusItem"
+              data-aos={`fade-${item.fields.fadeDirection}`}
+            >
               <img
                 src={item.fields.image.fields.file.url}
                 alt={item.fields.title}
@@ -102,37 +104,8 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       Our Members
     </h3>
     <YearSelector />
-    <Team classes="showDefault" year="year2" filename="2022-23" />
-    <Team year="year1" filename="2021-22" />
+    <Roster />
   </div>
-  <script>
-    // Get the element with the id of "yearselector"
-    const selector = document.getElementById(
-      'yearselector'
-    ) as HTMLSelectElement;
-    // When the selector changes, change the year to the selected year
-    selector.addEventListener('change', function () {
-      let newactive = document.querySelector('#' + this.value) as HTMLElement;
-      let oldactive = document.querySelector('.people') as HTMLElement;
-
-      removeClass();
-      newactive.classList.add('showDefault');
-
-      oldactive.animate([{ opacity: '1' }, { opacity: '.5' }], {
-        duration: 1000,
-      });
-      newactive.animate([{ opacity: '.2' }, { opacity: '1' }], {
-        duration: 1000,
-      });
-    });
-
-    function removeClass() {
-      var allElements = document.querySelectorAll('.showDefault');
-      for (let i = 0; i < allElements.length; i++) {
-        allElements[i].classList.remove('showDefault');
-      }
-    }
-  </script>
   <style>
     .content {
       line-height: 2;
@@ -149,18 +122,26 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       width: fit-content;
       margin-right: 50px;
     }
-    img {
-      height: 100px;
+    .aboutusItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .aboutusItem img {
+      height: 25vw;
       width: auto;
       border-radius: 10px;
       margin-left: 15px;
     }
-    .about-us p {
+    .aboutusItem p {
       padding-right: 15px;
       padding-left: 15px;
       font-size: 20px;
+      text-align: center;
     }
-    .about-us h3 {
+    .aboutusItem h3 {
       padding-right: 15px;
       padding-left: 15px;
       font-size: 32px;

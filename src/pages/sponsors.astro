@@ -1,8 +1,65 @@
 ---
+import { contentfulClient } from '../lib/contentful';
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
+import SponsorBox from '../components/Sponsorship/SponsorBox.astro';
 import YearSelector from '../components/About/YearSelector.astro';
-import Sponsors from '../components/Sponsorship/Sponsors.astro';
+
+interface Sponsor {
+  fields: {
+    logo: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    name: string;
+    blurb: string;
+    buttonText: string;
+    buttonLink: string;
+    buttonVisible: boolean;
+    tier: string;
+    year: number;
+    order: number;
+  };
+  contentTypeId: string;
+}
+
+const sponsorsResponse = await contentfulClient.getEntries<Sponsor>({
+  content_type: 'sponsor',
+  //@ts-ignore
+  order: '-fields.order',
+});
+
+const years: number[] = [];
+// for each of the years in the response, add it to the years array if it isn't already there
+sponsorsResponse.items.forEach((item) => {
+  if (!years.includes(item.fields.year)) {
+    years.push(item.fields.year);
+  }
+});
+years.sort((a, b) => b - a);
+
+//for anything thats not an integer, remove it from the array
+years.forEach((year) => {
+  if (!Number.isInteger(year)) {
+    years.splice(years.indexOf(year), 1);
+  }
+});
+
+//Make an array of all the tiers
+const tiers: string[] = [];
+sponsorsResponse.items.forEach((item) => {
+  if (!tiers.includes(item.fields.tier)) {
+    tiers.push(item.fields.tier);
+  }
+});
+
+//Capitalize first letter of each tier
+tiers.forEach((tier, index) => {
+  tiers[index] = tier.charAt(0).toUpperCase() + tier.slice(1);
+});
 ---
 
 <MainLayout title="Knight Owls - Our Sponsors">
@@ -11,32 +68,82 @@ import Sponsors from '../components/Sponsorship/Sponsors.astro';
     background="/images/headers/sponsors.webp"
   />
   <YearSelector />
-  <Sponsors classes="showDefault" year="year2" filename="2022-23" />
-  <Sponsors year="year1" filename="2021-22" />
+  {
+    years.map((year) => (
+      <div class="content">
+        <div
+          id={year.toString()}
+          class={`${year === years[0] ? 'showDefault' : ''} sponsors data`}
+        >
+          {tiers.map((tier) => (
+            <>
+              <h2>{tier} Sponsors</h2>
+              {sponsorsResponse.items
+                .filter(
+                  (item) =>
+                    item.fields.tier === tier.toLowerCase() &&
+                    item.fields.year === year
+                )
+                .map((item) => {
+                  {
+                    if (item.fields.buttonVisible === false) {
+                      return (
+                        <div data-aos="zoom-in-up" class="sponsorbox">
+                          <SponsorBox
+                            name={item.fields.name}
+                            logo={item.fields.logo?.fields?.file?.url}
+                            description={item.fields.blurb}
+                            buttonText={item.fields.buttonText}
+                            buttonLink={item.fields.buttonLink}
+                            buttonVisible="false"
+                          />
+                        </div>
+                      );
+                    } else
+                      return (
+                        <div data-aos="zoom-in-up" class="sponsorbox">
+                          <SponsorBox
+                            name={item.fields.name}
+                            logo={item.fields.logo?.fields?.file?.url}
+                            description={item.fields.blurb}
+                            buttonText={item.fields.buttonText}
+                            buttonLink={item.fields.buttonLink}
+                          />
+                        </div>
+                      );
+                  }
+                })}
+            </>
+          ))}
+        </div>
+      </div>
+    ))
+  }
 
-  <script>
-    // Get the element with the id of "yearselector"
-    const selector = document.getElementById(
-      'yearselector'
-    ) as HTMLSelectElement;
-    // When the selector changes, change the year to the selected year
-    selector.addEventListener('change', function () {
-      let newactive = document.querySelector('#' + this.value) as HTMLElement;
-      let oldactive = document.querySelector('.sponsors') as HTMLElement;
-      removeClass();
-      newactive.classList.add('showDefault');
-      oldactive.animate([{ opacity: '1' }, { opacity: '.5' }], {
-        duration: 1000,
-      });
-      newactive.animate([{ opacity: '.2' }, { opacity: '1' }], {
-        duration: 1000,
-      });
-    });
-    function removeClass() {
-      var allElements = document.querySelectorAll('.showDefault');
-      for (let i = 0; i < allElements.length; i++) {
-        allElements[i].classList.remove('showDefault');
-      }
+  <style>
+    .content {
+      margin-top: 25px;
+      line-height: 2;
     }
-  </script>
+    .sponsors {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      grid-gap: 50px;
+    }
+    .showDefault {
+      display: flex !important;
+    }
+    h2 {
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-color: var(--blue);
+      font-size: 40px;
+      margin-bottom: 3.5%;
+      flex-basis: 100%;
+    }
+  </style>
 </MainLayout>
