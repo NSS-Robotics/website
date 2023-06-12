@@ -93,23 +93,21 @@ subteams.sort((a, b) => {
             <h4 data-aos="zoom-in" data-aos-once="true">
               {year} {subteam} Team
             </h4>
-            <div class="subteam">
-              {rosterResponse.items
-                .filter(
-                  (member) =>
-                    member.fields.subteam == subteam.toLowerCase() &&
-                    member.fields.year == year
-                )
-                .map((member) => {
-                  return (
-                    <Person
-                      name={member.fields.name}
-                      title={member.fields.title}
-                      image={member.fields.picture.fields.file.url}
-                    />
-                  );
-                })}
-            </div>
+            {rosterResponse.items
+              .filter(
+                (member) =>
+                  member.fields.subteam == subteam.toLowerCase() &&
+                  member.fields.year == year
+              )
+              .map((member) => {
+                return (
+                  <Person
+                    name={member.fields.name}
+                    title={member.fields.title}
+                    image={member.fields.picture.fields.file.url}
+                  />
+                );
+              })}
           </>
         );
       })}
