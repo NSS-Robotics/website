@@ -66,7 +66,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
               data-aos={`fade-${item.fields.fadeDirection}`}
             >
               <img
-                src={item.fields.image.fields.file.url}
+                src={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
                 alt={item.fields.title}
               />
               <h3>{item.fields.title}</h3>
@@ -91,7 +91,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
           return (
             <Subteam
               name={item.fields.subteamTitle}
-              image={item.fields.subteamImage.fields.file.url}
+              image={`${item.fields.subteamImage.fields.file.url}?fm=jpg&fl=progressive`}
               alt={item.fields.subteamImageAltText}
               description={item.fields.subteamDescription}
               fadeDirection="left"

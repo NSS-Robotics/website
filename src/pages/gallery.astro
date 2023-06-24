@@ -44,7 +44,7 @@ const galleryCoverResponse = await contentfulClient.getEntries<GalleryCover>({
           <AlbumCover
             event={item.fields.title}
             date={item.fields.date}
-            image={item.fields.image.fields.file.url}
+            image={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
             link={item.fields.link}
           />
         ))
@@ -59,7 +59,7 @@ const galleryCoverResponse = await contentfulClient.getEntries<GalleryCover>({
           <AlbumCover
             event={item.fields.title}
             date={item.fields.date}
-            image={item.fields.image.fields.file.url}
+            image={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
             link={item.fields.link}
           />
         ))

@@ -41,7 +41,7 @@ const aboutUsResponse = await contentfulClient.getEntries<Wooshie>({
           fadeDirection={wooshie.fields.fadeDirection}
           title={wooshie.fields.title}
           subtitle={wooshie.fields.description}
-          image={wooshie.fields.image.fields.file.url}
+          image={`${wooshie.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
           alt={wooshie.fields.imageAltText}
           buttonLink={wooshie.fields.buttonLink}
           buttonText={wooshie.fields.buttonText}
