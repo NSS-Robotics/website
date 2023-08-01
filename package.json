@@ -19,7 +19,7 @@
     "astro-icon": "^0.8.1",
     "astro-imagetools": "^0.8.1",
     "astro-seo": "^0.7.5",
-    "contentful": "^10.3.4"
+    "contentful": "^10.4.0"
   },
   "devDependencies": {
     "@astrojs/react": "^2.2.1",
