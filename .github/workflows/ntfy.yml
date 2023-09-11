@@ -1,0 +1,20 @@
+name: Send ntfy alert on deployment
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  ntfy-alert:
+    runs-on: ubuntu-latest
+
+    name: ntfy
+    steps:
+    - name: ntfy alert
+      run: |
+        curl \
+          -H "Title: New knightowls.ca deployment" \
+          -H "Content-Type: text/plain" \
+          -H "Actions: view, Open Website, https://knightowls.ca/, clear=true;" \
+          -d $'Repo: ${{ github.repository }}\nCommit: ${{ github.sha }}\nRef: ${{ github.ref }}\nStatus: ${{ job.status}}' \
+          ${{ secrets.NTFY_URL }}
