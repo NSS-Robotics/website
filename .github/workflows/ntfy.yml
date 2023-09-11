@@ -17,4 +17,4 @@ jobs:
           -H "Content-Type: text/plain" \
           -H "Actions: view, Open Website, https://knightowls.ca/, clear=true;" \
           -d $'Repo: ${{ github.repository }}\nCommit: ${{ github.sha }}\nRef: ${{ github.ref }}\nStatus: ${{ job.status}}' \
-          ${{ secrets.NTFY_URL }}/knightowls_website
+          ${{ secrets.NTFY_URL }}
