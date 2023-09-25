@@ -57,6 +57,10 @@
   .tiers {
     grid-template-columns: 44vw 44vw !important;
   }
+  .box:nth-last-child(2) {
+    grid-column-start: 1 !important;
+    grid-column-end: 3 !important;
+  }
   .logoinfo {
     grid-column-start: 1;
     grid-column-end: 3 !important;
@@ -180,6 +184,10 @@
 @media screen and (max-width: 720px) {
   .tiers {
     grid-template-columns: 65vw !important;
+  }
+  .box:nth-last-child(2) {
+    grid-column-start: auto !important;
+    grid-column-end: auto !important;
   }
   .box h3 {
     height: auto !important;
