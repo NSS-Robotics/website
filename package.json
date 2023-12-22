@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.0.2",
+    "@astrojs/sitemap": "^3.0.3",
     "@contentful/rich-text-html-renderer": "^16.2.0",
     "@fontsource/poppins": "^5.0.8",
     "@vercel/analytics": "^1.1.1",
