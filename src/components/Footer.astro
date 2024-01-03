@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import icon from 'astro-icon';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -7,16 +7,16 @@ const currentYear = new Date().getFullYear();
   <div class="center">
     <div class="footerlinks">
       <a href="https://github.com/NSS-Robotics/" target="_blank">
-        <Icon name="bi:github" />
+        <icon name="bi:github"></icon>
       </a>
       <a href="https://www.instagram.com/knightowls_8884/" target="_blank">
-        <Icon name="bi:instagram" />
+        <icon name="bi:instagram"></icon>
       </a>
       <a href="https://www.youtube.com/@knightowls/" target="_blank">
-        <Icon name="ri:youtube-fill" />
+        <icon name="ri:youtube-fill"></icon>
       </a>
       <a href="mailto:hello@knightowls.ca">
-        <Icon name="bi:envelope" />
+        <icon name="bi:envelope"></icon>
       </a>
     </div>
     <div class="vercel">
@@ -49,13 +49,13 @@ const currentYear = new Date().getFullYear();
     text-align: center;
     z-index: 1;
   }
-  [astro-icon] {
+  [data-icon] {
     color: white;
     width: 30px;
     margin-left: 10px;
     transition-duration: 0.3s;
   }
-  [astro-icon]:hover {
+  [data-icon]:hover {
     color: var(--blue);
     transition-duration: 0.3s;
   }
