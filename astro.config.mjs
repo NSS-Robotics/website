@@ -20,6 +20,11 @@ export default defineConfig({
     }),
     sitemap(),
     astroImageTools,
-    icon(),
+    icon({
+      include: {
+        bi: ["github", "instagram", "envelope"],
+        ri: ["youtube-fill"],
+      },
+    }),
   ],
 });
