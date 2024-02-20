@@ -15,7 +15,7 @@
     "@fontsource/poppins": "^5.0.8",
     "@iconify-json/bi": "^1.1.22",
     "@iconify-json/ri": "^1.1.18",
-    "@vercel/analytics": "^1.1.1",
+    "@vercel/analytics": "^1.2.1",
     "@vercel/speed-insights": "^1.0.2",
     "astro": "^4.0.7",
     "astro-icon": "^1.0.2",
