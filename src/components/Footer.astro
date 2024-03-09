@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -19,13 +19,6 @@ const currentYear = new Date().getFullYear();
         <Icon name="bi:envelope" />
       </a>
     </div>
-    <div class="vercel">
-      <p>Powered By</p>
-      <a href="https://vercel.com/?utm_source=nssrobotics&utm_campaign=oss"
-        ><img src="/images/vercel.svg" alt="Vercel logo" />
-      </a>
-    </div>
-    <div class="footerline"></div>
     <div class="pages">
       <a href="/">Home</a>
       <a href="/about">About Us</a>
@@ -34,8 +27,15 @@ const currentYear = new Date().getFullYear();
       <a href="/tiers">Sponsorship Tiers</a>
       <a href="/donate">Sponsor Us</a>
     </div>
+    <div class="footerline"></div>
     <div>
       <p>&copy; Knight Owls {currentYear}</p>
+    </div>
+    <div class="vercel">
+      <p>Powered By</p>
+      <a href="https://vercel.com/?utm_source=nssrobotics&utm_campaign=oss"
+        ><img src="/images/vercel.svg" alt="Vercel logo" />
+      </a>
     </div>
   </div>
 </div>
@@ -49,13 +49,14 @@ const currentYear = new Date().getFullYear();
     text-align: center;
     z-index: 1;
   }
-  [astro-icon] {
+  [data-icon] {
     color: white;
     width: 30px;
+    height: auto;
     margin-left: 10px;
     transition-duration: 0.3s;
   }
-  [astro-icon]:hover {
+  [data-icon]:hover {
     color: var(--blue);
     transition-duration: 0.3s;
   }

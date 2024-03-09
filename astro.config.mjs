@@ -3,6 +3,7 @@ import robotsTxt from "astro-robots-txt";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import { astroImageTools } from "astro-imagetools";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,5 +20,11 @@ export default defineConfig({
     }),
     sitemap(),
     astroImageTools,
+    icon({
+      include: {
+        bi: ["github", "instagram", "envelope"],
+        ri: ["youtube-fill"],
+      },
+    }),
   ],
 });
