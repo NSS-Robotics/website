@@ -1,8 +1,43 @@
 ---
+import { contentfulClient } from '../lib/contentful';
+
 import Navbar from './Navbar.astro';
 import ScrollDown from './ScrollDown.astro';
 
-const { title, subtitle, background } = Astro.props;
+let { title, subtitle, background } = Astro.props;
+
+interface Header {
+  fields: {
+    title: string;
+    subtitle: string;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    page: string;
+  };
+  contentTypeId: string;
+}
+
+const headerResponse = await contentfulClient.getEntries<Header>({
+  content_type: 'header',
+});
+
+// console.log(headerResponse.items);
+console.log(Astro.url.pathname.slice(1, -1));
+
+//check if the page matches the page based on the url and if it is, set the title, subtitle, and background
+headerResponse.items.map((header) => {
+  if (header.fields.page === Astro.url.pathname.slice(1, -1)) {
+    title = header.fields.title;
+    subtitle = header.fields.subtitle;
+    background = header.fields.image.fields.file.url;
+    console.log(title, subtitle, background);
+  }
+});
 ---
 
 <div class="header" style={` background-image: url(${background}); `}>
