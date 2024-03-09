@@ -53,8 +53,31 @@ const tiers: string[] = [];
 sponsorsResponse.items.forEach((item) => {
   if (!tiers.includes(item.fields.tier)) {
     tiers.push(item.fields.tier);
+    // Sort the tiers in the correct order (elite, platinum, gold, silver, bronze)
+    if (tiers.includes('bronze') && tiers.indexOf('bronze') !== 4) {
+      tiers.splice(tiers.indexOf('bronze'), 1);
+      tiers.unshift('bronze');
+    }
+    if (tiers.includes('silver') && tiers.indexOf('silver') !== 3) {
+      tiers.splice(tiers.indexOf('silver'), 1);
+      tiers.unshift('silver');
+    }
+    if (tiers.includes('gold') && tiers.indexOf('gold') !== 2) {
+      tiers.splice(tiers.indexOf('gold'), 1);
+      tiers.unshift('gold');
+    }
+    if (tiers.includes('platinum') && tiers.indexOf('elite') !== 1) {
+      tiers.splice(tiers.indexOf('platinum'), 1);
+      tiers.unshift('platinum');
+    }
+    if (tiers.includes('elite') && tiers.indexOf('elite') !== 0) {
+      tiers.splice(tiers.indexOf('elite'), 1);
+      tiers.unshift('elite');
+    }
   }
 });
+
+console.log(tiers);
 
 //Capitalize first letter of each tier
 tiers.forEach((tier, index) => {
