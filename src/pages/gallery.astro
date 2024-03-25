@@ -35,6 +35,22 @@ const galleryCoverResponse = await contentfulClient.getEntries<GalleryCover>({
 
 <MainLayout title="Knight Owls - Gallery">
   <ImageHeader title="Gallery" background="/images/headers/gallery.webp" />
+  <h3>2024 Gallery</h3>
+  <GalleryAlbumLayout columns="3">
+    {
+      galleryCoverResponse.items
+        .filter((item) => item.fields.year === 2024)
+        .map((item) => (
+          <AlbumCover
+            event={item.fields.title}
+            date={item.fields.date}
+            image={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
+            link={item.fields.link}
+          />
+        ))
+    }
+  </GalleryAlbumLayout>
+
   <h3>2023 Gallery</h3>
   <GalleryAlbumLayout columns="3">
     {
