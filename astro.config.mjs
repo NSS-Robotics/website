@@ -5,26 +5,24 @@ import sitemap from "@astrojs/sitemap";
 import { astroImageTools } from "astro-imagetools";
 import icon from "astro-icon";
 
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://knightowls.ca",
   vite: {
     ssr: {
-      external: ["svgo"],
-    },
+      external: ["svgo"]
+    }
   },
-  integrations: [
-    react(),
-    robotsTxt({
-      sitemap: "https://knightowls.ca/sitemap-0.xml",
-    }),
-    sitemap(),
-    astroImageTools,
-    icon({
-      include: {
-        bi: ["github", "instagram", "envelope"],
-        ri: ["youtube-fill"],
-      },
-    }),
-  ],
+  integrations: [react(), robotsTxt({
+    sitemap: "https://knightowls.ca/sitemap-0.xml"
+  }), sitemap(), astroImageTools, icon({
+    include: {
+      bi: ["github", "instagram", "envelope"],
+      ri: ["youtube-fill"]
+    }
+  })],
+  output: "server",
+  adapter: vercel()
 });
