@@ -12,17 +12,23 @@ export default defineConfig({
   site: "https://knightowls.ca",
   vite: {
     ssr: {
-      external: ["svgo"]
-    }
+      external: ["svgo"],
+    },
   },
-  integrations: [react(), robotsTxt({
-    sitemap: "https://knightowls.ca/sitemap-0.xml"
-  }), sitemap(), astroImageTools, icon({
-    include: {
-      bi: ["github", "instagram", "envelope"],
-      ri: ["youtube-fill"]
-    }
-  })],
-  output: "server",
-  adapter: vercel()
+  integrations: [
+    react(),
+    robotsTxt({
+      sitemap: "https://knightowls.ca/sitemap-0.xml",
+    }),
+    sitemap(),
+    astroImageTools,
+    icon({
+      include: {
+        bi: ["github", "instagram", "envelope"],
+        ri: ["youtube-fill"],
+      },
+    }),
+  ],
+  output: "hybrid",
+  adapter: vercel(),
 });
