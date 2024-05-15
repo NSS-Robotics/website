@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 import robotsTxt from "astro-robots-txt";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
-import { astroImageTools } from "astro-imagetools";
 import icon from "astro-icon";
 
 import vercel from "@astrojs/vercel/serverless";
@@ -21,7 +20,6 @@ export default defineConfig({
       sitemap: "https://knightowls.ca/sitemap-0.xml",
     }),
     sitemap(),
-    astroImageTools,
     icon({
       include: {
         bi: ["github", "instagram", "envelope"],
