@@ -1,23 +1,22 @@
 ---
 //@ts-ignore
-import { Img } from 'astro-imagetools/components';
+import { Picture } from 'astro:assets';
+
 const { images = [] } = Astro.props;
 ---
 
 {
   images.map((image: string) => (
     <div class="galleryImage" data-aos="fade-up">
-      <Img
-        src={image}
-        alt="An image in the gallery"
-        format={['webp']}
-        placeholder="blurred"
-        loading="lazy"
-      />
+      <img src={image} alt="An image in the gallery" />
     </div>
   ))
 }
 <style>
+  img {
+    width: 100%;
+    height: auto;
+  }
   .galleryImage {
     width: 90%;
     height: auto;
