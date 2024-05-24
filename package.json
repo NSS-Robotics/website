@@ -24,7 +24,7 @@
     "contentful": "^10.10.0"
   },
   "devDependencies": {
-    "@astrojs/react": "^2.2.1",
+    "@astrojs/react": "^3.4.0",
     "astro-robots-txt": "^1.0.0",
     "find-up": "^7.0.0",
     "prettier": "^3.2.5",
