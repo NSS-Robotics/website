@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import robotsTxt from "astro-robots-txt";
-import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
 
@@ -15,7 +14,6 @@ export default defineConfig({
     },
   },
   integrations: [
-    react(),
     robotsTxt({
       sitemap: "https://knightowls.ca/sitemap-0.xml",
     }),
