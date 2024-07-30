@@ -24,12 +24,9 @@
     "contentful": "^10.11.10"
   },
   "devDependencies": {
-    "@astrojs/react": "^2.2.1",
     "astro-robots-txt": "^1.0.0",
     "find-up": "^7.0.0",
     "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
