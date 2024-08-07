@@ -26,10 +26,7 @@ const tiersResponse = await contentfulClient.getEntries<Tiers>({
 ---
 
 <MainLayout title="Knight Owls - Sponsorship Tiers">
-  <ImageHeader
-    title="Sponsorship Tiers"
-    background="/images/headers/tiers.webp"
-  />
+  <ImageHeader page="tiers" />
   <div class="tiers" id="listing">
     {
       tiersResponse.items.map((item) => (
