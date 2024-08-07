@@ -27,8 +27,6 @@ const ImageHeaderResponse = await contentfulClient.getEntries<ImageHeader>({
   'fields.page[match]': `${page}`,
 });
 
-console.log(ImageHeaderResponse.items[0].fields);
-
 const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;
 ---
 
