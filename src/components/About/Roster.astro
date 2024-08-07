@@ -21,7 +21,6 @@ interface Roster {
 
 const rosterResponse = await contentfulClient.getEntries<Roster>({
   content_type: 'teamRoster',
-  //@ts-ignore
 });
 
 const rosterYears: number[] = [];
@@ -43,7 +42,10 @@ rosterYears.forEach((year) => {
 //Make an array of all the subteams
 const subteams: string[] = [];
 rosterResponse.items.forEach((item) => {
-  if (!subteams.includes(item.fields.subteam)) {
+  if (
+    !subteams.includes(item.fields.subteam) &&
+    item.fields.subteam != undefined
+  ) {
     subteams.push(item.fields.subteam);
   }
 });
