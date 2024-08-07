@@ -53,7 +53,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
 ---
 
 <MainLayout title="Knight Owls - About Us">
-  <ImageHeader title="About Us" background="/images/headers/about.webp" />
+  <ImageHeader page="about" />
   <div class="content">
     <a id="whoarewe"></a>
     <div class="about-us">
@@ -104,7 +104,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       Our Members
     </h3>
     <YearSelector />
-    <Roster />
+    <!-- <Roster /> -->
   </div>
   <style>
     .content {

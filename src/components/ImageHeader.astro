@@ -2,10 +2,40 @@
 import Navbar from './Navbar.astro';
 import ScrollDown from './ScrollDown.astro';
 
-const { title, subtitle, background } = Astro.props;
+import { contentfulClient } from '../lib/contentful';
+
+const { page } = Astro.props;
+
+interface ImageHeader {
+  fields: {
+    title: string;
+    subtitle: string;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    page: string;
+  };
+  contentTypeId: string;
+}
+
+const ImageHeaderResponse = await contentfulClient.getEntries<ImageHeader>({
+  content_type: 'header',
+  'fields.page[match]': `${page}`,
+});
+
+console.log(ImageHeaderResponse.items[0].fields);
+
+const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;
 ---
 
-<div class="header" style={` background-image: url(${background}); `}>
+<div
+  class="header"
+  style={` background-image: url(${image.fields.file.url}); `}
+>
   <Navbar />
   <div class="black"></div>
   <div
