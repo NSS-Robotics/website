@@ -43,7 +43,8 @@ const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;
     <p class="subtitle">{subtitle}</p>
   </div>
   <ScrollDown />
-  <img src=`${image.fields.file.url}?fm=webp&q=5` />
+  <!-- Image background for the header -->
+  <img src=`${image.fields.file.url}?fm=webp&q=10` />
 </div>
 
 <style>
