@@ -30,10 +30,7 @@ const ImageHeaderResponse = await contentfulClient.getEntries<ImageHeader>({
 const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;
 ---
 
-<div
-  class="header"
-  style={` background-image: url(${image.fields.file.url}); `}
->
+<div class="header">
   <Navbar />
   <div class="black"></div>
   <div
@@ -46,14 +43,12 @@ const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;
     <p class="subtitle">{subtitle}</p>
   </div>
   <ScrollDown />
+  <img src=`${image.fields.file.url}?fm=webp&q=5` />
 </div>
 
 <style>
   .header {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    width: 100%;
+    width: auto;
     height: 100vh;
     margin-top: auto;
     display: flex;
@@ -87,5 +82,14 @@ const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;
     width: 100vw;
     height: 100vh;
     z-index: 1;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
   }
 </style>
