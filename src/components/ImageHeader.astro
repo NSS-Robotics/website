@@ -2,10 +2,35 @@
 import Navbar from './Navbar.astro';
 import ScrollDown from './ScrollDown.astro';
 
-const { title, subtitle, background } = Astro.props;
+import { contentfulClient } from '../lib/contentful';
+
+const { page } = Astro.props;
+
+interface ImageHeader {
+  fields: {
+    title: string;
+    subtitle: string;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    page: string;
+  };
+  contentTypeId: string;
+}
+
+const ImageHeaderResponse = await contentfulClient.getEntries<ImageHeader>({
+  content_type: 'header',
+  'fields.page[match]': `${page}`,
+});
+
+const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;
 ---
 
-<div class="header" style={` background-image: url(${background}); `}>
+<div class="header">
   <Navbar />
   <div class="black"></div>
   <div
@@ -18,14 +43,13 @@ const { title, subtitle, background } = Astro.props;
     <p class="subtitle">{subtitle}</p>
   </div>
   <ScrollDown />
+  <!-- Image background for the header -->
+  <img src=`${image.fields.file.url}?fm=webp&q=10` />
 </div>
 
 <style>
   .header {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    width: 100%;
+    width: auto;
     height: 100vh;
     margin-top: auto;
     display: flex;
@@ -59,5 +83,14 @@ const { title, subtitle, background } = Astro.props;
     width: 100vw;
     height: 100vh;
     z-index: 1;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
   }
 </style>

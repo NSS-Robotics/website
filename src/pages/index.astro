@@ -2,7 +2,7 @@
 import { contentfulClient } from '../lib/contentful';
 
 import MainLayout from '../layouts/MainLayout.astro';
-import AutoImageHeader from '../components/AutoImageHeader.astro';
+import ImageHeader from '../components/ImageHeader.astro';
 import Wooshie from '../components/Wooshie.astro';
 
 interface Wooshie {
@@ -33,7 +33,7 @@ const aboutUsResponse = await contentfulClient.getEntries<Wooshie>({
 ---
 
 <MainLayout title="Knight Owls - Home">
-  <AutoImageHeader title="Knight Owls" subtitle="FIRST Robotics Team 8884" />
+  <ImageHeader page="home" />
   <div class="wooshies">
     {
       aboutUsResponse.items.map((wooshie) => (

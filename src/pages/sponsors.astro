@@ -77,8 +77,6 @@ sponsorsResponse.items.forEach((item) => {
   }
 });
 
-console.log(tiers);
-
 //Capitalize first letter of each tier
 tiers.forEach((tier, index) => {
   tiers[index] = tier.charAt(0).toUpperCase() + tier.slice(1);
@@ -86,10 +84,7 @@ tiers.forEach((tier, index) => {
 ---
 
 <MainLayout title="Knight Owls - Our Sponsors">
-  <ImageHeader
-    title="Our Amazing Sponsors"
-    background="/images/headers/sponsors.webp"
-  />
+  <ImageHeader page="sponsors" />
   <YearSelector />
   {
     years.map((year) => (
