@@ -37,6 +37,11 @@ const currentYear = new Date().getFullYear();
         ><img src="/images/vercel.svg" alt="Vercel logo" />
       </a>
     </div>
+    <div class="moi">
+      <a target="_blank" href="https://github.com/Orbitally"
+        >Made with ❤️ by Jacob</a
+      >
+    </div>
   </div>
 </div>
 <style>
@@ -69,6 +74,25 @@ const currentYear = new Date().getFullYear();
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+  .vercel p {
+    margin-bottom: 7px;
+  }
+  .vercel img {
+    margin-bottom: 2px;
+  }
+  .moi {
+    margin-top: 0px;
+  }
+  .moi a {
+    color: white;
+    text-decoration: underline solid transparent;
+    transition-duration: 0.3s;
+    font-size: 13px;
+  }
+  .moi a:hover {
+    text-decoration: underline solid white;
+    transition-duration: 0.3s;
   }
   .center {
     display: flex;
