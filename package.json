@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.1.2",
     "@astrojs/vercel": "^7.8.0",
-    "@contentful/rich-text-html-renderer": "^16.5.2",
+    "@contentful/rich-text-html-renderer": "^16.6.10",
     "@fontsource/poppins": "^5.0.14",
     "@iconify-json/bi": "^1.1.23",
     "@iconify-json/ri": "^1.1.20",
