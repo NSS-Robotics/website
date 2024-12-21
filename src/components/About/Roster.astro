@@ -23,6 +23,10 @@ const rosterResponse = await contentfulClient.getEntries<Roster>({
   content_type: 'teamRoster',
 });
 
+const placeholderImage = await contentfulClient.getAsset(
+  '1riGUPwhsdCWEY7H4bG7ZP'
+);
+
 const rosterYears: number[] = [];
 // for each of the years in the response, add it to the years array if it isn't already there
 rosterResponse.items.forEach((item) => {
@@ -116,7 +120,7 @@ subteams.sort((a, b) => {
                       title={member.fields.title}
                       image={
                         member.fields.picture == undefined
-                          ? 'https://images.ctfassets.net/kuqw3vhn17xq/6d5mWEKjf8f3nmPtygGEiO/bf320d3433f9e6a2f055814fdec41295/placeholder.webp?fm=jpg&fl=progressive'
+                          ? `${placeholderImage.fields.file?.url}?fm=jpg&fl=progressive`
                           : `${member.fields.picture.fields.file.url}?fm=jpg&fl=progressive`
                       }
                     />
@@ -139,7 +143,7 @@ subteams.sort((a, b) => {
                       title={member.fields.title}
                       image={
                         member.fields.picture == undefined
-                          ? 'https://images.ctfassets.net/kuqw3vhn17xq/6d5mWEKjf8f3nmPtygGEiO/bf320d3433f9e6a2f055814fdec41295/placeholder.webp?fm=jpg&fl=progressive'
+                          ? `${placeholderImage.fields.file?.url}?fm=jpg&fl=progressive`
                           : `${member.fields.picture.fields.file.url}?fm=jpg&fl=progressive`
                       }
                     />
