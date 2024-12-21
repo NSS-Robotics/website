@@ -21,6 +21,8 @@ interface Roster {
 
 const rosterResponse = await contentfulClient.getEntries<Roster>({
   content_type: 'teamRoster',
+  order: '-fields.year',
+  limit: 1000,
 });
 
 const placeholderImage = await contentfulClient.getAsset(
