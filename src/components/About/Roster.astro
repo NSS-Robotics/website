@@ -29,8 +29,32 @@ const placeholderImage = await contentfulClient.getAsset(
   '1riGUPwhsdCWEY7H4bG7ZP'
 );
 
+// -------ROSTER MEMBER SORTING------- //
+
+// Sort the roster array in alphabetical order by name of the person
+rosterResponse.items.sort((a, b) => {
+  if (a.fields.name < b.fields.name) {
+    return -1;
+  } else if (a.fields.name > b.fields.name) {
+    return 1;
+  } else {
+    return 0;
+  }
+});
+
+// Sort the roster array by whether or not the person has a photo
+rosterResponse.items.sort((a, b) => {
+  if (a.fields.picture && !b.fields.picture) {
+    return -1;
+  } else if (!a.fields.picture && b.fields.picture) {
+    return 1;
+  } else {
+    return 0;
+  }
+});
+
 const rosterYears: number[] = [];
-// for each of the years in the response, add it to the years array if it isn't already there
+// For each of the years in the response, add it to the years array if it isn't already there
 rosterResponse.items.forEach((item) => {
   if (!rosterYears.includes(item.fields.year)) {
     rosterYears.push(item.fields.year);
@@ -38,12 +62,14 @@ rosterResponse.items.forEach((item) => {
 });
 rosterYears.sort((a, b) => b - a);
 
-//for anything thats not an integer, remove it from the array
+// For anything thats not an integer, remove it from the array
 rosterYears.forEach((year) => {
   if (!Number.isInteger(year)) {
     rosterYears.splice(rosterYears.indexOf(year), 1);
   }
 });
+
+// -------SUBTEAM SORTING------- //
 
 //Make an array of all the subteams
 const subteams: string[] = [];
@@ -56,12 +82,12 @@ rosterResponse.items.forEach((item) => {
   }
 });
 
-//capitalize the first letter of each subteam
+//Capitalize the first letter of each subteam
 subteams.forEach((subteam, index) => {
   subteams[index] = subteam.charAt(0).toUpperCase() + subteam.slice(1);
 });
 
-//sort the subteams so they go "exec", "manufacturing", "design", "outreach", "mentor"
+//Sort the subteams so they go "exec", "manufacturing", "design", "outreach", "mentor"
 subteams.sort((a, b) => {
   if (a == 'Exec') {
     return -1;
@@ -105,7 +131,6 @@ subteams.sort((a, b) => {
             <h4 data-aos="zoom-in" data-aos-once="true">
               {subteam} Team
             </h4>
-
             {
               // Filer out the people with titles (team leads) and map them
               rosterResponse.items
@@ -115,6 +140,17 @@ subteams.sort((a, b) => {
                     member.fields.year == year &&
                     member.fields.title
                 )
+                // Sort the leads by title length
+                .sort((a, b) => {
+                  if (a.fields.title.length > b.fields.title.length) {
+                    return -1;
+                  } else if (a.fields.title.length < b.fields.title.length) {
+                    return 1;
+                  } else {
+                    return 0;
+                  }
+                })
+                // Map the leads onto the page
                 .map((member) => {
                   return (
                     <Person
@@ -138,6 +174,16 @@ subteams.sort((a, b) => {
                     member.fields.year == year &&
                     member.fields.title == undefined
                 )
+                // Sort the members by whether or not they have a picture
+                .sort((a, b) => {
+                  if (a.fields.picture && !b.fields.picture) {
+                    return -1;
+                  } else if (!a.fields.picture && b.fields.picture) {
+                    return 1;
+                  } else {
+                    return 0;
+                  }
+                })
                 .map((member) => {
                   return (
                     <Person
