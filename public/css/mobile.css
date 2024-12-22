@@ -67,26 +67,7 @@
     width: 400px !important;
   }
 }
-@media screen and (max-width: 1000px) {
-  .teamgroup {
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-  }
-  .teamgroup img {
-    width: 90vw !important;
-    height: auto !important;
-  }
-  .teamgroup p {
-    width: 80vw !important;
-  }
-  .teams img {
-    margin: 0 !important;
-  }
-  .about-us {
-    padding-right: 5px !important;
-    padding-left: 5px !important;
-  }
-}
+
 @media screen and (max-width: 845px) {
   .navbar {
     zoom: 68% !important;
