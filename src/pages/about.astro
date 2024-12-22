@@ -80,12 +80,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
     </div>
     <a id="teams"></a>
     <div class="subteams" data-aos="zoom-in ">
-      <h3>Our Subteams</h3>
-      <p>
-        Our sub-teams are groups of students that focus on different aspects of
-        the robot and team operations. They include our Business, Programming,
-        Manufacturing, Design, and the Web Design and Media Teams.
-      </p>
+      <h2>Our Subteams</h2>
     </div>
     <div class="teams">
       {
@@ -123,8 +118,8 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       color: black;
       text-align: left;
       width: fit-content;
-      margin-left: 50px;
-      margin-right: 50px;
+      margin-left: 100px;
+      margin-right: 100px;
     }
     .aboutusItem {
       display: flex;
@@ -150,11 +145,16 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       text-decoration-color: var(--blue);
     }
     .subteams {
-      text-align: center;
       margin-top: 10%;
+      text-align: center;
     }
     .subteams h3 {
       font-size: 32px;
+      text-decoration: underline;
+      text-decoration-color: var(--blue);
+    }
+    .subteams h2 {
+      font-size: 42px;
       text-decoration: underline;
       text-decoration-color: var(--blue);
     }
@@ -166,12 +166,13 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
     .teams {
       display: grid;
       grid-template-columns: auto;
-      row-gap: 30px;
+      gap: 50px;
       align-items: center;
       justify-content: center;
       color: black;
-      margin-top: 7%;
-      width: auto;
+      margin-top: 4%;
+      margin-left: 100px;
+      margin-right: 100px;
     }
     .our-team {
       display: block;
