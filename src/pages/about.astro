@@ -69,8 +69,10 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
                 src={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
                 alt={item.fields.title}
               />
-              <h3>{item.fields.title}</h3>
-              <p>{item.fields.paragraph}</p>
+              <div>
+                <h3>{item.fields.title}</h3>
+                <p>{item.fields.paragraph}</p>
+              </div>
             </div>
           );
         })
@@ -112,40 +114,39 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
     }
     .about-us {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
       align-items: start;
+      justify-content: center;
       margin-top: 10%;
       gap: 50px;
       width: fit-content;
       color: black;
       text-align: left;
       width: fit-content;
+      margin-left: 50px;
       margin-right: 50px;
     }
     .aboutusItem {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      gap: 50px;
       align-items: center;
       justify-content: center;
-      width: 100%;
     }
     .aboutusItem img {
-      height: 25vw;
-      width: auto;
+      width: 30vw;
+      height: auto;
       border-radius: 10px;
-      margin-left: 15px;
     }
     .aboutusItem p {
-      padding-right: 15px;
-      padding-left: 15px;
       font-size: 20px;
-      text-align: center;
+      text-align: justify;
+      align-self: center;
     }
     .aboutusItem h3 {
-      padding-right: 15px;
-      padding-left: 15px;
       font-size: 32px;
       text-decoration: underline;
+      text-align: center;
       text-decoration-color: var(--blue);
     }
     .subteams {
