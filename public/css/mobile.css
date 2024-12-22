@@ -7,16 +7,6 @@
   html {
     overflow-x: hidden;
   }
-  .about-us {
-    row-gap: 15px;
-    column-gap: 15px;
-    width: 100vw;
-    text-align: center !important;
-  }
-  .about-us img {
-    width: 90% !important;
-    height: auto !important;
-  }
   .slides {
     width: 98% !important;
     height: auto;
@@ -195,10 +185,6 @@
   .logoinfo {
     grid-column-start: 1;
     grid-column-end: 2 !important;
-  }
-  .about-us {
-    grid-template-columns: 100% !important;
-    margin-right: 0px !important;
   }
 }
 @media screen and (max-width: 482px) {

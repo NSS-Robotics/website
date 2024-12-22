@@ -109,6 +109,31 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
     .content {
       line-height: 2;
     }
+    @media screen and (max-width: 1400px) {
+      .aboutusItem p {
+        font-size: 15px !important;
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      .aboutusItem {
+        flex-direction: column !important;
+        gap: 0px !important;
+        margin-bottom: 15px;
+      }
+      .aboutusItem img {
+        width: 60vw !important;
+        height: auto !important;
+      }
+    }
+    @media screen and (max-width: 680px) {
+      .about-us {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+      }
+      .aboutusItem img {
+        width: 70vw !important;
+      }
+    }
     .about-us {
       display: grid;
       grid-template-rows: auto;
