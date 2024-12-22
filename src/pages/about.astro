@@ -108,6 +108,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
   <style>
     .content {
       line-height: 2;
+      color: var(--text);
     }
     .about-us {
       display: grid;
@@ -117,7 +118,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       margin-top: 10%;
       gap: 50px;
       width: fit-content;
-      color: black;
+      color: var(--text);
       text-align: left;
       width: fit-content;
       margin-left: 100px;
@@ -154,16 +155,19 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       font-size: 32px;
       text-decoration: underline;
       text-decoration-color: var(--blue);
+      color: var(--text);
     }
     .subteams h2 {
       font-size: 42px;
       text-decoration: underline;
       text-decoration-color: var(--blue);
+      color: var(--text);
     }
     .subteams p {
       font-size: 20px;
       padding-left: 50px;
       padding-right: 50px;
+      color: var(--text);
     }
     .teams {
       display: grid;
@@ -171,7 +175,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       gap: 50px;
       align-items: center;
       justify-content: center;
-      color: black;
+      color: var(--text);
       margin-top: 4%;
       margin-left: 100px;
       margin-right: 100px;
@@ -184,6 +188,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       margin-bottom: 0;
       text-decoration: underline;
       text-decoration-color: var(--blue);
+      color: var(--text);
     }
   </style>
 </MainLayout>

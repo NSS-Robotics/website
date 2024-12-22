@@ -63,8 +63,11 @@ const { title } = Astro.props;
     <Footer />
     <style>
       :root {
-        --onyx: #282828;
+        --button: #192331;
+        --onyx: #141c27;
         --blue: #707cac;
+        --background: #1f2b3d;
+        --text: #ffffff;
       }
       /* Entire Scrollbar */
       ::-webkit-scrollbar {
@@ -72,7 +75,7 @@ const { title } = Astro.props;
       }
       /* Draggy Thingy */
       ::-webkit-scrollbar-thumb {
-        background: #8c8c8c;
+        background: var(--onyx);
       }
       html,
       body {
@@ -81,6 +84,7 @@ const { title } = Astro.props;
         scroll-behavior: smooth;
         font-family: 'Poppins', sans-serif;
         overflow-x: hidden;
+        background-color: var(--background);
       }
       .header {
         background-repeat: no-repeat !important;
