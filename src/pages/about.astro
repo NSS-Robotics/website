@@ -1,5 +1,6 @@
 ---
 import { contentfulClient } from '../lib/contentful';
+import { Image } from 'astro:assets';
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
 import Subteam from '../components/About/Subteam.astro';
@@ -65,8 +66,10 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
               class="aboutusItem"
               data-aos={`fade-${item.fields.fadeDirection}`}
             >
-              <img
+              <Image
                 src={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
+                width={550}
+                height={420}
                 alt={item.fields.title}
               />
               <div>

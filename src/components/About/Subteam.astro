@@ -1,10 +1,18 @@
 ---
+import { Image } from 'astro:assets';
+
 const { name, alt, description, image, fadeDirection } = Astro.props;
 ---
 
 <div class="teamgroup">
   <div>
-    <img data-aos={'fade-' + fadeDirection} src={image} alt={alt} />
+    <Image
+      data-aos={'fade-' + fadeDirection}
+      src={image}
+      width={550}
+      height={420}
+      alt={alt}
+    />
   </div>
   <div>
     <h3>{name}</h3>
@@ -20,8 +28,6 @@ const { name, alt, description, image, fadeDirection } = Astro.props;
     justify-content: center;
   }
   img {
-    width: 550px;
-    height: 420px;
     border-radius: 10px;
     float: left;
     left: 0;

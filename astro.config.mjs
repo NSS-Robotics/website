@@ -13,6 +13,9 @@ export default defineConfig({
       external: ["svgo"],
     },
   },
+  image: {
+    remotePatterns: [{ protocol: "https" }],
+  },
   integrations: [
     robotsTxt({
       sitemap: "https://knightowls.ca/sitemap-0.xml",
