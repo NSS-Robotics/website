@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+
+const { title, paragraph, image, alt, fadeDirection } = Astro.props;
+---
+
+<div class="aboutusItem" data-aos={`fade-${fadeDirection}`}>
+  <Image src={image} width={550} height={420} alt={alt} />
+  <div>
+    <h3>{title}</h3>
+    <p>{paragraph}</p>
+  </div>
+</div>
+
+<style>
+  @media screen and (max-width: 1400px) {
+    .aboutusItem p {
+      font-size: 15px !important;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .aboutusItem {
+      flex-direction: column !important;
+      gap: 0px !important;
+      margin-bottom: 15px;
+    }
+    img {
+      width: 60vw !important;
+      height: auto !important;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    img {
+      width: 70vw !important;
+    }
+  }
+  .aboutusItem {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    width: 30vw;
+    height: auto;
+    border-radius: 10px;
+  }
+  p {
+    font-size: 20px;
+    text-align: justify;
+    align-self: center;
+  }
+  h3 {
+    font-size: 32px;
+    text-decoration: underline;
+    text-align: center;
+    text-decoration-color: var(--blue);
+  }
+</style>
