@@ -55,6 +55,26 @@ const currentYear = new Date().getFullYear();
 </script>
 
 <style>
+  button {
+    text-decoration: none;
+    color: white;
+    background-color: var(--button);
+    margin-top: 30px;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 10px;
+    transition-duration: 200ms;
+    border: 3px solid var(--button);
+  }
+  button:hover {
+    transition-duration: 200ms;
+    background-color: transparent;
+    color: var(--blue);
+    border: 3px solid var(--blue);
+    cursor: pointer;
+  }
   .footer {
     background-color: var(--onyx);
     color: white;
