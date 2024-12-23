@@ -26,7 +26,7 @@ const currentYear = new Date().getFullYear();
       <a href="/sponsors">Our Sponsors</a>
       <a href="/tiers">Sponsorship Tiers</a>
       <a href="/donate">Sponsor Us</a>
-      <button id="dark-mode">Dark Mode</button>
+      <button id="dark-mode-button">Dark Mode</button>
     </div>
     <div class="footerline"></div>
     <div>
@@ -45,20 +45,11 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 </div>
-
-<script data-astro-rerun>
-  document.querySelectorAll('#dark-mode').forEach((btn) =>
-    btn.addEventListener('click', () => {
-      document.querySelector('body')?.classList.toggle('dark-mode');
-    })
-  );
-</script>
-
 <style>
   button {
     text-decoration: none;
     color: white;
-    background-color: var(--button);
+    background-color: var(--footerbutton);
     margin-top: 30px;
     padding-left: 17px;
     padding-right: 17px;
@@ -66,7 +57,7 @@ const currentYear = new Date().getFullYear();
     padding-bottom: 12px;
     border-radius: 10px;
     transition-duration: 200ms;
-    border: 3px solid var(--button);
+    border: 3px solid var(--footerbutton);
   }
   button:hover {
     transition-duration: 200ms;
