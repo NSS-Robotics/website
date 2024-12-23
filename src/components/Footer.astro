@@ -1,9 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
 const currentYear = new Date().getFullYear();
-
-
-
 ---
 
 <div class="footer">
@@ -49,8 +46,8 @@ const currentYear = new Date().getFullYear();
   </div>
 </div>
 
-<script>
-  document.querySelectorAll("#dark-mode").forEach(btn =>
+<script data-astro-rerun>
+  document.querySelectorAll('#dark-mode').forEach((btn) =>
     btn.addEventListener('click', () => {
       document.querySelector('body')?.classList.toggle('dark-mode');
     })
