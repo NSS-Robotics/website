@@ -1,14 +1,16 @@
 ---
-const { name, alt, description, fadeDirection } = Astro.props;
+const {
+  name,
+  alt,
+  description,
+  image = `/images/aboutus/subteams/${name}.webp`,
+  fadeDirection,
+} = Astro.props;
 ---
 
 <div class="teamgroup">
   <div>
-    <img
-      data-aos={'fade-' + fadeDirection}
-      src={'/images/aboutus/subteams/' + name + '.webp'}
-      alt={alt}
-    />
+    <img data-aos={'fade-' + fadeDirection} src={image} alt={alt} />
   </div>
   <div>
     <h3>{name}</h3>

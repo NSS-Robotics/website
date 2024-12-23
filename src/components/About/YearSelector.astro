@@ -1,9 +1,77 @@
+---
+import { contentfulClient } from '../../lib/contentful';
+
+interface Sponsor {
+  fields: {
+    logo: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    name: string;
+    blurb: string;
+    buttonText: string;
+    buttonLink: string;
+    tier: string;
+    year: number;
+    order: number;
+  };
+  contentTypeId: string;
+}
+
+const response = await contentfulClient.getEntries<Sponsor>({
+  content_type: 'sponsor',
+  //@ts-ignore
+  order: '-fields.order',
+});
+
+const years: number[] = [];
+// for each of the years in the response, add it to the years array if it isn't already there
+response.items.forEach((item) => {
+  if (!years.includes(item.fields.year)) {
+    years.push(item.fields.year);
+  }
+});
+years.sort((a, b) => b - a);
+
+//for anything thats not an integer, remove it from the array
+years.forEach((year) => {
+  if (!Number.isInteger(year)) {
+    years.splice(years.indexOf(year), 1);
+  }
+});
+---
+
 <div class="centerSelect">
   <select id="yearselector" data-aos="zoom-in" data-aos-once="true">
-    <option value="year2">2022/23</option>
-    <option value="year1">2021/22</option>
+    {
+      years.map((year) => {
+        return <option value={year}>{year}</option>;
+      })
+    }
   </select>
 </div>
+<script>
+  //when the year selector is changed, get the element with the same id as the selected year and give it the class "showDefault" and remove the class from all other elements
+  //@ts-ignore
+  document
+    .getElementById('yearselector')
+    .addEventListener('change', function () {
+      //@ts-ignore
+      var year = document.getElementById('yearselector').value;
+      var elements = document.getElementsByClassName('data');
+      for (var i = 0; i < elements.length; i++) {
+        if (elements[i].id == year) {
+          elements[i].classList.add('showDefault');
+        } else {
+          elements[i].classList.remove('showDefault');
+        }
+      }
+    });
+</script>
+
 <style>
   #yearselector {
     width: 250px;

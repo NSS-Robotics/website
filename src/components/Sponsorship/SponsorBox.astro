@@ -2,6 +2,7 @@
 const {
   name,
   description,
+  logo,
   buttonText = 'Website',
   buttonLink,
   border = '10px',
@@ -11,7 +12,7 @@ const {
 
 <div data-aos="zoom-in-up" class="sponsorbox">
   <img
-    src={'/images/sponsors/' + name + '.webp'}
+    src={logo}
     alt={name + "'s logo"}
     style={` border-radius: ${border}; `}
   />
