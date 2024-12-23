@@ -2,6 +2,7 @@
 import { contentfulClient } from '../lib/contentful';
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
+import AboutUsItem from '../components/About/AboutUsItem.astro';
 import Subteam from '../components/About/Subteam.astro';
 import YearSelector from '../components/About/YearSelector.astro';
 import Roster from '../components/About/Roster.astro';
@@ -61,29 +62,19 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       {
         aboutUsResponse.items.map((item) => {
           return (
-            <div
-              class="aboutusItem"
-              data-aos={`fade-${item.fields.fadeDirection}`}
-            >
-              <img
-                src={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
-                alt={item.fields.title}
-              />
-              <h3>{item.fields.title}</h3>
-              <p>{item.fields.paragraph}</p>
-            </div>
+            <AboutUsItem
+              title={item.fields.title}
+              paragraph={item.fields.paragraph}
+              image={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
+              alt={item.fields.title}
+              fadeDirection={item.fields.fadeDirection}
+            />
           );
         })
       }
     </div>
-    <a id="teams"></a>
-    <div class="subteams" data-aos="zoom-in ">
-      <h3>Our Subteams</h3>
-      <p>
-        Our sub-teams are groups of students that focus on different aspects of
-        the robot and team operations. They include our Business, Programming,
-        Manufacturing, Design, and the Web Design and Media Teams.
-      </p>
+    <div id="teams" class="subteams" data-aos="zoom-in ">
+      <h2>Our Subteams</h2>
     </div>
     <div class="teams">
       {
@@ -110,50 +101,42 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
     .content {
       line-height: 2;
     }
+    @media screen and (max-width: 680px) {
+      .about-us {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+      }
+      .teams {
+        margin-left: 60px !important;
+        margin-right: 60px !important;
+      }
+    }
     .about-us {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
       align-items: start;
+      justify-content: center;
       margin-top: 10%;
       gap: 50px;
       width: fit-content;
       color: black;
       text-align: left;
       width: fit-content;
-      margin-right: 50px;
+      margin-left: 100px;
+      margin-right: 100px;
     }
-    .aboutusItem {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-    }
-    .aboutusItem img {
-      height: 25vw;
-      width: auto;
-      border-radius: 10px;
-      margin-left: 15px;
-    }
-    .aboutusItem p {
-      padding-right: 15px;
-      padding-left: 15px;
-      font-size: 20px;
+
+    .subteams {
+      margin-top: 10%;
       text-align: center;
     }
-    .aboutusItem h3 {
-      padding-right: 15px;
-      padding-left: 15px;
+    .subteams h3 {
       font-size: 32px;
       text-decoration: underline;
       text-decoration-color: var(--blue);
     }
-    .subteams {
-      text-align: center;
-      margin-top: 10%;
-    }
-    .subteams h3 {
-      font-size: 32px;
+    .subteams h2 {
+      font-size: 42px;
       text-decoration: underline;
       text-decoration-color: var(--blue);
     }
@@ -165,12 +148,13 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
     .teams {
       display: grid;
       grid-template-columns: auto;
-      row-gap: 30px;
+      gap: 50px;
       align-items: center;
       justify-content: center;
       color: black;
-      margin-top: 7%;
-      width: auto;
+      margin-top: 4%;
+      margin-left: 100px;
+      margin-right: 100px;
     }
     .our-team {
       display: block;
