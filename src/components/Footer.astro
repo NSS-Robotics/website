@@ -26,7 +26,10 @@ const currentYear = new Date().getFullYear();
       <a href="/sponsors">Our Sponsors</a>
       <a href="/tiers">Sponsorship Tiers</a>
       <a href="/donate">Sponsor Us</a>
-      <button id="dark-mode-button">Dark Mode</button>
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-button">
+        <span class="slider round"></span>
+      </label>
     </div>
     <div class="footerline"></div>
     <div>
@@ -46,28 +49,69 @@ const currentYear = new Date().getFullYear();
   </div>
 </div>
 <style>
-  button {
-    text-decoration: none;
-    color: white;
-    background-color: var(--footerbutton);
-    margin-top: 30px;
-    padding-left: 17px;
-    padding-right: 17px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-radius: 10px;
-    transition-duration: 200ms;
-    border: 3px solid var(--footerbutton);
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-  }
-  button:hover {
-    transition-duration: 200ms;
-    background-color: transparent;
-    color: var(--blue);
-    border: 3px solid var(--blue);
-    cursor: pointer;
-  }
+  /* Slider */
+  /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--button);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  content: "🌙";
+  align-items: center;
+  color: transparent;
+  text-shadow: 0 0 0 var(--text);
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--background);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: var(--blue);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--blue);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  /* optional: content: "🔆";*/
+}
+/* Rounding */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
   .footer {
     background-color: var(--onyx);
     color: white;
@@ -150,6 +194,8 @@ const currentYear = new Date().getFullYear();
   }
   .pages {
     margin-bottom: 15px;
+    align-items: center;
+    display: flex;
   }
   .pages a {
     margin-left: 8px;
