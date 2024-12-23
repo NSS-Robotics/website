@@ -5,7 +5,7 @@ import '@fontsource/poppins';
 import Favicons from '../components/Favicons.astro';
 import Live from '../components/Live.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 const { title } = Astro.props;
 ---
 
@@ -54,6 +54,7 @@ const { title } = Astro.props;
     <SpeedInsights />
     <link rel="stylesheet" href="/css/mobile.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   </head>
   <body>
     <!-- <Live /> -->

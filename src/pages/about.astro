@@ -1,8 +1,8 @@
 ---
 import { contentfulClient } from '../lib/contentful';
-import { Image } from 'astro:assets';
 import MainLayout from '../layouts/MainLayout.astro';
 import ImageHeader from '../components/ImageHeader.astro';
+import AboutUsItem from '../components/About/AboutUsItem.astro';
 import Subteam from '../components/About/Subteam.astro';
 import YearSelector from '../components/About/YearSelector.astro';
 import Roster from '../components/About/Roster.astro';
@@ -62,21 +62,13 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       {
         aboutUsResponse.items.map((item) => {
           return (
-            <div
-              class="aboutusItem"
-              data-aos={`fade-${item.fields.fadeDirection}`}
-            >
-              <Image
-                src={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
-                width={550}
-                height={420}
-                alt={item.fields.title}
-              />
-              <div>
-                <h3>{item.fields.title}</h3>
-                <p>{item.fields.paragraph}</p>
-              </div>
-            </div>
+            <AboutUsItem
+              title={item.fields.title}
+              paragraph={item.fields.paragraph}
+              image={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
+              alt={item.fields.title}
+              fadeDirection={item.fields.fadeDirection}
+            />
           );
         })
       }
@@ -110,6 +102,16 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       line-height: 2;
       color: var(--text);
     }
+    @media screen and (max-width: 680px) {
+      .about-us {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+      }
+      .teams {
+        margin-left: 60px !important;
+        margin-right: 60px !important;
+      }
+    }
     .about-us {
       display: grid;
       grid-template-rows: auto;
@@ -124,29 +126,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
       margin-left: 100px;
       margin-right: 100px;
     }
-    .aboutusItem {
-      display: flex;
-      flex-direction: row;
-      gap: 50px;
-      align-items: center;
-      justify-content: center;
-    }
-    .aboutusItem img {
-      width: 30vw;
-      height: auto;
-      border-radius: 10px;
-    }
-    .aboutusItem p {
-      font-size: 20px;
-      text-align: justify;
-      align-self: center;
-    }
-    .aboutusItem h3 {
-      font-size: 32px;
-      text-decoration: underline;
-      text-align: center;
-      text-decoration-color: var(--blue);
-    }
+
     .subteams {
       margin-top: 10%;
       text-align: center;
