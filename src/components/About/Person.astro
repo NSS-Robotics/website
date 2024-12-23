@@ -1,16 +1,20 @@
 ---
+import { Image } from 'astro:assets';
+
 const { name, title, image = `/images/people/placeholder.webp` } = Astro.props;
 ---
 
 <div>
-  <img
+  <Image
     data-aos="zoom-in-up"
     src={image}
+    width={300}
+    height={300}
     data-aos-once="true"
-    alt={'Picture of' + name}
+    alt={name}
   />
   <p>{name}</p>
-  <figcaption>{title}</figcaption>
+  <p class="title">{title}</p>
 </div>
 <style>
   img {
@@ -24,8 +28,9 @@ const { name, title, image = `/images/people/placeholder.webp` } = Astro.props;
     margin-bottom: 0;
     font-size: 20px;
   }
-  figcaption {
+  .title {
     font-size: 20px;
+    font-weight: lighter;
     text-align: center;
     width: 300px;
   }

@@ -7,16 +7,6 @@
   html {
     overflow-x: hidden;
   }
-  .about-us {
-    row-gap: 15px;
-    column-gap: 15px;
-    width: 100vw;
-    text-align: center !important;
-  }
-  .about-us img {
-    width: 90% !important;
-    height: auto !important;
-  }
   .slides {
     width: 98% !important;
     height: auto;
@@ -77,26 +67,7 @@
     width: 400px !important;
   }
 }
-@media screen and (max-width: 1000px) {
-  .teamgroup {
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-  }
-  .teamgroup img {
-    width: 90vw !important;
-    height: auto !important;
-  }
-  .teamgroup p {
-    width: 80vw !important;
-  }
-  .teams img {
-    margin: 0 !important;
-  }
-  .about-us {
-    padding-right: 5px !important;
-    padding-left: 5px !important;
-  }
-}
+
 @media screen and (max-width: 845px) {
   .navbar {
     zoom: 68% !important;
@@ -108,9 +79,6 @@
 @media screen and (max-width: 813px) {
   html {
     overflow-x: hidden;
-  }
-  .titles {
-    margin-bottom: 40vh !important;
   }
   .space {
     display: none;
@@ -195,10 +163,6 @@
   .logoinfo {
     grid-column-start: 1;
     grid-column-end: 2 !important;
-  }
-  .about-us {
-    grid-template-columns: 100% !important;
-    margin-right: 0px !important;
   }
 }
 @media screen and (max-width: 482px) {
