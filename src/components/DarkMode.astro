@@ -1,10 +1,18 @@
-<label class="switch">
-    <input type="checkbox" id="dark-mode-button">
-    <span class="slider round"></span>
-</label>
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<div class="darkmodetoggle" id="dark-mode-element">    
+    <Icon name="bi:sun-fill"/>
+    <label class="switch">
+        <input type="checkbox" id="dark-mode-button">
+        <span class="slider round"></span>
+    </label>    <Icon name="bi:moon-fill"/>
+  </div>
 
 <script>
 const darkModeSwitch = document.getElementById("dark-mode-button");
+const darkModeElement = document.getElementById("dark-mode-element");
 
 // Listen for the dark mode toggle button click
 darkModeSwitch?.addEventListener("click", toggleDarkMode);
@@ -78,7 +86,8 @@ function toggleDarkMode() {
   position: absolute;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
-  content: "🌙";
+  content: "";
+  /* content: "🌙"; */
   align-items: center;
   color: transparent;
   text-shadow: 0 0 0 var(--text);
@@ -108,5 +117,19 @@ input:checked + .slider:before {
 }
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* div */
+.darkmodetoggle {
+    margin-bottom: 15px;
+    align-items: center;
+    display: flex;
+}
+.darkmodetoggle svg {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 16px;
 }
 </style>
