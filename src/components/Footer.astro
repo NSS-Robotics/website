@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import DarkModeElement from './DarkMode.astro';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -27,6 +28,7 @@ const currentYear = new Date().getFullYear();
       <a href="/tiers">Sponsorship Tiers</a>
       <a href="/donate">Sponsor Us</a>
     </div>
+    <DarkModeElement></DarkModeElement>
     <div class="footerline"></div>
     <div>
       <p>&copy; Knight Owls {currentYear}</p>
@@ -127,6 +129,8 @@ const currentYear = new Date().getFullYear();
   }
   .pages {
     margin-bottom: 15px;
+    align-items: center;
+    display: flex;
   }
   .pages a {
     margin-left: 8px;
@@ -140,5 +144,12 @@ const currentYear = new Date().getFullYear();
     text-decoration: underline solid var(--blue);
     text-decoration-thickness: 2px;
     transition-duration: 0.3s;
+  }
+  .pages p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 16px;
   }
 </style>

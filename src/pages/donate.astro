@@ -29,30 +29,36 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
         </p>
         <GalleryVideos videoids={['4oBanPq-mG0']} />
       </div>
-      <div data-aos="fade-left">
+      <div class="iframe-container" data-aos="fade-left">
         <iframe
           src="https://www.canadahelps.org/en/dne/m/10652/donation"
           title="iframe"
           width="100%"
           allow="payment"
-          style="height: 800px; border: none; overflow: hidden;"></iframe>
+          scrolling="no"
+          style="border: none; overflow: hidden;"></iframe>
       </div>
     </div>
   </div>
   <style>
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 1200px) {
       .things {
         grid-template-columns: 100% !important;
       }
     }
+    @media screen and (max-width: 610px) {
+      iframe {
+        width: 90% !important;
+      }
+    }
+
     .content {
-      color: black;
       margin-top: 25px;
       line-height: 2;
     }
     .things {
       display: grid;
-      grid-template-columns: 50% 45%;
+      grid-template-columns: 50% 28%;
       justify-content: center;
       align-content: center;
       padding: 15px;
@@ -65,6 +71,12 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
       align-items: center;
       width: 90%;
     }
+    .iframe-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     strong {
       color: var(--blue);
     }
@@ -73,10 +85,12 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
       text-decoration: underline;
       text-decoration-color: var(--blue);
       font-size: 35px;
+      color: var(--text);
     }
     p {
       width: 85%;
       text-align: center;
+      color: var(--text);
     }
     a {
       color: var(--blue);
@@ -85,6 +99,11 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
     a:hover {
       color: var(--onyx);
       transition-duration: 0.3s;
+    }
+    iframe {
+      border-radius: 10px;
+      width: 450px;
+      height: 720px;
     }
   </style>
 </MainLayout>
