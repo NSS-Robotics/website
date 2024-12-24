@@ -29,7 +29,7 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
         </p>
         <GalleryVideos videoids={['4oBanPq-mG0']} />
       </div>
-      <div data-aos="fade-left">
+      <div class="iframe-container" data-aos="fade-left">
         <iframe
           src="https://www.canadahelps.org/en/dne/m/10652/donation"
           title="iframe"
@@ -41,11 +41,17 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
     </div>
   </div>
   <style>
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 1200px) {
       .things {
         grid-template-columns: 100% !important;
       }
     }
+    @media screen and (max-width: 610px) {
+      iframe {
+        width: 90% !important;
+      }
+    }
+
     .content {
       margin-top: 25px;
       line-height: 2;
@@ -64,6 +70,12 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
       justify-self: center;
       align-items: center;
       width: 90%;
+    }
+    .iframe-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     strong {
       color: var(--blue);
@@ -91,7 +103,7 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
     iframe {
       border-radius: 10px;
       width: 450px;
-      height: 735px;
+      height: 720px;
     }
   </style>
 </MainLayout>
