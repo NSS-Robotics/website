@@ -1,9 +1,6 @@
 <div class="live">
-  <p>We're currently competeing at an event!</p>
-  <a href="http://knightowls.ca/daytwolive" target="_blank">Main Livestream</a>
-  <a href="http://knightowls.ca/fullfieldlive" target="_blank"
-    >Full Field Feed</a
-  >
+  <p>Help us get to worlds!</p>
+  <a href="http://knightowls.ca/donate" target="_blank">Sponsor Us!</a>
 </div>
 <style>
   .live {
@@ -15,30 +12,32 @@
     align-items: center;
     flex-direction: row;
     gap: 20px;
-    background-color: #fff;
+    background-color: var(--blue);
     width: 100%;
     z-index: 2;
-    border: 4px solid var(--blue);
     padding: 5px;
     border-radius: 0px 10px 0px 10px;
+    color: var(--text);
+    font-size: large;
+    font-weight: bolder;
   }
   a {
     text-decoration: none;
-    color: white;
-    background-color: var(--onyx);
+    color: var(--text);
+    background-color: var(--button);
     padding-left: 12px;
     padding-right: 12px;
     padding-top: 9px;
     padding-bottom: 9px;
     border-radius: 10px;
     transition-duration: 200ms;
-    border: 3px solid var(--onyx);
+    border: 3px solid var(--button);
   }
   a:hover {
     transition-duration: 200ms;
     background-color: transparent;
-    color: var(--blue);
-    border: 3px solid var(--blue);
+    color: var(--button);
+    border: 3px solid var(--button);
   }
 </style>
 <style is:global>
