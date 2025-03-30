@@ -8,6 +8,14 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
   <ImageHeader page="donate" />
   <div class="content">
     <div class="things">
+      <div class="iframe-container" data-aos="fade-left">
+        <iframe
+          src="https://www.canadahelps.org/en/dne/m/10652/donation"
+          title="iframe"
+          width="100%"
+          allow="payment"
+          style="border: none; overflow: hidden;"></iframe>
+      </div>
       <div class="info" data-aos="fade-right">
         <h2>Donating</h2>
         <p>
@@ -27,16 +35,7 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
           any questions, don't hesitate to
           <a href="mailto:hello@knightowls.ca">get in touch!</a>
         </p>
-        <GalleryVideos videoids={['4oBanPq-mG0']} />
-      </div>
-      <div class="iframe-container" data-aos="fade-left">
-        <iframe
-          src="https://www.canadahelps.org/en/dne/m/10652/donation"
-          title="iframe"
-          width="100%"
-          allow="payment"
-          scrolling="no"
-          style="border: none; overflow: hidden;"></iframe>
+        <GalleryVideos videoids={['6_lIajaufcI']} />
       </div>
     </div>
   </div>
@@ -58,7 +57,7 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
     }
     .things {
       display: grid;
-      grid-template-columns: 50% 28%;
+      grid-template-columns: 28% 50%;
       justify-content: center;
       align-content: center;
       padding: 15px;
@@ -103,7 +102,7 @@ import GalleryVideos from '../components/Gallery/GalleryVideos.astro';
     iframe {
       border-radius: 10px;
       width: 450px;
-      height: 720px;
+      height: 780px;
     }
   </style>
 </MainLayout>
