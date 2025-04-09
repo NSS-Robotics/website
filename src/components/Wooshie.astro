@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 const {
   fadeDirection = 'left',
   title,
@@ -16,12 +18,16 @@ const {
     <p>{subtitle}</p>
     <a href={buttonLink}>{buttonText}</a>
   </div>
-  <img src={image} alt={alt} />
+  <Image
+    data-aos={'fade-' + fadeDirection}
+    src={image}
+    width={600}
+    height={350}
+    alt={alt}
+  />
 </div>
 <style>
   img {
-    width: 600px;
-    height: auto;
     padding: 15px;
     border-radius: 30px;
   }
