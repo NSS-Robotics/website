@@ -82,7 +82,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
           return (
             <Subteam
               name={item.fields.subteamTitle}
-              image={`${item.fields.subteamImage.fields.file.url}?fm=jpg&fl=progressive`}
+              image={`${item.fields.subteamImage.fields.file.url}?fm=jpg&fl=progressive&w=550&h=420`}
               alt={item.fields.subteamImageAltText}
               description={item.fields.subteamDescription}
               fadeDirection="left"
