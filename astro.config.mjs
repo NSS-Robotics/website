@@ -3,7 +3,7 @@ import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,5 +29,5 @@ export default defineConfig({
     }),
   ],
   output: "static",
-  adapter: vercel(),
+  adapter: vercel(true),
 });
