@@ -35,6 +35,23 @@ const galleryCoverResponse = await contentfulClient.getEntries<GalleryCover>({
 
 <MainLayout title="Knight Owls - Gallery">
   <ImageHeader page="gallery" />
+
+  <h3>2025 Gallery</h3>
+  <GalleryAlbumLayout columns="3">
+    {
+      galleryCoverResponse.items
+        .filter((item) => item.fields.year === 2025)
+        .map((item) => (
+          <AlbumCover
+            event={item.fields.title}
+            date={item.fields.date}
+            image={`${item.fields.image.fields.file.url}?fm=avif&w=750&h=750`}
+            link={item.fields.link}
+          />
+        ))
+    }
+  </GalleryAlbumLayout>
+
   <h3>2024 Gallery</h3>
   <GalleryAlbumLayout columns="3">
     {
@@ -44,7 +61,7 @@ const galleryCoverResponse = await contentfulClient.getEntries<GalleryCover>({
           <AlbumCover
             event={item.fields.title}
             date={item.fields.date}
-            image={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
+            image={`${item.fields.image.fields.file.url}?fm=avif&w=750&h=750`}
             link={item.fields.link}
           />
         ))
@@ -60,7 +77,7 @@ const galleryCoverResponse = await contentfulClient.getEntries<GalleryCover>({
           <AlbumCover
             event={item.fields.title}
             date={item.fields.date}
-            image={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
+            image={`${item.fields.image.fields.file.url}?fm=avif&w=750&h=750`}
             link={item.fields.link}
           />
         ))
@@ -75,7 +92,7 @@ const galleryCoverResponse = await contentfulClient.getEntries<GalleryCover>({
           <AlbumCover
             event={item.fields.title}
             date={item.fields.date}
-            image={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
+            image={`${item.fields.image.fields.file.url}?fm=avif&w=750&h=750`}
             link={item.fields.link}
           />
         ))
