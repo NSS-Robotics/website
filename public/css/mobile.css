@@ -55,9 +55,6 @@
   .navbar {
     transform: scale(0.7) !important;
   }
-  .wooshies img {
-    width: 400px !important;
-  }
   .step img {
     width: 400px !important;
   }
@@ -125,12 +122,7 @@
   .btn-left:hover {
     left: 55px !important;
   }
-  .wooshies img {
-    width: 300px !important;
-  }
-  .woosh {
-    flex-wrap: wrap-reverse !important;
-  }
+
   #nsscouncil {
     height: 7vw !important;
   }
