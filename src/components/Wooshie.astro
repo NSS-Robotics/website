@@ -22,7 +22,7 @@ const {
     data-aos={'fade-' + fadeDirection}
     src={image}
     width={600}
-    height={350}
+    height={300}
     alt={alt}
   />
 </div>
@@ -30,7 +30,6 @@ const {
   @media screen and (max-width: 1200px) {
     img {
       width: 400px !important;
-      height: 200px !important;
     }
   }
 
@@ -43,9 +42,18 @@ const {
       height: 200px !important;
     } */
   }
+  @media screen and (max-width: 450px) {
+    img {
+      width: 250px !important;
+    }
+  }
   img {
+    flex-shrink: 0;
+    aspect-ratio: 16 / 9;
     padding: 15px;
     border-radius: 30px;
+    width: 500px;
+    height: auto;
   }
   p {
     padding-left: 15px;
