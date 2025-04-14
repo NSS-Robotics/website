@@ -3,7 +3,7 @@ import Footer from '../components/Footer.astro';
 import { SEO } from 'astro-seo';
 import '@fontsource/poppins';
 import Favicons from '../components/Favicons.astro';
-import Live from '../components/Live.astro';
+import WorldsSponsor from '../components/WorldsSponsor.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 import { ClientRouter } from 'astro:transitions';
 const { title } = Astro.props;
@@ -52,9 +52,7 @@ const { title } = Astro.props;
     />
     <Favicons />
     <SpeedInsights />
-    <link rel="stylesheet" href="/css/mobile.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <link rel="stylesheet" href="/css/aos.css" />
   </head>
   <body>
     <!--
@@ -108,7 +106,7 @@ const { title } = Astro.props;
  |_|\_|___/___/ |_|\_\_||_|_\__, |_||_\__|  \___/ \_/\_/|_/__/
                             |___/
 -->
-    <!-- <Live /> -->
+    <WorldsSponsor />
     <slot />
     <Footer />
     <style>
@@ -161,7 +159,6 @@ const { title } = Astro.props;
     </style>
     <script defer src="/_vercel/insights/script.js"></script>
     <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script is:inline src="/src/js/darkMode.ts"></script>
     <script is:inline>
       AOS.init({
         duration: 600,

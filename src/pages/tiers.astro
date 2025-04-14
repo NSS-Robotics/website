@@ -48,6 +48,34 @@ const tiersResponse = await contentfulClient.getEntries<Tiers>({
     </div>
   </div>
   <style>
+    @media screen and (max-width: 1265px) {
+      .tiers {
+        grid-template-columns: 44vw 44vw !important;
+      }
+      .logoinfo {
+        grid-column-start: 1;
+        grid-column-end: 3 !important;
+      }
+    }
+
+    @media screen and (max-width: 720px) {
+      .tiers {
+        grid-template-columns: 65vw !important;
+      }
+      .logoinfo {
+        grid-column-start: 1;
+        grid-column-end: 2 !important;
+      }
+    }
+    @media screen and (max-width: 482px) {
+      .tiers {
+        grid-template-columns: 88vw !important;
+      }
+      .logoinfo {
+        grid-column-start: 1;
+        grid-column-end: 2 !important;
+      }
+    }
     .tiers {
       display: grid;
       grid-template-columns: 22vw 22vw 22vw 22vw;

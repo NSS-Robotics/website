@@ -16,7 +16,7 @@
         <a class="except" href="/about#people">Our Members</a>
         <a
           class="except"
-          href="https://www.youtube.com/watch?v=4oBanPq-mG0"
+          href="https://www.youtube.com/watch?v=6_lIajaufcI"
           target="_blank">Team Video</a
         >
         <a
@@ -43,13 +43,34 @@
   </div>
 </div>
 <style>
+  @media screen and (max-width: 1100px) {
+    .navbar {
+      flex-wrap: wrap;
+      position: absolute;
+    }
+  }
+  @media screen and (max-width: 845px) {
+    .navbar {
+      transform: scale(0.9) !important;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 2%;
+    }
+    .space {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 482px) {
+    .navbar {
+      transform: scale(0.8) !important;
+    }
+  }
   /* Main Navbar Div */
   .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 25px;
-    height: 40px;
+    /*padding-top: 5vh;*/
     z-index: 10;
     position: absolute;
     top: 0;

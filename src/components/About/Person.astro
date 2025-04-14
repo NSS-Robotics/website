@@ -12,6 +12,7 @@ const { name, title, image = `/images/people/placeholder.webp` } = Astro.props;
     height={300}
     data-aos-once="true"
     alt={name}
+    loading={'lazy'}
   />
   <p>{name}</p>
   <p class="title">{title}</p>

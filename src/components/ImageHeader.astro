@@ -48,6 +48,18 @@ const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;
 </div>
 
 <style>
+  @media screen and (max-width: 813px) {
+    .header {
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100vw !important;
+    }
+    .black {
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100vw !important;
+    }
+  }
   .header {
     width: auto;
     height: 100vh;
@@ -80,7 +92,7 @@ const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: 1;
   }
@@ -88,7 +100,7 @@ const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     object-fit: cover;
     z-index: 0;

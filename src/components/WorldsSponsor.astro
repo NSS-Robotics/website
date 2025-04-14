@@ -1,0 +1,64 @@
+<div class="worldssponsor">
+  <p>Help us get to Worlds!</p>
+  <a href="http://knightowls.ca/donate">Sponsor Us!</a>
+</div>
+<style>
+  .worldssponsor {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5vmin;
+    background-color: var(--blue);
+    width: 100%;
+    height: 10vh;
+    z-index: 2;
+    color: var(--text);
+    font-size: 22px;
+  }
+  a {
+    text-decoration: none;
+    color: var(--text);
+    background-color: var(--button);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 1.5vh;
+    font-size: 18px;
+    transition-duration: 200ms;
+    border: 3px solid var(--button);
+  }
+  a:hover {
+    transition-duration: 200ms;
+    background-color: transparent;
+    color: var(--button);
+    border: 3px solid var(--button);
+  }
+</style>
+<style is:global>
+  .navbar {
+    margin-top: 15vh;
+  }
+
+  @media screen and (max-width: 450px) {
+    .worldssponsor {
+      flex-direction: column !important;
+      gap: 0px !important;
+      height: 15vh !important;
+    }
+    .worldssponsor p {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px !important;
+    }
+    .worldssponsor a {
+      margin-top: 0;
+      padding-top: 0;
+      font-size: 18px !important;
+    }
+  }
+</style>
