@@ -65,7 +65,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
             <AboutUsItem
               title={item.fields.title}
               paragraph={item.fields.paragraph}
-              image={`${item.fields.image.fields.file.url}?fm=jpg&fl=progressive`}
+              image={`${item.fields.image.fields.file.url}?fm=avif&w=550&h=420`}
               alt={item.fields.title}
               fadeDirection={item.fields.fadeDirection}
             />
@@ -82,7 +82,7 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
           return (
             <Subteam
               name={item.fields.subteamTitle}
-              image={`${item.fields.subteamImage.fields.file.url}?fm=jpg&fl=progressive`}
+              image={`${item.fields.subteamImage.fields.file.url}?fm=avif&w=550&h=420`}
               alt={item.fields.subteamImageAltText}
               description={item.fields.subteamDescription}
               fadeDirection="left"
@@ -98,9 +98,17 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
     <Roster />
   </div>
   <style>
-    .content {
-      line-height: 2;
-      color: var(--text);
+    @media screen and (max-width: 813px) {
+      .our-team {
+        width: auto !important;
+      }
+      .about-us p {
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+      .left {
+        justify-content: center;
+      }
     }
     @media screen and (max-width: 680px) {
       .about-us {
@@ -111,6 +119,10 @@ const subteamResponse = await contentfulClient.getEntries<Subteams>({
         margin-left: 60px !important;
         margin-right: 60px !important;
       }
+    }
+    .content {
+      line-height: 2;
+      color: var(--text);
     }
     .about-us {
       display: grid;

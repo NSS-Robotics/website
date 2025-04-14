@@ -43,6 +43,28 @@
   </div>
 </div>
 <style>
+  @media screen and (max-width: 1100px) {
+    .navbar {
+      flex-wrap: wrap;
+      position: absolute;
+    }
+  }
+  @media screen and (max-width: 845px) {
+    .navbar {
+      transform: scale(0.9) !important;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 2%;
+    }
+    .space {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 482px) {
+    .navbar {
+      transform: scale(0.8) !important;
+    }
+  }
   /* Main Navbar Div */
   .navbar {
     display: flex;
