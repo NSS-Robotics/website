@@ -52,8 +52,7 @@ const { title } = Astro.props;
     />
     <Favicons />
     <SpeedInsights />
-    <link rel="stylesheet" href="/css/mobile.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/css/aos.css" />
   </head>
   <body>
     <!--
@@ -160,7 +159,6 @@ const { title } = Astro.props;
     </style>
     <script defer src="/_vercel/insights/script.js"></script>
     <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script is:inline src="/src/js/darkMode.ts"></script>
     <script is:inline>
       AOS.init({
         duration: 600,

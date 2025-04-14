@@ -34,6 +34,21 @@ const {
 </div>
 
 <style>
+  @media screen and (max-width: 1265px) {
+    .box:nth-last-child(2) {
+      grid-column-start: 1 !important;
+      grid-column-end: 3 !important;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .box:nth-last-child(2) {
+      grid-column-start: auto !important;
+      grid-column-end: auto !important;
+    }
+    .box h3 {
+      height: auto !important;
+    }
+  }
   .tiertitle {
     margin-bottom: 10px;
     font-weight: 900;
