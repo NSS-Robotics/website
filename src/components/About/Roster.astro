@@ -158,8 +158,8 @@ subteams.sort((a, b) => {
                       title={member.fields.title}
                       image={
                         member.fields.picture == undefined
-                          ? `${placeholderImage.fields.file?.url}?fm=jpg&fl=progressive`
-                          : `${member.fields.picture.fields.file.url}?fm=jpg&fl=progressive`
+                          ? `${placeholderImage.fields.file?.url}?fm=avif&w=300&h=300`
+                          : `${member.fields.picture.fields.file.url}?fm=avif&w=300&h=300`
                       }
                     />
                   );
@@ -191,8 +191,8 @@ subteams.sort((a, b) => {
                       title={member.fields.title}
                       image={
                         member.fields.picture == undefined
-                          ? `${placeholderImage.fields.file?.url}?fm=jpg&fl=progressive`
-                          : `${member.fields.picture.fields.file.url}?fm=jpg&fl=progressive`
+                          ? `${placeholderImage.fields.file?.url}?fm=avif`
+                          : `${member.fields.picture.fields.file.url}?fm=avif`
                       }
                     />
                   );

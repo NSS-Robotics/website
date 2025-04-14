@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 const {
   fadeDirection = 'left',
   title,
@@ -16,14 +18,42 @@ const {
     <p>{subtitle}</p>
     <a href={buttonLink}>{buttonText}</a>
   </div>
-  <img src={image} alt={alt} />
+  <Image
+    data-aos={'fade-' + fadeDirection}
+    src={image}
+    width={600}
+    height={300}
+    alt={alt}
+  />
 </div>
 <style>
+  @media screen and (max-width: 1200px) {
+    img {
+      width: 400px !important;
+    }
+  }
+
+  @media screen and (max-width: 845px) {
+    .woosh {
+      flex-wrap: wrap-reverse !important;
+    }
+    /* img {
+      width: 300px !important;
+      height: 200px !important;
+    } */
+  }
+  @media screen and (max-width: 450px) {
+    img {
+      width: 250px !important;
+    }
+  }
   img {
-    width: 600px;
-    height: auto;
+    flex-shrink: 0;
+    aspect-ratio: 16 / 9;
     padding: 15px;
     border-radius: 30px;
+    width: 500px;
+    height: auto;
   }
   p {
     padding-left: 15px;
