@@ -21,7 +21,7 @@
     "astro": "^5.6.1",
     "astro-icon": "^1.1.5",
     "astro-seo": "^0.8.4",
-    "contentful": "^11.5.11"
+    "contentful": "^11.7.8"
   },
   "devDependencies": {
     "astro-robots-txt": "^1.0.0",
