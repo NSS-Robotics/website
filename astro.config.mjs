@@ -23,7 +23,7 @@ export default defineConfig({
     sitemap(),
     icon({
       include: {
-        bi: ["github", "instagram", "envelope", "sun-fill", "moon-fill"],
+        bi: ["github", "instagram", "envelope", "images", "sun-fill", "moon-fill"],
         ri: ["youtube-fill"],
       },
     }),
