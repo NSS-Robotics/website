@@ -12,13 +12,13 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.5.1",
     "@astrojs/vercel": "^8.2.7",
-    "@contentful/rich-text-html-renderer": "^17.1.0",
+    "@contentful/rich-text-html-renderer": "^17.1.2",
     "@fontsource/poppins": "^5.2.6",
     "@iconify-json/bi": "^1.2.6",
     "@iconify-json/ri": "^1.2.5",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "astro": "^5.13.5",
+    "astro": "^5.13.7",
     "astro-icon": "^1.1.5",
     "astro-seo": "^0.8.4",
     "contentful": "^11.7.16"
