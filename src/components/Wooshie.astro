@@ -1,8 +1,8 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 const {
-  fadeDirection = 'left',
+  fadeDirection = "left",
   title,
   subtitle,
   image,
@@ -12,14 +12,14 @@ const {
 } = Astro.props;
 ---
 
-<div class="woosh" data-aos={'fade-' + fadeDirection}>
+<div class="woosh" data-aos={"fade-" + fadeDirection}>
   <div class="wooshgroup">
     <h2>{title}</h2>
     <p>{subtitle}</p>
     <a href={buttonLink}>{buttonText}</a>
   </div>
   <Image
-    data-aos={'fade-' + fadeDirection}
+    data-aos={"fade-" + fadeDirection}
     src={image}
     width={600}
     height={300}

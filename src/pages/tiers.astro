@@ -1,9 +1,9 @@
 ---
-import { contentfulClient } from '../lib/contentful';
+import { contentfulClient } from "../lib/contentful";
 
-import MainLayout from '../layouts/MainLayout.astro';
-import ImageHeader from '../components/ImageHeader.astro';
-import SponsorshipTier from '../components/Sponsorship/SponsorshipTier.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import ImageHeader from "../components/ImageHeader.astro";
+import SponsorshipTier from "../components/Sponsorship/SponsorshipTier.astro";
 
 interface Tiers {
   fields: {
@@ -19,9 +19,9 @@ interface Tiers {
 }
 
 const tiersResponse = await contentfulClient.getEntries<Tiers>({
-  content_type: 'sponsorshipTiers',
+  content_type: "sponsorshipTiers",
   //@ts-ignore
-  order: '-fields.order',
+  order: "-fields.order",
 });
 ---
 

@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 ---
 
 <div class="darkmodetoggle">
@@ -12,41 +12,41 @@ import { Icon } from 'astro-icon/components';
 </div>
 
 <script>
-  const darkModeSwitch = document.getElementById('dark-mode-button');
+  const darkModeSwitch = document.getElementById("dark-mode-button");
 
   // Listen for the dark mode toggle button click
-  darkModeSwitch?.addEventListener('click', toggleDarkMode);
+  darkModeSwitch?.addEventListener("click", toggleDarkMode);
 
   // Check the current theme on page load
   window.onload = () => {
-    if (localStorage.getItem('dark-mode') === 'true') {
-      document.querySelector('body')?.classList.add('dark-mode');
+    if (localStorage.getItem("dark-mode") === "true") {
+      document.querySelector("body")?.classList.add("dark-mode");
       darkModeSwitch.checked = true;
     } else {
-      document.querySelector('body')?.classList.remove('dark-mode');
+      document.querySelector("body")?.classList.remove("dark-mode");
       darkModeSwitch.checked = false;
     }
   };
 
   // Listen for the "astro:before-swap" event to make sure the incoming page has the correct theme
-  document.addEventListener('astro:before-swap', (event) => {
-    if (localStorage.getItem('dark-mode') === 'true') {
-      event.newDocument.querySelector('body')?.classList.add('dark-mode');
+  document.addEventListener("astro:before-swap", (event) => {
+    if (localStorage.getItem("dark-mode") === "true") {
+      event.newDocument.querySelector("body")?.classList.add("dark-mode");
       darkModeSwitch.checked = true;
     } else {
-      event.newDocument.querySelector('body')?.classList.remove('dark-mode');
+      event.newDocument.querySelector("body")?.classList.remove("dark-mode");
       darkModeSwitch.checked = false;
     }
   });
 
   // Toggle dark mode variable in local storage when button is clicked
   function toggleDarkMode() {
-    if (localStorage.getItem('dark-mode') === 'true') {
-      localStorage.setItem('dark-mode', 'false');
-      document.querySelector('body')?.classList.remove('dark-mode');
+    if (localStorage.getItem("dark-mode") === "true") {
+      localStorage.setItem("dark-mode", "false");
+      document.querySelector("body")?.classList.remove("dark-mode");
     } else {
-      localStorage.setItem('dark-mode', 'true');
-      document.querySelector('body')?.classList.add('dark-mode');
+      localStorage.setItem("dark-mode", "true");
+      document.querySelector("body")?.classList.add("dark-mode");
     }
   }
 </script>
@@ -81,8 +81,8 @@ import { Icon } from 'astro-icon/components';
   .slider:before {
     position: absolute;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    content: '';
+    font-family: "Poppins", sans-serif;
+    content: "";
     /* content: "🌙"; */
     align-items: center;
     color: transparent;

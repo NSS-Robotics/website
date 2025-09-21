@@ -1,9 +1,9 @@
 ---
-import { contentfulClient } from '../lib/contentful';
-import MainLayout from '../layouts/MainLayout.astro';
-import ImageHeader from '../components/ImageHeader.astro';
-import SponsorBox from '../components/Sponsorship/SponsorBox.astro';
-import YearSelector from '../components/About/YearSelector.astro';
+import { contentfulClient } from "../lib/contentful";
+import MainLayout from "../layouts/MainLayout.astro";
+import ImageHeader from "../components/ImageHeader.astro";
+import SponsorBox from "../components/Sponsorship/SponsorBox.astro";
+import YearSelector from "../components/About/YearSelector.astro";
 
 interface Sponsor {
   fields: {
@@ -27,9 +27,9 @@ interface Sponsor {
 }
 
 const sponsorsResponse = await contentfulClient.getEntries<Sponsor>({
-  content_type: 'sponsor',
+  content_type: "sponsor",
   //@ts-ignore
-  order: '-fields.order',
+  order: "-fields.order",
 });
 
 const years: number[] = [];
@@ -54,25 +54,25 @@ sponsorsResponse.items.forEach((item) => {
   if (!tiers.includes(item.fields.tier)) {
     tiers.push(item.fields.tier);
     // Sort the tiers in the correct order (elite, platinum, gold, silver, bronze)
-    if (tiers.includes('bronze') && tiers.indexOf('bronze') !== 4) {
-      tiers.splice(tiers.indexOf('bronze'), 1);
-      tiers.unshift('bronze');
+    if (tiers.includes("bronze") && tiers.indexOf("bronze") !== 4) {
+      tiers.splice(tiers.indexOf("bronze"), 1);
+      tiers.unshift("bronze");
     }
-    if (tiers.includes('silver') && tiers.indexOf('silver') !== 3) {
-      tiers.splice(tiers.indexOf('silver'), 1);
-      tiers.unshift('silver');
+    if (tiers.includes("silver") && tiers.indexOf("silver") !== 3) {
+      tiers.splice(tiers.indexOf("silver"), 1);
+      tiers.unshift("silver");
     }
-    if (tiers.includes('gold') && tiers.indexOf('gold') !== 2) {
-      tiers.splice(tiers.indexOf('gold'), 1);
-      tiers.unshift('gold');
+    if (tiers.includes("gold") && tiers.indexOf("gold") !== 2) {
+      tiers.splice(tiers.indexOf("gold"), 1);
+      tiers.unshift("gold");
     }
-    if (tiers.includes('platinum') && tiers.indexOf('elite') !== 1) {
-      tiers.splice(tiers.indexOf('platinum'), 1);
-      tiers.unshift('platinum');
+    if (tiers.includes("platinum") && tiers.indexOf("elite") !== 1) {
+      tiers.splice(tiers.indexOf("platinum"), 1);
+      tiers.unshift("platinum");
     }
-    if (tiers.includes('elite') && tiers.indexOf('elite') !== 0) {
-      tiers.splice(tiers.indexOf('elite'), 1);
-      tiers.unshift('elite');
+    if (tiers.includes("elite") && tiers.indexOf("elite") !== 0) {
+      tiers.splice(tiers.indexOf("elite"), 1);
+      tiers.unshift("elite");
     }
   }
 });
@@ -91,7 +91,7 @@ tiers.forEach((tier, index) => {
       <div class="content">
         <div
           id={year.toString()}
-          class={`${year === years[0] ? 'showDefault' : ''} sponsors data`}
+          class={`${year === years[0] ? "showDefault" : ""} sponsors data`}
         >
           {tiers.map((tier) => (
             <>
@@ -100,7 +100,7 @@ tiers.forEach((tier, index) => {
                 .filter(
                   (item) =>
                     item.fields.tier === tier.toLowerCase() &&
-                    item.fields.year === year
+                    item.fields.year === year,
                 )
                 .map((item) => {
                   {

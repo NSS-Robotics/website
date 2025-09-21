@@ -1,5 +1,5 @@
 ---
-import { contentfulClient } from '../../lib/contentful';
+import { contentfulClient } from "../../lib/contentful";
 
 interface Sponsor {
   fields: {
@@ -22,9 +22,9 @@ interface Sponsor {
 }
 
 const response = await contentfulClient.getEntries<Sponsor>({
-  content_type: 'sponsor',
+  content_type: "sponsor",
   //@ts-ignore
-  order: '-fields.order',
+  order: "-fields.order",
 });
 
 const years: number[] = [];
@@ -56,20 +56,18 @@ years.forEach((year) => {
 <script data-astro-rerun>
   //when the year selector is changed, get the element with the same id as the selected year and give it the class "showDefault" and remove the class from all other elements
   //@ts-ignore
-  document
-    .getElementById('yearselector')
-    .addEventListener('change', () => {
-      //@ts-ignore
-      let year = document.getElementById('yearselector').value;
-      let elements = document.getElementsByClassName('data');
-      for (let i = 0; i < elements.length; i++) {
-        if (elements[i].id == year) {
-          elements[i].classList.add('showDefault');
-        } else {
-          elements[i].classList.remove('showDefault');
-        }
+  document.getElementById("yearselector").addEventListener("change", () => {
+    //@ts-ignore
+    let year = document.getElementById("yearselector").value;
+    let elements = document.getElementsByClassName("data");
+    for (let i = 0; i < elements.length; i++) {
+      if (elements[i].id == year) {
+        elements[i].classList.add("showDefault");
+      } else {
+        elements[i].classList.remove("showDefault");
       }
-    });
+    }
+  });
 </script>
 
 <style>
@@ -81,13 +79,13 @@ years.forEach((year) => {
     border-left: none;
     border-right: none;
     border-bottom: 2px solid var(--onyx);
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     background-color: var(--button);
     color: var(--text);
   }
   #yearselector option {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
   }
   .centerSelect {

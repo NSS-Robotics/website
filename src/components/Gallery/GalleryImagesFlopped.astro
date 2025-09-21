@@ -1,6 +1,6 @@
 ---
 //@ts-ignore
-import { Img } from 'astro-imagetools/components';
+import { Img } from "astro-imagetools/components";
 const { images = [] } = Astro.props;
 ---
 
@@ -10,7 +10,7 @@ const { images = [] } = Astro.props;
       <Img
         src={image}
         alt="An image in the gallery"
-        format={['webp']}
+        format={["webp"]}
         placeholder="blurred"
         loading="lazy"
         rotate={90}
