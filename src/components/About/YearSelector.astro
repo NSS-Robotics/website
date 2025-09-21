@@ -58,11 +58,11 @@ years.forEach((year) => {
   //@ts-ignore
   document
     .getElementById('yearselector')
-    .addEventListener('change', function () {
+    .addEventListener('change', () => {
       //@ts-ignore
-      var year = document.getElementById('yearselector').value;
-      var elements = document.getElementsByClassName('data');
-      for (var i = 0; i < elements.length; i++) {
+      let year = document.getElementById('yearselector').value;
+      let elements = document.getElementsByClassName('data');
+      for (let i = 0; i < elements.length; i++) {
         if (elements[i].id == year) {
           elements[i].classList.add('showDefault');
         } else {
