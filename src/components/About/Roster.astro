@@ -1,6 +1,6 @@
 ---
-import { contentfulClient } from '../../lib/contentful';
-import Person from './Person.astro';
+import { contentfulClient } from "../../lib/contentful";
+import Person from "./Person.astro";
 
 interface Roster {
   fields: {
@@ -20,13 +20,13 @@ interface Roster {
 }
 
 const rosterResponse = await contentfulClient.getEntries<Roster>({
-  content_type: 'teamRoster',
-  order: '-fields.year',
+  content_type: "teamRoster",
+  order: "-fields.year",
   limit: 1000,
 });
 
 const placeholderImage = await contentfulClient.getAsset(
-  '1riGUPwhsdCWEY7H4bG7ZP'
+  "1riGUPwhsdCWEY7H4bG7ZP",
 );
 
 // -------ROSTER MEMBER SORTING------- //
@@ -95,25 +95,38 @@ subteams.forEach((subteam, index) => {
 // Sort the subteams so they go "exec", "manufacturing", "design", "outreach", "mentor"
 subteams.sort((a, b) => {
   switch (true) {
-    case a === 'Exec': return -1;
-    case b === 'Exec': return 1;
+    case a === "Exec":
+      return -1;
+    case b === "Exec":
+      return 1;
 
-    case a === 'Manufacturing': return -1;
-    case b === 'Manufacturing': return 1;
+    case a === "Manufacturing":
+      return -1;
+    case b === "Manufacturing":
+      return 1;
 
-    case a === 'Design': return -1;
-    case b === 'Design': return 1;
+    case a === "Design":
+      return -1;
+    case b === "Design":
+      return 1;
 
-    case a === 'Programming': return -1;
-    case b === 'Programming': return 1;
+    case a === "Programming":
+      return -1;
+    case b === "Programming":
+      return 1;
 
-    case a === 'Outreach': return -1;
-    case b === 'Outreach': return 1;
+    case a === "Outreach":
+      return -1;
+    case b === "Outreach":
+      return 1;
 
-    case a === 'Mentor': return -1;
-    case b === 'Mentor': return 1;
+    case a === "Mentor":
+      return -1;
+    case b === "Mentor":
+      return 1;
 
-    default: return 0;
+    default:
+      return 0;
   }
 });
 ---
@@ -121,7 +134,7 @@ subteams.sort((a, b) => {
 {
   rosterYears.map((year) => (
     <div
-      class={`${year === rosterYears[0] ? 'showDefault' : ''} people data`}
+      class={`${year === rosterYears[0] ? "showDefault" : ""} people data`}
       id={year.toString()}
     >
       {subteams.map((subteam) => {
@@ -137,7 +150,7 @@ subteams.sort((a, b) => {
                   (member) =>
                     member.fields.subteam == subteam.toLowerCase() &&
                     member.fields.year == year &&
-                    member.fields.title
+                    member.fields.title,
                 )
                 // Sort the leads by title length
                 .sort((a, b) => {
@@ -171,7 +184,7 @@ subteams.sort((a, b) => {
                   (member) =>
                     member.fields.subteam == subteam.toLowerCase() &&
                     member.fields.year == year &&
-                    member.fields.title == undefined
+                    member.fields.title == undefined,
                 )
                 // Sort the members by whether or not they have a picture
                 .sort((a, b) => {

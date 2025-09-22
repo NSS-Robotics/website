@@ -1,9 +1,9 @@
 ---
-import { contentfulClient } from '../lib/contentful';
+import { contentfulClient } from "../lib/contentful";
 
-import MainLayout from '../layouts/MainLayout.astro';
-import ImageHeader from '../components/ImageHeader.astro';
-import Wooshie from '../components/Wooshie.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import ImageHeader from "../components/ImageHeader.astro";
+import Wooshie from "../components/Wooshie.astro";
 
 interface Wooshie {
   fields: {
@@ -26,9 +26,9 @@ interface Wooshie {
 }
 
 const aboutUsResponse = await contentfulClient.getEntries<Wooshie>({
-  content_type: 'wooshies',
+  content_type: "wooshies",
   //@ts-ignore
-  order: '-fields.order',
+  order: "-fields.order",
 });
 ---
 
