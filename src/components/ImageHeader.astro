@@ -1,8 +1,8 @@
 ---
-import Navbar from './Navbar.astro';
-import ScrollDown from './ScrollDown.astro';
+import Navbar from "./Navbar.astro";
+import ScrollDown from "./ScrollDown.astro";
 
-import { contentfulClient } from '../lib/contentful';
+import { contentfulClient } from "../lib/contentful";
 
 const { page } = Astro.props;
 
@@ -23,8 +23,8 @@ interface ImageHeader {
 }
 
 const ImageHeaderResponse = await contentfulClient.getEntries<ImageHeader>({
-  content_type: 'header',
-  'fields.page[match]': `${page}`,
+  content_type: "header",
+  "fields.page[match]": `${page}`,
 });
 
 const { title, subtitle, image } = ImageHeaderResponse.items[0].fields;

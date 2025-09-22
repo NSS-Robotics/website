@@ -1,6 +1,6 @@
 ---
-import Navbar from './Navbar.astro';
-import ScrollDown from './ScrollDown.astro';
+import Navbar from "./Navbar.astro";
+import ScrollDown from "./ScrollDown.astro";
 
 const { title, subtitle } = Astro.props;
 ---
@@ -34,21 +34,21 @@ const { title, subtitle } = Astro.props;
 
 <script>
   const images = [
-    '/images/headers/auto/1.webp',
-    '/images/headers/auto/2.webp',
-    '/images/headers/auto/3.webp',
-    '/images/headers/auto/4.webp',
-    '/images/headers/auto/5.webp',
-    '/images/headers/auto/6.webp',
-    '/images/headers/auto/7.webp',
-    '/images/headers/auto/8.webp',
-    '/images/headers/auto/9.webp',
-    '/images/headers/auto/10.webp',
-    '/images/headers/auto/11.webp',
+    "/images/headers/auto/1.webp",
+    "/images/headers/auto/2.webp",
+    "/images/headers/auto/3.webp",
+    "/images/headers/auto/4.webp",
+    "/images/headers/auto/5.webp",
+    "/images/headers/auto/6.webp",
+    "/images/headers/auto/7.webp",
+    "/images/headers/auto/8.webp",
+    "/images/headers/auto/9.webp",
+    "/images/headers/auto/10.webp",
+    "/images/headers/auto/11.webp",
   ];
 
   const firefox =
-    navigator.userAgent.toString().toLowerCase().indexOf('firefox') != -1;
+    navigator.userAgent.toString().toLowerCase().indexOf("firefox") != -1;
 
   if (!firefox) {
     initBg();
@@ -58,17 +58,17 @@ const { title, subtitle } = Astro.props;
   }
 
   function changeBG() {
-    const header = document.querySelector('.header')! as HTMLElement;
+    const header = document.querySelector(".header")! as HTMLElement;
     const bg = images[Math.floor(Math.random() * images.length)];
 
-    header.style.backgroundImage = 'url(' + bg + ')';
-    header.style.transition = '2.3s';
+    header.style.backgroundImage = "url(" + bg + ")";
+    header.style.transition = "2.3s";
   }
 
   function initBg() {
     const bg = images[Math.floor(Math.random() * images.length)];
-    const header = document.querySelector('.header')! as HTMLElement;
-    header.style.backgroundImage = 'url(' + bg + ')';
+    const header = document.querySelector(".header")! as HTMLElement;
+    header.style.backgroundImage = "url(" + bg + ")";
   }
 </script>
 

@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 const { name, alt, description, image, fadeDirection } = Astro.props;
 ---
@@ -7,7 +7,7 @@ const { name, alt, description, image, fadeDirection } = Astro.props;
 <div class="teamgroup">
   <div>
     <Image
-      data-aos={'fade-' + fadeDirection}
+      data-aos={"fade-" + fadeDirection}
       src={image}
       width={550}
       height={420}

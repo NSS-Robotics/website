@@ -1,11 +1,11 @@
 ---
-import { contentfulClient } from '../lib/contentful';
-import MainLayout from '../layouts/MainLayout.astro';
-import ImageHeader from '../components/ImageHeader.astro';
-import AboutUsItem from '../components/About/AboutUsItem.astro';
-import Subteam from '../components/About/Subteam.astro';
-import YearSelector from '../components/About/YearSelector.astro';
-import Roster from '../components/About/Roster.astro';
+import { contentfulClient } from "../lib/contentful";
+import MainLayout from "../layouts/MainLayout.astro";
+import ImageHeader from "../components/ImageHeader.astro";
+import AboutUsItem from "../components/About/AboutUsItem.astro";
+import Subteam from "../components/About/Subteam.astro";
+import YearSelector from "../components/About/YearSelector.astro";
+import Roster from "../components/About/Roster.astro";
 
 interface Subteams {
   fields: {
@@ -41,15 +41,15 @@ interface AboutUs {
 }
 
 const aboutUsResponse = await contentfulClient.getEntries<AboutUs>({
-  content_type: 'whoAreWe',
+  content_type: "whoAreWe",
   //@ts-ignore
-  order: '-fields.order',
+  order: "-fields.order",
 });
 
 const subteamResponse = await contentfulClient.getEntries<Subteams>({
-  content_type: 'subteam',
+  content_type: "subteam",
   //@ts-ignore
-  order: '-fields.order',
+  order: "-fields.order",
 });
 ---
 
