@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",
-    "@astrojs/vercel": "^8.2.11",
+    "@astrojs/vercel": "^9.0.0",
     "@contentful/rich-text-html-renderer": "^17.1.5",
     "@fontsource/poppins": "^5.2.7",
     "@iconify-json/bi": "^1.2.6",
