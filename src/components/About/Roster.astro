@@ -46,17 +46,19 @@ const subteams = ["Exec", "Manufacturing", "Design", "Programming", "Outreach"];
 
 // Comparator: sort by ranking (higher first), then by name (A–Z, case-insensitive)
 function compareMembers(a: Roster, b: Roster) {
-  const aRank = a.fields.ranking;
-  const bRank = b.fields.ranking;
+  let aRank = a.fields.ranking ?? 0;
+  let bRank = b.fields.ranking ?? 0;
 
   if (aRank !== bRank) {
-    return bRank - aRank; // higher ranking first
+      console.log(`Comparing ${a.fields.name} (rank: ${aRank}) with ${b.fields.name} (rank: ${bRank})`);
+      return bRank - aRank; // higher ranking first
   }
 
   const aName = (a.fields.name || "").toLowerCase();
   const bName = (b.fields.name || "").toLowerCase();
   return aName.localeCompare(bName);
 }
+
 ---
 {
   rosterYears.map((year) => (
@@ -71,8 +73,7 @@ function compareMembers(a: Roster, b: Roster) {
               {rosterResponse.items
                 .filter(
                   (member) =>
-                    member.fields.year === year &&
-                    member.fields.subteam === subteam.toLowerCase(),
+                    member.fields.year === year && member.fields.subteam === subteam.toLowerCase(),
                 )
                 .sort(compareMembers) // Apply the fixed comparator
                 .map((member) => {
