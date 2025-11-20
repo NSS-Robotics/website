@@ -9,7 +9,7 @@
       <a class="dropbtn" href="/">Home</a>
     </div>
     <div class="dropdown" data-aos="fade-down" data-aos-delay="700">
-      <a href="/about/" class="dropbtn">About Us</a>
+      <a href="/about/" class="dropbtn dropdown-link">About Us</a>
       <div style="margin-left: -10px" class="dropdown-content">
         <a class="except" href="/about#whoarewe">Who Are We?</a>
         <a class="except" href="/about#teams">Our Subteams</a>
@@ -159,4 +159,80 @@
     pointer-events: auto;
     transition-duration: 0.3s;
   }
+
+  /* show dropdown on mobile when toggled */
+  .dropdown.open .dropdown-content {
+      display: block;
+      opacity: 1;
+      pointer-events: auto;
+  }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const isMobile = () => window.matchMedia('(max-width: 845px)').matches;
+        const dropdowns = Array.from(document.querySelectorAll('.dropdown'))
+            .filter(d => d.querySelector('.dropdown-content'));
+
+        dropdowns.forEach(drop => {
+            const btn = drop.querySelector('.dropbtn');
+            if (!btn) return;
+            btn.setAttribute('aria-haspopup', 'true');
+            btn.setAttribute('aria-expanded', 'false');
+
+            btn.addEventListener('click', (e) => {
+                if (!isMobile()) return; // keep normal behavior on desktop
+
+                // check if the button is already expanded; if so, allow navigation
+                const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    // let the link follow its href on the second tap
+                    return;
+                }
+
+                // first tap on mobile: prevent navigation and open the menu
+                e.preventDefault();
+                const opened = drop.classList.toggle('open');
+                btn.setAttribute('aria-expanded', String(opened));
+
+                // close others
+                dropdowns.forEach(other => {
+                    if (other !== drop && other.classList.contains('open')) {
+                        other.classList.remove('open');
+                        const ob = other.querySelector('.dropbtn');
+                        if (ob) ob.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+        });
+
+        // close on outside tap (mobile)
+        document.addEventListener('click', (e) => {
+            if (!isMobile()) return;
+            // safe composedPath usage for TypeScript environments
+            const path = (typeof (e as any).composedPath === 'function') ? (e as any).composedPath() : [];
+            dropdowns.forEach(drop => {
+                if (!drop.classList.contains('open')) return;
+                if (!path.includes(drop)) {
+                    drop.classList.remove('open');
+                    const b = drop.querySelector('.dropbtn');
+                    if (b) b.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // escape closes any open dropdown
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                dropdowns.forEach(drop => {
+                    if (drop.classList.contains('open')) {
+                        drop.classList.remove('open');
+                        const b = drop.querySelector('.dropbtn');
+                        if (b) b.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        });
+    });
+</script>
+
