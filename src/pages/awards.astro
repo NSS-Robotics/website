@@ -18,12 +18,10 @@ for (const banner of bannerResponse.items) {
         banners[year] = [];
     }
 
-    console.log(banner.fields);
     const final = {
         text: banner.fields.event + " " + banner.fields.title,
         color: banner.fields.type === "award" ? "grey" : "blue",
     };
-    console.log(final)
     banners[year].push(final);
 }
 ---
