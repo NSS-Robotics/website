@@ -42,21 +42,31 @@ rosterResponse.items.forEach((member) => {
 const rosterYears = Array.from(rosterYearsSet).sort((a, b) => b - a);
 
 // Define the subteams in the desired order
-const subteams = ["Exec", "Manufacturing", "Design", "Programming", "Outreach"];
+const subteams = ["Exec", "Manufacturing", "Design", "Programming", "Outreach", "Mentor"];
 
-// Comparator: sort by ranking (higher first), then by name (A–Z, case-insensitive)
+// Comparator: ranked members first (by ranking desc).
+// If neither has ranking, prefer members with images; those without images go to bottom.
+// Finally, fallback to case-insensitive name compare.
 function compareMembers(a: Roster, b: Roster) {
-  let aRank = a.fields.ranking ?? 0;
-  let bRank = b.fields.ranking ?? 0;
+    const aRank = a.fields.ranking;
+    const bRank = b.fields.ranking;
+    const aHasRank = typeof aRank === "number";
+    const bHasRank = typeof bRank === "number";
 
-  if (aRank !== bRank) {
-      console.log(`Comparing ${a.fields.name} (rank: ${aRank}) with ${b.fields.name} (rank: ${bRank})`);
-      return bRank - aRank; // higher ranking first
-  }
+    if (aHasRank || bHasRank) {
+        if (aHasRank && bHasRank) {
+            return (bRank ?? 0) - (aRank ?? 0);
+        }
+        return aHasRank ? -1 : 1;
+    }
 
-  const aName = (a.fields.name || "").toLowerCase();
-  const bName = (b.fields.name || "").toLowerCase();
-  return aName.localeCompare(bName);
+    const aHasImage = Boolean(a.fields.picture?.fields?.file?.url);
+    const bHasImage = Boolean(b.fields.picture?.fields?.file?.url);
+    if (aHasImage !== bHasImage) return aHasImage ? -1 : 1;
+
+    const aName = (a.fields.name || "").toLowerCase();
+    const bName = (b.fields.name || "").toLowerCase();
+    return aName.localeCompare(bName);
 }
 
 ---

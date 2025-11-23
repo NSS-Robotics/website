@@ -1,0 +1,43 @@
+---
+import Banner from './Banner.astro';
+
+interface BannerItem {
+    text?: string;
+    name?: string;
+    image?: string;
+    color?: string;
+}
+
+interface Props {
+    banners: Record<string, BannerItem[]>;
+    year: string | number;
+}
+
+const { banners, year } = Astro.props as Props;
+const yearKey = String(year);
+const items = banners?.[yearKey] ?? [];
+---
+
+<div class="banners">
+    {items.map((banner: BannerItem) => (
+            <Banner
+                    text={banner.text}
+                    image={banner.image ?? "/images/first.svg"}
+                    color={banner.color ?? "blue"}
+                    year={year}
+            />
+    ))}
+</div>
+
+<style>
+    .banners {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
+</style>
