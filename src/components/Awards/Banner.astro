@@ -4,8 +4,11 @@ const { image, text, color, year} = Astro.props;
 
 <li class={color + " banner"}>
     <img src={image} alt="Award Icon"/>
-    {year}
-    {text}
+    <div class="txt">
+        {year}
+        {text}
+    </div>
+
 </li>
 
 <style>
@@ -15,8 +18,7 @@ const { image, text, color, year} = Astro.props;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    }
-    .banner {
+
         line-height: 1.2;
         font-family: 'Poppins', sans-serif;
         text-align: center;
@@ -56,5 +58,10 @@ const { image, text, color, year} = Astro.props;
     .grey:after {
         border-color: #777 !important;
         border-bottom-color: transparent !important;
+    }
+    .txt {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
     }
 </style>
