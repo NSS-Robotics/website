@@ -1,47 +1,46 @@
 ---
 import BannerContainer from "./BannerContainer.astro";
-const {year, fadeDirection, banners } = Astro.props;
+const { year, fadeDirection, banners } = Astro.props;
 import "../../../public/images/first.svg";
-
 ---
 
 <div class="awardYear" data-aos={`fade-${fadeDirection}`}>
-    <h3>{year}</h3>
-    <BannerContainer banners={banners} year={year}></BannerContainer>
+  <h3>{year}</h3>
+  <BannerContainer banners={banners} year={year} />
 </div>
 
 <style>
-    @media screen and (max-width: 1400px) {
-        .awardYear p {
-            font-size: 15px !important;
-        }
+  @media screen and (max-width: 1400px) {
+    .awardYear p {
+      font-size: 15px !important;
     }
-    @media screen and (max-width: 1000px) {
-        .awardYear {
-            flex-direction: column !important;
-            gap: 0 !important;
-            margin-bottom: 15px;
-        }
-        img {
-            width: 60vw !important;
-            height: auto !important;
-        }
-    }
-    @media screen and (max-width: 680px) {
-        img {
-            width: 70vw !important;
-        }
-    }
-    h3 {
-        font-size: 50px;
-        text-align: center;
-        text-decoration: underline;
-        text-decoration-color: var(--blue);
-        color: var(--text);
-    }
+  }
+  @media screen and (max-width: 1000px) {
     .awardYear {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
+      flex-direction: column !important;
+      gap: 0 !important;
+      margin-bottom: 15px;
     }
+    img {
+      width: 60vw !important;
+      height: auto !important;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    img {
+      width: 70vw !important;
+    }
+  }
+  h3 {
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+    color: var(--text);
+  }
+  .awardYear {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 </style>

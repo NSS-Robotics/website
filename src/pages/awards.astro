@@ -2,45 +2,53 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ImageHeader from "../components/ImageHeader.astro";
 import AwardYear from "../components/Awards/AwardYear.astro";
-import {contentfulClient} from "../lib/contentful.ts";
+import { contentfulClient } from "../lib/contentful.ts";
 
 const bannerResponse = await contentfulClient.getEntries({
-    content_type: "acolade"
+  content_type: "acolade",
 });
 
 let banners: Record<string, any[]> = {};
 
 for (const banner of bannerResponse.items) {
-    if (!banner?.fields) continue;
-    const year = String(banner.fields.year ?? "unknown");
+  if (!banner?.fields) continue;
+  const year = String(banner.fields.year ?? "unknown");
 
-    if (!banners[year]) {
-        banners[year] = [];
-    }
+  if (!banners[year]) {
+    banners[year] = [];
+  }
 
-    const final = {
-        text: banner.fields.event + " " + banner.fields.title,
-        color: banner.fields.type === "award" ? "grey" : "blue",
-    };
-    banners[year].push(final);
+  const final = {
+    text: banner.fields.event + " " + banner.fields.title,
+    color: banner.fields.type === "award" ? "grey" : "blue",
+  };
+  banners[year].push(final);
 }
 ---
 
 <MainLayout title="Knight Owls - Awards">
-    <ImageHeader page="acolades"/>
-    <div class="content">
-        {Object.keys(banners).sort((a, b) => Number(b) - Number(a)).map((year, index) => (
-            <AwardYear year={year} fadeDirection={index % 2 === 0 ? "right" : "left"} banners={banners}></AwardYear>
-        ))}
-    </div>
+  <ImageHeader page="acolades" />
+  <div class="content">
+    {
+      Object.keys(banners)
+        .sort((a, b) => Number(b) - Number(a))
+        .map((year, index) => (
+          <AwardYear
+            year={year}
+            fadeDirection={index % 2 === 0 ? "right" : "left"}
+            banners={banners}
+          />
+        ))
+    }
+  </div>
 </MainLayout>
 
 <style>
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding-bottom: 50px;
-    }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 50px;
+  }
 </style>
