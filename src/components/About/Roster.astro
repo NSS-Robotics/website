@@ -42,37 +42,47 @@ rosterResponse.items.forEach((member) => {
 const rosterYears = Array.from(rosterYearsSet).sort((a, b) => b - a);
 
 // Define the subteams in the desired order
-const subteams = ["Exec", "Manufacturing", "Design", "Programming", "Outreach", "Mentor"];
+const subteams = [
+  "Exec",
+  "Manufacturing",
+  "Design",
+  "Programming",
+  "Outreach",
+  "Mentor",
+];
 
 // Comparator: ranked members first (by ranking desc).
 // If neither has ranking, prefer members with images; those without images go to bottom.
 // Finally, fallback to case-insensitive name compare.
 function compareMembers(a: Roster, b: Roster) {
-    const aRank = a.fields.ranking;
-    const bRank = b.fields.ranking;
-    const aHasRank = typeof aRank === "number";
-    const bHasRank = typeof bRank === "number";
+  const aRank = a.fields.ranking;
+  const bRank = b.fields.ranking;
+  const aHasRank = typeof aRank === "number";
+  const bHasRank = typeof bRank === "number";
 
-    if (aHasRank || bHasRank) {
-        if (aHasRank && bHasRank) {
-            return (bRank ?? 0) - (aRank ?? 0);
-        }
-        return aHasRank ? -1 : 1;
+  if (aHasRank || bHasRank) {
+    if (aHasRank && bHasRank) {
+      return (bRank ?? 0) - (aRank ?? 0);
     }
+    return aHasRank ? -1 : 1;
+  }
 
-    const aHasImage = Boolean(a.fields.picture?.fields?.file?.url);
-    const bHasImage = Boolean(b.fields.picture?.fields?.file?.url);
-    if (aHasImage !== bHasImage) return aHasImage ? -1 : 1;
+  const aHasImage = Boolean(a.fields.picture?.fields?.file?.url);
+  const bHasImage = Boolean(b.fields.picture?.fields?.file?.url);
+  if (aHasImage !== bHasImage) return aHasImage ? -1 : 1;
 
-    const aName = (a.fields.name || "").toLowerCase();
-    const bName = (b.fields.name || "").toLowerCase();
-    return aName.localeCompare(bName);
+  const aName = (a.fields.name || "").toLowerCase();
+  const bName = (b.fields.name || "").toLowerCase();
+  return aName.localeCompare(bName);
 }
-
 ---
+
 {
   rosterYears.map((year) => (
-    <div class={`${year === rosterYears[0] ? "showDefault" : ""} people data`} id={year.toString()}>
+    <div
+      class={`${year === rosterYears[0] ? "showDefault" : ""} people data`}
+      id={year.toString()}
+    >
       {subteams.map((subteam) => {
         return (
           <>
@@ -83,7 +93,8 @@ function compareMembers(a: Roster, b: Roster) {
               {rosterResponse.items
                 .filter(
                   (member) =>
-                    member.fields.year === year && member.fields.subteam === subteam.toLowerCase(),
+                    member.fields.year === year &&
+                    member.fields.subteam === subteam.toLowerCase(),
                 )
                 .sort(compareMembers) // Apply the fixed comparator
                 .map((member) => {
