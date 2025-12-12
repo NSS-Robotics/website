@@ -40,6 +40,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`      | Preview your build locally, before deploying       |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
 | `npm run astro --help` | Get help using the Astro CLI                       |
-
-
-[![Powered by Vercel](https://user-images.githubusercontent.com/70914399/160733536-9b9355c5-8569-4973-8f6b-d6d24676816a.svg)](https://vercel.com/?utm_source=nssrobotics&utm_campaign=oss "Powered by Vercel")
