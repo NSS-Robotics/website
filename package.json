@@ -20,7 +20,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.16.9",
     "astro-icon": "^1.1.5",
-    "astro-seo": "^0.8.4",
+    "astro-seo": "^1.1.0",
     "contentful": "^11.10.2"
   },
   "devDependencies": {
