@@ -17,7 +17,7 @@
     "@iconify-json/bi": "^1.2.7",
     "@iconify-json/ri": "^1.2.10",
     "@vercel/analytics": "^1.6.1",
-    "@vercel/speed-insights": "^1.2.0",
+    "@vercel/speed-insights": "^2.0.0",
     "astro": "^5.18.1",
     "astro-icon": "^1.1.5",
     "astro-seo": "^1.1.0",
